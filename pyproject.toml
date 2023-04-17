@@ -3,12 +3,12 @@ requires = ['setuptools >= 61.0.0']
 build-backend = 'setuptools.build_meta'
 
 [project]
-name = 'template'
+name = 'meg_tests'
 version = '0.1.0'
-description = 'Template for python projects.'
+description = 'Test and demo for the MEGIN Triux Neo System at the Human Neuroscience Platform in Geneva. '
 readme = 'README.md'
 license = {file = 'LICENSE'}
-requires-python = '>=3.8'
+requires-python = '>=3.9'
 authors = [
     {name = 'Mathieu Scheltienne', email = 'mathieu.scheltienne@fcbg.ch'},
 ]
@@ -17,14 +17,16 @@ maintainers = [
 ]
 keywords = [
     'python',
-    'template',
+    'meg',
+    'neuroscience',
+    'timings',
+    'tests',
 ]
 classifiers = [
     'Operating System :: Microsoft :: Windows',
     'Operating System :: Unix',
     'Operating System :: MacOS',
     'Programming Language :: Python :: 3 :: Only',
-    'Programming Language :: Python :: 3.8',
     'Programming Language :: Python :: 3.9',
     'Programming Language :: Python :: 3.10',
     'Programming Language :: Python :: 3.11',
@@ -68,34 +70,34 @@ test = [
     'pytest-timeout',
 ]
 all = [
-    'template[build]',
-    'template[doc]',
-    'template[style]',
-    'template[test]',
+    'meg_tests[build]',
+    'meg_tests[doc]',
+    'meg_tests[style]',
+    'meg_tests[test]',
 ]
 full = [
-    'template[all]',
+    'meg_tests[all]',
 ]
 
 [project.urls]
-homepage = 'https://github.com/mscheltienne/template-python'
-documentation = 'https://github.com/mscheltienne/template-python'
-source = 'https://github.com/mscheltienne/template-python'
-tracker = 'https://github.com/mscheltienne/template-python/issues'
+homepage = 'https://github.com/mscheltienne/meg_tests'
+documentation = 'https://github.com/mscheltienne/meg_tests'
+source = 'https://github.com/mscheltienne/meg_tests'
+tracker = 'https://github.com/mscheltienne/meg_tests/issues'
 
 [project.scripts]
-template-sys_info = 'template.commands.sys_info:run'
+meg_tests-sys_info = 'meg_tests.commands.sys_info:run'
 
 [tool.setuptools]
 include-package-data = false
 
 [tool.setuptools.packages.find]
-include = ['template*']
-exclude = ['template*tests']
+include = ['meg_tests*']
+exclude = ['meg_tests*tests']
 
 [tool.black]
 line-length = 79
-target-version = ['py38']
+target-version = ['py39']
 include = '\.pyi?$'
 extend-exclude = '''
 (
@@ -113,7 +115,7 @@ extend-exclude = '''
 profile = 'black'
 multi_line_output = 3
 line_length = 79
-py_version = 38
+py_version = 39
 extend_skip_glob = [
     'setup.py',
     'doc/*',
@@ -125,7 +127,7 @@ extend_skip_glob = [
 convention = 'numpy'
 ignore-decorators = '(copy_doc|property|.*setter|.*getter|pyqtSlot|Slot)'
 match = '^(?!setup|__init__|test_).*\.py'
-match-dir = '^template.*'
+match-dir = '^meg_tests.*'
 add_ignore = 'D100,D104,D107'
 
 [tool.ruff]
@@ -148,9 +150,9 @@ branch = true
 cover_pylib = false
 omit = [
     '**/__init__.py',
-    '**/template/_version.py',
-    '**/template/commands/*',
-    '**/template/utils/_fixes.py',
+    '**/meg_tests/_version.py',
+    '**/meg_tests/commands/*',
+    '**/meg_tests/utils/_fixes.py',
     '**/tests/**',
 ]
 

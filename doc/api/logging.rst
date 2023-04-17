@@ -1,7 +1,7 @@
 Logging
 =======
 
-.. currentmodule:: template
+.. currentmodule:: meg_tests
 
 .. autosummary::
     :toctree: generated/

@@ -21,7 +21,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu, macos, windows]
-        python-version: [3.8, 3.9, "3.10", "3.11"]
+        python-version: [3.9, "3.10", "3.11"]
     name: ${{ matrix.os }} - py${{ matrix.python-version }}
     runs-on: ${{ matrix.os }}-latest
     defaults:
@@ -40,9 +40,9 @@ jobs:
           python -m pip install --progress-bar off --upgrade pip setuptools wheel
           python -m pip install --progress-bar off .[test]
       - name: Display system information
-        run: template-sys_info --developer
+        run: meg_tests-sys_info --developer
       - name: Run pytest
-        run: pytest template --cov=template --cov-report=xml --cov-config=pyproject.toml
+        run: pytest meg_tests --cov=meg_tests --cov-report=xml --cov-config=pyproject.toml
       - name: Upload to codecov
         if: ${{ matrix.os == 'ubuntu' && matrix.python-version == 3.9 }}
         uses: codecov/codecov-action@v3
