@@ -7,14 +7,14 @@ This package uses the logging module.
 """
 
 #%%
-# The logger and its utilities can be imported from the ``template`` package
+# The logger and its utilities can be imported from the ``meg_tests`` package
 # namespace.
 
 import logging
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from template import add_file_handler, logger, set_log_level
+from meg_tests import add_file_handler, logger, set_log_level
 
 # sphinx_gallery_thumbnail_path = '_static/logging/flowchart-light.png'
 
@@ -31,7 +31,7 @@ logger.debug("Log that will not be displayed.")
 logger.warning("Log that will be displayed.")
 
 #%%
-# The function `~template.set_log_level` can be used to edit the level of the
+# The function `~meg_tests.set_log_level` can be used to edit the level of the
 # logger.
 
 set_log_level("DEBUG")
@@ -40,8 +40,8 @@ logger.debug("Log that will now be displayed.")
 #%%
 # By default, the logger has one `~logging.StreamHandler` which outputs to
 # ``sys.stdout``. The level of both the logger and of this first handler can be
-# changed with `~template.set_log_level`.
-# Additional file handlers can be added with `~template.add_file_handler`.
+# changed with `~meg_tests.set_log_level`.
+# Additional file handlers can be added with `~meg_tests.add_file_handler`.
 # Each handler can be set to a different level than the logger.
 #
 # .. note::

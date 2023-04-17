@@ -10,11 +10,10 @@
 
 .. project
 
-.. _project pypi: https://pypi.org/project/template-python/
-.. _project conda: https://anaconda.org/conda-forge/template-python
-.. _project github: https://github.com/mscheltienne/template-python
-.. _project citation: https://github.com/mscheltienne/template-python/blob/main/CITATION.cff
-.. _project license: https://github.com/mscheltienne/template-python/blob/main/LICENSE
+.. _project pypi: https://pypi.org/project/meg_tests/
+.. _project github: https://github.com/mscheltienne/meg_tests
+.. _project citation: https://github.com/mscheltienne/meg_tests/blob/main/CITATION.cff
+.. _project license: https://github.com/mscheltienne/meg_tests/blob/main/LICENSE
 
 
 .. license

@@ -1,7 +1,7 @@
 .. include:: ./links.inc
 
-**template-python**
-===================
+**MEG tests**
+=============
 
 .. toctree::
    :hidden:
@@ -10,4 +10,5 @@
    generated/tutorials/index
    changes/index
 
-This is a template python-repository.
+This repository contains tests of the MEGIN Triux Neo System at the
+Human Neuroscience Platform, Campus Biotech, Geneva.
