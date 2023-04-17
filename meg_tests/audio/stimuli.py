@@ -13,6 +13,7 @@ def run(address: str, frequency: float) -> None:
     Parameters
     ----------
     address : str
+        Address of the computer parallel port.
     frequency : float
         Frequency of the auditory stimuli. The frequency should be chosen based
         on the sampling rate selected on the DACQ.
