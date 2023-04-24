@@ -10,10 +10,8 @@
 
 .. project
 
-.. _project pypi: https://pypi.org/project/meg_tests/
-.. _project github: https://github.com/mscheltienne/meg_tests
-.. _project citation: https://github.com/mscheltienne/meg_tests/blob/main/CITATION.cff
-.. _project license: https://github.com/mscheltienne/meg_tests/blob/main/LICENSE
+.. _project github: https://github.com/fcbg-hnp-meeg/meg_info
+.. _project license: https://github.com/fcbg-hnp-meeg/meg_info/blob/main/LICENSE
 
 
 .. license
