@@ -11,17 +11,17 @@ from typing import Dict, Optional
 
 from sphinx_gallery.sorting import FileNameSortKey
 
-import meg_tests
+import meg_info
 
 # -- project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "meg_tests"
+project = "meg_info"
 author = "Mathieu Scheltienne"
 copyright = f"{date.today().year}, {author}"
-release = meg_tests.__version__
-package = meg_tests.__name__
-gh_url = "https://github.com/mscheltienne/meg_tests"
+release = meg_info.__version__
+package = meg_info.__name__
+gh_url = "https://github.com/fcbg-hnp-meeg/meg_info"
 
 # -- general configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

@@ -1,7 +1,7 @@
 Logging
 =======
 
-.. currentmodule:: meg_tests
+.. currentmodule:: meg_info
 
 .. autosummary::
     :toctree: generated/
