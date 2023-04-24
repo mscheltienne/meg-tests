@@ -16,12 +16,12 @@ import meg_info
 # -- project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "meg_info"
+project = "meg-info"
 author = "Mathieu Scheltienne"
 copyright = f"{date.today().year}, {author}"
 release = meg_info.__version__
 package = meg_info.__name__
-gh_url = "https://github.com/fcbg-hnp-meeg/meg_info"
+gh_url = "https://github.com/fcbg-hnp-meeg/meg-info"
 
 # -- general configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
