@@ -70,6 +70,7 @@ html_theme = "furo"
 html_static_path = ["_static"]
 html_title = project
 html_show_sphinx = False
+html_logo = "_static/icons/HNP_MEEG_short.svg"
 
 # Documentation to change footer icons:
 # https://pradyunsg.me/furo/customisation/footer/#changing-footer-icons
@@ -86,6 +87,7 @@ html_theme_options = {
             "class": "",
         },
     ],
+    "sidebar_hide_name": True,
 }
 
 # -- autosummary -------------------------------------------------------------
