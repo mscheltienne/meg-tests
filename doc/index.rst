@@ -1,14 +1,30 @@
 .. include:: ./links.inc
 
-**MEG tests**
-=============
+**MEG information**
+===================
 
 .. toctree::
    :hidden:
 
+   devices/audio
+   devices/visual
+   devices/eye-tracker
    api/index
    generated/tutorials/index
    changes/index
 
-This repository contains tests of the MEGIN Triux Neo System at the
-Human Neuroscience Platform, Campus Biotech, Geneva. Bla
+Description and tests of the `MEGIN Triux Neo System`_ at the Human Neuroscience
+Platform, Campus Biotech, Geneva. With 306 SQUID sensors, 204 planar gradiometers and
+102 magnetometers, it can measure brain activity in 3 positions:
+
+- up-right: 68°
+- up-right: 60°
+- supine: 0°
+
+.. image:: ./_static/meg/meg-positions-dark.png
+    :class: only-dark
+
+.. image:: ./_static/meg/meg-positions-light.png
+    :class: only-light
+
+.. _MEGIN Triux Neo System: https://megin.com/triux-neo/
