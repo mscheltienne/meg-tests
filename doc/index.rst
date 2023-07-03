@@ -6,12 +6,13 @@
 .. toctree::
    :hidden:
 
-   devices/audio
-   devices/visual
-   devices/eye-tracker
-   api/index
-   generated/tutorials/index
-   changes/index
+   audio/index.rst
+   visual/index.rst
+   eye-tracker.rst
+   optimic.rst
+   api/index.rst
+   generated/tutorials/index.rst
+   changes/index.rst
 
 Description and tests of the `MEGIN Triux Neo System`_ at the Human Neuroscience
 Platform, Campus Biotech, Geneva. With 306 SQUID sensors, 204 planar gradiometers and
