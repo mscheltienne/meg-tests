@@ -17,8 +17,8 @@ Description and tests of the `MEGIN Triux Neo System`_ at the Human Neuroscience
 Platform, Campus Biotech, Geneva. With 306 SQUID sensors, 204 planar gradiometers and
 102 magnetometers, it can measure brain activity in 3 positions:
 
-- up-right: 68°
-- up-right: 60°
+- upright: 68°
+- upright: 60°
 - supine: 0°
 
 .. image:: ./_static/meg/meg-positions-dark.png
