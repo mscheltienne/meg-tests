@@ -5,11 +5,23 @@
 
 .. toctree::
    :hidden:
+   :caption: General
+
+   meg-session.rst
+
+.. toctree::
+   :hidden:
+   :caption: Devices
 
    audio/index.rst
    visual/index.rst
    eye-tracker.rst
    optimic.rst
+
+.. toctree::
+   :hidden:
+   :caption: Code
+
    api/index.rst
    generated/tutorials/index.rst
    changes/index.rst
