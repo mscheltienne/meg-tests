@@ -5,7 +5,7 @@ from typing import Callable, Optional, Union
 
 from ._checks import check_verbose
 from ._docs import fill_doc
-from ._fixes import _WrapStdOut
+from ._fixes import WrapStdOut
 
 
 @fill_doc
@@ -30,7 +30,7 @@ def _init_logger(*, verbose: Optional[Union[bool, str, int]] = None) -> logging.
     logger.setLevel(verbose)
 
     # add the main handler
-    handler = logging.StreamHandler(_WrapStdOut())
+    handler = logging.StreamHandler(WrapStdOut())
     handler.setFormatter(_LoggerFormatter())
     logger.addHandler(handler)
 
@@ -65,8 +65,8 @@ def add_file_handler(
 
 
 @fill_doc
-def set_log_level(verbose: Union[bool, str, int, None]) -> None:
-    """Set the log level for the logger and the first handler ``sys.stdout``.
+def set_log_level(verbose: Optional[Union[bool, str, int]]) -> None:
+    """Set the log level for the logger.
 
     Parameters
     ----------
@@ -99,8 +99,7 @@ class _LoggerFormatter(logging.Formatter):
         super().__init__(fmt="%(levelname): %(message)s")
 
     def format(self, record: logging.LogRecord):
-        """
-        Format the received log record.
+        """Format the received log record.
 
         Parameters
         ----------
