@@ -20,11 +20,20 @@
 
 .. toctree::
    :hidden:
+   :caption: Resources
+
+   MNE-Python <https://mne.tools/stable/index.html>
+   MNE Forum <https://mne.discourse.group/>
+   MNE Discord <https://discord.gg/rKfvxTuATa>
+   FieldTrip <https://www.fieldtriptoolbox.org/>
+   NeuroStars <https://neurostars.org/>
+
+.. toctree::
+   :hidden:
    :caption: Code
 
    api/index.rst
    generated/tutorials/index.rst
-   changes/index.rst
 
 Description and tests of the `MEGIN Triux Neo System`_ at the Human Neuroscience
 Platform, Campus Biotech, Geneva. With 306 SQUID sensors, 204 planar gradiometers and
