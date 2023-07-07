@@ -8,25 +8,25 @@
    :caption: General
 
    meg-session.rst
+   stim-pc.rst
+   data-transfer.rst
+   data-analysis-pc.rst
 
 .. toctree::
    :hidden:
    :caption: Devices
 
-   audio/index.rst
-   visual/index.rst
-   eye-tracker.rst
-   optimic.rst
+   stim-devices/audio/index.rst
+   stim-devices/visual.rst
+   stim-devices/eye-tracker.rst
+   stim-devices/optimic.rst
 
 .. toctree::
    :hidden:
    :caption: Resources
 
    MNE-Python <https://mne.tools/stable/index.html>
-   MNE Forum <https://mne.discourse.group/>
-   MNE Discord <https://discord.gg/rKfvxTuATa>
    FieldTrip <https://www.fieldtriptoolbox.org/>
-   NeuroStars <https://neurostars.org/>
 
 .. toctree::
    :hidden:
