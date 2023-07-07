@@ -4,7 +4,7 @@ Stimulation devices
 ===================
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     audio/index.rst
     visual.rst
