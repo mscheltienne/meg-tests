@@ -73,7 +73,38 @@ mounting procedure on the desktop.
 
     .. tab-item:: macOS
 
-        WIP
+        On macOS, ``Finder`` can connect to network share. After opening it, hit
+        ``Cmd + K``, or select ``Go`` and ``Connect to Server...`` to open the
+        corresponding pop-up. In the address field, enter ``smb://$(address)`` where
+        ``$(address)`` is replaced with the network share address. For instance:
+
+        .. code-block:: bash
+
+            smb://fcbgnasc.campusbiotech.ch/fcbgdata
+
+        .. image:: ./_static/isilon/macos-address-dark.png
+            :class: only-dark
+
+        .. image:: ./_static/isilon/macos-address-light.png
+            :class: only-light
+
+        A pop-up will request your credentials. Select ``Registered User``, enter your
+        username and password.
+
+        .. image:: ./_static/isilon/macos-credentials-dark.png
+            :class: only-dark
+
+        .. image:: ./_static/isilon/macos-credentials-light.png
+            :class: only-light
+
+        The network share is now mounted and appears in the left pane as an external
+        drive.
+
+        .. image:: ./_static/isilon/macos-connected-dark.png
+            :class: only-dark
+
+        .. image:: ./_static/isilon/macos-connected-light.png
+            :class: only-light
 
     .. tab-item:: Linux
 
