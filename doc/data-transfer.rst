@@ -61,7 +61,9 @@ you belong to (and thus on the network you are connected to) and on the share na
             fcbgnasc.unige.ch/fcbgdata/0000_CBT_EPFL_XXXXXX
 
 Once the address and credentials are known, mounting the network share differs depending
-on the OS.
+on the OS. On the ``meguser`` account of the :ref:`stim-pc:Stimulation PC` and
+:ref:`data-analysis-pc:Data analysis PC (DANA)`, you can find a PDF describing the
+mounting procedure on the desktop.
 
 .. tab-set::
 
@@ -83,7 +85,51 @@ on the OS.
 
             sudo apt install smbclient
 
-        WIP - nautilus picture
+        In the left pane of the file explorer, select ``Other locations``. At the
+        bottom, in the field ``Connect to Server``, enter ``smb://$(address)`` where
+        ``$(address)`` is replaced with the network share address. For instance:
+
+        .. code-block:: bash
+
+            smb://fcbgnas.campusbiotech.ch/fcbgdata
+
+        .. image:: ./_static/isilon/linux-address-dark.png
+            :class: only-dark
+
+        .. image:: ./_static/isilon/linux-address-light.png
+            :class: only-light
+
+        A pop-up will request your credentials. Select ``Registered User``, enter your
+        username, domain (``campusbiotech.ch``, ``epfl.ch`` or ``unige.ch``) and
+        password.
+
+        .. image:: ./_static/isilon/linux-credentials-dark.png
+            :class: only-dark
+
+        .. image:: ./_static/isilon/linux-credentials-light.png
+            :class: only-light
+
+        .. warning::
+
+            On the :ref:`stim-pc:Stimulation PC` or the
+            :ref:`data-analysis-pc:Data analysis PC (DANA)`, do not save the password.
+            Please select ``Forget password immediately`` or ``Remember password until
+            you logout``.
+
+        The network share is now mounted and appears in the left pane as an external
+        drive.
+
+        .. image:: ./_static/isilon/linux-connected-dark.png
+            :class: only-dark
+
+        .. image:: ./_static/isilon/linux-connected-light.png
+            :class: only-light
+
+        .. warning::
+
+            On the :ref:`stim-pc:Stimulation PC` or the
+            :ref:`data-analysis-pc:Data analysis PC (DANA)`, please eject (disconnect)
+            the network share when you are leaving.
 
         .. note::
 
@@ -118,9 +164,3 @@ on the OS.
               already available when you navigate to ``/mnt/Isilon``.
             - ``x-systemd.after=network-online.target`` to mount only after the target
               network is connected.
-
-.. note::
-
-    On the ``meguser`` account of the :ref:`stim-pc:Stimulation PC` and
-    :ref:`data-analysis-pc:Data analysis PC (DANA)`, you can find a PDF describing the
-    mounting procedure on the desktop.
