@@ -17,7 +17,7 @@ import meg_info
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "meg-info"
-author = "Mathieu Scheltienne"
+author = "MEEG-BCI facility"
 copyright = f"{date.today().year}, {author}"
 release = meg_info.__version__
 package = meg_info.__name__
