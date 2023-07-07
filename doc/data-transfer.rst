@@ -80,7 +80,7 @@ mounting procedure on the desktop.
 
         .. code-block:: bash
 
-            smb://fcbgnasc.campusbiotech.ch/fcbgdata
+            smb://fcbgnasc.epfl.ch/fcbgdata
 
         .. image:: ./_static/isilon/macos-address-dark.png
             :class: only-dark
