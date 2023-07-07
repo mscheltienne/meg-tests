@@ -91,7 +91,7 @@ mounting procedure on the desktop.
 
         .. code-block:: bash
 
-            smb://fcbgnas.campusbiotech.ch/fcbgdata
+            smb://fcbgnasc.campusbiotech.ch/fcbgdata
 
         .. image:: ./_static/isilon/linux-address-dark.png
             :class: only-dark
