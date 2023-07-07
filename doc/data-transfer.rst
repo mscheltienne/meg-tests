@@ -40,7 +40,7 @@ you belong to (and thus on the network you are connected to) and on the share na
 
         .. code-block:: bash
 
-            fcbgnas.campusbiotech.ch/fcbgdata/0000_CBT_EPFL_XXXXXX
+            fcbgnasc.campusbiotech.ch/fcbgdata/0000_CBT_EPFL_XXXXXX
 
     .. tab-item:: EPFL
 
@@ -49,7 +49,7 @@ you belong to (and thus on the network you are connected to) and on the share na
 
         .. code-block:: bash
 
-            fcbgnas.epfl.ch/fcbgdata/0000_CBT_EPFL_XXXXXX
+            fcbgnasc.epfl.ch/fcbgdata/0000_CBT_EPFL_XXXXXX
 
     .. tab-item:: UniGE
 
@@ -58,10 +58,66 @@ you belong to (and thus on the network you are connected to) and on the share na
 
         .. code-block:: bash
 
-            fcbgnas.unige.ch/fcbgdata/0000_CBT_EPFL_XXXXXX
+            fcbgnasc.unige.ch/fcbgdata/0000_CBT_EPFL_XXXXXX
 
 Once the address and credentials are known, mounting the network share differs depending
 on the OS.
+
+.. tab-set::
+
+    .. tab-item:: Windows
+
+        WIP
+
+    .. tab-item:: macOS
+
+        WIP
+
+    .. tab-item:: Linux
+
+        Mounting the network share might differ depending on your Linux distribution.
+        For an Ubuntu-based distribution, the network share can be mounted from the
+        ``nautilus`` file explorer. It requires ``smbclient`` to be installed.
+
+        .. code-block:: bash
+
+            sudo apt install smbclient
+
+        WIP - nautilus picture
+
+        .. note::
+
+            If you want to mount the network share automatically, e.g. on boot, you can
+            edit ``/etc/fstab`` and use ``cifs``.
+
+            .. code-block:: bash
+
+                sudo apt install cifs-utils
+                sudo mkdir /mnt/Isilon  # location in which the share is mounted
+                sudo nano /etc/fstab
+
+            In the ``fstab``, add a line:
+
+            .. code-block:: bash
+
+                //fcbgnasc.$(network).ch/fcbgdata/$(share)  /mnt/Isilon  cifs  credentials=/root/.smbcredentials,uid=$(user),gid=$(user),file_mode=0770,dir_mode=0770  0  0
+
+            Where ``$(network)`` is replaced by the network you are connected to,
+            ``$(share)`` is replaced by the share name, ``$(user)`` is replaced by your
+            username. The credentials have to be defined in ``/root/.smbcredentials``:
+
+            .. code-block:: bash
+
+               username=...
+               password=...
+               domain=...  # campusbiotech.ch, epfl.ch or unige.ch
+
+            If you are using ``systemd``, you can add the flags:
+
+            - ``x-systemd.automount`` to automatically mount the share if it was not
+              already available when you navigate to ``/mnt/Isilon``.
+            - ``x-systemd.after=network-online.target`` to mount only after the target
+              network is connected.
 
 .. note::
 
