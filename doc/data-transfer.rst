@@ -6,8 +6,8 @@ accessed from one of 3 networks: FCBG (``campusbiotech.ch``), EPFL (``epfl.ch``)
 UNIGE (``unige.ch``). Each lab has a separate share with lab-wide credentials and can
 mount the share on their computer using those credentials.
 
-The data acquisition PC (DACQ) has accessed to the shares from labs using the MEG
-facility, and recordings can be transferred to their owner via this network share.
+The data acquisition PC (DACQ) has access to the shares from labs using the MEG faciliy,
+and recordings can be transferred to their owner via this network share.
 
 .. note::
 
