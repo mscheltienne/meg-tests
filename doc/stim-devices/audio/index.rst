@@ -65,8 +65,8 @@ the participant through the in-ear headphones. To enable the black microphone, b
     LEDs ``SIG`` of the microphone input 2 should remain off while the black microphone
     is not in use.
 
-Stimulation input
------------------
+Audio sources
+-------------
 
 Auditory stimulation can come from 2 sources: the `Chronos`_ if `E-Prime`_ is used or
 directly the computer sound (DAW). Only one of the 2 sources should be active at a time.
