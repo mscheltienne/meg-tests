@@ -78,7 +78,7 @@ Monitoring feedback
 
 2 Bose speakers are used to monitor the sound played through the audio stimulation
 system. The Bose speakers are connected on ``Phones 1`` and volume is adjusted both with
-a knob on the speakers and with the knob ``Phone 1`` on the `Crimson 3`_.
+a knob on the speakers and with the knob ``Phones 1`` on the `Crimson 3`_.
 
 Main volume
 -----------
