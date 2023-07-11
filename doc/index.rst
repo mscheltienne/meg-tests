@@ -67,7 +67,7 @@ Where to find us
 ----------------
 
 The MEEG-BCI facility is located in ``H4.01``. The main entry is in front of the
-Time-out shop. Access to ``H4.01`` is restricted and requies a valid badge.
+Time-out shop. Access to ``H4.01`` is restricted and requires a valid badge.
 
 Contact us
 ----------
