@@ -19,7 +19,9 @@
    stim-devices/audio/index.rst
    stim-devices/visual.rst
    stim-devices/eye-tracker.rst
+   stim-devices/response-pads.rst
    stim-devices/optimic.rst
+   stim-devices/electrical-stimulator.rst
 
 .. toctree::
    :hidden:
