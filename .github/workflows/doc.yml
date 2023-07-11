@@ -30,7 +30,7 @@ jobs:
       - name: Install package
         run: python -m pip install --progress-bar off main/.[doc]
       - name: Display system information
-        run: meg_info-sys_info --developer
+        run: meg_wiki-sys_info --developer
       - name: Build doc
         run: sphinx-build ./main/doc ./doc-build/dev -W --keep-going
       - name: Upload documentation

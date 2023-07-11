@@ -11,16 +11,16 @@ from typing import Dict, Optional
 
 from sphinx_gallery.sorting import FileNameSortKey
 
-import meg_info
+import meg_wiki
 
 # -- project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "meg-info"
+project = "meg-wiki"
 author = "MEEG-BCI facility"
 copyright = f"{date.today().year}, {author}"
-release = meg_info.__version__
-package = meg_info.__name__
+release = meg_wiki.__version__
+package = meg_wiki.__name__
 gh_url = "https://github.com/fcbg-hnp-meeg/meg-info"
 
 # -- general configuration ---------------------------------------------------

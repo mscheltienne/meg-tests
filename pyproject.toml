@@ -3,7 +3,7 @@ requires = ['setuptools >= 61.0.0']
 build-backend = 'setuptools.build_meta'
 
 [project]
-name = 'meg_info'
+name = 'meg_wiki'
 version = '0.1.0'
 description = 'Info, test and demo for the MEGIN Triux Neo System at the Human Neuroscience Platform in Geneva. '
 readme = 'README.md'
@@ -73,30 +73,30 @@ test = [
     'pytest-timeout',
 ]
 all = [
-    'meg_info[build]',
-    'meg_info[doc]',
-    'meg_info[style]',
-    'meg_info[test]',
+    'meg_wiki[build]',
+    'meg_wiki[doc]',
+    'meg_wiki[style]',
+    'meg_wiki[test]',
 ]
 full = [
-    'meg_info[all]',
+    'meg_wiki[all]',
 ]
 
 [project.urls]
-homepage = 'https://github.com/fcbg-hnp-meeg/meg_info'
-documentation = 'https://github.com/fcbg-hnp-meeg/meg_info'
-source = 'https://github.com/fcbg-hnp-meeg/meg_info'
-tracker = 'https://github.com/fcbg-hnp-meeg/meg_info/issues'
+homepage = 'https://github.com/fcbg-hnp-meeg/meg_wiki'
+documentation = 'https://github.com/fcbg-hnp-meeg/meg_wiki'
+source = 'https://github.com/fcbg-hnp-meeg/meg_wiki'
+tracker = 'https://github.com/fcbg-hnp-meeg/meg_wiki/issues'
 
 [project.scripts]
-meg_info-sys_info = 'meg_info.commands.sys_info:run'
+meg_wiki-sys_info = 'meg_wiki.commands.sys_info:run'
 
 [tool.setuptools]
 include-package-data = false
 
 [tool.setuptools.packages.find]
-include = ['meg_info*']
-exclude = ['meg_info*tests']
+include = ['meg_wiki*']
+exclude = ['meg_wiki*tests']
 
 [tool.black]
 line-length = 88
@@ -130,7 +130,7 @@ extend_skip_glob = [
 convention = 'numpy'
 ignore-decorators = '(copy_doc|property|.*setter|.*getter|pyqtSlot|Slot)'
 match = '^(?!setup|__init__|test_).*\.py'
-match-dir = '^meg_info.*'
+match-dir = '^meg_wiki.*'
 add_ignore = 'D100,D104,D107'
 
 [tool.ruff]
@@ -153,9 +153,9 @@ branch = true
 cover_pylib = false
 omit = [
     '**/__init__.py',
-    '**/meg_info/_version.py',
-    '**/meg_info/commands/*',
-    '**/meg_info/utils/_fixes.py',
+    '**/meg_wiki/_version.py',
+    '**/meg_wiki/commands/*',
+    '**/meg_wiki/utils/_fixes.py',
     '**/tests/**',
 ]
 
