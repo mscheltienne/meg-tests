@@ -76,8 +76,9 @@ The facility can be contacted on meg@fcbg.ch and eeg@fcbg.ch depending on the mo
 requested. Alternatively, you can contact directly one of the facility members:
 
 - Gwenael Birot (manager): gwenael.birot@fcbg.ch
-- Jonathan Marquis: jonathan.marquis@fcbg.ch
-- Mathieu Scheltienne: mathieu.scheltienne@fcbg.ch
-- Vincent Rochas: vincent.rochas@fcbg.ch
+- Jonathan Marquis (technologist): jonathan.marquis@fcbg.ch
+- Mathieu Scheltienne (engineer): mathieu.scheltienne@fcbg.ch
+- Nathalie Philippe (technologist): nathalie.philippe@fcbg.ch
+- Vincent Rochas (scientist): vincent.rochas@fcbg.ch
 
 .. _MEGIN Triux Neo System: https://megin.com/triux-neo/
