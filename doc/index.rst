@@ -75,7 +75,7 @@ Contact us
 The facility can be contacted on meg@fcbg.ch and eeg@fcbg.ch depending on the modality
 requested. Alternatively, you can contact directly one of the facility members:
 
-- Gwenaël Birot (manager): gwenael.birot@fcbg.ch
+- Gwenael Birot (manager): gwenael.birot@fcbg.ch
 - Jonathan Marquis: jonathan.marquis@fcbg.ch
 - Mathieu Scheltienne: mathieu.scheltienne@fcbg.ch
 - Vincent Rochas: vincent.rochas@fcbg.ch
