@@ -83,6 +83,11 @@ mounting procedure on the desktop.
             :align: center
             :width: 600
 
+        .. warning::
+
+            On the :ref:`stim-pc:Stimulation PC` please deselect ``Reconnect at
+            sign-in``.
+
         A pop-up will request your credentials. Enter your username and password.
 
         .. image:: ./_static/isilon/windows-credentials-dark.png
@@ -95,6 +100,11 @@ mounting procedure on the desktop.
             :align: center
             :width: 400
 
+        .. warning::
+
+            On the :ref:`stim-pc:Stimulation PC` do not save the password. Please
+            deselect ``Remember my credentials``.
+
         The network share is now mounted and appears in the left pane as a network
         drive.
 
@@ -105,6 +115,11 @@ mounting procedure on the desktop.
         .. image:: ./_static/isilon/windows-connected-light.png
             :class: only-light
             :align: center
+
+        .. warning::
+
+            On the :ref:`stim-pc:Stimulation PC` please disconnect the network drive
+            when you are leaving.
 
     .. tab-item:: macOS
 
