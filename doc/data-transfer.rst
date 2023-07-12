@@ -69,7 +69,42 @@ mounting procedure on the desktop.
 
     .. tab-item:: Windows
 
-        WIP
+        On Windows, you can mount a network drive in the file explorer from ``This PC``.
+        In the menu bar, select ``Computer`` and ``Map network drive``. Choose an
+        available drive letter, set the field ``Folder`` to ``\\$(address)`` where
+        ``$(address)`` is replaced with the network share address, and tick
+        ``Connect using different credentials``.
+
+        .. code-block:: bash
+
+            \\fcbgnasc.campusbiotech.ch\fcbgdata
+
+        .. image:: ./_static/isilon/windows-address.png
+            :align: center
+            :width: 600
+
+        A pop-up will requet your credentials. Enter your username and password.
+
+        .. image:: ./_static/isilon/windows-credentials-dark.png
+            :class: only-dark
+            :align: center
+            :width: 400
+
+        .. image:: ./_static/isilon/windows-credentials-light.png
+            :class: only-light
+            :align: center
+            :width: 400
+
+        The network share is now mounted and appears in the left pane as a network
+        drive.
+
+        .. image:: ./_static/isilon/windows-connected-dark.png
+            :class: only-dark
+            :align: center
+
+        .. image:: ./_static/isilon/windows-connected-light.png
+            :class: only-light
+            :align: center
 
     .. tab-item:: macOS
 
@@ -84,27 +119,33 @@ mounting procedure on the desktop.
 
         .. image:: ./_static/isilon/macos-address-dark.png
             :class: only-dark
+            :align: center
 
         .. image:: ./_static/isilon/macos-address-light.png
             :class: only-light
+            :align: center
 
         A pop-up will request your credentials. Select ``Registered User``, enter your
         username and password.
 
         .. image:: ./_static/isilon/macos-credentials-dark.png
             :class: only-dark
+            :align: center
 
         .. image:: ./_static/isilon/macos-credentials-light.png
             :class: only-light
+            :align: center
 
         The network share is now mounted and appears in the left pane as an external
         drive.
 
         .. image:: ./_static/isilon/macos-connected-dark.png
             :class: only-dark
+            :align: center
 
         .. image:: ./_static/isilon/macos-connected-light.png
             :class: only-light
+            :align: center
 
     .. tab-item:: Linux
 
@@ -126,9 +167,11 @@ mounting procedure on the desktop.
 
         .. image:: ./_static/isilon/linux-address-dark.png
             :class: only-dark
+            :align: center
 
         .. image:: ./_static/isilon/linux-address-light.png
             :class: only-light
+            :align: center
 
         A pop-up will request your credentials. Select ``Registered User``, enter your
         username, domain (``campusbiotech.ch``, ``epfl.ch`` or ``unige.ch``) and
@@ -136,9 +179,11 @@ mounting procedure on the desktop.
 
         .. image:: ./_static/isilon/linux-credentials-dark.png
             :class: only-dark
+            :align: center
 
         .. image:: ./_static/isilon/linux-credentials-light.png
             :class: only-light
+            :align: center
 
         .. warning::
 
@@ -152,9 +197,11 @@ mounting procedure on the desktop.
 
         .. image:: ./_static/isilon/linux-connected-dark.png
             :class: only-dark
+            :align: center
 
         .. image:: ./_static/isilon/linux-connected-light.png
             :class: only-light
+            :align: center
 
         .. warning::
 
