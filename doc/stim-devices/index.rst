@@ -9,4 +9,6 @@ Stimulation devices
     audio/index.rst
     visual.rst
     eye-tracker.rst
+    response-pads/index.rst
     optimic.rst
+    electrical-stimulator.rst
