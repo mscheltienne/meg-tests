@@ -16,4 +16,11 @@ control monitor duplicates the image displayed by the projector in the control r
     :width: 400
     :align: center
 
+The projector is set in ``Rear projection`` and displays on a screen inside the MSR. The
+ideal screen position is marked on the floor and ensures reproducibility between
+subjects.
+
+.. image:: ../_static/visual/screen-projection.png
+    :align: center
+
 .. _ProPixx projector: https://vpixx.com/products/propixx-mri/
