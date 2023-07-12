@@ -12,6 +12,11 @@ larger color gammut.
 The projector is connected as the second monitor of the :ref:`stim-pc:Stimulation PC`. A
 control monitor duplicates the image displayed by the projector in the control room.
 
+.. note::
+
+    The control monitor can be used without the projector by turning ``ON`` the ProPixx
+    controller while leaving ``OFF`` the projector.
+
 .. image:: ../_static/visual/control-room.png
     :width: 400
     :align: center
