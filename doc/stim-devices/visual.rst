@@ -1,6 +1,10 @@
 ProPixx projector
 -----------------
 
+.. image:: ../_static/visual/propixx.png
+    :align: right
+    :width: 300
+
 The MEG uses a `ProPixx projector`_ from the company VPixx to display images in the
 magnetically shielded room (MSR). This projector uses LED as a light source, giving a
 larger color gammut.
