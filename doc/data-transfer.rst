@@ -83,7 +83,7 @@ mounting procedure on the desktop.
             :align: center
             :width: 600
 
-        A pop-up will requet your credentials. Enter your username and password.
+        A pop-up will request your credentials. Enter your username and password.
 
         .. image:: ./_static/isilon/windows-credentials-dark.png
             :class: only-dark
