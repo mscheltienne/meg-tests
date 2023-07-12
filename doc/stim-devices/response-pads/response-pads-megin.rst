@@ -1,0 +1,4 @@
+:orphan:
+
+Response pads (MEGIN)
+=====================
