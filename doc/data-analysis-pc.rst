@@ -5,6 +5,14 @@ Data analysis PCs, called DANA, are available in the MEG facility. DANA's can be
 accessed on the account ``meguser`` and have both MEGIN's analysis software and
 MNE-Python.
 
+Specifications
+--------------
+
+The stimulation PC runs on an `intel Xeon W-2245`_ (8 cores, 16 threads) with 32 GB of
+RAM and an `Nvidia Quadro P2200`_. Most analysis pipeline require one or multiple copies
+of a dataset to be loaded in RAM. 32 GB is sufficient for subject-level analysis and
+most group-level analysis, with an additional 20 GB of available swap if needed.
+
 MEGIN's software
 ----------------
 
@@ -16,3 +24,6 @@ MNE-Python
 
 FreeSurfer
 ----------
+
+.. _intel Xeon W-2245: https://www.intel.com/content/www/us/en/products/sku/198609/intel-xeon-w2245-processor-16-5m-cache-3-90-ghz/specifications.html
+.. _Nvidia Quadro P2200: https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/quadro-p2200-datasheet-letter-974207-r4-web.pdf
