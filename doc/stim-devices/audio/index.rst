@@ -73,6 +73,12 @@ directly the computer sound (DAW). Only one of the 2 sources should be active at
 To use the sound from the `Chronos`_, the button ``Sources: RCA`` must be enabled. To
 use the sound from the computer, the button ``DAW: 1|2`` must be enabled.
 
+.. note::
+
+    On Windows, the computer sends sound to a single channel, ``DAW: 1|2``. However on
+    Linux, it sends sound to both channels, ``DAW: 1|2`` and ``DAW: 3|4``, thus enabling
+    both yields a higher volume.
+
 Monitoring feedback
 -------------------
 
