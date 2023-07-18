@@ -20,6 +20,26 @@ verbose : int | str | bool | None
     verbosity is set to ``"WARNING"``. If a bool is provided, the verbosity is set to
     ``"WARNING"`` for False and to ``"INFO"`` for True."""
 
+# ----------------------------------- pport ----------------------------------
+docdict[
+    "address"
+] = """
+address : str | ``'mock'``
+    Address of the computer parallel port."""
+
+# ----------------------------------- audio ----------------------------------
+docdict[
+    "frequency"
+] = """
+frequency : float
+    Frequency of the auditory stimuli. The frequency should be chosen based
+    on the sampling rate selected on the DACQ."""
+docdict[
+    "n_repetition"
+] = """
+n_repetitionn : int
+    Number of sound repetition."""
+
 # ------------------------- Documentation functions --------------------------
 docdict_indented: Dict[int, Dict[str, str]] = dict()
 
