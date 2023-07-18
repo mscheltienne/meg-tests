@@ -1,11 +1,6 @@
 import time
 from logging import INFO
 
-from psychopy import prefs
-
-prefs.hardware["audioLib"] = ["PTB", "sounddevice", "pyo", "pygame"]
-prefs.hardware["audioLatencyMode"] = "0"
-
 from meg_wiki import logger, set_log_level
 from meg_wiki.audio.psychopy import psychopy_compensated, psychopy_uncompensated
 
