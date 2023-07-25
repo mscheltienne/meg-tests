@@ -19,12 +19,13 @@ MEGIN's software
 MaxWell filter
 ~~~~~~~~~~~~~~
 
-Signal-Space Separation (SSS) is a technique based on the physics of electromagnetics
-fields. SSS separates the measured signal into components attributable to sources inside
-the measurement volume of the sensor array (the internal components), and components
-attributable to sources outside the measurement volume (the external components). The
-internal and external components are linearly independent, so it is possible to simply
-discard the external components to reduce environmental noise.
+Signal-Space Separation (SSS)\ :footcite:p:`sss_2005,tsss_2006` is a technique based on
+the physics of electromagnetics fields. SSS separates the measured signal into
+components attributable to sources inside the measurement volume of the sensor array
+(the internal components), and components attributable to sources outside the
+measurement volume (the external components). The internal and external components are
+linearly independent, so it is possible to simply discard the external components to
+reduce environmental noise.
 
 Maxwell filtering is a related procedure that omits the higher-order components of the
 internal subspace, which are dominated by sensor noise. Typically, Maxwell filtering and
@@ -57,4 +58,9 @@ MATLAB Runtime can be added upon request.
 .. _intel Xeon W-2245: https://www.intel.com/content/www/us/en/products/sku/198609/intel-xeon-w2245-processor-16-5m-cache-3-90-ghz/specifications.html
 .. _Nvidia Quadro P2200: https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/quadro-p2200-datasheet-letter-974207-r4-web.pdf
 .. _spherical harmonics: https://en.wikipedia.org/wiki/Spherical_harmonics
-.. _MNE-Python's background on SSS and Maxwell filtering: https://mne.tools/dev/auto_tutorials/preprocessing/60_maxwell_filtering_sss.html#background-on-sss-and-maxwell-filtering
+.. _MNE-Python's background on SSS and Maxwell filtering: https://mne.tools/stable/auto_tutorials/preprocessing/60_maxwell_filtering_sss.html#background-on-sss-and-maxwell-filtering
+
+References
+----------
+
+.. footbibliography::
