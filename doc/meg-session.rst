@@ -17,8 +17,11 @@ dental retainers, piercings, make-up, bra.
 
 .. note::
 
-    Participants will change into MEG-compatible clothes, thus removing belts, jeans,
+    Participants will change into MEG-compatible clothes thus removing belts, jeans,
     bras and other clothes with metalic pieces.
 
 If the interference source can not be removed, e.g. implants or dental retainers, the
-decision to continue or cancel the acquisition belongs to the researcher.
+decision to continue or cancel the acquisition belongs to the researcher. In practice,
+we recommend to exclude participants which do not yield clean signal, except if they are
+part of a rare cohort. In theory, :ref:`MaxWell filtering and Spatiotemporal SSS (tSSS)
+<data-analysis-pc:MaxWell filter>` can remove most noise components.
