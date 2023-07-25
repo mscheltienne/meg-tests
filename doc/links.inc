@@ -24,7 +24,7 @@
 .. _mne stable: https://mne.tools/stable/index.html
 .. _mne bids: https://mne.tools/mne-bids/stable/index.html
 .. _mne connectivity: https://mne.tools/mne-connectivity/stable/index.html
-.. _mne icalabel: https://mne.tools/mne-icalabel/dev/index.html
+.. _mne icalabel: https://mne.tools/mne-icalabel/stable/index.html
 .. _autoreject: https://autoreject.github.io/stable/index.html
 
 
