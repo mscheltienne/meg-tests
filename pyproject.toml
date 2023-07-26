@@ -37,6 +37,7 @@ dependencies = [
     'bsl',
     'numpy>=1.21',
     'packaging',
+    'pooch',
     'psutil',
     'psychopy',
     'stimuli',
