@@ -4,6 +4,9 @@
 Create Signal Space Projectors
 ==============================
 
+Background on projection
+------------------------
+
 Signal-Space Projection (SSP)\ :footcite:p:`ssp_1997` is a way of estimating a
 projection matrix to remove noise from a recording by comparing measurements with and
 without the signal of interest. An empty-room recording is typically used to estimate
@@ -53,7 +56,24 @@ ax.quiver3D(
 )
 
 #%%
+# Default projectors
+# ------------------
+#
+# The default set of projectors is available `here <ssp github_>`_, on our GitHub. Those
+# projectors were obtained by taking:
+#
+# - For magnetometers:  6 components from the wideband PCA and 3 components from the
+#   narrowband PCA, with a bandpass filter between 15 and 18 Hz.
+# - For gradiometers: 3 components from the wideband PCA and 2 components from the
+#   narrowband PCA, with a bandpass filter between 15 and 18 Hz.
+#
+# The narrowband PCA improves the correction of the 16.7 Hz artifact, typical from a
+# 15 kV AC railway electrification system.
+
+#%%
 # References
 # ----------
 #
 # .. footbibliography::
+#
+# .. _ssp github: https://github.com/fcbg-hnp-meeg/meg-wiki/tree/main/ssp
