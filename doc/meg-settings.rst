@@ -12,7 +12,7 @@ Sampling rate
 
 The MEG default sampling rate is 1 kHz, but it can be changed to 2 kHz, 3 kHz, 4 kHz or
 5 kHz. In practice, there is no reason to increase the sampling rate (which will also
-increase the file size) except if an analogical signal requiring this sampling rate is
+increase the file size) except if an analog signal requiring this sampling rate is
 measured on the miscellaneous channels.
 
 Channel selection
