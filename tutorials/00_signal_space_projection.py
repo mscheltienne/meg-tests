@@ -15,7 +15,7 @@ dimensionality of your data and thus sensors will not retain linear independency
 Additional information on projections and on Signal-Space Projection (SSP) can be found
 in `MNE's Python background on projectors and projections`_.
 
-MNE's Python geometric example projecting¨ from 3-dimensional space to the (x, y) plane:
+MNE's Python geometric example projecting from 3-dimensional space to the (x, y) plane:
 
 .. _MNE's Python background on projectors and projections: https://mne.tools/stable/auto_tutorials/preprocessing/45_projectors_background.html
 """
