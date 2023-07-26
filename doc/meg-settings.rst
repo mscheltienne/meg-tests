@@ -1,10 +1,19 @@
+.. include:: ./links.inc
+
 MEG settings
 ============
+
+The MEG's settings can be edited on the acquisition software on the DACQ computer. The
+sampling rate, the channel selection and the internal active shielding can be edited
+directly on the GUI.
 
 Sampling rate
 -------------
 
-The MEG default sampling rate is 1 kHz, but it can be changed to [...].
+The MEG default sampling rate is 1 kHz, but it can be changed to 2 kHz, 3 kHz, 4 kHz or
+5 kHz. In practice, there is no reason to increase the sampling rate (which will also
+increase the file size) except if an analogical signal requiring this sampling rate is
+measured on the miscellaneous channels.
 
 Channel selection
 -----------------
@@ -52,3 +61,44 @@ The IAS compensation channels can be recorded and include:
     gradients is equal to 0:
     :math:`\frac{\partial{B_x}}{\partial{x}} + \frac{\partial{B_y}}{\partial{y}} +
     \frac{\partial{B_z}}{\partial{z}} = 0`
+
+Coil type
+---------
+
+Previous generation MEGIN system have a different magnetometer coil size compared to new
+generations. Our MEG system has the type 3024 ``FIFFV_COIL_VV_MAG_T3`` and correctly
+saves the type in the FIFF recordings. If in doubt, check that the magnetometer coil
+type is correct and is not set to 3022 ``FIFF.FIFFV_COIL_VV_MAG_T1`` or 3023
+``FIFF.FIFFV_COIL_VV_MAG_T2``. `MNE-Python <mne stable_>`_ has a convenience function to
+check and fix the coil type if needed, accessible through the function
+:func:`mne.channels.fix_mag_coil_types` or through the Raw object method
+:meth:`mne.io.Raw.fix_mag_coil_types`.
+
+.. note::
+
+    The effect of the difference between the coil sizes on the current estimates
+    is very small. Therefore, fixing the coil type is not mandatory.
+
+Signal Space Projector
+----------------------
+
+Signal-Space Projection (SSP)\ :footcite:p:`ssp_1997` is a way of estimating a
+projection matrix to remove noise from a recording by comparing measurements with and
+without the signal of interest. Every recording is shipped with a set of SSP tailored
+for our site. Specifically, these projectors were obtained by taking:
+
+- Magnetometers: 6 components from the wideband PCA and 3 components from the narrowband
+  PCA, with a bandpass filter between 15 and 18 Hz.
+- Gradiometers: 3 components from the wideband PCA and 2 components from the narrowband
+  PCA, with a bandpass filter between 15 and 18 Hz.
+
+The narrowband PCA improves the correction of the 16.7 Hz artifact, typical from a
+15 kV AC railway electrification system.
+
+See also the tutorial on how to :ref:`re-compute the Signal Space Projectors (SSP)
+<tut-artifact-ssp>` from an empty-room recording.
+
+References
+----------
+
+.. footbibliography::
