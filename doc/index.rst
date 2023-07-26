@@ -10,6 +10,7 @@
    :caption: General
 
    meg-session.rst
+   meg-settings.rst
    stim-pc.rst
    data-transfer.rst
    data-analysis-pc.rst
