@@ -20,8 +20,28 @@ E-Prime
 Python
 ------
 
+.. tab-set::
+
+    .. tab-item:: Windows
+
+        TODO
+
+    .. tab-item:: Linux
+
+        TODO
+
 PsychoPy
 --------
+
+.. tab-set::
+
+    .. tab-item:: Windows
+
+        TODO
+
+    .. tab-item:: Linux
+
+        TODO
 
 MATLAB
 ------
