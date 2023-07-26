@@ -11,6 +11,7 @@
 
    meg-session.rst
    meg-settings.rst
+   meg-triggers.rst
    stim-pc.rst
    data-transfer.rst
    data-analysis-pc.rst
