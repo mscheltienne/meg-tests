@@ -8,7 +8,7 @@ MNE-Python.
 Specifications
 --------------
 
-The stimulation PC runs on an `intel Xeon W-2245`_ (8 cores, 16 threads) with 32 GB of
+The analysis PCs run on an `intel Xeon W-2245`_ (8 cores, 16 threads) with 32 GB of
 RAM and an `Nvidia Quadro P2200`_. Most analysis pipeline require one or multiple copies
 of a dataset to be loaded in RAM. 32 GB is sufficient for subject-level analysis and
 most group-level analysis, with an additional 20 GB of available swap if needed.

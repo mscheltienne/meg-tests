@@ -12,10 +12,10 @@ the :ref:`stim-pc:Stimulation PC` and one in the stimulus cabinet.
 Binary vs combined channel
 --------------------------
 
-The channels ``STI01``, ``STI02``, ..., ``STI16`` are binary channels. They measure a
+The channels ``STI001``, ``STI002``, ..., ``STI016`` are binary channels. They measure a
 single TTL pulse which drives the channel from 0 to 1 and vice versa.
-The channels ``STI101`` and ``STI102`` are combined channels which measure the 16
-binary channels associated to their respective trigger interface I/O box at once. The
+The channels ``STI101`` and ``STI102`` are combined channels which measure at once the
+16 binary channels associated to their respective trigger interface I/O box. The
 value measured by a combined channel corresponds to the decimal value of the binary
 number expressed on the binary channels. For instance, if the channels 1, 3, 4 of the
 trigger interface I/O box in the stimulus cabinet receive a pulse, the combined channel
@@ -26,7 +26,7 @@ trigger interface I/O box in the stimulus cabinet receive a pulse, the combined 
 Thus, if 8 BNC cables are connected, e.g., from the computer DB-25 port (parallel port),
 the combined channel can receives triggers ranging from 0 to 255 (8 bits unsigned
 integer). In theory, with 16 channels each, combined channels can measure trigger
-ranging from 0 to 65535.
+ranging from 0 to 65535 (16 bits unsigned integer).
 
 STI101 and STI102
 -----------------
@@ -37,12 +37,39 @@ cabinet and ``STI102`` to the one on the main desk. By default, both trigger int
 I/O box work in *synchronous* mode. In this mode, you effectively have only 16 binary
 channels, mirrored between both boxes. In other words, if a trigger arrives on the
 channel 1 of the box in the stimulus cabinet, the same trigger will be received on the
-channel 1 of the box on the main desk.
+channel 1 of the box on the main desk. In this mode, you need to be certain that 2
+triggers will not arrive simultaneously on both trigger interfaces.
 
-To desynchronize the trigger interface I/O boxes, the channel ``STI102`` must be
-enabled. When desynchronized, a trigger which arrives on the channel 1 of the box in the
-stimulus cabinet is not mirrored on the channel 1 of the box on the main desk.
+To desynchronize the trigger interfaces, the channel ``STI102`` must be enabled. When
+desynchronized, a trigger which arrives on the channel 1 of the box in the stimulus
+cabinet is not mirrored on the channel 1 of the box on the main desk. When
+desynchronized, the individual binary channels of the trigger interface on the main desk
+are not available.
 
 .. note::
 
     This channel is disabled by default and it is not possible to change the default.
+
+Triggers from the stimulation PC
+--------------------------------
+
+The :ref:`stim-pc:Stimulation PC` can send triggers to the 8 first bits of the trigger
+interface on the main desk, ``STI102``, via a parallel port (DB-25) or via the Chronos
+if :ref:`stim-pc:E-Prime` is in-use. You can switch which output is in-use with the
+switch Chronos/DB-25 on the main desk.
+
+Parallel Port (DB-25)
+~~~~~~~~~~~~~~~~~~~~~
+
+.. tab-set::
+
+    .. tab-item:: Windows
+
+        TODO
+
+    .. tab-item:: Linux
+
+        TODO
+
+Chronos
+~~~~~~~
