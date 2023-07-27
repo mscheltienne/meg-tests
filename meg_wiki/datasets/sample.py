@@ -7,10 +7,10 @@ from typing import TYPE_CHECKING
 import pooch
 
 if TYPE_CHECKING:
-    from typing import Union
+    from typing import Optional, Union
 
 
-def _make_registry(output: Union[str, Path]) -> None:
+def _make_registry(output: Optional[Union[str, Path]] = None) -> None:
     """Create the registry file for the sample dataset.
 
     Parameters
@@ -24,6 +24,9 @@ def _make_registry(output: Union[str, Path]) -> None:
             "The sample dataset registry can only be created from a clone of the "
             "repository."
         )
+    output = (
+        files("meg_wiki.datasets") / "sample-registry.txt" if output is None else output
+    )
     pooch.make_registry(folder, output=output, recursive=True)
 
 
