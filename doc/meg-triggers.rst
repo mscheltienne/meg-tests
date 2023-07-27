@@ -48,7 +48,9 @@ are not available.
 
 .. note::
 
-    This channel is disabled by default and it is not possible to change the default.
+    ``STI102`` is disabled by default and it is not possible to change the default. It
+    is however possible to create the project specific settings which have to be
+    reloaded at the start of every new acquisition.
 
 Triggers from the stimulation PC
 --------------------------------
