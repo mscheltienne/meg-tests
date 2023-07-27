@@ -104,4 +104,4 @@ References
 
 .. footbibliography::
 
-.. _ssp github: https://github.com/fcbg-hnp-meeg/meg-wiki/tree/main/ssp
+.. _ssp github: https://github.com/fcbg-hnp-meeg/meg-wiki/tree/main/datasets/ssp
