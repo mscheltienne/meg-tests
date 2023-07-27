@@ -31,7 +31,7 @@ ranging from 0 to 65535 (16 bits unsigned integer).
 STI101 and STI102
 -----------------
 
-```STI101`` and ``STI102`` are the names of the 2 combined channels corresponding to
+``STI101`` and ``STI102`` are the names of the 2 combined channels corresponding to
 each trigger interface I/O box. ``STI101`` corresponds to the one in the stimulus
 cabinet and ``STI102`` to the one on the main desk. By default, both trigger interface
 I/O box work in *synchronous* mode. In this mode, you effectively have only 16 binary
