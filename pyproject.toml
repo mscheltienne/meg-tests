@@ -99,6 +99,9 @@ include-package-data = false
 include = ['meg_wiki*']
 exclude = ['meg_wiki*tests']
 
+[tool.setuptools.package-data]
+"meg_wiki.datasets" = ["registries/*.txt"]
+
 [tool.black]
 line-length = 88
 target-version = ['py39']
