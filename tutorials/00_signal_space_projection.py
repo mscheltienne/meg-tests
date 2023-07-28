@@ -81,7 +81,7 @@ directory = sample.data_path() / "ssp"
 projs = read_proj(directory / "ssp_68_230120-proj.fif")
 
 #%%
-# To visualize the projector, we need informations about the sensors. Those informations
+# To visualize the projector, we need information about the sensors. Those information
 # are stored in every raw recording.
 
 from mne.io.meas_info import read_info
