@@ -6,4 +6,4 @@ Datasets
 .. autosummary::
     :toctree: generated/
 
-    sample
+    sample.data_path
