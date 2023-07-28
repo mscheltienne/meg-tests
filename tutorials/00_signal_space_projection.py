@@ -69,6 +69,19 @@ ax.quiver3D(
 #
 # The narrowband PCA improves the correction of the 16.7 Hz artifact, typical from a
 # 15 kV AC railway electrification system.
+#
+# Let's have a look at the projectors in 68° position when IAS is disabled.
+
+from mne import read_proj
+
+from meg_wiki.datasets import sample
+
+
+directory = sample.data_path() / "ssp"
+projs = read_proj(directory / "ssp_68_230120-proj.fif")
+
+#%%
+
 
 #%%
 # References
