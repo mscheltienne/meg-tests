@@ -6,6 +6,8 @@ from typing import TYPE_CHECKING
 
 import pooch
 
+from ._fetch import fetch_dataset
+
 if TYPE_CHECKING:
     from typing import Optional, Union
 
@@ -38,14 +40,7 @@ def data_path() -> Path:
     path : Path
         Path to the sample dataset, by default in "~/meg-wiki_data".
     """
-    fetcher = pooch.create(
-        path=Path.home() / "meg-wiki_data",
-        base_url="https://github.com/fcbg-hnp-meeg/meg-wiki/raw/main/datasets/",
-        registry=None,
-        retry_if_failed=2,
-        allow_updates=True,
-    )
-    fetcher.load_registry(files("meg_wiki.datasets") / "sample-registry.txt")
-    for file in fetcher.registry:
-        fetcher.fetch(file)
-    return fetcher.abspath
+    path = Path.home() / "meg-wiki_data"
+    base_url = "https://github.com/fcbg-hnp-meeg/meg-wiki/raw/main/datasets/"
+    registry = files("meg_wiki.datasets") / "sample-registry.txt"
+    return fetch_dataset(path, base_url, registry)
