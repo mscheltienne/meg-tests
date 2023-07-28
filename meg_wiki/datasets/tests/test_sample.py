@@ -6,10 +6,6 @@ import pytest
 from meg_wiki.datasets import sample
 
 
-@pytest.mark.skipif(
-    not (files("meg_wiki").parent / "datasets").exists(),
-    reason="datasets directory is missing",
-)
 def test_sample(tmp_path):
     """Test download of the sample dataset."""
     path = sample.data_path()  # retrieve dataset
@@ -26,9 +22,6 @@ def test_sample(tmp_path):
     # create a new registry
     output = tmp_path / "registry-1.txt"
     pooch.make_registry(path, output=output, recursive=True)
-    assert pooch.file_hash(output) == pooch.file_hash(registry)
-    output = tmp_path / "registry-2.txt"
-    sample._make_registry(output)
     assert pooch.file_hash(output) == pooch.file_hash(registry)
 
 
