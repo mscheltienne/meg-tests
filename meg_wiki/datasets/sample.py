@@ -38,7 +38,7 @@ def data_path() -> Path:
     Returns
     -------
     path : Path
-        Path to the sample dataset, by default in "~/meg-wiki_data".
+        Path to the sample dataset, by default in ``"~/meg-wiki_data"``.
     """
     path = Path.home() / "meg-wiki_data"
     base_url = "https://github.com/fcbg-hnp-meeg/meg-wiki/raw/main/datasets/"
