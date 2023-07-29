@@ -46,7 +46,7 @@ def fetch_dataset(path: Path, base_url: str, registry: Union[str, Path]) -> Path
         fetcher.fetch(file)
     # remove outdated files from the dataset
     for entry in _walk(path):
-        if str(entry.relative_to(path)) not in fetcher.registry:
+        if str(entry.relative_to(path).as_posix()) not in fetcher.registry:
             logger.info("Removing outdated dataset file '%s'.", entry.relative_to(path))
             entry.unlink(missing_ok=True)
     return fetcher.abspath
