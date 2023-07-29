@@ -54,6 +54,7 @@ ax.quiver3D(
     linewidth=1,
     linestyle="dashed"
 )
+plt.show()
 
 #%%
 # Default projectors
@@ -77,17 +78,18 @@ from mne import read_proj
 from meg_wiki.datasets import sample
 
 
-directory = sample.data_path() / "ssp"
-projs = read_proj(directory / "ssp_68_230120-proj.fif")
+projs = read_proj(sample.data_path() / "ssp" / "ssp_68_230120-proj.fif")
 
 #%%
-# To visualize the projector, we need information about the sensors. Those information
-# are stored in every raw recording.
+# To visualize the projector as topographic maps, we need information about the sensors
+# location and orientation. Those information are stored in every raw recording.
 
 from mne.io.meas_info import read_info
 
 
-info = read_info(directory / "measurement-info.fif", verbose="WARNING")
+info = read_info(
+    sample.data_path() / "meas_info" / "measurement-info.fif", verbose="WARNING"
+)
 info
 
 #%%
