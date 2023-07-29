@@ -22,7 +22,18 @@ info
 #%%
 # In MNE-Python, the sensor position is stored under the key ``loc`` for every channels.
 
-info["chs"][0]
+print (info["chs"][0]["loc"])
+
+#%%
+# Along with other sensor information:
+
+for key, value in info["chs"][0].items():
+    if key == "loc":
+        print (
+            f"{key}:\n  Position:\n{value[:3]}\n  Normal:\n{value[3:].reshape(3, 3)}"
+        )
+    else:
+        print (f"{key}: {value}")
 
 #%%
 # The sensors can be visualized on a 3D plot. This measurement information was taken
