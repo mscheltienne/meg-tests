@@ -88,7 +88,7 @@ from mne.io.meas_info import read_info
 
 
 info = read_info(
-    sample.data_path() / "meas_info" / "measurement-info.fif", verbose="WARNING"
+    sample.data_path() / "meas_info" / "measurement-info.fif", verbose=False
 )
 info
 
