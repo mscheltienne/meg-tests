@@ -18,6 +18,22 @@ measured on the miscellaneous channels.
 Channel selection
 -----------------
 
+The channel selection should be verified before every acquisition. By default, the
+selection is set to:
+
+.. image:: ./_static/meg/meg-channel-selection.png
+    :width: 1000
+    :align: center
+
+Common changes include:
+
+- Disable the unused IAS channels
+- Enable ``STI102``. See :ref:`meg-triggers:STI101 and STI102` for more information.
+- Enable individual binary ``stim`` channels. See
+  :ref:`meg-triggers:Binary vs combined channel` for more information.
+- Enable EEG channels
+- Enable bipolar channels
+
 Internal Active Shielding (IAS)
 -------------------------------
 

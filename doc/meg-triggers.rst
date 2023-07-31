@@ -56,9 +56,9 @@ Triggers from the stimulation PC
 --------------------------------
 
 The :ref:`stim-pc:Stimulation PC` can send triggers to the 8 first bits of the trigger
-interface on the main desk, ``STI102``, via a parallel port (DB-25) or via the Chronos
-if :ref:`stim-pc:E-Prime` is in-use. You can switch which output is in-use with the
-switch Chronos/DB-25 on the main desk.
+interface on the main desk, ``STI102``, via a parallel port (DB-25) or via the
+`Chronos`_ if :ref:`stim-pc:E-Prime` is in-use. You can switch which output is in-use
+with the switch Chronos/DB-25 on the main desk.
 
 Parallel Port (DB-25)
 ~~~~~~~~~~~~~~~~~~~~~
@@ -67,11 +67,26 @@ Parallel Port (DB-25)
 
     .. tab-item:: Windows
 
-        TODO
+        On Windows, the address of the parallel port in hexadecimal is ``4FB8``. On the
+        desktop, ``LPT Port Test Utility`` can be used to test the parallel port.
+
+        .. image:: ./_static/meg/lpt-port-test-utility.png
+            :width: 400
+            :align: center
+
+        Select LPT X address and set ``4FB8``. You can then turn ``ON`` or ``OFF`` the
+        individual ``Data Register`` pins.
 
     .. tab-item:: Linux
 
-        TODO
+        On Linux, the address of the parallel port is ``/dev/parport0``.
 
 Chronos
 ~~~~~~~
+
+With :ref:`stim-pc:E-Prime`, a `Chronos`_ can be used to deliver triggers. The Chronos
+has 16 digitial intputs and 16 digital outputs, wired to the Chronos interface on the
+main desk. The 8 first output pins are wired to the 8 first bits of the MEG trigger
+interface.
+
+.. _Chronos: https://pstnet.com/products/chronos/
