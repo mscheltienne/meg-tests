@@ -4,6 +4,15 @@
 Create Signal Space Projectors
 ==============================
 
+.. note::
+
+    This example requires the ``meg_wiki`` package to download the sample dataset. This
+    package can be installed with ``pip``:
+
+    .. code-block:: bash
+
+        pip install git+https://github.com/fcbg-hnp-meeg/meg-wiki
+
 Background on projection
 ------------------------
 
