@@ -51,9 +51,9 @@ Triggers
 
 The stimulation PC can send triggers to the first 8 bits of the trigger interface on the
 main desk, ``STI102``, via a parallel port (DB-25) or via the `Chronos`_ if
-:ref:`stim-pc:E-Prime` is in-use. The triggers should last a couple of ``ms``, 10 ms is
-recommended. The parallel port should be initialized to ``0`` at the beginning of the
-paradigm and it should be reset to ``0`` after each trigger.
+:ref:`stim-pc:E-Prime` is in-use. The triggers should last a couple of millisecond, 10
+ms is recommended. The parallel port should be initialized to ``0`` at the beginning of
+the paradigm and it should be reset to ``0`` after each trigger.
 
 .. tab-set::
 
