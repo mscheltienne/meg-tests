@@ -161,7 +161,8 @@ raw.info["bads"] = ["MEG1343"]  # bad channel with flux jumps
 # ~~~~~~~~~~~
 #
 # The power spectral density can be used to visualize the noise level. See
-# :footcite:t:`msr-noise_2013` and this `MNE-Python example`_ for additional information.
+# :footcite:t:`msr-noise_2013` and this `MNE-Python example`_ for additional
+# information.
 
 raw.compute_psd(verbose=False).plot(
     average=True,
