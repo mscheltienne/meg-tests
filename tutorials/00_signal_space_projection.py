@@ -138,9 +138,46 @@ plt.suptitle("Gradiometers - Narrowband PCA")
 plt.show()
 
 #%%
+# Empty room recording
+# --------------------
+#
+# Projectors are determined from an empty-room recording. They are specific to a gantry
+# position (up-right 68°, up-right 60°, supine 0°) and to an
+# :ref:`meg-settings:Internal Active Shielding (IAS)` state (``ON`` or ``OFF``). The
+# empty-room recording loaded below was measured with the gantry in the 68° position and
+# with IAS disabled.
+
+from mne.io import read_raw_fif
+
+
+raw = read_raw_fif(
+    sample.data_path() / "empty-room" / "empty-room-raw.fif", verbose=False
+)
+raw.del_proj("all")  # remove the default projectors
+raw.info["bads"] = ["MEG1343"]  # bad channel with flux jumps
+
+#%%
+# Noise level
+# ~~~~~~~~~~~
+#
+# The power spectral density can be used to visualize the noise level. See
+# :footcite:t:`msr-noise_2013` and this `MNE-Python example`_ for additional information.
+
+raw.compute_psd(verbose=False).plot(
+    average=True,
+    spatial_colors=False,
+    dB=False,
+    xscale="log",
+    picks="data",
+    exclude="bads",
+)
+plt.show()
+
+#%%
 # References
 # ----------
 #
 # .. footbibliography::
 #
+# .. _MNE-Python example: https://mne.tools/stable/auto_examples/visualization/sensor_noise_level.html
 # .. _ssp github: https://github.com/fcbg-hnp-meeg/meg-wiki/tree/main/datasets/ssp
