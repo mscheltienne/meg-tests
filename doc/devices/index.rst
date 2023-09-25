@@ -12,3 +12,4 @@ Stimulation devices
     response-pads/index.rst
     optimic.rst
     electrical-stimulator.rst
+    electrophysiology.rst
