@@ -4,7 +4,8 @@ Logging
 .. currentmodule:: meg_wiki
 
 .. autosummary::
-    :toctree: generated/
+    :toctree: ../generated/api
+    :nosignatures:
 
     add_file_handler
     set_log_level
