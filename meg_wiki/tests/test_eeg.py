@@ -4,7 +4,6 @@ from mne import create_info
 from meg_wiki.datasets import sample
 from meg_wiki.eeg import load_mapping
 
-
 directory = sample.data_path() / "eeg-layout"
 
 
