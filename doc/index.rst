@@ -20,12 +20,12 @@
    :hidden:
    :caption: Devices
 
-   stim-devices/audio/index.rst
-   stim-devices/visual.rst
-   stim-devices/eye-tracker.rst
-   stim-devices/response-pads/index.rst
-   stim-devices/optimic.rst
-   stim-devices/electrical-stimulator.rst
+   devices/audio/index.rst
+   devices/visual.rst
+   devices/eye-tracker.rst
+   devices/response-pads/index.rst
+   devices/optimic.rst
+   devices/electrical-stimulator.rst
 
 .. toctree::
    :hidden:
