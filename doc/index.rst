@@ -26,6 +26,7 @@
    devices/response-pads/index.rst
    devices/optimic.rst
    devices/electrical-stimulator.rst
+   devices/electrophysiology.rst
 
 .. toctree::
    :hidden:
