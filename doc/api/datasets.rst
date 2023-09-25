@@ -4,6 +4,7 @@ Datasets
 .. currentmodule:: meg_wiki.datasets
 
 .. autosummary::
-    :toctree: generated/
+    :toctree: ../generated/api
+    :nosignatures:
 
     sample.data_path
