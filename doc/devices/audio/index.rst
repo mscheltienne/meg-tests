@@ -41,13 +41,13 @@ Select Etymotic or SoundPixx
 ----------------------------
 
 The button ``Speakers: A to B`` selects the system in use. If the button is ``OFF``, the
-speakers ``A`` corresponding to the :ref:`stim-devices/audio/etymotic:Etymotic` system
+speakers ``A`` corresponding to the :ref:`devices/audio/etymotic:Etymotic` system
 is selected. If the button is ``ON``, the speakers ``B`` corresponding to the
-:ref:`stim-devices/audio/soundpixx:SoundPixx` system is selected.
+:ref:`devices/audio/soundpixx:SoundPixx` system is selected.
 
 .. warning::
 
-    If the :ref:`stim-devices/audio/soundpixx:SoundPixx` is in-use, don't forget to
+    If the :ref:`devices/audio/soundpixx:SoundPixx` is in-use, don't forget to
     turn on the SoundPixx controller.
 
 Microphone inputs 1/2
