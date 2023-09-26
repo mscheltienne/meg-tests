@@ -100,6 +100,7 @@ include = ['meg_wiki*']
 exclude = ['meg_wiki*tests']
 
 [tool.setuptools.package-data]
+"meg_wiki" = ["assets/eeg-layout/*.txt"]
 "meg_wiki.datasets" = ["sample-registry.txt"]
 
 [tool.black]

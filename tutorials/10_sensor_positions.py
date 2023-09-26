@@ -1,5 +1,5 @@
 """
-.. _tut-sensor-location:
+.. _tut-sensor-positions:
 
 Sensor positions
 ================
