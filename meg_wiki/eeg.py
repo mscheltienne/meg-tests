@@ -44,7 +44,7 @@ def load_mapping(fname: Union[str, Path]) -> Dict[str, str]:
 
 
 def load_mapping_32chs() -> Dict[str, str]:
-    """Load a mapping TXT file into an MNE-compatible dictionary for the 32 chs cap.
+    """Load the mapping dictionary for the 32 chs cap.
 
     .. code-block:: python
 
@@ -61,7 +61,7 @@ def load_mapping_32chs() -> Dict[str, str]:
 
 
 def load_mapping_64chs() -> Dict[str, str]:
-    """Load a mapping TXT file into an MNE-compatible dictionary for the 64 chs cap.
+    """Load the mapping dictionary for the 64 chs cap.
 
     .. code-block:: python
 
@@ -78,7 +78,7 @@ def load_mapping_64chs() -> Dict[str, str]:
 
 
 def load_mapping_128chs() -> Dict[str, str]:
-    """Load a mapping TXT file into an MNE-compatible dictionary for the 128 chs cap.
+    """Load the mapping dictionary for the 128 chs cap.
 
     .. code-block:: python
 
