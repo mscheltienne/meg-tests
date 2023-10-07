@@ -1,112 +1,98 @@
 [build-system]
-requires = ['setuptools >= 61.0.0']
 build-backend = 'setuptools.build_meta'
+requires = ['setuptools >= 61.0.0']
 
 [project]
-name = 'meg_wiki'
-version = '0.1.0'
-description = 'Info, test and demo for the MEGIN Triux Neo System at the Human Neuroscience Platform in Geneva. '
-readme = 'README.md'
-license = {file = 'LICENSE'}
-requires-python = '>=3.9'
 authors = [
-    {name = 'Mathieu Scheltienne', email = 'mathieu.scheltienne@fcbg.ch'},
-]
-maintainers = [
-    {name = 'Mathieu Scheltienne', email = 'mathieu.scheltienne@fcbg.ch'},
-]
-keywords = [
-    'python',
-    'meg',
-    'neuroscience',
-    'timings',
-    'tests',
+  {email = 'mathieu.scheltienne@fcbg.ch', name = 'Mathieu Scheltienne'},
 ]
 classifiers = [
-    'Operating System :: Microsoft :: Windows',
-    'Operating System :: Unix',
-    'Operating System :: MacOS',
-    'Programming Language :: Python :: 3 :: Only',
-    'Programming Language :: Python :: 3.9',
-    'Programming Language :: Python :: 3.10',
-    'Programming Language :: Python :: 3.11',
-    'Natural Language :: English',
-    'License :: OSI Approved :: MIT License',
+  'License :: OSI Approved :: MIT License',
+  'Natural Language :: English',
+  'Operating System :: MacOS',
+  'Operating System :: Microsoft :: Windows',
+  'Operating System :: Unix',
+  'Programming Language :: Python :: 3 :: Only',
+  'Programming Language :: Python :: 3.10',
+  'Programming Language :: Python :: 3.11',
+  'Programming Language :: Python :: 3.9',
 ]
 dependencies = [
-    'bsl',
-    'numpy>=1.21',
-    'packaging',
-    'pooch',
-    'psutil',
-    'psychopy',
-    'stimuli',
+  'bsl',
+  'numpy>=1.21',
+  'packaging',
+  'pooch',
+  'psutil',
+  'psychopy',
+  'stimuli',
 ]
+description = 'Info, test and demo for the MEGIN Triux Neo System at the Human Neuroscience Platform in Geneva. '
+keywords = [
+  'meg',
+  'neuroscience',
+  'python',
+  'tests',
+  'timings',
+]
+license = {file = 'LICENSE'}
+maintainers = [
+  {email = 'mathieu.scheltienne@fcbg.ch', name = 'Mathieu Scheltienne'},
+]
+name = 'meg_wiki'
+readme = 'README.md'
+requires-python = '>=3.9'
+version = '0.1.0'
 
 [project.optional-dependencies]
+all = [
+  'meg_wiki[build]',
+  'meg_wiki[doc]',
+  'meg_wiki[style]',
+  'meg_wiki[test]',
+]
 build = [
-    'build',
-    'twine',
+  'build',
+  'twine',
 ]
 doc = [
-    'furo',
-    'matplotlib',
-    'memory-profiler',
-    'numpydoc',
-    'sphinx!=7.2.*',
-    'sphinxcontrib-bibtex',
-    'sphinx-copybutton',
-    'sphinx-design',
-    'sphinx-gallery',
-    'sphinx-issues',
-]
-style = [
-    'bibclean',
-    'black',
-    'codespell',
-    'isort',
-    'pydocstyle[toml]',
-    'ruff',
-]
-test = [
-    'pytest',
-    'pytest-cov',
-    'pytest-timeout',
-]
-all = [
-    'meg_wiki[build]',
-    'meg_wiki[doc]',
-    'meg_wiki[style]',
-    'meg_wiki[test]',
+  'furo',
+  'matplotlib',
+  'memory-profiler',
+  'numpydoc',
+  'sphinx!=7.2.*',
+  'sphinx-copybutton',
+  'sphinx-design',
+  'sphinx-gallery',
+  'sphinx-issues',
+  'sphinxcontrib-bibtex',
 ]
 full = [
-    'meg_wiki[all]',
+  'meg_wiki[all]',
 ]
-
-[project.urls]
-homepage = 'https://github.com/fcbg-hnp-meeg/meg_wiki'
-documentation = 'https://github.com/fcbg-hnp-meeg/meg_wiki'
-source = 'https://github.com/fcbg-hnp-meeg/meg_wiki'
-tracker = 'https://github.com/fcbg-hnp-meeg/meg_wiki/issues'
+style = [
+  'bibclean',
+  'black',
+  'codespell',
+  'isort',
+  'pydocstyle[toml]',
+  'ruff',
+]
+test = [
+  'pytest',
+  'pytest-cov',
+  'pytest-timeout',
+]
 
 [project.scripts]
 meg_wiki-sys_info = 'meg_wiki.commands.sys_info:run'
 
-[tool.setuptools]
-include-package-data = false
-
-[tool.setuptools.packages.find]
-include = ['meg_wiki*']
-exclude = ['meg_wiki*tests']
-
-[tool.setuptools.package-data]
-"meg_wiki" = ["assets/eeg-layout/*.txt"]
-"meg_wiki.datasets" = ["sample-registry.txt"]
+[project.urls]
+documentation = 'https://github.com/fcbg-hnp-meeg/meg_wiki'
+homepage = 'https://github.com/fcbg-hnp-meeg/meg_wiki'
+source = 'https://github.com/fcbg-hnp-meeg/meg_wiki'
+tracker = 'https://github.com/fcbg-hnp-meeg/meg_wiki/issues'
 
 [tool.black]
-line-length = 88
-target-version = ['py39']
-include = '\.pyi?$'
 extend-exclude = '''
 (
       __pycache__
@@ -118,55 +104,74 @@ extend-exclude = '''
     | tutorials/
 )
 '''
-
-[tool.isort]
-profile = 'black'
-multi_line_output = 3
-line_length = 88
-py_version = 39
-extend_skip_glob = [
-    'setup.py',
-    'doc/*',
-    'examples/*',
-    'tutorials/*',
-]
-
-[tool.pydocstyle]
-convention = 'numpy'
-ignore-decorators = '(copy_doc|property|.*setter|.*getter|pyqtSlot|Slot)'
-match = '^(?!setup|__init__|test_).*\.py'
-match-dir = '^meg_wiki.*'
-add_ignore = 'D100,D104,D107'
-
-[tool.ruff]
+include = '\.pyi?$'
 line-length = 88
-extend-exclude = [
-    "doc",
-    "setup.py",
+target-version = ['py39']
+
+[tool.coverage.report]
+exclude_lines = [
+  'if __name__ == .__main__.:',
+  'pragma: no cover',
 ]
-
-[tool.ruff.per-file-ignores]
-"__init__.py" = ["F401"]
-
-[tool.pytest.ini_options]
-minversion = '6.0'
-addopts = '--durations 20 --junit-xml=junit-results.xml --verbose'
-filterwarnings = []
+precision = 2
 
 [tool.coverage.run]
 branch = true
 cover_pylib = false
 omit = [
-    '**/__init__.py',
-    '**/meg_wiki/_version.py',
-    '**/meg_wiki/commands/*',
-    '**/meg_wiki/utils/_fixes.py',
-    '**/tests/**',
+  '**/__init__.py',
+  '**/meg_wiki/_version.py',
+  '**/meg_wiki/commands/*',
+  '**/meg_wiki/utils/_fixes.py',
+  '**/tests/**',
 ]
 
-[tool.coverage.report]
-exclude_lines = [
-    'pragma: no cover',
-    'if __name__ == .__main__.:',
+[tool.isort]
+extend_skip_glob = [
+  'doc/*',
+  'examples/*',
+  'setup.py',
+  'tutorials/*',
 ]
-precision = 2
+line_length = 88
+multi_line_output = 3
+profile = 'black'
+py_version = 39
+
+[tool.pydocstyle]
+add_ignore = 'D100,D104,D107'
+convention = 'numpy'
+ignore-decorators = '(copy_doc|property|.*setter|.*getter|pyqtSlot|Slot)'
+match = '^(?!setup|__init__|test_).*\.py'
+match-dir = '^meg_wiki.*'
+
+[tool.pytest.ini_options]
+addopts = '--durations 20 --junit-xml=junit-results.xml --verbose'
+filterwarnings = []
+minversion = '6.0'
+
+[tool.ruff]
+extend-exclude = [
+  "doc",
+  "setup.py",
+]
+line-length = 88
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.package-data]
+"meg_wiki" = ["assets/eeg-layout/*.txt"]
+"meg_wiki.datasets" = ["sample-registry.txt"]
+
+[tool.setuptools.packages.find]
+exclude = ['meg_wiki*tests']
+include = ['meg_wiki*']
+
+[tool.tomlsort]
+all = true
+ignore_case = true
+trailing_comma_inline_array = true
