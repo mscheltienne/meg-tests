@@ -1,7 +1,8 @@
 from __future__ import annotations  # c.f. PEP 563, PEP 649
 
-from importlib.resources import files
 from typing import TYPE_CHECKING
+
+from .datasets import sample
 
 if TYPE_CHECKING:
     from pathlib import Path
@@ -56,7 +57,7 @@ def load_mapping_32chs() -> Dict[str, str]:
     mapping : dict
         A dictionary mapping the old channel name to the new channel name.
     """
-    fname = files("meg_wiki") / "assets" / "eeg-layout" / "mapping-eeg-32-chs.txt"
+    fname = sample.data_path() / "eeg-layout" / "mapping-eeg-32-chs.txt"
     return load_mapping(fname)
 
 
@@ -73,7 +74,7 @@ def load_mapping_64chs() -> Dict[str, str]:
     mapping : dict
         A dictionary mapping the old channel name to the new channel name.
     """
-    fname = files("meg_wiki") / "assets" / "eeg-layout" / "mapping-eeg-64-chs.txt"
+    fname = sample.data_path() / "eeg-layout" / "mapping-eeg-64-chs.txt"
     return load_mapping(fname)
 
 
@@ -90,5 +91,5 @@ def load_mapping_128chs() -> Dict[str, str]:
     mapping : dict
         A dictionary mapping the old channel name to the new channel name.
     """
-    fname = files("meg_wiki") / "assets" / "eeg-layout" / "mapping-eeg-128-chs.txt"
+    fname = sample.data_path() / "eeg-layout" / "mapping-eeg-128-chs.txt"
     return load_mapping(fname)

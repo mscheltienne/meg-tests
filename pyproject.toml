@@ -165,7 +165,6 @@ line-length = 88
 include-package-data = false
 
 [tool.setuptools.package-data]
-"meg_wiki" = ["assets/eeg-layout/*.txt"]
 "meg_wiki.datasets" = ["sample-registry.txt"]
 
 [tool.setuptools.packages.find]

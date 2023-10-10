@@ -1,5 +1,5 @@
 EEG
-===
+---
 
 .. currentmodule:: meg_wiki.eeg
 
