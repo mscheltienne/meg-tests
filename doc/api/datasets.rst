@@ -1,5 +1,5 @@
 Datasets
-========
+--------
 
 .. currentmodule:: meg_wiki.datasets
 

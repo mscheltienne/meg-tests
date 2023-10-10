@@ -1,3 +1,5 @@
+.. include:: ./links.inc
+
 Data analysis PC (DANA)
 =======================
 
@@ -39,6 +41,16 @@ mathematically constructs the external and internal subspaces from
 subspace (i.e., does an oblique projection).
 
 Introduction taken from `MNE-Python's background on SSS and Maxwell filtering`_.
+
+.. note::
+
+    Instead of MEGIN's old MaxWell software available on the DANA, the enhanced version
+    available in `MNE-Python <mne stable_>`_ is recommanded. See
+    :func:`mne.preprocessing.maxwell_filter`. The fine calibration file and the
+    cross-talk correction are available in the `sample dataset`_ (
+    see :func:`meg_wiki.datasets.sample.data_path`).
+
+.. _sample dataset: https://github.com/fcbg-hnp-meeg/meg-wiki/tree/main/datasets
 
 Python
 ------

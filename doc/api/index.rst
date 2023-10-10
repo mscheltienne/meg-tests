@@ -9,4 +9,5 @@ This is the reference for classes (``CamelCase`` names) and functions
 
     datasets.rst
     eeg.rst
+    calibration.rst
     logging.rst

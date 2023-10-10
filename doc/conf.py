@@ -142,6 +142,8 @@ numpydoc_xref_aliases = {
     "Raw": "mne.io.Raw",
     # Python
     "bool": ":class:`python:bool`",
+    "file-like": ":term:`file-like <python:file object>`",
+    "path-like": ":term:`path-like`",
     "Path": "pathlib.Path",
     "TextIO": "io.TextIOBase",
 }
