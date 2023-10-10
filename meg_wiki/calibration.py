@@ -2,9 +2,11 @@ from __future__ import annotations  # c.f. PEP 563, PEP 649
 
 from typing import TYPE_CHECKING
 
+import numpy as np
+
 if TYPE_CHECKING:
     from pathlib import Path
-    from typing import Any, Dict, Union
+    from typing import Dict, List, Union
 
     from numpy.typing import NDArray
 
@@ -39,11 +41,7 @@ def load_fine_calibration(
     with open(fname, "r") as fid:
         lines = fid.readlines()
     lines = [
-        [
-            elt.strip()
-            for elt in line.split("\n")[0].split(" ")
-            if len(elt.strip()) != 0
-        ]
+        [elt.strip() for elt in line.split("\n")[0].split(" ") if len(elt.strip()) != 0]
         for line in lines
     ]
     assert all(len(elt[0]) in (3, 4) for elt in lines)  # sanity-check
