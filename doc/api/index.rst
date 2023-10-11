@@ -2,7 +2,12 @@ API References
 ==============
 
 This is the reference for classes (``CamelCase`` names) and functions
-(``underscore_case`` names) of ``meg_info`` grouped thematically.
+(``underscore_case`` names) of ``meg_info`` grouped thematically. This package can be
+installed with ``pip`` from source:
+
+.. code-block:: bash
+
+    pip install git+https://github.com/fcbg-hnp-meeg/meg-wiki
 
 .. toctree::
     :maxdepth: 2
