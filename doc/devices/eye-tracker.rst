@@ -25,7 +25,7 @@ Triggers
 
 Triggers delivered to the MEG (see the section
 :ref:`meg-triggers:Triggers from the stimulation PC`) are automatically duplicated and
-delivered to the eyetracker on the ``DIN`` channel.
+delivered to the eye tracker on the ``DIN`` channel.
 
 Alternatively, triggers can be delivered as a "message" via the ethernet link between
 the :ref:`stim-pc:Stimulation PC` and the EyeLink PC.
