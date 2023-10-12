@@ -43,7 +43,7 @@ the :ref:`stim-pc:Stimulation PC` and the EyeLink PC.
 Analogical outputs
 ------------------
 
-The EyeTracker is capable of sending some analogical output directly into the ``misc``
+The eye tracker is capable of sending some analogical output directly into the ``misc``
 channels of the MEG, thus recording core information as part of the FIF file. In total,
 6 channels are available.
 
