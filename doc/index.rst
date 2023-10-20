@@ -10,6 +10,7 @@
    :caption: General
 
    meg-session.rst
+   contraindications.rst
    meg-settings.rst
    meg-triggers.rst
    stim-pc.rst
