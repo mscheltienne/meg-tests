@@ -1,7 +1,7 @@
 MEG contraindications
 =====================
 
-The signal measured by an MEG system is extremely low (:math:`10e^{-15} T`), the device
+The signal measured by an MEG system is extremely low (:math:`10e^{-15}\ T`), the device
 is very restrictive with potential artifacts-inducing elements. None of the
 contraindications listed below can be harmful for the participant or for the device: an
 MEG is a fully passive device. The contraindications will only impact the signal
