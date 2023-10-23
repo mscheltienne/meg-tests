@@ -6,10 +6,10 @@ Screening
 
 An MEG session starts by screening the participant to ensure his compatibility with
 MEG acquisition (see :ref:`meg-contraindications:MEG contraindications`. An MEG measures
-fields in the range of :math:`fT`, i.e. :math:`e^{-15}` Tesla. Thus, it's very sensitive
-to any magnetic metal or alloy in movement within the Magnetically Shielded Room (MSR).
-For instance, the ticking of the second's needle of a mechanical watch is picked up 2
-meters from the sensors.
+fields in the range of :math:`fT`, i.e. :math:`e^{-15}\ Tesla`. Thus, it's very
+sensitive to any magnetic metal or alloy in movement within the Magnetically Shielded
+Room (MSR). For instance, the ticking of the second's needle of a mechanical watch is
+picked up 2 meters from the sensors.
 
 During screening, the participant is positioned in the MEG and the signal is monitored
 for a short period of time. Screening is an iterative process where we try to identify
