@@ -18,25 +18,25 @@ quality.
   implanted device
 - cardiac valves, both mechanical or animal
 - hearing aid, hearing implant
-- joint prosthesis (hip, knee, shoulder, ..) [1]_
+- joint prosthesis (hip, knee, shoulder, ..)[1]_
 - neurosurgical clip for brain aneurysm
-- orthodontic equipment, dental prosthesis, dental retainer [2]_
+- orthodontic equipment, dental prosthesis, dental retainer[2]_
 - sutures with metal wires or staples
 - non-removable piercings, ear rings, ..
-- tattoos [1]_
-- permanent makeup and eye makeup [3]_
+- tattoos[1]_
+- permanent makeup and eye makeup[3]_
 - recent hair color or any kind of hair extensions
 - dreadlocks (MEG's helmet is quite narrow)
 - foreign object in the eye
 - shrapnel or metal object in the body
 - filter in the vena cava to prevent pulmonary embolism
-- metal workers or construction workers working with metal [5]_
+- metal workers or construction workers working with metal[5]_
 
 On top of those contraindications, it's better if the participant:
 
-- comes with clean hair/beard [4]_
-- was not in an MRI or subject to an MRI-field in the last 2 weeks [5]_
-- did not have any recent surgeries [5]_
+- comes with clean hair/beard[4]_
+- was not in an MRI or subject to an MRI-field in the last 2 weeks[5]_
+- did not have any recent surgeries[5]_
 
 .. [1] May depend on material and localization. It's safer to avoid including
    participants with this contraindication, but depending on participant and lab
