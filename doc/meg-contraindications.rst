@@ -41,8 +41,8 @@ On top of those contraindications, it's better if the participant:
 .. [1] May depend on material and localization. It's safer to avoid including
    participants with this contraindication, but depending on participant and lab
    availability, he/she can come for a brief screening test in the lab (requires about
-   10 minutes) before booking the actual MEG slot. Tatoos below the elbow do not usually
-   created artifacts.
+   10 minutes) before booking the actual MEG slot. Tattoos below the elbow do not
+   usually created artifacts.
 
 .. [2] Any kind of dental work should be aoivded. However, some dental work/dental
    retainers are compatible. Depending on participant and lab availability, he/she can
