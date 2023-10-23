@@ -1,8 +1,7 @@
 Contraindications for MEG
 =========================
 
-Since the signal mesured by a MEG system is extremely low (10e-15 T), the machine is very restrictive with potential artefacts-creating elements. **Being compatible to a fMRI examination doesnt mean being compatible for MEG.**
-
+Since the signal measured by a MEG system is extremely low (10e-15 T), the machine is very restrictive with potential artefacts-creating elements. **Being compatible for an fMRI examination doesn't mean being compatible for MEG.** 
                                                            
 - Pace-maker (cardiac stimulator)
 - Insulin pump, bladder neurostimulator, or any implanted device
