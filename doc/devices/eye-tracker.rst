@@ -14,11 +14,15 @@ Setup
 
     .. tab-item:: Upright position
 
-        TODO
+        .. image:: ../_static/eye-tracker/upright.png
+            :width: 600
+            :align: center
 
     .. tab-item:: Supine position
 
-        TODO
+        .. image:: ../_static/eye-tracker/supine.png
+            :width: 600
+            :align: center
 
 Triggers
 --------
