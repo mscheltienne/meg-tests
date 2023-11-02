@@ -55,6 +55,7 @@ doc = [
   'furo',
   'matplotlib',
   'memory-profiler',
+  'mne',
   'numpydoc',
   'sphinx!=7.2.*',
   'sphinx-copybutton',
