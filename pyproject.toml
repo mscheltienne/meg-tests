@@ -120,6 +120,7 @@ branch = true
 cover_pylib = false
 omit = [
   '**/__init__.py',
+  '**/conftest.py',
   '**/meg_wiki/_version.py',
   '**/meg_wiki/commands/*',
   '**/meg_wiki/utils/_fixes.py',
