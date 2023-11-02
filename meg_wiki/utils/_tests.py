@@ -21,12 +21,17 @@ def sha256sum(fname):
     return h.hexdigest()
 
 
-def requires_module(function: Callable, name: str):
+def requires_module(name: str):  # pragma: no cover
     """Skip a test if package is not available (decorator)."""
     try:
         import_module(name)
         skip = False
     except ImportError:
         skip = True
-    reason = f"Test {function.__name__} skipped, requires {name}."
-    return pytest.mark.skipif(skip, reason=reason)(function)
+
+    def decorator(function: Callable):
+        return pytest.mark.skipif(
+            skip, reason=f"Test {function.__name__} skipped, requires {name}."
+        )(function)
+
+    return decorator
