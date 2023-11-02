@@ -2,13 +2,9 @@ from __future__ import annotations  # c.f. PEP 563, PEP 649
 
 from typing import TYPE_CHECKING
 
-import psychtoolbox as ptb
-from bsl.triggers import MockTrigger, ParallelPortTrigger
-from psychopy.clock import wait
-from psychopy.sound.backend_ptb import SoundPTB as Sound
-
 from ..utils._checks import check_type, ensure_int
 from ..utils._docs import fill_doc
+from ..utils._imports import import_optional_dependency
 from ..utils.logs import logger
 
 if TYPE_CHECKING:
@@ -37,6 +33,13 @@ def psychopy_uncompensated(
     The sound duration is set to 200 ms. The hanning window to smooth the onset and
     offset is disabled.
     """
+    import_optional_dependency("byte_triggers")
+    import_optional_dependency("psychopy")
+
+    from byte_triggers import MockTrigger, ParallelPortTrigger
+    from psychopy.clock import wait
+    from psychopy.sound.backend_ptb import SoundPTB as Sound
+
     _, _, n_repetition = _check_args(frequency, volume, n_repetition)
     # error checking on the parallel-port argument is handled by BSL directly
     trigger = MockTrigger() if address == "mock" else ParallelPortTrigger(address)
@@ -75,6 +78,15 @@ def psychopy_compensated(
     The sound duration is set to 200 ms. The hanning window to smooth the onset and
     offset is disabled.
     """
+    import_optional_dependency("byte_triggers")
+    import_optional_dependency("psychopy")
+    import_optional_dependency("psychtoolbox")
+
+    import psychtoolbox as ptb
+    from byte_triggers import MockTrigger, ParallelPortTrigger
+    from psychopy.clock import wait
+    from psychopy.sound.backend_ptb import SoundPTB as Sound
+
     _, _, n_repetition = _check_args(frequency, volume, n_repetition)
     trigger = MockTrigger() if address == "mock" else ParallelPortTrigger(address)
     sound = Sound(value=frequency, volume=volume, secs=0.2, hamming=False)

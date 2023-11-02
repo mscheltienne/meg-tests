@@ -1,9 +1,6 @@
-from bsl.triggers import MockTrigger, ParallelPortTrigger
-from psychopy.clock import wait
-from stimuli.audio import Tone
-
 from ..utils._checks import ensure_int
 from ..utils._docs import fill_doc
+from ..utils._imports import import_optional_dependency
 from ..utils.logs import logger
 
 
@@ -29,6 +26,14 @@ def sounddevice_uncompensated(
     -----
     The sound duration is set to 200 ms.
     """
+    import_optional_dependency("byte_triggers")
+    import_optional_dependency("psychopy")
+    import_optional_dependency("stimuli")
+
+    from byte_triggers import MockTrigger, ParallelPortTrigger
+    from psychopy.clock import wait
+    from stimuli.audio import Tone
+
     n = ensure_int(n_repetition, "n_repetition")
     # error checking on the arguments is handled by BSL and stimuli directly
     trigger = MockTrigger() if address == "mock" else ParallelPortTrigger(address)
