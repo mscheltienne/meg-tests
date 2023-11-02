@@ -3,10 +3,13 @@ from logging import INFO
 
 from meg_wiki import logger, set_log_level
 from meg_wiki.audio.psychopy import psychopy_compensated, psychopy_uncompensated
+from meg_wiki.utils._tests import requires_module
 
 logger.propagate = True
 
 
+@requires_module("byte_triggers")
+@requires_module("psychopy")
 def test_psychopy_uncompensated(caplog):
     """Test execution of psychopy_uncompensated."""
     set_log_level(INFO)
@@ -20,6 +23,9 @@ def test_psychopy_uncompensated(caplog):
     assert 2 <= (end - start)
 
 
+@requires_module("byte_triggers")
+@requires_module("psychopy")
+@requires_module("psychtoolbox")
 def test_psychopy_compensated(caplog):
     """Test execution of psychopy_compensated."""
     set_log_level(INFO)

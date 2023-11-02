@@ -18,13 +18,10 @@ classifiers = [
   'Programming Language :: Python :: 3.9',
 ]
 dependencies = [
-  'bsl',
   'numpy>=1.21',
   'packaging',
   'pooch',
   'psutil',
-  'psychopy',
-  'stimuli',
 ]
 description = 'Info, test and demo for the MEGIN Triux Neo System at the Human Neuroscience Platform in Geneva. '
 keywords = [
@@ -77,6 +74,7 @@ style = [
   'pydocstyle[toml]',
   'ruff',
   'toml-sort',
+  'yamllint',
 ]
 test = [
   'pytest',

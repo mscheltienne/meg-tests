@@ -3,10 +3,14 @@ from logging import INFO
 
 from meg_wiki import logger, set_log_level
 from meg_wiki.audio.stimuli import sounddevice_uncompensated
+from meg_wiki.utils._tests import requires_module
 
 logger.propagate = True
 
 
+@requires_module("byte_triggers")
+@requires_module("psychopy")
+@requires_module("stimuli")
 def test_sounddevice_uncompensated(caplog):
     """Test execution of sounddevice_uncompensated."""
     set_log_level(INFO)
