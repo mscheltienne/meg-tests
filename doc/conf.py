@@ -5,6 +5,8 @@
 
 
 import inspect
+import subprocess
+import sys
 from datetime import date
 from importlib import import_module
 from typing import Dict, Optional
@@ -226,6 +228,15 @@ def linkcode_resolve(domain: str, info: Dict[str, str]) -> Optional[str]:
 
 
 # -- sphinx-gallery --------------------------------------------------------------------
+if sys.platform.startswith("win"):
+    try:
+        subprocess.check_call(["optipng", "--version"])
+        compress_images = ("images", "thumbnails")
+    except Exception:
+        compress_images = ("images", "thumbnails")
+else:
+    compress_images = ("images", "thumbnails")
+
 sphinx_gallery_conf = {
     "backreferences_dir": "generated/backreferences",
     "doc_module": (f"{package}",),
@@ -245,7 +256,7 @@ sphinx_gallery_conf = {
 linkcheck_anchors = False  # saves a bit of time
 linkcheck_timeout = 15  # some can be quite slow
 linkcheck_retries = 3
-linkcheck_ignore = [  # will be ompiled to regex
+linkcheck_ignore = [  # will be compiled to regex
     # 403 Client Error: Forbidden
     "https://ark.intel.com/content/www/us/en/",
     "https://www.intel.com/content/www/us/en/",
