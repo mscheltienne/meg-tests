@@ -24,6 +24,35 @@ Setup
             :width: 600
             :align: center
 
+Standalone vs integrated mode
+-----------------------------
+
+The eye-tracker can be controlled from the :ref:`stim-pc:Stimulation PC`. This is the
+recommended approach, as it allows to customize the eye-tracker settings, calibration
+and visual for every experiment. However, it is also possible to use the eye-tracker in
+standalone mode, either without the :ref:`stim-pc:Stimulation PC` or through a simple
+calibration and recording application on the :ref:`stim-pc:Stimulation PC`.
+
+.. tab-set::
+
+    .. tab-item:: Integrated mode
+
+        Every paradigm should be designed to communicate with the eye-tracker directly.
+        Bindings and examples for different software and programming languages are
+        available on the `SR Research`_ website.
+
+        Mainly, this method increases control on the visual window displayed for
+        calibration and recording and allows a tight integration of the calibration in
+        the paradigm.
+        With this method, a monitoring window can be opened during the experiment
+        displaying a live view of the gaze position super-imposed on the paradigm.
+
+    .. tab-item:: Standalone mode
+
+        In standalone mode, the eye-tracker can be controlled from the EyeLink PC or
+        through a simple calibration and recording application on the
+        :ref:`stim-pc:Stimulation PC`, such as `eyelink-track`_.
+
 Triggers
 --------
 
@@ -103,3 +132,4 @@ channels of the MEG, thus recording core information as part of the FIF file. In
 
 .. _EyeLink 1000 Plus: https://www.sr-research.com/eyelink-1000-plus/
 .. _SR Research: https://www.sr-research.com/
+.. _eyelink-track: https://github.com/fcbg-hnp-meeg/eyelink-track
