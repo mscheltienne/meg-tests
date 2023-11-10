@@ -6,14 +6,14 @@ import numpy as np
 
 if TYPE_CHECKING:
     from pathlib import Path
-    from typing import Dict, List, Union
+    from typing import Union
 
     from numpy.typing import NDArray
 
 
 def load_fine_calibration(
     fname: Union[str, Path]
-) -> Dict[str, Union[List[str], NDArray[float], List[NDArray[float]]]]:
+) -> dict[str, Union[list[str], NDArray[np.float64], list[NDArray[np.float64]]]]:
     """Load a fine calibration.
 
     The fine calibration typically includes improved sensor locations,

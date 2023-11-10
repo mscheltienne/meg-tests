@@ -1,14 +1,9 @@
 from __future__ import annotations  # c.f. PEP 563, PEP 649
 
-from typing import TYPE_CHECKING
-
 from ..utils._checks import check_type, ensure_int
 from ..utils._docs import fill_doc
 from ..utils._imports import import_optional_dependency
 from ..utils.logs import logger
-
-if TYPE_CHECKING:
-    from typing import Tuple
 
 
 @fill_doc
@@ -106,7 +101,7 @@ def psychopy_compensated(
 
 def _check_args(
     frequency: float, volume: float = 0.2, n_repetition: int = 100
-) -> Tuple[float, float, int]:
+) -> tuple[float, float, int]:
     """Check arguments used in PsychoPy's functions."""
     check_type(frequency, ("numeric",), "frequency")
     if frequency <= 0:
