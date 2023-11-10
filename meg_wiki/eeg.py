@@ -6,10 +6,10 @@ from .datasets import sample
 
 if TYPE_CHECKING:
     from pathlib import Path
-    from typing import Dict, Union
+    from typing import Union
 
 
-def load_mapping(fname: Union[str, Path]) -> Dict[str, str]:
+def load_mapping(fname: Union[str, Path]) -> dict[str, str]:
     """Load a mapping TXT file into an MNE-compatible dictionary.
 
     The loaded mapping can be used to rename the channels from a recording with
@@ -44,7 +44,7 @@ def load_mapping(fname: Union[str, Path]) -> Dict[str, str]:
     return mapping
 
 
-def load_mapping_32chs() -> Dict[str, str]:
+def load_mapping_32chs() -> dict[str, str]:
     """Load the mapping dictionary for the 32 chs cap.
 
     .. code-block:: python
@@ -61,7 +61,7 @@ def load_mapping_32chs() -> Dict[str, str]:
     return load_mapping(fname)
 
 
-def load_mapping_64chs() -> Dict[str, str]:
+def load_mapping_64chs() -> dict[str, str]:
     """Load the mapping dictionary for the 64 chs cap.
 
     .. code-block:: python
@@ -78,7 +78,7 @@ def load_mapping_64chs() -> Dict[str, str]:
     return load_mapping(fname)
 
 
-def load_mapping_128chs() -> Dict[str, str]:
+def load_mapping_128chs() -> dict[str, str]:
     """Load the mapping dictionary for the 128 chs cap.
 
     .. code-block:: python
