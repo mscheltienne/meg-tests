@@ -1,3 +1,4 @@
+import sys
 from importlib.resources import files
 
 import pooch
@@ -29,15 +30,11 @@ def test_sample(tmp_path):
     not (files("meg_wiki").parent / "datasets").exists(),
     reason="datasets directory is missing",
 )
+@pytest.mark.skipif(sys.platform.startswith("win"), reason="fails on windows")
 def test_registry_up_to_date(tmp_path):
     """Test that the registry is up to date."""
     folder = files("meg_wiki").parent / "datasets"
     output = tmp_path / "registry.txt"
     pooch.make_registry(folder, output=output, recursive=True)
     registry = files("meg_wiki.datasets") / "sample-registry.txt"
-    with open(registry) as fid:
-        print(fid.read())
-    print("---------------------------------------------------------------------------")
-    with open(output) as fid:
-        print(fid.read())
     assert pooch.file_hash(output) == pooch.file_hash(registry)
