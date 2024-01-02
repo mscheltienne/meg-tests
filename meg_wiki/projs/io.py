@@ -5,7 +5,6 @@ from warnings import warn
 
 from mne import Projection
 from mne._fiff.constants import FIFF
-from mne._fiff.tag import _rename_list
 from mne._fiff.write import (
     end_block,
     start_and_end_file,
@@ -28,8 +27,6 @@ if TYPE_CHECKING:
 def _write_proj(
     fid: IO,
     projs: Union[list[Projection], tuple[Projection]],
-    *,
-    ch_names_mapping: Optional[dict[str, str]] = None,
 ) -> None:
     """Write a projection operator to a file.
 
@@ -40,23 +37,20 @@ def _write_proj(
     projs : dict
         The projection operator.
     """
-    ch_names_mapping = dict() if ch_names_mapping is None else ch_names_mapping
     check_type(projs, (list, tuple), "projs")
     if len(projs) == 0:
         raise ValueError("The list of projectors is empty.")
     for k, proj in enumerate(projs):
         check_type(proj, (Projection,), f"projs[{k}]")
-    check_type(ch_names_mapping, (dict,), "ch_names_mapping")
-    for key, value in ch_names_mapping.items():
-        check_type(key, (str,), "ch_names_mapping[key]")
-        check_type(value, (str,), "ch_names_mapping[value]")
     start_block(fid, FIFF.FIFFB_PROJ)
     for proj in projs:
         start_block(fid, FIFF.FIFFB_PROJ_ITEM)
         write_int(fid, FIFF.FIFF_NCHAN, len(proj["data"]["col_names"]))
-        names = _rename_list(proj["data"]["col_names"], ch_names_mapping)
         write_name_list_sanitized(
-            fid, FIFF.FIFF_PROJ_ITEM_CH_NAME_LIST, names, "col_names"
+            fid,
+            FIFF.FIFF_PROJ_ITEM_CH_NAME_LIST,
+            proj["data"]["col_names"],
+            "col_names",
         )
         write_string(fid, FIFF.FIFF_NAME, proj["desc"])
         write_int(fid, FIFF.FIFF_PROJ_ITEM_KIND, proj["kind"])

@@ -47,3 +47,15 @@ def test_write_proj(tmp_path):
         assert set(tags) == _TAGS
         assert len(tags) == len(_TAGS)
     fid.close()
+
+
+def test_write_proj_invalid(tmp_path):
+    """Test writing invalid projectors."""
+    with pytest.raises(ValueError, match="list of projectors is empty"):
+        write_proj(tmp_path / "test_proj.fif", [])
+    with pytest.raises(TypeError, match="must be an instance of"):
+        write_proj(tmp_path / "test_proj.fif", "foo", overwrite=True)
+    fname = sample.data_path() / "ssp" / "200123" / "ssp_68_200123_proj.fif"
+    projs = read_proj(fname)
+    with pytest.raises(FileExistsError, match="already exists"):
+        write_proj(tmp_path / "test_proj.fif", projs)
