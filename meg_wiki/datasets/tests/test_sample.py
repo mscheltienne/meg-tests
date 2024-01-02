@@ -1,5 +1,5 @@
-import sys
 from importlib.resources import files
+from os import getenv
 
 import pooch
 import pytest
@@ -30,7 +30,7 @@ def test_sample(tmp_path):
     not (files("meg_wiki").parent / "datasets").exists(),
     reason="datasets directory is missing",
 )
-@pytest.mark.skipif(sys.platform.startswith("win"), reason="fails on windows")
+@pytest.mark.skipif(getenv("GITHUB_ACTIONS", "") == "true", reason="requires git-lfs")
 def test_registry_up_to_date(tmp_path):
     """Test that the registry is up to date."""
     folder = files("meg_wiki").parent / "datasets"
