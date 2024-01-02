@@ -45,6 +45,7 @@ version = '0.1.0'
 all = [
   'meg_wiki[build]',
   'meg_wiki[doc]',
+  'meg_wiki[stubs]',
   'meg_wiki[style]',
   'meg_wiki[test]',
 ]
