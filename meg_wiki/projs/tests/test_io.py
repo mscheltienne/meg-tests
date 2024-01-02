@@ -20,7 +20,7 @@ _TAGS = {
 
 def test_write_proj(tmp_path):
     """Test writing SSP projectors."""
-    fname = sample.data_path() / "ssp" / "ssp_68_proj.fif"
+    fname = sample.data_path() / "ssp" / "200123" / "ssp_68_200123_proj.fif"
     projs = read_proj(fname)
     with pytest.warns(RuntimeWarning, match="should end with"):
         write_proj(tmp_path / "test.fif", projs)
