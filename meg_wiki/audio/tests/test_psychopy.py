@@ -1,6 +1,8 @@
 import time
 from logging import INFO
 
+import pytest
+
 from meg_wiki import logger, set_log_level
 from meg_wiki.audio.psychopy import psychopy_compensated, psychopy_uncompensated
 from meg_wiki.utils._tests import requires_module
@@ -8,6 +10,7 @@ from meg_wiki.utils._tests import requires_module
 logger.propagate = True
 
 
+@pytest.mark.skip(reason="conflict between psychtoolbox and sounddevice backends.")
 @requires_module("byte_triggers")
 @requires_module("psychopy")
 def test_psychopy_uncompensated(caplog):
@@ -23,6 +26,7 @@ def test_psychopy_uncompensated(caplog):
     assert 2 <= (end - start)
 
 
+@pytest.mark.skip(reason="conflict between psychtoolbox and sounddevice backends.")
 @requires_module("byte_triggers")
 @requires_module("psychopy")
 @requires_module("psychtoolbox")
