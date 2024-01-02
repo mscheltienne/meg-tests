@@ -87,7 +87,7 @@ from mne import read_proj
 from meg_wiki.datasets import sample
 
 
-projs = read_proj(sample.data_path() / "ssp" / "ssp_68_230120-proj.fif")
+projs = read_proj(sample.data_path() / "ssp" / "200123" / "ssp_68_200123_proj.fif")
 
 #%%
 # To visualize the projector as topographic maps, we need information about the sensors
