@@ -10,46 +10,38 @@ import sys
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from typing import Callable
+    from typing import Any, Callable
 
-# ------------------------- Documentation dictionary -------------------------
+# ------------------------- Documentation dictionary -----------------------------------
 docdict: dict[str, str] = dict()
 
-# ---------------------------------- verbose ---------------------------------
-docdict[
-    "verbose"
-] = """
+# ---------------------------------- verbose -------------------------------------------
+docdict["verbose"] = """
 verbose : int | str | bool | None
     Sets the verbosity level. The verbosity increases gradually between ``"CRITICAL"``,
     ``"ERROR"``, ``"WARNING"``, ``"INFO"`` and ``"DEBUG"``. If None is provided, the
     verbosity is set to ``"WARNING"``. If a bool is provided, the verbosity is set to
     ``"WARNING"`` for False and to ``"INFO"`` for True."""
 
-# ----------------------------------- pport ----------------------------------
-docdict[
-    "address"
-] = """
+# ----------------------------------- pport --------------------------------------------
+docdict["address"] = """
 address : str | ``'mock'``
     Address of the computer parallel port."""
 
-# ----------------------------------- audio ----------------------------------
-docdict[
-    "frequency"
-] = """
+# ----------------------------------- audio --------------------------------------------
+docdict["frequency"] = """
 frequency : float
     Frequency of the auditory stimuli. The frequency should be chosen based
     on the sampling rate selected on the DACQ."""
-docdict[
-    "n_repetition"
-] = """
+docdict["n_repetition"] = """
 n_repetitionn : int
     Number of sound repetition."""
 
-# ------------------------- Documentation functions --------------------------
+# ------------------------- Documentation functions ------------------------------------
 docdict_indented: dict[int, dict[str, str]] = dict()
 
 
-def fill_doc(f: Callable) -> Callable:
+def fill_doc(f: Callable[..., Any]) -> Callable[..., Any]:
     """Fill a docstring with docdict entries.
 
     Parameters
@@ -95,16 +87,16 @@ def fill_doc(f: Callable) -> Callable:
 def _indentcount_lines(lines: list[str]) -> int:
     """Minimum indent for all lines in line list.
 
-    >>> lines = [' one', '  two', '   three']
+    >>> lines = [" one", "  two", "   three"]
     >>> indentcount_lines(lines)
     1
     >>> lines = []
     >>> indentcount_lines(lines)
     0
-    >>> lines = [' one']
+    >>> lines = [" one"]
     >>> indentcount_lines(lines)
     1
-    >>> indentcount_lines(['    '])
+    >>> indentcount_lines(["    "])
     0
     """
     indent = sys.maxsize
@@ -117,7 +109,7 @@ def _indentcount_lines(lines: list[str]) -> int:
     return indent
 
 
-def copy_doc(source: Callable) -> Callable:
+def copy_doc(source: Callable[..., Any]) -> Callable[..., Any]:
     """Copy the docstring from another function (decorator).
 
     The docstring of the source function is prepepended to the docstring of the function
@@ -145,13 +137,13 @@ def copy_doc(source: Callable) -> Callable:
     >>> class B(A):
     ...     @copy_doc(A.m1)
     ...     def m1():
-    ...         ''' this gets appended'''
+    ...         '''this gets appended'''
     ...         pass
     >>> print(B.m1.__doc__)
     Docstring for m1 this gets appended
     """
 
-    def wrapper(func):
+    def wrapper(func: Callable[..., Any]) -> Callable[..., Any]:
         if source.__doc__ is None or len(source.__doc__) == 0:
             raise RuntimeError(
                 f"The docstring from {source.__name__} could not be copied because it "
