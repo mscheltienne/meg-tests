@@ -35,4 +35,9 @@ def test_registry_up_to_date(tmp_path):
     output = tmp_path / "registry.txt"
     pooch.make_registry(folder, output=output, recursive=True)
     registry = files("meg_wiki.datasets") / "sample-registry.txt"
+    with open(registry) as fid:
+        print(fid.read())
+    print("---------------------------------------------------------------------------")
+    with open(output) as fid:
+        print(fid.read())
     assert pooch.file_hash(output) == pooch.file_hash(registry)
