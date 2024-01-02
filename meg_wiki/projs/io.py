@@ -22,11 +22,11 @@ from ..utils._docs import fill_doc
 
 if TYPE_CHECKING:
     from pathlib import Path
-    from typing import Optional, Union
+    from typing import IO, Optional, Union
 
 
 def _write_proj(
-    fid,
+    fid: IO,
     projs: Union[list[Projection], tuple[Projection]],
     *,
     ch_names_mapping: Optional[dict[str, str]] = None,
@@ -45,11 +45,11 @@ def _write_proj(
     if len(projs) == 0:
         raise ValueError("The list of projectors is empty.")
     for k, proj in enumerate(projs):
-        check_type(proj, Projection, f"projs[{k}]")
-    check_type(ch_names_mapping, dict, "ch_names_mapping")
+        check_type(proj, (Projection,), f"projs[{k}]")
+    check_type(ch_names_mapping, (dict,), "ch_names_mapping")
     for key, value in ch_names_mapping.items():
-        check_type(key, str, "ch_names_mapping[key]")
-        check_type(value, str, "ch_names_mapping[value]")
+        check_type(key, (str,), "ch_names_mapping[key]")
+        check_type(value, (str,), "ch_names_mapping[value]")
     start_block(fid, FIFF.FIFFB_PROJ)
     for proj in projs:
         start_block(fid, FIFF.FIFFB_PROJ_ITEM)
@@ -78,6 +78,8 @@ def write_proj(
 ) -> None:
     """Write projections to a FIF file.
 
+    The projectors only contain the required tags for the DACQ. MNE tags are removed.
+
     Parameters
     ----------
     fname : path-like
@@ -93,8 +95,9 @@ def write_proj(
     --------
     :func:`mne.read_proj`
     """
-    fname = ensure_path(fname, overwrite=overwrite)
-    ensure_path(fname, must_exist=False)
+    fname = ensure_path(fname, must_exist=False)
+    if fname.exists() and not overwrite:
+        raise FileExistsError(f"The file {fname} already exists.")
     if not fname.name.endswith(
         ("-proj.fif", "-proj.fif.gz", "_proj.fif", "_proj.fif.gz")
     ):
