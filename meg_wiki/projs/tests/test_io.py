@@ -26,7 +26,8 @@ def test_write_proj(tmp_path):
         write_proj(tmp_path / "test.fif", projs)
     write_proj(tmp_path / "test_proj.fif", projs)
     # reload and compare
-    projs1 = read_proj(tmp_path / "test.fif")
+    with pytest.warns(RuntimeWarning, match="does not conform to MNE naming"):
+        projs1 = read_proj(tmp_path / "test.fif")
     projs2 = read_proj(tmp_path / "test_proj.fif")
     assert projs1 == projs2
     # manually compare the main fields
@@ -39,9 +40,10 @@ def test_write_proj(tmp_path):
         assert p1["data"]["col_names"] == p2["data"]["col_names"]
         assert_allclose(p1["data"]["data"], p2["data"]["data"])
     # check presence and absence of FIFF tags
-    _, tree, _ = fiff_open(tmp_path / "test_proj.fif")
+    fid, tree, _ = fiff_open(tmp_path / "test_proj.fif")
     projs = tree["children"][0]["children"]
     for proj in projs:
         tags = [tag.kind for tag in proj["directory"]]
         assert set(tags) == _TAGS
         assert len(tags) == len(_TAGS)
+    fid.close()
