@@ -12,7 +12,7 @@ if TYPE_CHECKING:
 
 
 def load_fine_calibration(
-    fname: Union[str, Path]
+    fname: Union[str, Path],
 ) -> dict[str, Union[list[str], NDArray[np.float64], list[NDArray[np.float64]]]]:
     """Load a fine calibration.
 
