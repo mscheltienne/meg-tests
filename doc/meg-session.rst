@@ -14,7 +14,8 @@ picked up 2 meters from the sensors.
 During screening, the participant is positioned in the MEG and the signal is monitored
 for a short period of time. Screening is an iterative process where we try to identify
 and remove all sources of interference. Common sources of interference are: braces,
-dental retainers, piercings, make-up, bra.
+dental retainers, piercings, make-up, bra, .. see
+:ref:`meg-contraindications:MEG contraindications` for an exhaustive list.
 
 .. note::
 
@@ -33,6 +34,44 @@ Empty-Room recording
 Before the experiment begins, an empty-room recording is measured. The empty-room
 recording can be used to :ref:`re-compute the Signal Space Projectors (SSP)
 <tut-artifact-ssp>`.
+
+The default Signal Space Projectors have been tuned for our site and the empty-room
+noise present. This noise and its correction are stable in time, thus it should not
+be needed to re-compute the SSPs. However, the empty-room recording can be used to
+compare the SSP correction with the empty-room noise correction from the TODO: insert
+date and PSD of SSP.
+
+.. code-block:: python
+
+    from matplotlib import pyplot as plt
+    from mne.io import read_raw_fif
+
+    fname = r"empty_room.fif"
+    raw = read_raw_fif(fname, preload=True).apply_proj()
+    fig = raw.compute_psd().plot(show=False)
+    fig.axes[0].set(xlim=(0, 50), ylim=(5, 40))
+    fig.axes[1].set(xlim=(0, 50), ylim=(5, 40))
+    plt.show()
+
+.. tab-set::
+
+    .. tab-item:: Position 68°
+
+        TODO
+
+    .. tab-item:: Position 60°
+
+        TODO
+
+    .. tab-item:: Position 0°
+
+        TODO
+
+Digitization
+------------
+
+HPI measurement
+---------------
 
 Experiment
 ----------
