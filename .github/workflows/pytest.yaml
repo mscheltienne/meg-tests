@@ -37,6 +37,11 @@ jobs:
           python -m pip install --progress-bar off .[test]
       - name: Display system information
         run: meg_wiki-sys_info --developer
+      - name: Cache dataset
+        uses: actions/cache@v3
+        with:
+          key: meg-wiki
+          path: ~/meg-wiki_data
       - name: Run pytest
         run: pytest meg_wiki --cov=meg_wiki --cov-report=xml --cov-config=pyproject.toml
       - name: Upload to codecov
@@ -76,6 +81,11 @@ jobs:
           python -m pip install --progress-bar off --upgrade --pre --only-binary :all: -i https://pypi.anaconda.org/scientific-python-nightly-wheels/simple --timeout=180 numpy scipy
       - name: Display system information
         run: meg_wiki-sys_info --developer
+      - name: Cache dataset
+        uses: actions/cache@v3
+        with:
+          key: meg-wiki
+          path: ~/meg-wiki_data
       - name: Run pytest
         run: pytest meg_wiki --cov=meg_wiki --cov-report=xml --cov-config=pyproject.toml
       - name: Upload to codecov
