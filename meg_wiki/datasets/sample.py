@@ -6,30 +6,42 @@ from typing import TYPE_CHECKING
 
 import pooch
 
+from ..utils._checks import ensure_path
 from ._fetch import fetch_dataset
 
 if TYPE_CHECKING:
     from typing import Optional, Union
 
+_REGISTRY: Path = files("meg_wiki.datasets") / "sample-registry.txt"
 
-def _make_registry(output: Optional[Union[str, Path]] = None) -> None:
+
+def _make_registry(
+    folder: Union[str, Path], output: Optional[Union[str, Path]] = None
+) -> None:
     """Create the registry file for the sample dataset.
 
     Parameters
     ----------
-    output : str | Path
+    folder : path-like
+        Path to the sample dataset.
+    output : path-like
         Path to the output registry file.
     """
-    folder = files("meg_wiki").parent / "datasets"
-    if not folder.exists():
-        raise RuntimeError(
-            "The sample dataset registry can only be created from a clone of the "
-            "repository."
-        )
-    output = (
-        files("meg_wiki.datasets") / "sample-registry.txt" if output is None else output
+    folder = ensure_path(folder, must_exist=True)
+    output = _REGISTRY if output is None else ensure_path(output, must_exist=False)
+    files = sorted(
+        [
+            file
+            for file in folder.glob("**/*")
+            if file.is_file()
+            and file.relative_to(folder).parts[0] != ".git"
+            and not file.name.startswith(".git")
+        ]
     )
-    pooch.make_registry(folder, output=output, recursive=True)
+    hashes = [pooch.file_hash(file) for file in files]
+    with open(output, "w") as outfile:
+        for fname, fhash in zip(files, hashes):
+            outfile.write(f"{fname.relative_to(folder).as_posix()} {fhash}\n")
 
 
 def data_path() -> Path:
@@ -41,6 +53,6 @@ def data_path() -> Path:
         Path to the sample dataset, by default in ``"~/meg-wiki_data"``.
     """
     path = Path.home() / "meg-wiki_data"
-    base_url = "https://github.com/fcbg-hnp-meeg/meg-wiki/raw/main/datasets/"
+    base_url = "https://github.com/fcbg-hnp-meeg/meg-wiki-datasets/raw/main/"
     registry = files("meg_wiki.datasets") / "sample-registry.txt"
     return fetch_dataset(path, base_url, registry)
