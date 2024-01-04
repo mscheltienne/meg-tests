@@ -17,16 +17,16 @@ from mne._fiff.write import (
 )
 
 from ..utils._checks import check_type, ensure_path
-from ..utils._docs import fill_doc
+from .utils import _orthonormalize_proj
 
 if TYPE_CHECKING:
     from pathlib import Path
-    from typing import IO, Optional, Union
+    from typing import IO, Union
 
 
 def _write_proj(
     fid: IO,
-    projs: Union[list[Projection], tuple[Projection]],
+    projs: list[Projection],
 ) -> None:
     """Write a projection operator to a file.
 
@@ -34,14 +34,9 @@ def _write_proj(
     ----------
     fid : file
         The file descriptor of the open file.
-    projs : dict
-        The projection operator.
+    projs : list of Projection
+        The projection operators.
     """
-    check_type(projs, (list, tuple), "projs")
-    if len(projs) == 0:
-        raise ValueError("The list of projectors is empty.")
-    for k, proj in enumerate(projs):
-        check_type(proj, (Projection,), f"projs[{k}]")
     start_block(fid, FIFF.FIFFB_PROJ)
     for proj in projs:
         start_block(fid, FIFF.FIFFB_PROJ_ITEM)
@@ -62,13 +57,12 @@ def _write_proj(
     end_block(fid, FIFF.FIFFB_PROJ)
 
 
-@fill_doc
 def write_proj(
     fname: Union[str, Path],
     projs: Union[list[Projection], tuple[Projection]],
     *,
     overwrite: bool = False,
-    verbose: Optional[Union[bool, str, int]] = None,
+    orthonormalize: bool = False,
 ) -> None:
     """Write projections to a FIF file.
 
@@ -83,13 +77,22 @@ def write_proj(
         The list of projection vectors.
     overwrite : bool
         If True, overwrite the destination file (if it exists).
-    %(verbose)s
+    orthonormalize : bool
+        If True, the projectors are transformed to form an orthonormal basis using
+        :func:`scipy.linalg.orth`.
 
     See Also
     --------
     :func:`mne.read_proj`
     """
     fname = ensure_path(fname, must_exist=False)
+    check_type(projs, (list, tuple), "projs")
+    if len(projs) == 0:
+        raise ValueError("The list of projectors is empty.")
+    for k, proj in enumerate(projs):
+        check_type(proj, (Projection,), f"projs[{k}]")
+    check_type(overwrite, (bool,), "overwrite")
+    check_type(orthonormalize, (bool,), "orthonormalize")
     if fname.exists() and not overwrite:
         raise FileExistsError(f"The file {fname} already exists.")
     if not fname.name.endswith(
@@ -100,5 +103,8 @@ def write_proj(
             RuntimeWarning,
             stacklevel=2,
         )
+    projs = list(projs)
+    if orthonormalize:
+        projs = _orthonormalize_proj(projs)
     with start_and_end_file(fname) as fid:
         _write_proj(fid, projs)
