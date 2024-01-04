@@ -16,8 +16,8 @@ from mne._fiff.write import (
     write_string,
 )
 
-from ..utils._checks import check_type, ensure_path
-from .utils import _orthonormalize_proj
+from ..utils._checks import check_type, check_value, ensure_int, ensure_path
+from .utils import _orthonormalize_proj, _rename_proj
 
 if TYPE_CHECKING:
     from pathlib import Path
@@ -60,6 +60,7 @@ def _write_proj(
 def write_proj(
     fname: Union[str, Path],
     projs: Union[list[Projection], tuple[Projection]],
+    position: int,
     *,
     overwrite: bool = False,
     orthonormalize: bool = False,
@@ -75,6 +76,8 @@ def write_proj(
         ``-proj.fif`` or ``-proj.fif.gz``.
     projs : list
         The list of projection vectors.
+    position : int
+        Gantry position in degree: ``0``, ``60`` or ``68``.
     overwrite : bool
         If True, overwrite the destination file (if it exists).
     orthonormalize : bool
@@ -91,6 +94,8 @@ def write_proj(
         raise ValueError("The list of projectors is empty.")
     for k, proj in enumerate(projs):
         check_type(proj, (Projection,), f"projs[{k}]")
+    position = ensure_int(position, "position")
+    check_value(position, (0, 60, 68), "position")
     check_type(overwrite, (bool,), "overwrite")
     check_type(orthonormalize, (bool,), "orthonormalize")
     if fname.exists() and not overwrite:
@@ -106,5 +111,6 @@ def write_proj(
     projs = list(projs)
     if orthonormalize:
         projs = _orthonormalize_proj(projs)
+    projs = _rename_proj(projs, position, combined=orthonormalize)
     with start_and_end_file(fname) as fid:
         _write_proj(fid, projs)

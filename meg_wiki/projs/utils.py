@@ -38,3 +38,33 @@ def _orthonormalize_proj(
             f"ssp_{hits[0]}_combined_{k}" if len(hits) == 1 else f"ssp_combined_{k}"
         )
     return projs
+
+
+def _rename_proj(
+    projs: list[Projection], position: int, combined: bool
+) -> list[Projection]:
+    """Rename the projection operators.
+
+    Parameters
+    ----------
+    projs : list of Projection
+        The projection operators.
+    position : int
+        The gantry position.
+    combined : bool
+        Whether the projection operators are combined through an orthonormalization.
+    """
+    pattern = re.compile(r"\d{1,2}deg")  # detect gantry position
+    for k, proj in enumerate(projs):
+        if combined:
+            proj["desc"] = f"ssp_combined_{k}_{position}deg"
+            continue
+        hits = re.findall(pattern, proj["desc"])
+        if len(hits) != 1:
+            proj["desc"] = proj["desc"] + f"_{position}deg"
+            continue
+        idx = proj["desc"].find(hits[0])
+        proj["desc"] = (
+            proj["desc"][:idx] + f"{position}deg" + proj["desc"][idx + len(hits[0]) :]
+        )
+    return projs
