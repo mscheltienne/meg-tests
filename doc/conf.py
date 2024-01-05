@@ -164,7 +164,8 @@ error_ignores = {
     "EX01",  # section 'Examples' not found
     "ES01",  # no extended summary found
     "SA01",  # section 'See Also' not found
-    "RT02",  # The first line of the Returns section should contain only the type, unless multiple values are being returned  # noqa: E501
+    "SA04",  # missing description for See Also reference
+    "RT02",  # the first line of the Returns section should contain only the type, unless multiple values are being returned  # noqa: E501
 }
 numpydoc_validate = True
 numpydoc_validation_checks = {"all"} | set(error_ignores)
