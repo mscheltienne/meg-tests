@@ -1,5 +1,6 @@
 from __future__ import annotations  # c.f. PEP 563, PEP 649
 
+from copy import deepcopy
 from typing import TYPE_CHECKING
 from warnings import warn
 
@@ -108,7 +109,7 @@ def write_proj(
             RuntimeWarning,
             stacklevel=2,
         )
-    projs = list(projs)
+    projs = list(deepcopy(projs))
     if orthonormalize:
         projs = _orthonormalize_proj(projs)
     projs = _rename_proj(projs, position, combined=orthonormalize)
