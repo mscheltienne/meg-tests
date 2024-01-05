@@ -18,7 +18,7 @@ from mne._fiff.write import (
 )
 
 from ..utils._checks import check_type, check_value, ensure_int, ensure_path
-from .utils import _orthonormalize_proj, _rename_proj
+from ._utils import orthonormalize_proj, rename_proj
 
 if TYPE_CHECKING:
     from pathlib import Path
@@ -111,7 +111,7 @@ def write_proj(
         )
     projs = list(deepcopy(projs))
     if orthonormalize:
-        projs = _orthonormalize_proj(projs)
-    projs = _rename_proj(projs, position, combined=orthonormalize)
+        projs = orthonormalize_proj(projs)
+    projs = rename_proj(projs, position, combined=orthonormalize)
     with start_and_end_file(fname) as fid:
         _write_proj(fid, projs)

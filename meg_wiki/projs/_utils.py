@@ -10,7 +10,7 @@ if TYPE_CHECKING:
     from mne import Projection
 
 
-def _orthonormalize_proj(
+def orthonormalize_proj(
     projs: list[Projection],
 ) -> list[Projection]:
     """Transform the set of projector vectors into an orthonormal basis using SVD.
@@ -40,7 +40,7 @@ def _orthonormalize_proj(
     return projs
 
 
-def _rename_proj(
+def rename_proj(
     projs: list[Projection], position: int, combined: bool
 ) -> list[Projection]:
     """Rename the projection operators.
