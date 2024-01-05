@@ -36,6 +36,7 @@ def _make_registry(
             if file.is_file()
             and file.relative_to(folder).parts[0] != ".git"
             and not file.name.startswith(".git")
+            and not file.name == "version.txt"
         ]
     )
     hashes = [pooch.file_hash(file) for file in files]

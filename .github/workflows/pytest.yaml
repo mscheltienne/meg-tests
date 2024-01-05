@@ -37,11 +37,20 @@ jobs:
           python -m pip install --progress-bar off .[test]
       - name: Display system information
         run: meg_wiki-sys_info --developer
+      - name: Get testing dataset version
+        run: |
+          curl https://raw.githubusercontent.com/fcbg-hnp-meeg/meg-wiki-datasets/main/version.txt -o meg_wiki_datasets_version.txt
       - name: Cache dataset
+        id: cache
         uses: actions/cache@v3
         with:
-          key: meg-wiki
+          key: meg-wiki-${{ hashFiles('meg_wiki_datasets_version.txt') }}
           path: ~/meg-wiki_data
+      - name: Download testing dataset
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: python -c "import meg_wiki; meg_wiki.datasets.sample.data_path()"
+      - name: Remove dataset version file
+        run: rm meg_wiki_datasets_version.txt
       - name: Run pytest
         run: pytest meg_wiki --cov=meg_wiki --cov-report=xml --cov-config=pyproject.toml
       - name: Upload to codecov
@@ -81,11 +90,20 @@ jobs:
           python -m pip install --progress-bar off --upgrade --pre --only-binary :all: -i https://pypi.anaconda.org/scientific-python-nightly-wheels/simple --timeout=180 numpy scipy
       - name: Display system information
         run: meg_wiki-sys_info --developer
+      - name: Get testing dataset version
+        run: |
+          curl https://raw.githubusercontent.com/fcbg-hnp-meeg/meg-wiki-datasets/main/version.txt -o meg_wiki_datasets_version.txt
       - name: Cache dataset
+        id: cache
         uses: actions/cache@v3
         with:
-          key: meg-wiki
+          key: meg-wiki-${{ hashFiles('meg_wiki_datasets_version.txt') }}
           path: ~/meg-wiki_data
+      - name: Download testing dataset
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: python -c "import meg_wiki; meg_wiki.datasets.sample.data_path()"
+      - name: Remove dataset version file
+        run: rm meg_wiki_datasets_version.txt
       - name: Run pytest
         run: pytest meg_wiki --cov=meg_wiki --cov-report=xml --cov-config=pyproject.toml
       - name: Upload to codecov
