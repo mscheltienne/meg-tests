@@ -12,7 +12,8 @@ installed with ``pip`` from source:
 .. toctree::
     :maxdepth: 2
 
+    calibration.rst
     datasets.rst
     eeg.rst
-    calibration.rst
     logging.rst
+    projs.rst
