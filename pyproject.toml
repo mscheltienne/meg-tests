@@ -106,7 +106,7 @@ skip = 'build,.git,.mypy_cache,.pytest_cache'
 [tool.coverage.report]
 exclude_lines = [
   'if __name__ == .__main__.:',
-  'If TYPE_CHECKING:',
+  'if TYPE_CHECKING:',
   'pragma: no cover',
 ]
 precision = 2
