@@ -31,6 +31,20 @@ jobs:
         run: python -m pip install --progress-bar off .[doc]
       - name: Display system information
         run: meg_wiki-sys_info --developer
+      - name: Get testing dataset version
+        run: |
+          curl https://raw.githubusercontent.com/fcbg-hnp-meeg/meg-wiki-datasets/main/version.txt -o meg_wiki_datasets_version.txt
+      - name: Cache dataset
+        id: cache
+        uses: actions/cache@v3
+        with:
+          key: meg-wiki-${{ runner.os }}-${{ hashFiles('meg_wiki_datasets_version.txt') }}
+          path: ~/meg-wiki_data
+      - name: Download testing dataset
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: python -c "import meg_wiki; meg_wiki.datasets.sample.data_path()"
+      - name: Remove dataset version file
+        run: rm meg_wiki_datasets_version.txt
       - name: Build doc
         run: make -C doc html
       - name: Prune sphinx environment
