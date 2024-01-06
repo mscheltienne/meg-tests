@@ -1,34 +1,33 @@
 from pathlib import Path as Path
-from typing import IO, Optional, Union
+from typing import IO, Union
 
 from mne import Projection
 
 from ..utils._checks import check_type as check_type
+from ..utils._checks import check_value as check_value
+from ..utils._checks import ensure_int as ensure_int
 from ..utils._checks import ensure_path as ensure_path
-from ..utils._docs import fill_doc as fill_doc
+from ._utils import orthonormalize_proj as orthonormalize_proj
+from ._utils import rename_proj as rename_proj
 
-def _write_proj(
-    fid: IO,
-    projs: Union[list[Projection], tuple[Projection]],
-    *,
-    ch_names_mapping: Optional[dict[str, str]] = None,
-) -> None:
+def _write_proj(fid: IO, projs: list[Projection]) -> None:
     """Write a projection operator to a file.
 
     Parameters
     ----------
     fid : file
         The file descriptor of the open file.
-    projs : dict
-        The projection operator.
+    projs : list of Projection
+        The projection operators.
     """
 
 def write_proj(
     fname: Union[str, Path],
     projs: Union[list[Projection], tuple[Projection]],
+    position: int,
     *,
     overwrite: bool = False,
-    verbose: Optional[Union[bool, str, int]] = None,
+    orthonormalize: bool = False,
 ) -> None:
     """Write projections to a FIF file.
 
@@ -41,13 +40,13 @@ def write_proj(
         ``-proj.fif`` or ``-proj.fif.gz``.
     projs : list
         The list of projection vectors.
+    position : int
+        Gantry position in degree: ``0``, ``60`` or ``68``.
     overwrite : bool
         If True, overwrite the destination file (if it exists).
-    verbose : int | str | bool | None
-        Sets the verbosity level. The verbosity increases gradually between ``"CRITICAL"``,
-        ``"ERROR"``, ``"WARNING"``, ``"INFO"`` and ``"DEBUG"``. If None is provided, the
-        verbosity is set to ``"WARNING"``. If a bool is provided, the verbosity is set to
-        ``"WARNING"`` for False and to ``"INFO"`` for True.
+    orthonormalize : bool
+        If True, the projectors are transformed to form an orthonormal basis using
+        :func:`scipy.linalg.orth`.
 
     See Also
     --------
