@@ -61,11 +61,11 @@ ax.quiver3D(
     arrow_length_ratio=0.1,
     color="C1",
     linewidth=1,
-    linestyle="dashed"
+    linestyle="dashed",
 )
 plt.show()
 
-#%%
+# %%
 # Default projectors
 # ------------------
 #
@@ -89,7 +89,7 @@ from meg_wiki.datasets import sample
 
 projs = read_proj(sample.data_path() / "ssp" / "200123" / "ssp_68_200123_proj.fif")
 
-#%%
+# %%
 # To visualize the projector as topographic maps, we need information about the sensors
 # location and orientation. Those information are stored in every raw recording.
 
@@ -101,7 +101,7 @@ info = read_info(
 )
 info
 
-#%%
+# %%
 
 from matplotlib import pyplot as plt
 
@@ -119,7 +119,7 @@ for k, proj in enumerate(projs[6:9]):
 plt.suptitle("Magnetometers - Narrowband PCA")
 plt.show()
 
-#%%
+# %%
 
 from matplotlib import pyplot as plt
 
@@ -137,7 +137,7 @@ for k, proj in enumerate(projs[12:14]):
 plt.suptitle("Gradiometers - Narrowband PCA")
 plt.show()
 
-#%%
+# %%
 # Empty room recording
 # --------------------
 #
@@ -156,7 +156,7 @@ raw = read_raw_fif(
 raw.del_proj("all")  # remove the default projectors
 raw.info["bads"] = ["MEG1343"]  # bad channel with flux jumps
 
-#%%
+# %%
 # Noise level
 # ~~~~~~~~~~~
 #
@@ -174,7 +174,7 @@ raw.compute_psd(verbose=False).plot(
 )
 plt.show()
 
-#%%
+# %%
 # References
 # ----------
 #
