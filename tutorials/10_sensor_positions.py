@@ -89,7 +89,7 @@ ax.axis("off")
 plt.show()
 
 # %%
-# ..note::
+# .. note::
 #
 #    The function :func:`mne.viz.plot_layout` or the method :meth:`mne.Layout.plot` can
 #    be used to plot the layout faster without customization.
