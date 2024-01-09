@@ -38,8 +38,9 @@ recording can be used to :ref:`re-compute the Signal Space Projectors (SSP)
 The default Signal Space Projectors have been tuned for our site and the empty-room
 noise present. This noise and its correction are stable in time, thus it should not
 be needed to re-compute the SSPs. However, the empty-room recording can be used to
-compare the SSP correction with the empty-room noise correction from the TODO: insert
-date and PSD of SSP.
+compare the SSP correction with the empty-room noise correction from the ``08/01/24``.
+On that day, the bad sensors removed are ``MEG 1213``, ``MEG 1321``, ``MEG 1343``,
+``MEG 1423``.
 
 .. code-block:: python
 
@@ -57,15 +58,39 @@ date and PSD of SSP.
 
     .. tab-item:: Position 68°
 
-        TODO
+        .. image:: ./_static/ssp/psd-68deg-dark.svg
+            :class: only-dark
+            :align: center
+            :width: 700
+
+        .. image:: ./_static/ssp/psd-68deg-light.svg
+            :class: only-light
+            :align: center
+            :width: 700
 
     .. tab-item:: Position 60°
 
-        TODO
+        .. image:: ./_static/ssp/psd-60deg-dark.svg
+            :class: only-dark
+            :align: center
+            :width: 700
+
+        .. image:: ./_static/ssp/psd-60deg-light.svg
+            :class: only-light
+            :align: center
+            :width: 700
 
     .. tab-item:: Position 0°
 
-        TODO
+        .. image:: ./_static/ssp/psd-0deg-dark.svg
+            :class: only-dark
+            :align: center
+            :width: 700
+
+        .. image:: ./_static/ssp/psd-0deg-light.svg
+            :class: only-light
+            :align: center
+            :width: 700
 
 Digitization
 ------------
