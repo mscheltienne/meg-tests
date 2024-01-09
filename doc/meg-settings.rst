@@ -102,15 +102,10 @@ Signal-Space Projection (SSP)\ :footcite:p:`ssp_1997` is a way of estimating a
 projection matrix to remove noise from a recording by comparing measurements with and
 without the signal of interest. Every recording is shipped with a set of SSP tailored
 for our site, available `here <ssp github_>`_. Specifically, these projectors were
-obtained by taking:
-
-- For magnetometers: 6 components from the wideband PCA and 3 components from the
-  narrowband PCA, with a bandpass filter between 15 and 18 Hz.
-- For gradiometers: 3 components from the wideband PCA and 2 components from the
-  narrowband PCA, with a bandpass filter between 15 and 18 Hz.
-
-The narrowband PCA improves the correction of the 16.7 Hz artifact, typical from a
-15 kV AC railway electrification system.
+obtained by combining projectors for the obtained from the wideband PCA and from the
+narrowband PCA (bandpass filter between 15 and 18 Hz). The narrowband PCA improves the
+correction of the 16.7 Hz artifact, typical from a 15 kV AC railway electrification
+system.
 
 See also the tutorial on how to :ref:`re-compute the Signal Space Projectors (SSP)
 <tut-artifact-ssp>` from an empty-room recording.
@@ -120,4 +115,4 @@ References
 
 .. footbibliography::
 
-.. _ssp github: https://github.com/fcbg-hnp-meeg/meg-wiki/tree/main/datasets/ssp
+.. _ssp github: https://github.com/fcbg-hnp-meeg/meg-wiki-datasets/tree/main/ssp

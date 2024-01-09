@@ -70,15 +70,10 @@ plt.show()
 # ------------------
 #
 # The default set of projectors is available `here <ssp github_>`_, on our GitHub. Those
-# projectors were obtained by taking:
-#
-# - For magnetometers:  6 components from the wideband PCA and 3 components from the
-#   narrowband PCA, with a bandpass filter between 15 and 18 Hz.
-# - For gradiometers: 3 components from the wideband PCA and 2 components from the
-#   narrowband PCA, with a bandpass filter between 15 and 18 Hz.
-#
-# The narrowband PCA improves the correction of the 16.7 Hz artifact, typical from a
-# 15 kV AC railway electrification system.
+# projectors were obtained by combining projectors for the obtained from the wideband
+# PCA and from the narrowband PCA (bandpass filter between 15 and 18 Hz). The narrowband
+# PCA improves the correction of the 16.7 Hz artifact, typical from a 15 kV AC railway
+# electrification system.
 #
 # Let's have a look at the projectors in 68° position when IAS is disabled.
 
