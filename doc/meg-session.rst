@@ -47,7 +47,7 @@ On that day, the bad sensors removed are ``MEG 1213``, ``MEG 1321``, ``MEG 1343`
     from matplotlib import pyplot as plt
     from mne.io import read_raw_fif
 
-    fname = r"empty_room.fif"
+    fname = r"empty_room_raw.fif"
     raw = read_raw_fif(fname, preload=True).apply_proj()
     fig = raw.compute_psd().plot(show=False)
     fig.axes[0].set(xlim=(0, 50), ylim=(5, 40))
