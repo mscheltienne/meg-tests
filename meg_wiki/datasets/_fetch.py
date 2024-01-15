@@ -8,8 +8,9 @@ from ..utils._checks import ensure_path
 from ..utils.logs import logger
 
 if TYPE_CHECKING:
+    from collections.abc import Generator
     from pathlib import Path
-    from typing import Generator, Union
+    from typing import Union
 
 
 def fetch_dataset(path: Path, base_url: str, registry: Union[str, Path]) -> Path:

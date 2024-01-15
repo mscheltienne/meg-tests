@@ -32,7 +32,7 @@ def load_mapping(fname: Union[str, Path]) -> dict[str, str]:
     mapping : dict
         A dictionary mapping the old channel name to the new channel name.
     """
-    with open(fname, "r") as file:
+    with open(fname) as file:
         lines = file.readlines()
 
     lines = [

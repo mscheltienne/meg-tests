@@ -38,7 +38,7 @@ def load_fine_calibration(
                   For magnetometers, the calibration coefficients.
                   For gradiometers, one or three imbalance parameters.
     """
-    with open(fname, "r") as fid:
+    with open(fname) as fid:
         lines = fid.readlines()
     lines = [
         [elt.strip() for elt in line.split("\n")[0].split(" ") if len(elt.strip()) != 0]
