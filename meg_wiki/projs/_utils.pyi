@@ -14,9 +14,7 @@ def orthonormalize_proj(projs: list[Projection]) -> list[Projection]:
         The orthogonalized projection operators.
     """
 
-def rename_proj(
-    projs: list[Projection], position: int, combined: bool
-) -> list[Projection]:
+def rename_proj(projs: list[Projection], position: int, combined: bool) -> list[Projection]:
     """Rename the projection operators.
 
     Parameters

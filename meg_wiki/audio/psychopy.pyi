@@ -4,9 +4,7 @@ from ..utils._docs import fill_doc as fill_doc
 from ..utils._imports import import_optional_dependency as import_optional_dependency
 from ..utils.logs import logger as logger
 
-def psychopy_uncompensated(
-    address: str, frequency: float, volume: float = 0.2, n_repetition: int = 100
-) -> None:
+def psychopy_uncompensated(address: str, frequency: float, volume: float=0.2, n_repetition: int=100) -> None:
     """Run a loop of pure tone auditory stimuli using PsychoPy.
 
     Before each stimuli, a trigger is delivered on the first pin of the DB-25
@@ -30,9 +28,7 @@ def psychopy_uncompensated(
     offset is disabled.
     """
 
-def psychopy_compensated(
-    address: str, frequency: float, volume: float = 0.2, n_repetition: int = 100
-) -> None:
+def psychopy_compensated(address: str, frequency: float, volume: float=0.2, n_repetition: int=100) -> None:
     """Run a loop of pure tone auditory stimuli using PsychoPy.
 
     Before each stimuli, a trigger is delivered on the first pin of the DB-25
@@ -56,7 +52,5 @@ def psychopy_compensated(
     offset is disabled.
     """
 
-def _check_args(
-    frequency: float, volume: float = 0.2, n_repetition: int = 100
-) -> tuple[float, float, int]:
+def _check_args(frequency: float, volume: float=0.2, n_repetition: int=100) -> tuple[float, float, int]:
     """Check arguments used in PsychoPy's functions."""

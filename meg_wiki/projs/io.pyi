@@ -21,14 +21,7 @@ def _write_proj(fid: IO, projs: list[Projection]) -> None:
         The projection operators.
     """
 
-def write_proj(
-    fname: Union[str, Path],
-    projs: Union[list[Projection], tuple[Projection]],
-    position: int,
-    *,
-    overwrite: bool = False,
-    orthonormalize: bool = False,
-) -> None:
+def write_proj(fname: Union[str, Path], projs: Union[list[Projection], tuple[Projection]], position: int, *, overwrite: bool=False, orthonormalize: bool=False) -> None:
     """Write projections to a FIF file.
 
     The projectors only contain the required tags for the DACQ. MNE tags are removed.

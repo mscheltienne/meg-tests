@@ -1,5 +1,6 @@
+from collections.abc import Generator
 from pathlib import Path
-from typing import Generator, Union
+from typing import Union
 
 from ..utils._checks import ensure_path as ensure_path
 from ..utils.logs import logger as logger
