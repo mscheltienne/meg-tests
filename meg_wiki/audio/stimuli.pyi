@@ -3,7 +3,9 @@ from ..utils._docs import fill_doc as fill_doc
 from ..utils._imports import import_optional_dependency as import_optional_dependency
 from ..utils.logs import logger as logger
 
-def sounddevice_uncompensated(address: str, frequency: float, volume: float=20, n_repetition: int=100) -> None:
+def sounddevice_uncompensated(
+    address: str, frequency: float, volume: float = 20, n_repetition: int = 100
+) -> None:
     """Run a loop of pure tone auditory stimuli using sounddevice through stimuli.
 
     Before each stimuli, a trigger is delivered on the first pin of the DB-25
