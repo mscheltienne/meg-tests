@@ -11,7 +11,7 @@
 .. project
 
 .. _project github: https://github.com/fcbg-hnp-meeg/meg-wiki
-.. _projet issue tracker: https://github.com/fcbg-hnp-meeg/meg-wiki/issues
+.. _project issue tracker: https://github.com/fcbg-hnp-meeg/meg-wiki/issues
 .. _project license: https://github.com/fcbg-hnp-meeg/meg-wiki/blob/main/LICENSE
 
 
