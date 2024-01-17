@@ -81,6 +81,8 @@ a FIFF file. For instance, to inspect the content of the file
     $ mne what ssp_68_200123_proj.fif
     proj
 
+.. code-block:: bash
+
     $ mne show_fiff ssp_68_200123_proj.fif
     999  = FIFFB_ROOT
         100  = FIFF_FILE_ID (20b ids)  = {'version': 65540, 'machid': a ... dict len=4
@@ -118,6 +120,26 @@ The tag 314 (``FIFFB_PROJ_ITEM``) contains the information of a single SSP. The 
 (``FIFF_PROJ_ITEM_KIND``) indicates the type of projection. The tag 3417
 (``FIFF_PROJ_ITEM_CH_NAME_LIST``) contains the list of channels to which the SSP is
 applied.
+
+All MEGIN softwares work with the FIFF format.
+
+Softwares
+~~~~~~~~~
+
+The available softwares from MEGIN are:
+
+- ``DicomAccess``
+- ``Graph`` to visualize data. This tool has different layouts (settings) which can be
+  used to visualize one or multiple datasets.
+- ``GraphicsClipboard`` to generate screenshots of visualizations.
+- ``MaxFilter`` to run (temporal) Signal-Space
+  Separation\ :footcite:p:`sss_2005,tsss_2006`. See the section about
+  :ref:`data-analysis-pc:MaxWell filter`.
+- ``MEG-MRI-Integration``
+- ``MRI-segmentation``
+- ``Plotting``
+- ``SourceModelling``, also called ``xfit``, for dipole fitting.
+- ``ViewBrain``
 
 Python
 ------
