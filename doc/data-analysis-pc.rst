@@ -33,12 +33,12 @@ Maxwell filtering is a related procedure that omits the higher-order components 
 internal subspace, which are dominated by sensor noise. Typically, Maxwell filtering and
 SSS are performed together.
 
-Like Signal-Space Projection (SSP), SSS is a form of projection. Whereas SSP empirically
-determines a noise subspace based on data (empty-room recordings, EOG or ECG activity,
-etc) and projects the measurements onto a subspace orthogonal to the noise, SSS
-mathematically constructs the external and internal subspaces from
-`spherical harmonics`_ and reconstructs the sensor signals using only the internal
-subspace (i.e., does an oblique projection).
+Like :ref:`meg-settings:Signal Space Projector`\ :footcite:p:`ssp_1997`, SSS is a form
+of projection. Whereas SSP empirically determines a noise subspace based on data
+(empty-room recordings, EOG or ECG activity, etc) and projects the measurements onto a
+subspace orthogonal to the noise, SSS mathematically constructs the external and
+internal subspaces from `spherical harmonics`_ and reconstructs the sensor signals using
+only the internal subspace (i.e., does an oblique projection).
 
 Introduction taken from `MNE-Python's background on SSS and Maxwell filtering`_.
 
@@ -51,6 +51,73 @@ Introduction taken from `MNE-Python's background on SSS and Maxwell filtering`_.
     see :func:`meg_wiki.datasets.sample.data_path`).
 
 .. _sample dataset: https://github.com/fcbg-hnp-meeg/meg-wiki/tree/main/datasets
+
+FIFF format
+~~~~~~~~~~~
+
+The FIFF format is MEGIN's proprietary format for MEG data. It is a binary tag based
+format. The tags define which information is stored in the file. Thus, the FIFF format
+is not restricted to storing the continuous MEG data. For instance, the
+:ref:`meg-settings:Signal Space Projector`\ :footcite:p:`ssp_1997` are stored both
+in the raw data file and in a separate FIFF file. In both case, the information related
+to the SSP is stored in the same FIFF tag.
+
+.. note::
+
+    `MNE-Python <mne stable_>`_ has command-line tools which can be accessed with:
+
+    .. code-block:: bash
+
+        $ mne <command> <options>
+
+    Entering the command ``$ mne`` will return a list of available commands.
+
+The commands ``mne what`` and ``mne show_fiff`` can be used to inspect the content of
+a FIFF file. For instance, to inspect the content of the file
+``ssp_68_200123_proj.fif``:
+
+.. code-block:: bash
+
+    $ mne what ssp_68_200123_proj.fif
+    proj
+
+    $ mne show_fiff ssp_68_200123_proj.fif
+    999  = FIFFB_ROOT
+        100  = FIFF_FILE_ID (20b ids)  = {'version': 65540, 'machid': a ... dict len=4
+        101  = FIFF_DIR_POINTER (4b >i4)  = [-1]
+        106  = FIFF_FREE_LIST (4b >i4)  = [-1]
+        108  = FIFF_NOP (0b nul)
+        313  = FIFFB_PROJ
+            200  = FIFF_NCHAN (4b >i4)  = [306]
+            3002 = FIFF_SPHERE_RADIUS (4b >i4)  = [1]
+            3001 = FIFF_SPHERE_ORIGIN (12b >f4)  = [0. 0. 0.] ... array size=3
+            314  = FIFFB_PROJ_ITEM
+                206  = FIFF_COMMENT/FIFF_DESCRIPTION (24b str)  = ssp_68_magn.fif : PCA-v1 ... str len=24
+                3411 = FIFF_PROJ_ITEM_KIND (4b >i4)  = [1]
+                3417 = FIFF_PROJ_ITEM_CH_NAME_LIST (2447b str)  = MEG0111:MEG0112:MEG0113:MEG012 ... str len=2447
+                3412 = FIFF_PROJ_ITEM_TIME (4b >f4)  = [0.]
+                3414 = FIFF_PROJ_ITEM_NVEC (4b >i4)  = [1]
+                3415 = FIFF_PROJ_ITEM_VECTORS (1236b >f4)  = [[-0.07794372  0.          0.  ... array size=306
+            314  = FIFFB_PROJ_ITEM
+                206  = FIFF_COMMENT/FIFF_DESCRIPTION (24b str)  = ssp_68_magn.fif : PCA-v2 ... str len=24
+                3411 = FIFF_PROJ_ITEM_KIND (4b >i4)  = [1]
+                3417 = FIFF_PROJ_ITEM_CH_NAME_LIST (2447b str)  = MEG0111:MEG0112:MEG0113:MEG012 ... str len=2447
+                3412 = FIFF_PROJ_ITEM_TIME (4b >f4)  = [0.]
+                3414 = FIFF_PROJ_ITEM_NVEC (4b >i4)  = [1]
+                3415 = FIFF_PROJ_ITEM_VECTORS (1236b >f4)  = [[-0.07037429  0.          0.  ... array size=306
+            (...)
+            314  = FIFFB_PROJ_ITEM
+                206  = FIFF_COMMENT/FIFF_DESCRIPTION (24b str)  = ssp_68_grad.fif : PCA-v2 ... str len=24
+                3411 = FIFF_PROJ_ITEM_KIND (4b >i4)  = [1]
+                3417 = FIFF_PROJ_ITEM_CH_NAME_LIST (2447b str)  = MEG0111:MEG0112:MEG0113:MEG012 ... str len=2447
+                3412 = FIFF_PROJ_ITEM_TIME (4b >f4)  = [0.]
+                3414 = FIFF_PROJ_ITEM_NVEC (4b >i4)  = [1]
+                3415 = FIFF_PROJ_ITEM_VECTORS (1236b >f4)  = [[ 0.00000000e+00  4.50235838e ... array size=306
+
+The tag 314 (``FIFFB_PROJ_ITEM``) contains the information of a single SSP. The tag 3411
+(``FIFF_PROJ_ITEM_KIND``) indicates the type of projection. The tag 3417
+(``FIFF_PROJ_ITEM_CH_NAME_LIST``) contains the list of channels to which the SSP is
+applied.
 
 Python
 ------
