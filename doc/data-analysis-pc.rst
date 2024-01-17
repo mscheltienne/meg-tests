@@ -121,12 +121,12 @@ The tag 314 (``FIFFB_PROJ_ITEM``) contains the information of a single SSP. The 
 (``FIFF_PROJ_ITEM_CH_NAME_LIST``) contains the list of channels to which the SSP is
 applied.
 
-All MEGIN softwares work with the FIFF format.
+All MEGIN software work with the FIFF format.
 
-Softwares
-~~~~~~~~~
+Software
+~~~~~~~~
 
-The available softwares from MEGIN are:
+The available software from MEGIN are:
 
 - ``DicomAccess``
 - ``Graph`` to visualize data. This tool has different layouts (settings) which can be
