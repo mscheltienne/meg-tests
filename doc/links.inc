@@ -10,8 +10,9 @@
 
 .. project
 
-.. _project github: https://github.com/fcbg-hnp-meeg/meg-info
-.. _project license: https://github.com/fcbg-hnp-meeg/meg-info/blob/main/LICENSE
+.. _project github: https://github.com/fcbg-hnp-meeg/meg-wiki
+.. _projet issue tracker: https://github.com/fcbg-hnp-meeg/meg-wiki/issues
+.. _project license: https://github.com/fcbg-hnp-meeg/meg-wiki/blob/main/LICENSE
 
 
 .. license

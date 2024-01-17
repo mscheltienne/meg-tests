@@ -42,6 +42,7 @@
 
    api/index.rst
    generated/tutorials/index.rst
+   contributing.rst
 
 Wiki for the `MEGIN Triux Neo System`_ at the Human Neuroscience Platform, Campus
 Biotech, Geneva. With 306 SQUID sensors, 204 planar gradiometers and 102 magnetometers,

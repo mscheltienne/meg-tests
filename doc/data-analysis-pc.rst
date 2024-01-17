@@ -50,7 +50,7 @@ Introduction taken from `MNE-Python's background on SSS and Maxwell filtering`_.
     cross-talk correction are available in the `sample dataset`_ (
     see :func:`meg_wiki.datasets.sample.data_path`).
 
-.. _sample dataset: https://github.com/fcbg-hnp-meeg/meg-wiki/tree/main/datasets
+.. _sample dataset: https://github.com/fcbg-hnp-meeg/meg-wiki-datasets/tree/main
 
 FIFF format
 ~~~~~~~~~~~
