@@ -38,7 +38,7 @@ you belong to (and thus on the network you are connected to) and on the share na
         ``campusbiotech.ch``. For example, for the share ``0000_CBT_EPFL_XXXXXX``, the
         address is:
 
-        .. code-block:: bash
+        .. code-block::
 
             fcbgnasc.campusbiotech.ch/fcbgdata/0000_CBT_EPFL_XXXXXX
 
@@ -47,7 +47,7 @@ you belong to (and thus on the network you are connected to) and on the share na
         If you are connected to the EPFL network, the domain is ``epfl.ch``. For
         example, for the share ``0000_CBT_EPFL_XXXXXX``, the address is:
 
-        .. code-block:: bash
+        .. code-block::
 
             fcbgnasc.epfl.ch/fcbgdata/0000_CBT_EPFL_XXXXXX
 
@@ -56,7 +56,7 @@ you belong to (and thus on the network you are connected to) and on the share na
         If you are connected to the UniGE network, the domain is ``unige.ch``. For
         example, for the share ``0000_CBT_EPFL_XXXXXX``, the address is:
 
-        .. code-block:: bash
+        .. code-block::
 
             fcbgnasc.unige.ch/fcbgdata/0000_CBT_EPFL_XXXXXX
 
@@ -75,7 +75,7 @@ mounting procedure on the desktop.
         ``$(address)`` is replaced with the network share address, and tick
         ``Connect using different credentials``.
 
-        .. code-block:: bash
+        .. code-block::
 
             \\fcbgnasc.campusbiotech.ch\fcbgdata
 
@@ -128,7 +128,7 @@ mounting procedure on the desktop.
         corresponding pop-up. In the address field, enter ``smb://$(address)`` where
         ``$(address)`` is replaced with the network share address. For instance:
 
-        .. code-block:: bash
+        .. code-block::
 
             smb://fcbgnasc.epfl.ch/fcbgdata
 
@@ -170,13 +170,13 @@ mounting procedure on the desktop.
 
         .. code-block:: bash
 
-            sudo apt install smbclient
+            $ sudo apt install smbclient
 
         In the left pane of the file explorer, select ``Other locations``. At the
         bottom, in the field ``Connect to Server``, enter ``smb://$(address)`` where
         ``$(address)`` is replaced with the network share address. For instance:
 
-        .. code-block:: bash
+        .. code-block::
 
             smb://fcbgnasc.campusbiotech.ch/fcbgdata
 
@@ -231,13 +231,13 @@ mounting procedure on the desktop.
 
             .. code-block:: bash
 
-                sudo apt install cifs-utils
-                sudo mkdir /mnt/Isilon  # location in which the share is mounted
-                sudo nano /etc/fstab
+                $ sudo apt install cifs-utils
+                $ sudo mkdir /mnt/Isilon  # location in which the share is mounted
+                $ sudo nano /etc/fstab
 
             In the ``fstab``, add a line:
 
-            .. code-block:: bash
+            .. code-block::
 
                 //fcbgnasc.$(network).ch/fcbgdata/$(share)  /mnt/Isilon  cifs  credentials=/root/.smbcredentials,uid=$(user),gid=$(user),file_mode=0770,dir_mode=0770  0  0
 
@@ -245,7 +245,7 @@ mounting procedure on the desktop.
             ``$(share)`` is replaced by the share name, ``$(user)`` is replaced by your
             username. The credentials have to be defined in ``/root/.smbcredentials``:
 
-            .. code-block:: bash
+            .. code-block::
 
                username=...
                password=...

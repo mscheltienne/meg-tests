@@ -7,4 +7,4 @@ This package can be installed from source using ``pip``:
 
 .. code-block:: bash
 
-    pip install git+https://github.com/fcbg-hnp-meeg/meg-wiki
+    $ pip install git+https://github.com/fcbg-hnp-meeg/meg-wiki

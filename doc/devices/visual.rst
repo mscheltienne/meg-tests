@@ -106,7 +106,7 @@ when the top left pixel changes state. This mode, usually disable, can be found 
 
     .. code-block:: python
 
-        from bsl.triggers import ParallelPortTrigger
+        from byte_triggers import ParallelPortTrigger
         from psychopy.visual import Window
 
         trigger = ParallelPortTrigger(0x4FB8)

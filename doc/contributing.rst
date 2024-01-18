@@ -33,15 +33,15 @@ can be installed in a python environment with:
 
 .. code-block:: bash
 
-    pip install -e path/to/meg-wiki[all]
+    $ pip install -e path/to/meg-wiki[all]
 
 Additionally, `pre-commit`_ hooks are available to check for common errors before
 committing changes.
 
 .. code-block:: bash
 
-   pip install pre-commit
-   pre-commit install
+   $ pip install pre-commit
+   $ pre-commit install
 
 The documentation can be build from the ``meg-wiki/doc`` folder with ``make`` commands:
 

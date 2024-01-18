@@ -11,7 +11,7 @@ Sensor positions
 
     .. code-block:: bash
 
-        pip install git+https://github.com/fcbg-hnp-meeg/meg-wiki
+        $ pip install git+https://github.com/fcbg-hnp-meeg/meg-wiki
 
 The sensor position is defined for each sensors as an `~numpy.array` of 12 elements.
 This array represents the position and the normal given by a ``(3, 3)`` rotation matrix,
