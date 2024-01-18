@@ -272,3 +272,7 @@ linkcheck_ignore = [  # will be compiled to regex
     "response-pads-megin.html",  # response-pads/index.html
     "soundpixx.html",  # audio/index.html
 ]
+
+# -- sphinx_copybutton -----------------------------------------------------------------
+copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
+copybutton_prompt_is_regexp = True
