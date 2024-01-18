@@ -1,3 +1,5 @@
+.. include:: ./links.inc
+
 MEG session
 ===========
 
@@ -35,12 +37,12 @@ Before the experiment begins, an empty-room recording is measured. The empty-roo
 recording can be used to :ref:`re-compute the Signal Space Projectors (SSP)
 <tut-artifact-ssp>`.
 
-The default Signal Space Projectors have been tuned for our site and the empty-room
-noise present. This noise and its correction are stable in time, thus it should not
-be needed to re-compute the SSPs. However, the empty-room recording can be used to
-compare the SSP correction with the empty-room noise correction from the ``08/01/24``.
-On that day, the bad sensors removed are ``MEG 1213``, ``MEG 1321``, ``MEG 1343``,
-``MEG 1423``.
+The default :term:`Signal Space Projectors` have been tuned for our site and the
+empty-room noise present. This noise and its correction are stable in time, thus it
+should not be needed to re-compute the SSPs. However, the empty-room recording can be
+used to compare the :term:`SSP` correction with the empty-room noise correction from
+the ``08/01/24``. On that day, the bad sensors removed are ``MEG 1213``, ``MEG 1321``,
+``MEG 1343``, ``MEG 1423``.
 
 .. code-block:: python
 
@@ -112,9 +114,9 @@ HPI measurement).
     :width: 200
 
 The digitization process is performed with the `Polhemus FASTRAK system <Polhemus_>`_.
-First, 3 landmarks are digitized: the `nasion (NAS) <Nasion_>`_, the `left and right
-pre-auricular point (LPA and RPA) <LRPA_>`_. Those 3 landmarks define the head
-coordinate frame:
+First, 3 :term:`anatomical landmarks` are digitized: the `nasion (NAS) <Nasion_>`_, the
+`left and right pre-auricular point (LPA and RPA) <LRPA_>`_. Those 3
+:term:`anatomical landmarks` define the headcoordinate frame:
 
 - The X-axis goes from `LPA (2) to RPA (1) <LRPA_>`_
 - The Y-axis is orthogonal to the X-axis and goes through the
@@ -123,14 +125,10 @@ coordinate frame:
 
 The head coordinate frame measures the point's position in meters.
 
-TODO: Add picture of the Nasion/LPA/RPA points used on our site.
-
 HPI measurement
 ---------------
 
 Experiment
 ----------
 
-.. _LRPA: https://www.fieldtriptoolbox.org/faq/how_are_the_lpa_and_rpa_points_defined/
-.. _Nasion: https://en.wikipedia.org/wiki/Nasion
 .. _Polhemus: https://polhemus.com/motion-tracking/all-trackers/fastrak/

@@ -35,6 +35,7 @@
 
    MNE-Python <https://mne.tools/stable/index.html>
    FieldTrip <https://www.fieldtriptoolbox.org/>
+   glossary.rst
 
 .. toctree::
    :hidden:

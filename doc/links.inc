@@ -14,6 +14,9 @@
 .. _project issue tracker: https://github.com/fcbg-hnp-meeg/meg-wiki/issues
 .. _project license: https://github.com/fcbg-hnp-meeg/meg-wiki/blob/main/LICENSE
 
+.. _LRPA: https://www.fieldtriptoolbox.org/faq/how_are_the_lpa_and_rpa_points_defined/
+.. _Nasion: https://en.wikipedia.org/wiki/Nasion
+
 
 .. license
 
