@@ -176,4 +176,4 @@ plt.show()
 # .. footbibliography::
 #
 # .. _MNE-Python example: https://mne.tools/stable/auto_examples/visualization/sensor_noise_level.html
-# .. _ssp github: https://github.com/fcbg-hnp-meeg/meg-wiki/tree/main/datasets/ssp
+# .. _ssp github: https://github.com/fcbg-hnp-meeg/meg-wiki-datasets/tree/main/ssp
