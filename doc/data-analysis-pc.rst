@@ -126,18 +126,26 @@ Software
 
 The available software from MEGIN are:
 
-- ``DicomAccess``
-- ``Graph`` to visualize data. This tool has different layouts (settings) which can be
-  used to visualize one or multiple datasets.
+- ``DicomAccess`` is a DICOM v3.0 compliant application for transferring DICOM images.
+  The images can be retrieved from a DICOM database or loaded from directories. The
+  ``GET`` operation creates FIFF files from the single-frame 16-bit CT, enhanced CT, MR
+  and enhanced MR images.
+- ``Graph`` is a general purpose signal processor based on a LISP language interpreter.
+  This tool is useful to visualize and compared datasets through its different layouts.
 - ``GraphicsClipboard`` to generate screenshots of visualizations.
 - ``MaxFilter`` to run (temporal) Signal-Space
   Separation\ :footcite:p:`sss_2005,tsss_2006`. See the section about
   :ref:`data-analysis-pc:MaxWell filter`.
-- ``MEG-MRI-Integration``
-- ``MRI-segmentation``
-- ``Plotting``
+- ``MEG-MRI-Integration``, also called ``mrilabl``, is a tool to visualize volumetric
+  data. It's especially designed to combine MRI and MEG data.
+- ``MRI-segmentation``, also called ``seglab``, is a segmentation program with both 2D
+  processing operators (for single images) and 3D processing operators (for volume
+  data).
+- ``Plotting``, also called ``xplotter``, is a plotting tool mainly intended for
+  plotting of evoked response data.
 - ``SourceModelling``, also called ``xfit``, for dipole fitting.
-- ``ViewBrain``
+- ``ViewBrain`` is used to visualize volumetric data. It can render segmented MRI as 3D
+  images and overlay Equivalent Current Dipoles (ECDs).
 
 Python
 ------
