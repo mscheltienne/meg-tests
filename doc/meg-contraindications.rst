@@ -1,6 +1,24 @@
 MEG contraindications
 =====================
 
+.. list-table::
+   :widths: 100 100
+   :header-rows: 1
+
+   * - English
+     - French
+   * - .. image:: ./_static/icons/pdf.png
+         :align: center
+         :width: 100
+         :target: ./_static/questionnaires/questionnaire_MEG_en.pdf
+         :alt: Download (EN)
+
+     - .. image:: ./_static/icons/pdf.png
+         :align: center
+         :width: 100
+         :target: ./_static/questionnaires/questionnaire_MEG_fr.pdf
+         :alt: Download (FR)
+
 The signal measured by an MEG system is extremely low (:math:`10e^{-15}\ T`), the device
 is very restrictive with potential artifacts-inducing elements. None of the
 contraindications listed below can be harmful for the participant or for the device: an
