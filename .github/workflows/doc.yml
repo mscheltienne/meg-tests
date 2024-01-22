@@ -36,7 +36,7 @@ jobs:
           curl https://raw.githubusercontent.com/fcbg-hnp-meeg/meg-wiki-datasets/main/version.txt -o meg_wiki_datasets_version.txt
       - name: Cache dataset
         id: cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           key: meg-wiki-${{ runner.os }}-${{ hashFiles('meg_wiki_datasets_version.txt') }}
           path: ~/meg-wiki_data
