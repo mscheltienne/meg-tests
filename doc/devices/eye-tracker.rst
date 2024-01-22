@@ -29,11 +29,13 @@ Setup
 Standalone vs integrated mode
 -----------------------------
 
-The eye-tracker can be controlled from the :ref:`stim-pc:Stimulation PC`. This is the
-recommended approach, as it allows to customize the eye-tracker settings, calibration
-and visual for every experiment. However, it is also possible to use the eye-tracker in
-standalone mode, either without the :ref:`stim-pc:Stimulation PC` or through a simple
-calibration and recording application on the :ref:`stim-pc:Stimulation PC`.
+The eye-tracker can be controlled from the
+:ref:`stimulation PC <stim-pc:Stimulation PC>`. This is the recommended approach, as it
+allows to customize the eye-tracker settings, calibration and visual for every
+experiment. However, it is also possible to use the eye-tracker in standalone mode,
+either without the :ref:`stimulation PC <stim-pc:Stimulation PC>` or through a simple
+calibration and recording application on the
+:ref:`stimulation PC <stim-pc:Stimulation PC>`.
 
 .. tab-set::
 
@@ -53,17 +55,17 @@ calibration and recording application on the :ref:`stim-pc:Stimulation PC`.
 
         In standalone mode, the eye-tracker can be controlled from the EyeLink PC or
         through a simple calibration and recording application on the
-        :ref:`stim-pc:Stimulation PC`, such as `eyelink-track`_.
+        :ref:`stimulation PC <stim-pc:Stimulation PC>`, such as `eyelink-track`_.
 
 Triggers
 --------
 
-Triggers delivered to the MEG (see the section
-:ref:`meg-triggers:Triggers from the stimulation PC`) are automatically duplicated and
-delivered to the eye tracker on the ``DIN`` channel.
+Triggers delivered to the MEG (see the section about
+:ref:`triggers from the stimulation PC <meg-triggers:Triggers from the stimulation PC>`)
+are automatically duplicated and delivered to the eye tracker on the ``DIN`` channel.
 
 Alternatively, triggers can be delivered as a "message" via the ethernet link between
-the :ref:`stim-pc:Stimulation PC` and the EyeLink PC.
+the :ref:`stimulation PC <stim-pc:Stimulation PC>` and the EyeLink PC.
 
 .. image:: ../_static/eye-tracker/triggers-light.png
     :width: 600

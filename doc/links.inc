@@ -29,6 +29,7 @@
 .. _Digitimer: https://www.digitimer.com/
 .. _DS7A: https://www.digitimer.com/product/human-neurophysiology/peripheral-stimulators/ds7a-ds7ah-hv-current-stimulator/
 .. _EyeLink 1000 Plus: https://www.sr-research.com/eyelink-1000-plus/
+.. _LEAD108C: https://www.biopac.com/product/clip-leads-rt/
 .. _MEGIN Triux Neo: https://megin.com/triux-neo/
 .. _Optimic MEG microphone: https://www.optoacoustics.com/medical/optimic-meg-microphone
 .. _Pneumatic Squeeze Ball: https://www.curdes.com/mainforp/responsedevices/hhsc-1x1-pne.html

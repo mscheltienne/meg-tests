@@ -30,7 +30,8 @@ Common changes include:
 - Disable the unused IAS channels
 - Enable ``STI102``. See :ref:`meg-triggers:STI101 and STI102` for more information.
 - Enable individual binary ``stim`` channels. See
-  :ref:`meg-triggers:Binary vs combined channel` for more information.
+  :ref:`binary vs combined channel <meg-triggers:Binary vs combined channel>` for more
+  information.
 - Enable EEG channels
 - Enable bipolar channels
 

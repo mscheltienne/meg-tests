@@ -14,8 +14,9 @@ The MEG uses a `ProPixx projector`_ from the company VPixx to display images in 
 magnetically shielded room (MSR). This projector uses LED as a light source, giving a
 larger color gammut.
 
-The projector is connected as the second monitor of the :ref:`stim-pc:Stimulation PC`. A
-control monitor duplicates the image displayed by the projector in the control room.
+The projector is connected as the second monitor of the
+:ref:`stimulation PC <stim-pc:Stimulation PC>`. A control monitor duplicates the image
+displayed by the projector in the control room.
 
 .. note::
 

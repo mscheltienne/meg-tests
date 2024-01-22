@@ -3,7 +3,7 @@ MEG triggers
 
 The MEG system has 32 binary channels that can be used for triggers. Those 32 channels
 are split between 2 trigger interface I/O boxes, one on the main desk connected to
-the :ref:`stim-pc:Stimulation PC` and one in the stimulus cabinet.
+the :ref:`stimulation PC <stim-pc:Stimulation PC>` and one in the stimulus cabinet.
 
 .. image:: ./_static/meg/meg-triggers.png
     :width: 700
@@ -55,10 +55,10 @@ are not available.
 Triggers from the stimulation PC
 --------------------------------
 
-The :ref:`stim-pc:Stimulation PC` can send triggers to the 8 first bits of the trigger
-interface on the main desk, ``STI102``, via a parallel port (DB-25) or via the
-`Chronos`_ if :ref:`stim-pc:E-Prime` is in-use. You can switch which output is in-use
-with the switch Chronos/DB-25 on the main desk.
+The :ref:`stimulation PC <stim-pc:Stimulation PC>` can send triggers to the 8 first bits
+of the trigger interface on the main desk, ``STI102``, via a parallel port (DB-25) or
+via the `Chronos`_ if :ref:`stim-pc:E-Prime` is in-use. You can switch which output is
+in-use with the switch Chronos/DB-25 on the main desk.
 
 Parallel Port (DB-25)
 ~~~~~~~~~~~~~~~~~~~~~

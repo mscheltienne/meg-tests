@@ -8,7 +8,8 @@ Current Designs
 
 Response devices from `Current Designs`_ are available through the `932 interface`_.
 This interface can simultaneously translate responses as keyboard inputs for the
-:ref:`stim-pc:Stimulation PC` and as TTL pulses on MEG trigger channels.
+:ref:`stimulation PC <stim-pc:Stimulation PC>` and as TTL pulses on MEG trigger
+channels.
 
 The platform currently provides:
 
