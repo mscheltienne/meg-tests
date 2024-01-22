@@ -45,7 +45,7 @@
    generated/tutorials/index.rst
    contributing.rst
 
-Wiki for the `MEGIN Triux Neo System`_ at the Human Neuroscience Platform, Campus
+Wiki for the `MEGIN Triux Neo`_ at the Human Neuroscience Platform, Campus
 Biotech, Geneva. With 306 SQUID sensors, 204 planar gradiometers and 102 magnetometers,
 it can measure brain activity in upright or supine position.
 
@@ -86,5 +86,3 @@ requested. Alternatively, you can contact directly one of the facility members:
 - Mathieu Scheltienne (engineer): mathieu.scheltienne@fcbg.ch
 - Nathalie Philippe (technologist): nathalie.philippe@fcbg.ch
 - Vincent Rochas (scientist): vincent.rochas@fcbg.ch
-
-.. _MEGIN Triux Neo System: https://megin.com/triux-neo/

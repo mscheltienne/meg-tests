@@ -4,6 +4,8 @@ r"""
 Create Signal Space Projectors
 ==============================
 
+.. include:: ../../links.inc
+
 .. note::
 
     This example requires the ``meg_wiki`` package to download the sample dataset. This
@@ -25,11 +27,9 @@ project your recording onto that hyperplane. It should be clear that SSP reduces
 dimensionality of your data and thus sensors will not retain linear independency.
 
 Additional information on projections and on Signal-Space Projection (SSP) can be found
-in `MNE's Python background on projectors and projections`_.
+in `MNE's background on projectors and projections`_.
 
 MNE's Python geometric example projecting from 3-dimensional space to the (x, y) plane:
-
-.. _MNE's Python background on projectors and projections: https://mne.tools/stable/auto_tutorials/preprocessing/45_projectors_background.html
 """
 
 import numpy as np
@@ -69,11 +69,11 @@ plt.show()
 # Default projectors
 # ------------------
 #
-# The default set of projectors is available `here <ssp github_>`_, on our GitHub. Those
-# projectors were obtained by combining projectors for the obtained from the wideband
-# PCA and from the narrowband PCA (bandpass filter between 15 and 18 Hz). The narrowband
-# PCA improves the correction of the 16.7 Hz artifact, typical from a 15 kV AC railway
-# electrification system.
+# The default set of projectors is available `on our GitHub <sample dataset ssp_>`_.
+# Those projectors were obtained by combining projectors for the obtained from the
+# wideband PCA and from the narrowband PCA (bandpass filter between 15 and 18 Hz).
+# The narrowband PCA improves the correction of the 16.7 Hz artifact, typical from a 15
+# kV AC railway electrification system.
 #
 # Let's have a look at the projectors in 68° position when IAS is disabled.
 
@@ -176,4 +176,3 @@ plt.show()
 # .. footbibliography::
 #
 # .. _MNE-Python example: https://mne.tools/stable/auto_examples/visualization/sensor_noise_level.html
-# .. _ssp github: https://github.com/fcbg-hnp-meeg/meg-wiki-datasets/tree/main/ssp

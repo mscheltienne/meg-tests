@@ -115,6 +115,3 @@ when the top left pixel changes state. This mode, usually disable, can be found 
         win.flip()
 
     Thus, the pixel mode is usually not needed.
-
-.. _ProPixx projector: https://vpixx.com/products/propixx-mri/
-.. _X-Rite i1Display Pro colorimeter: https://vpixx.com/products/x-rite-i1display/

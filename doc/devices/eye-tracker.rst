@@ -1,3 +1,5 @@
+.. include:: ../links.inc
+
 Eye-tracker
 ===========
 
@@ -129,7 +131,3 @@ channels of the MEG, thus recording core information as part of the FIF file. In
         relative to the head. For the ``-5V`` to ``5V`` range, it's
         :math:`5V * tan(angle)`, measured separately for vertical and horizontal
         rotations. This mode requires a calibration.
-
-.. _EyeLink 1000 Plus: https://www.sr-research.com/eyelink-1000-plus/
-.. _SR Research: https://www.sr-research.com/
-.. _eyelink-track: https://github.com/fcbg-hnp-meeg/eyelink-track

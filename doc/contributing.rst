@@ -17,8 +17,9 @@ Pull Requests
 If comfortable with git and collaborative development, pull request to the repository
 are welcome. The wiki is organized as a python project with a sphinx documentation.
 The documentation, used to generate the website HTML pages, is written in
-`reStructuredText format <rst_>`_ in the `doc <github doc_>`_ folder. For instance,
-``doc/meg-session.rst`` contains the content of the :ref:`meg-session:MEG Session` page.
+`reStructuredText format <rst_>`_ in the `doc <project github doc_>`_ folder. For
+instance, ``doc/meg-session.rst`` contains the content of the
+:ref:`meg-session:MEG Session` page.
 
 In a pull request, the automatic workflows will build the documentation and check for
 conformity. Any warnings and errors during the build process must be resolved before
@@ -59,8 +60,3 @@ tutorials are written in a plain python ``.py`` file in the folder
 ``meg-wiki/tutorials``. The file naming must follow the pattern ``dd_*.py`` with ``dd``
 corresponding to 2 digits used to order the tutorials. The ``# %%`` jupyter syntax is
 used to denote separate sections.
-
-.. _github doc: https://github.com/fcbg-hnp-meeg/meg-wiki/tree/main/doc
-.. _pre-commit: https://pre-commit.com/
-.. _rst: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
-.. _sphinx-gallery: https://sphinx-gallery.github.io/stable/index.html

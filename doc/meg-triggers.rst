@@ -88,5 +88,3 @@ With :ref:`stim-pc:E-Prime`, a `Chronos`_ can be used to deliver triggers. The C
 has 16 digital inputs and 16 digital outputs, wired to the Chronos interface on the
 main desk. The 8 first output pins are wired to the 8 first bits of the MEG trigger
 interface.
-
-.. _Chronos: https://pstnet.com/products/chronos/

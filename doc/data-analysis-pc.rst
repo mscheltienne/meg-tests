@@ -40,7 +40,7 @@ subspace orthogonal to the noise, SSS mathematically constructs the external and
 internal subspaces from `spherical harmonics`_ and reconstructs the sensor signals using
 only the internal subspace (i.e., does an oblique projection).
 
-Introduction taken from `MNE-Python's background on SSS and Maxwell filtering`_.
+Introduction taken from `MNE's background on SSS and Maxwell filtering`_.
 
 .. note::
 
@@ -49,8 +49,6 @@ Introduction taken from `MNE-Python's background on SSS and Maxwell filtering`_.
     :func:`mne.preprocessing.maxwell_filter`. The fine calibration file and the
     cross-talk correction are available in the `sample dataset`_ (
     see :func:`meg_wiki.datasets.sample.data_path`).
-
-.. _sample dataset: https://github.com/fcbg-hnp-meeg/meg-wiki-datasets/tree/main
 
 FIFF format
 ~~~~~~~~~~~
@@ -155,11 +153,6 @@ MATLAB
 
 The data analysis PCs do not have a MATLAB license. However, applications using the
 MATLAB Runtime can be added upon request.
-
-.. _intel Xeon W-2245: https://www.intel.com/content/www/us/en/products/sku/198609/intel-xeon-w2245-processor-16-5m-cache-3-90-ghz/specifications.html
-.. _Nvidia Quadro P2200: https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/quadro-p2200-datasheet-letter-974207-r4-web.pdf
-.. _spherical harmonics: https://en.wikipedia.org/wiki/Spherical_harmonics
-.. _MNE-Python's background on SSS and Maxwell filtering: https://mne.tools/stable/auto_tutorials/preprocessing/60_maxwell_filtering_sss.html#background-on-sss-and-maxwell-filtering
 
 References
 ----------

@@ -130,5 +130,3 @@ HPI measurement
 
 Experiment
 ----------
-
-.. _Polhemus: https://polhemus.com/motion-tracking/all-trackers/fastrak/

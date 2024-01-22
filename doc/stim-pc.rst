@@ -1,3 +1,5 @@
+.. include:: ./links.inc
+
 Stimulation PC
 ==============
 
@@ -68,7 +70,3 @@ the paradigm and it should be reset to ``0`` after each trigger.
     .. tab-item:: MATLAB (Windows)
 
         TODO
-
-.. _Chronos: https://pstnet.com/products/chronos/
-.. _intel i5-12500: https://ark.intel.com/content/www/us/en/ark/products/96144/intel-core-i512500-processor-18m-cache-up-to-4-60-ghz.html
-.. _Nvidia T1000: https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/productspage/quadro/quadro-desktop/proviz-print-nvidia-T1000-datasheet-us-nvidia-1670054-r4-web.pdf

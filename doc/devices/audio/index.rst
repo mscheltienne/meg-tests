@@ -1,3 +1,5 @@
+.. include:: ../../links.inc
+
 Audio stimulation
 =================
 
@@ -92,8 +94,3 @@ Main volume
 The main volume knob affects the volume from all sources. The volume should be gradually
 increased from a low value up-to the desired value to prevent loud sound from deafening
 participants.
-
-.. _Chronos: https://pstnet.com/products/chronos/
-.. _Crimson 3: https://spl.audio/en/spl-produkt/crimson-3/
-.. _E-Prime: https://pstnet.com/products/e-prime/
-.. _SPL: https://spl.audio/en/

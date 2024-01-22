@@ -8,45 +8,77 @@
    nipy, NIPY, Nipy, etc...
 
 
+.. compagnies
+
+.. _Current Designs: https://www.curdes.com/
+.. _SPL: https://spl.audio/en/
+.. _SR Research: https://www.sr-research.com/
+
+
+.. datasets
+
+.. _sample dataset: https://github.com/fcbg-hnp-meeg/meg-wiki-datasets/tree/main
+.. _sample dataset ssp: https://github.com/fcbg-hnp-meeg/meg-wiki-datasets/tree/main/ssp
+
+
+.. devices
+
+.. _Chronos: https://pstnet.com/products/chronos/
+.. _Crimson 3: https://spl.audio/en/spl-produkt/crimson-3/
+.. _current-designs response-devices: https://www.curdes.com/mainforp/responsedevices.html
+.. _Digitimer: https://www.digitimer.com/
+.. _DS7A: https://www.digitimer.com/product/human-neurophysiology/peripheral-stimulators/ds7a-ds7ah-hv-current-stimulator/
+.. _EyeLink 1000 Plus: https://www.sr-research.com/eyelink-1000-plus/
+.. _MEGIN Triux Neo: https://megin.com/triux-neo/
+.. _Optimic MEG microphone: https://www.optoacoustics.com/medical/optimic-meg-microphone
+.. _Pneumatic Squeeze Ball: https://www.curdes.com/mainforp/responsedevices/hhsc-1x1-pne.html
+.. _Polhemus: https://polhemus.com/motion-tracking/all-trackers/fastrak/
+.. _ProPixx projector: https://vpixx.com/products/propixx-mri/
+.. _X-Rite i1Display Pro colorimeter: https://vpixx.com/products/x-rite-i1display/
+.. _932 interface: https://www.curdes.com/mainforp/interfaces/fiu-932b.html
+.. _4 button (curve left): https://www.curdes.com/mainforp/responsedevices/hhsc-1x4-cl.html
+.. _8 button bimanual (curved lines): https://www.curdes.com/mainforp/responsedevices/hhsc-2x4-c.html
+
+
+.. glossary
+
+.. _LRPA: https://www.fieldtriptoolbox.org/faq/how_are_the_lpa_and_rpa_points_defined/
+.. _MNE's background on projectors and projections: https://mne.tools/stable/auto_tutorials/preprocessing/45_projectors_background.html
+.. _MNE's background on SSS and Maxwell filtering: https://mne.tools/stable/auto_tutorials/preprocessing/60_maxwell_filtering_sss.html#background-on-sss-and-maxwell-filtering
+.. _Nasion: https://en.wikipedia.org/wiki/Nasion
+.. _rst: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
+.. _spherical harmonics: https://en.wikipedia.org/wiki/Spherical_harmonics
+
+
+.. IT
+
+.. _intel i5-12500: https://ark.intel.com/content/www/us/en/ark/products/96144/intel-core-i512500-processor-18m-cache-up-to-4-60-ghz.html
+.. _intel Xeon W-2245: https://www.intel.com/content/www/us/en/products/sku/198609/intel-xeon-w2245-processor-16-5m-cache-3-90-ghz/specifications.html
+.. _Nvidia Quadro P2200: https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/quadro-p2200-datasheet-letter-974207-r4-web.pdf
+.. _Nvidia T1000: https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/productspage/quadro/quadro-desktop/proviz-print-nvidia-T1000-datasheet-us-nvidia-1670054-r4-web.pdf
+
+
 .. project
 
+.. _MIT license: https://opensource.org/licenses/MIT
 .. _project github: https://github.com/fcbg-hnp-meeg/meg-wiki
+.. _project github doc: https://github.com/fcbg-hnp-meeg/meg-wiki/tree/main/doc
 .. _project issue tracker: https://github.com/fcbg-hnp-meeg/meg-wiki/issues
 .. _project license: https://github.com/fcbg-hnp-meeg/meg-wiki/blob/main/LICENSE
 
-.. _LRPA: https://www.fieldtriptoolbox.org/faq/how_are_the_lpa_and_rpa_points_defined/
-.. _Nasion: https://en.wikipedia.org/wiki/Nasion
 
+.. software
 
-.. license
-
-.. _MIT license: https://opensource.org/licenses/MIT
-
-
-.. mne
-
+.. _autoreject: https://autoreject.github.io/stable/index.html
+.. _E-Prime: https://pstnet.com/products/e-prime/
+.. _eyelink-track: https://github.com/fcbg-hnp-meeg/eyelink-track
 .. _mne stable: https://mne.tools/stable/index.html
 .. _mne bids: https://mne.tools/mne-bids/stable/index.html
 .. _mne connectivity: https://mne.tools/mne-connectivity/stable/index.html
 .. _mne icalabel: https://mne.tools/mne-icalabel/stable/index.html
-.. _autoreject: https://autoreject.github.io/stable/index.html
-
-
-.. numpy
-
 .. _numpy: https://numpy.org/
-
-
-.. psychopy
-
+.. _pre-commit: https://pre-commit.com/
 .. _psychopy: https://www.psychopy.org/
-
-
-.. sklearn
-
 .. _scikit-learn: https://scikit-learn.org/stable/
-
-
-.. scipy
-
 .. _scipy: https://scipy.org/
+.. _sphinx-gallery: https://sphinx-gallery.github.io/stable/index.html
