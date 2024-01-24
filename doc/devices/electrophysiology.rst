@@ -54,6 +54,18 @@ the co-registration through additional digitization points on the scalp surface.
 
             Figure taken from MEGIN's User's Manual (copyright ©2011-2019 MEGIN Oy).
 
+.. note::
+
+    The EEG electrode :ref:`digitization <meg-session:Digitization>` can either be done
+    sequentially by following the electrodes order (1, 2, 3, ..) or by "lines"
+    (recommended, default). The "lines" correspond to the dotted lines with arrows (left
+    to right) on the figures above.
+
+.. warning::
+
+    Using the EEG caps with the MEG system significantly increases the preparation time.
+    64 channels caps require about 1 hour and 2 operators to digitize, apply the gel and
+    measures the impedances.
 
 BIO channels
 ------------
