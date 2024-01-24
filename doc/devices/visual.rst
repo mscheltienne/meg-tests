@@ -33,6 +33,12 @@ on the floor and ensures reproducibility between subjects.
 .. image:: ../_static/visual/screen-projection.png
     :align: center
 
+Screen
+------
+
+The screen is position at a fixed ``~1.2m`` distance from the eyes of the subject.
+The screen measures ``~30.5 cm x 55.0 cm``, thus the diagonal is ``~62.9 cm``.
+
 Settings
 --------
 
