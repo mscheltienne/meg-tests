@@ -71,6 +71,7 @@
 .. software
 
 .. _autoreject: https://autoreject.github.io/stable/index.html
+.. _byte-triggers: https://fcbg-hnp-meeg.github.io/byte-triggers/
 .. _E-Prime: https://pstnet.com/products/e-prime/
 .. _eyelink-track: https://github.com/fcbg-hnp-meeg/eyelink-track
 .. _mne stable: https://mne.tools/stable/index.html

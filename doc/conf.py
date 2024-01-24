@@ -110,6 +110,7 @@ autoclass_content = "class"
 
 # -- intersphinx -----------------------------------------------------------------------
 intersphinx_mapping = {
+    "byte_triggers": ("https://fcbg-hnp-meeg.github.io/byte-triggers/", None),
     "matplotlib": ("https://matplotlib.org/stable", None),
     "mne": ("https://mne.tools/stable/", None),
     "numpy": ("https://numpy.org/doc/stable", None),

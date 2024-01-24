@@ -62,12 +62,73 @@ the paradigm and it should be reset to ``0`` after each trigger.
 
     .. tab-item:: Python (Windows)
 
-        TODO
+        The platform provides `byte-triggers`_ to send triggers in paradigm. It supports
+        :class:`~byte_triggers.MockTrigger` (for testing purposes),
+        :class:`~byte_triggers.LSLTrigger` (for software triggers) and
+        :class:`~byte_triggers.ParallelPortTrigger` (for hardware triggers).
+
+        .. code-block:: python
+
+            from byte_triggers import ParallelPortTrigger
+
+            trigger = ParallelPortTrigger(0x4FB8)  # hexadecimal address
+            trigger.signal(101)
+
+        .. note::
+
+            The :class:`~byte_triggers.ParallelPortTrigger` automatically resets the
+            parallel port to ``0`` after each trigger, in a separate thread. This avoids
+            blocking the main thread. The default reset delay is set to ``50 ms``.
+
+        .. note::
+
+            Note that the :ref:`stimulation PC <stim-pc:Stimulation PC>` is
+            pre-configured. On other computers, microsoft redistributables and the
+            :download:`inpoutx64.dll <./_static/triggers/inpoutx64.dll>` file in
+            ``C:\Windows\system32`` may be required.
 
     .. tab-item:: Python (Linux)
 
-        TODO
+        The platform provides `byte-triggers`_ to send triggers in paradigm. It supports
+        :class:`~byte_triggers.MockTrigger` (for testing purposes),
+        :class:`~byte_triggers.LSLTrigger` (for software triggers) and
+        :class:`~byte_triggers.ParallelPortTrigger` (for hardware triggers).
+
+        .. code-block:: python
+
+            from byte_triggers import ParallelPortTrigger
+
+            trigger = ParallelPortTrigger("/dev/parport0")
+            trigger.signal(101)
+
+        .. note::
+
+            The :class:`~byte_triggers.ParallelPortTrigger` automatically resets the
+            parallel port to ``0`` after each trigger, in a separate thread. This avoids
+            blocking the main thread. The default reset delay is set to ``50 ms``.
 
     .. tab-item:: MATLAB (Windows)
 
-        TODO
+        1. Download :download:`io64.mexw64 <./_static/triggers/io64.mexw64>` in your
+           MATLAB path
+        2. In MATLAB, use the following code to send triggers betwwn ``1`` and ``255``:
+
+        .. code-block:: matlab
+
+            %% Initialize the parallel port object
+            address = hex2dec("4FB8");
+            ioObj = io64;
+            status = io64(ioObj);
+            io64(ioObj, address, 0);  % set the parallel port to 0 (default state)
+
+            %% Deliver the trigger 101
+            io64(ioObj, address, 101);  % set the parallel port to 101
+            pause(0.01);  % wait for 10 ms
+            io64(ioObj, address, 0);  % set the parallel port back to 0
+
+        .. note::
+
+            Note that the :ref:`stimulation PC <stim-pc:Stimulation PC>` is
+            pre-configured. On other computers, microsoft redistributables and the
+            :download:`inpoutx64.dll <./_static/triggers/inpoutx64.dll>` file in
+            ``C:\Windows\system32`` may be required.
