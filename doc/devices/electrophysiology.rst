@@ -27,6 +27,34 @@ The EEG electrodes can be digitized are part of the
 improve scalp topographies of EEG signal with "True" electrode locations, (2) improve
 the co-registration through additional digitization points on the scalp surface.
 
+.. tab-set::
+
+    .. tab-item:: 32 channels
+
+        .. figure:: ../_static/eeg/eeg-layout-32-channels.png
+            :align: center
+            :alt: EEG layout with 32 channels
+
+            Figure taken from MEGIN's User's Manual (copyright ©2011-2019 MEGIN Oy).
+
+    .. tab-item:: 64 channels
+
+        .. figure:: ../_static/eeg/eeg-layout-64-channels.png
+            :align: center
+            :alt: EEG layout with 64 channels
+
+            Figure taken from MEGIN's User's Manual (copyright ©2011-2019 MEGIN Oy).
+
+
+    .. tab-item:: 128 channels
+
+        .. figure:: ../_static/eeg/eeg-layout-128-channels.png
+            :align: center
+            :alt: EEG layout with 128 channels
+
+            Figure taken from MEGIN's User's Manual (copyright ©2011-2019 MEGIN Oy).
+
+
 BIO channels
 ------------
 
