@@ -77,6 +77,11 @@ Parallel Port (DB-25)
         Select LPT X address and set ``4FB8``. You can then turn ``ON`` or ``OFF`` the
         individual ``Data Register`` pins.
 
+        .. note::
+
+            The ``LPT Port Test Utility`` can be downloaded
+            :download:`here <./_static/triggers/LPTTestUtility.exe>`.
+
     .. tab-item:: Linux
 
         On Linux, the address of the parallel port is ``/dev/parport0``.
