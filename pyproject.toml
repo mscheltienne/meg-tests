@@ -58,6 +58,7 @@ doc = [
   'matplotlib',
   'memory-profiler',
   'numpydoc',
+  'PyQt6',
   'pyvista',
   'pyvistaqt',
   'sphinx!=7.2.*',
