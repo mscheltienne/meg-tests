@@ -21,6 +21,12 @@ compliant touchproof leads. On the platform, the following caps are available:
 | Large  |                           | .. centered:: X           | .. centered:: X            |
 +--------+---------------------------+---------------------------+----------------------------+
 
+The EEG channel names are incremental, ``EEG 001``, ``EEG 002``, ``EEG 003``, ... but
+correspond to a standard 10/05 naming. See the functions
+:func:`~meg_wiki.eeg.load_mapping_32chs`, :func:`~meg_wiki.eeg.load_mapping_64chs`,
+:func:`~meg_wiki.eeg.load_mapping_128chs` and :ref:`this tutorial <tut-rename_eeg>` to
+load the mapping between the incremental channel names and the standard 10/05 naming
+
 The EEG electrodes can be digitized are part of the
 :ref:`digitization <meg-session:Digitization>` process using the
 `Polhemus FASTRAK system <Polhemus_>`_. The digitized EEG electrodes can be used to (1)
