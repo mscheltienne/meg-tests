@@ -81,7 +81,6 @@ from mne import read_proj
 
 from meg_wiki.datasets import sample
 
-
 projs = read_proj(sample.data_path() / "ssp" / "200123" / "ssp_68_200123_proj.fif")
 
 # %%
@@ -89,7 +88,6 @@ projs = read_proj(sample.data_path() / "ssp" / "200123" / "ssp_68_200123_proj.fi
 # location and orientation. Those information are stored in every raw recording.
 
 from mne.io.meas_info import read_info
-
 
 info = read_info(
     sample.data_path() / "meas_info" / "measurement-info.fif", verbose=False
@@ -99,7 +97,6 @@ info
 # %%
 
 from matplotlib import pyplot as plt
-
 
 f, ax = plt.subplots(2, 3, figsize=(6, 6))
 for k, proj in enumerate(projs[0:6]):
@@ -117,7 +114,6 @@ plt.show()
 # %%
 
 from matplotlib import pyplot as plt
-
 
 f, ax = plt.subplots(1, 3, figsize=(6, 6))
 for k, proj in enumerate(projs[9:12]):
@@ -143,7 +139,6 @@ plt.show()
 # with IAS disabled.
 
 from mne.io import read_raw_fif
-
 
 raw = read_raw_fif(
     sample.data_path() / "empty-room" / "empty-room-raw.fif", verbose=False

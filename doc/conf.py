@@ -12,6 +12,7 @@ from datetime import date
 from importlib import import_module
 from typing import TYPE_CHECKING
 
+import pyvista
 from sphinx_gallery.sorting import FileNameSortKey
 
 import meg_wiki
@@ -234,6 +235,8 @@ def linkcode_resolve(domain: str, info: dict[str, str]) -> Optional[str]:
 
 
 # -- sphinx-gallery --------------------------------------------------------------------
+pyvista.BUILDING_GALLERY = True
+
 if sys.platform.startswith("win"):
     try:
         subprocess.check_call(["optipng", "--version"])
@@ -251,6 +254,7 @@ sphinx_gallery_conf = {
     "exclude_implicit_doc": {},  # set
     "filename_pattern": r"\d{2}_",
     "gallery_dirs": ["generated/tutorials"],
+    "image_scrapers": ("matplotlib", "pyvista"),
     "line_numbers": False,
     "plot_gallery": "True",  # str, to enable overwrite from CLI without warning
     "reference_url": {f"{package}": None},

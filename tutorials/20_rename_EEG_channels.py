@@ -25,7 +25,6 @@ from mne.io import read_raw_fif
 from meg_wiki.datasets import sample
 from meg_wiki.eeg import load_mapping_64chs
 
-
 set_log_level("WARNING")
 fname = sample.data_path() / "eeg-layout" / "meg-eeg-raw.fif"
 raw = read_raw_fif(fname, preload=False).pick("eeg")

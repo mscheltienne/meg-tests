@@ -18,11 +18,19 @@ This array represents the position and the normal given by a ``(3, 3)`` rotation
 in device coordinates.
 """
 
+import numpy as np
+from matplotlib import pyplot as plt
+from mne import pick_info, set_log_level
+from mne._fiff.pick import _picks_to_idx  # handy private function for selection
+from mne.channels import read_layout
 from mne.io.meas_info import read_info
+from mne.transforms import Transform
+from mne.viz import plot_alignment, plot_sensors, set_3d_view
+from mne.viz.backends.renderer import create_3d_figure
 
 from meg_wiki.datasets import sample
 
-
+set_log_level("WARNING")
 info = read_info(
     sample.data_path() / "meas_info" / "measurement-info.fif", verbose=False
 )
@@ -47,10 +55,6 @@ for key, value in info["chs"][0].items():
 # from an empty-room recording. Thus, it does not contain an HPI measurement and it does
 # not contain the transform from the device to the head coordinate frame.
 
-from matplotlib import pyplot as plt
-from mne.transforms import Transform
-from mne.viz import plot_sensors
-
 # set an identity transformation from the device to head coordinates
 info["dev_head_t"] = Transform("meg", "head")
 ax = plt.axes(projection="3d")
@@ -64,9 +68,6 @@ plt.show()
 # the idealied 2D sensor positions. Built-in layouts are available for the MEGIN system,
 # under the keys ``'Vectorview-all'``, ``'Vectorview-mag'``, ``'Vectorview-grad'``, and
 # ``'Vectorview-grad_norm'``.
-
-import numpy as np
-from mne.channels import read_layout
 
 layout = read_layout("Vectorview-all")
 fig, ax = plt.subplots(1, 1, figsize=(16.53, 11.69), layout="constrained")
@@ -92,5 +93,62 @@ plt.show()
 # .. note::
 #
 #    The function :func:`mne.viz.plot_layout` or the method
-#    :meth:`mne.channels.Layout.plot` can be used to plot the layout faster without
-#    customization.
+#    :meth:`mne.channels.Layout.plot` can be used to plot the layout with fewer lines
+#    of code but without customization. For instance:
+#
+#    .. code-block:: python
+#
+#        from mne.channels import read_layout
+#
+#        layout = read_layout("Vectorview-all")
+#        layout.plot()
+#
+# If you pay attention to the plotted layout, you will notice that triplets of sensors
+# are represented sometimes with ``GRADXXX2`` on top and ``GRADXXX3`` on the bottom, and
+# sometimes the other way around. This is because the sensors are not all oriented in
+# the same direction. The sensor in the top box measures the derivative along the
+# latitude while the sensor in the bottom box measures the derivative along the
+# longitude.
+#
+# .. figure:: ../../_static/layout/meg-channel-naming-convention.png
+#     :align: center
+#     :alt: MEG channel naming convention
+#
+#     Figure taken from MEGIN's User's Manual (copyright ©2011-2019 MEGIN Oy).
+#
+# We can visualize the orientation in 3D, with the sensors oriented along the lines of
+# latitude (horizontal sensitivity along the equator) in **red** and the sensors
+# oriented along the lines of longitude (vertical sensitivity along the equator) in
+# **orange**.
+
+picks = _picks_to_idx(info, picks="grad")
+info = pick_info(info, picks, copy=False)
+mask_top = np.zeros(len(info.ch_names), bool)
+for k, (ch2, ch3) in enumerate(zip(info.ch_names[::2], info.ch_names[1::2])):
+    # ch2 ends with MEGxxx2 and ch3 ends with MEGxxx3
+    idx2 = np.where(np.array(layout.names) == f"MEG {ch2.split('MEG')[1]}")[0]
+    idx3 = np.where(np.array(layout.names) == f"MEG {ch3.split('MEG')[1]}")[0]
+    mask_top[2 * k : 2 * k + 2] = (
+        [True, False]
+        if layout.pos[:, 1][idx2[0]] > layout.pos[:, 1][idx3[0]]
+        else [False, True]
+    )
+mask_bottom = ~mask_top  # opposite
+
+# retrieve position and orientation in device coordinate frame
+pos = np.array([ch["loc"][:3] for ch in info["chs"]])
+ori = np.array([ch["loc"][3:6] for ch in info["chs"]])
+
+# create render
+renderer_kwargs = dict(bgcolor="w")
+renderer = create_3d_figure(
+    size=(800, 800),
+    scene=False,
+    bgcolor="w",
+)
+plot_alignment(info, meg="sensors", coord_frame="meg", fig=renderer.scene())
+renderer.quiver3d(*pos[mask_top].T, *ori[mask_top].T, "r", scale=0.015, mode="arrow")
+renderer.quiver3d(
+    *pos[mask_bottom].T, *ori[mask_bottom].T, "orange", scale=0.015, mode="arrow"
+)
+set_3d_view(renderer.figure, azimuth=55, elevation=70, distance=0.55)
