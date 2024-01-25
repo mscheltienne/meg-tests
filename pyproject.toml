@@ -59,6 +59,7 @@ doc = [
   'memory-profiler',
   'numpydoc',
   'pyvista',
+  'pyvistaqt',
   'sphinx!=7.2.*',
   'sphinx-copybutton',
   'sphinx-design',
