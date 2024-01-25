@@ -58,7 +58,9 @@ Triggers from the stimulation PC
 The :ref:`stimulation PC <stim-pc:Stimulation PC>` can send triggers to the 8 first bits
 of the trigger interface on the main desk, ``STI102``, via a parallel port (DB-25) or
 via the `Chronos`_ if :ref:`stim-pc:E-Prime` is in-use. You can switch which output is
-in-use with the switch Chronos/DB-25 on the main desk.
+in-use with the switch Chronos/DB-25 on the main desk. See
+:ref:`the trigger section of the stimulation PC <stim-pc:Triggers>` for additional
+information.
 
 Parallel Port (DB-25)
 ~~~~~~~~~~~~~~~~~~~~~
