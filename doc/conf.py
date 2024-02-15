@@ -73,14 +73,16 @@ modindex_common_prefix = [f"{package}."]
 default_role = "py:obj"
 
 # -- options for HTML output -----------------------------------------------------------
-html_theme = "furo"
-html_static_path = ["_static"]
 html_css_files = [
     "css/style.css",
 ]
-html_title = project
-html_show_sphinx = False
+html_favicon = "_static/icons/HNP_MEEG_short.svg"
 html_logo = "_static/icons/HNP_MEEG_short.svg"
+html_permalinks_icon = "🔗"
+html_show_sphinx = False
+html_static_path = ["_static"]
+html_theme = "furo"
+html_title = project
 
 # Documentation to change footer icons:
 # https://pradyunsg.me/furo/customisation/footer/#changing-footer-icons
