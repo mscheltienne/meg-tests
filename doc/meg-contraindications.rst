@@ -1,6 +1,23 @@
 MEG contraindications
 =====================
 
+The signal measured by an MEG system is extremely low (:math:`10e^{-15}\ T`), the device
+is very restrictive with potential artifacts-inducing elements. None of the
+contraindications listed below can be harmful for the participant or for the device: an
+MEG is a fully passive device. The contraindications will only impact the signal
+quality.
+
+.. warning::
+
+    MRI compatibility is not equivalent to MEG compatibility. An MRI compatible object
+    might still contain some amount of ferromagnetic materials which do not disqualify
+    it for MRI certification but will induce artifacts on the MEG signal.
+
+Questionnaires for participants
+-------------------------------
+
+Fillable PDFs in english or french are available below.
+
 .. list-table::
    :widths: 100 100
    :header-rows: 1
@@ -19,17 +36,8 @@ MEG contraindications
          :target: ./_static/questionnaires/questionnaire_MEG_fr.pdf
          :alt: Download (FR)
 
-The signal measured by an MEG system is extremely low (:math:`10e^{-15}\ T`), the device
-is very restrictive with potential artifacts-inducing elements. None of the
-contraindications listed below can be harmful for the participant or for the device: an
-MEG is a fully passive device. The contraindications will only impact the signal
-quality.
-
-.. warning::
-
-    MRI compatibility is not equivalent to MEG compatibility. An MRI compatible object
-    might still contain some amount of ferromagnetic materials which do not disqualify
-    it for MRI certification but will induce artifacts on the MEG signal.
+Known contraindications
+-----------------------
 
 - pacemaker, or any kind of cardiac stimulator
 - insulin pump, bladder neurostimulator, deep-brain neurostimulator, or any kind of
