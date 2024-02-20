@@ -113,22 +113,39 @@ The digitization process is performed with the `Polhemus FASTRAK system <Polhemu
 First, 3 :term:`anatomical landmarks` are digitized: the `nasion (NAS) <Nasion_>`_, the
 `left and right pre-auricular point (LPA and RPA) <LRPA_>`_.
 
-.. image:: ./_static/coordinate-frame/fiducials.svg
+.. image:: ./_static/coordinate-frame/digitization.svg
     :align: center
-    :width: 600
+    :width: 100%
+
+|
 
 .. image:: ./_static/coordinate-frame/head-coordinate-frame.png
     :align: right
-    :width: 200
+    :width: 18%
 
 Those 3 :term:`anatomical landmarks` define the head coordinate frame:
 
 - The X-axis goes from `LPA (2) to RPA (1) <LRPA_>`_
 - The Y-axis is orthogonal to the X-axis and goes through the
-  `nasion (NAS) <Nasion_>`_ (3)
+  `nasion (NAS) (3) <Nasion_>`_
 - The Z-axis forms the right-handed orthogonal system
 
-The head coordinate frame measures the point's position in meters.
+|
+
+All points digitized  after the :term:`anatomical landmarks` are reported in the head
+coordinate frame. Once the head coordinate frame is defined, the digitized points are:
+
+- the 5 :term:`HPI` coils (placement may vary from one participant to another)
+- (optional) the :ref:`EEG <devices/electrophysiology:Electroencaphalography (EEG)>`
+  electrodes
+- the head shape (additional points on the scalp to improve co-registration)
+
+The head shape is digitized in ``string`` mode, i.e. a continuous pressure is applied on
+the pen which draws lines on the scalp.
+
+.. note::
+
+    The head coordinate frame measures the point's position in meters.
 
 HPI measurement
 ---------------
