@@ -109,14 +109,19 @@ participant head. The coils position is measured both in the head coordinate fra
 part of the digitization process) and in the device coordinate frame (as part of the
 :ref:`meg-session:HPI measurement`).
 
+The digitization process is performed with the `Polhemus FASTRAK system <Polhemus_>`_.
+First, 3 :term:`anatomical landmarks` are digitized: the `nasion (NAS) <Nasion_>`_, the
+`left and right pre-auricular point (LPA and RPA) <LRPA_>`_.
+
+.. image:: ./_static/coordinate-frame/fiducials.svg
+    :align: center
+    :width: 600
+
 .. image:: ./_static/coordinate-frame/head-coordinate-frame.png
     :align: right
     :width: 200
 
-The digitization process is performed with the `Polhemus FASTRAK system <Polhemus_>`_.
-First, 3 :term:`anatomical landmarks` are digitized: the `nasion (NAS) <Nasion_>`_, the
-`left and right pre-auricular point (LPA and RPA) <LRPA_>`_. Those 3
-:term:`anatomical landmarks` define the head coordinate frame:
+Those 3 :term:`anatomical landmarks` define the head coordinate frame:
 
 - The X-axis goes from `LPA (2) to RPA (1) <LRPA_>`_
 - The Y-axis is orthogonal to the X-axis and goes through the
