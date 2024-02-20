@@ -3,6 +3,10 @@
 MEG session
 ===========
 
+.. image:: ./_static/flowchart.svg
+    :align: center
+    :width: 100%
+
 Screening
 ---------
 
@@ -183,6 +187,3 @@ movements using `MNE-Python <mne stable_>`_.
     Note that this function is not a simple notch filter as the :term:`cHPI` signals are
     in general not stationary because the head movements act like amplitude modulators.
     Thus, an iterative fitting method is used to remove the :term:`cHPI` signal.
-
-Experiment
-----------
