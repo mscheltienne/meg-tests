@@ -104,7 +104,7 @@ participants or 2 different recording sessions, the head position inside the MEG
 might vary. In other words, a given sensor will not monitor the same brain region.
 
 To account for the variable head position, a device to head transformation is estimated
-for every recording. This transformation is estimated from 5 ciols placed on the
+for every recording. This transformation is estimated from 5 coils placed on the
 participant head. The coils position is measured both in the head coordinate frame (as
 part of the digitization process) and in the device coordinate frame (as part of the
 HPI measurement).
@@ -116,7 +116,7 @@ HPI measurement).
 The digitization process is performed with the `Polhemus FASTRAK system <Polhemus_>`_.
 First, 3 :term:`anatomical landmarks` are digitized: the `nasion (NAS) <Nasion_>`_, the
 `left and right pre-auricular point (LPA and RPA) <LRPA_>`_. Those 3
-:term:`anatomical landmarks` define the headcoordinate frame:
+:term:`anatomical landmarks` define the head coordinate frame:
 
 - The X-axis goes from `LPA (2) to RPA (1) <LRPA_>`_
 - The Y-axis is orthogonal to the X-axis and goes through the
@@ -127,6 +127,40 @@ The head coordinate frame measures the point's position in meters.
 
 HPI measurement
 ---------------
+
+An HPI (Head Position Indication) measurement is always performed before a new recording
+with a participant. Once, the participant is positioned in the MEG, a pulse is sent to
+the 5 coils placed on the head. The coils positions are estimated from the magnetic
+field measured by the MEG sensors.
+
+.. note::
+
+    Only 3 coils are needed to estimate the head position, 4 coils ensures that they are
+    not coplanar. MEGIN opted for 5 coils as a safety margin to ensure a robust
+    estimation.
+
+The HPI measurement at the beginning of the recording is used to estimate a single
+device to head transformation, stored in the ``raw.info["dev_head_t"]`` field of a
+:class:`~mne.io.Raw` object.
+
+.. note::
+
+    In `MNE-Python <mne stable_>`_, the device to head transformation is stored in a
+    :class:`~mne.transforms.Transform` object representing a 4x4 affine transformation.
+
+cHPI (continuous Head Position Indication) is used to continuously elicit a magnetic
+field from the 5 HPI coils. :ref:`data-analysis-pc:MaxWell filter` can use the cHPI
+signal to correct signal distortions due to head movements. See
+:ref:`this tutorial <tut-cHPI>` for more information about the correction of head
+movements using `MNE-Python <mne stable_>`_.
+
+.. warning::
+
+    In any-case, the cHPI signal should be filtered out before the analysis.
+    In `MNE-Python <mne stable_>`_, this is done through :func:`~mne.chpi.filter_chpi`.
+    Note that this function is not a simple notch filter as the cHPI signals are in
+    general not stationary because the head movements act like amplitude modulators.
+    Thus, an iterative fitting method is used to remove the cHPI signal.
 
 Experiment
 ----------
