@@ -92,6 +92,6 @@ requested. Alternatively, you can contact directly one of the facility members:
 Booking the MEG
 ---------------
 
-The MEG can be booked on `Campus Biotech Calpendo <calpendo_>`_ with the account used
-for all FCBG facilities equipment. Only approved projects can book the MEG. Please
-contact the facility team if you need access to Calpendo.
+The MEG can be booked on `Campus Biotech Calpendo <calpendo_>`_ through the researcher
+individual account used for all FCBG facilities equipment. Only approved projects can
+book the MEG. Please contact the facility team if you need access to Calpendo.
