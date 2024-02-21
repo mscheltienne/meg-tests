@@ -6,48 +6,48 @@
 ============
 
 .. toctree::
-   :hidden:
-   :caption: General
+    :hidden:
+    :caption: General
 
-   meg-session.rst
-   meg-contraindications.rst
-   meg-settings.rst
-   meg-triggers.rst
-   stim-pc.rst
-   data-transfer.rst
-   data-analysis-pc.rst
-
-.. toctree::
-   :hidden:
-   :caption: Devices
-
-   devices/audio/index.rst
-   devices/visual.rst
-   devices/eye-tracker.rst
-   devices/response-pads/index.rst
-   devices/optimic.rst
-   devices/electrical-stimulator.rst
-   devices/electrophysiology.rst
+    meg-session.rst
+    meg-contraindications.rst
+    meg-settings.rst
+    meg-triggers.rst
+    stim-pc.rst
+    data-transfer.rst
+    data-analysis-pc.rst
 
 .. toctree::
-   :hidden:
-   :caption: Resources
+    :hidden:
+    :caption: Devices
 
-   MNE-Python <https://mne.tools/stable/index.html>
-   FieldTrip <https://www.fieldtriptoolbox.org/>
-   glossary.rst
+    devices/audio/index.rst
+    devices/visual.rst
+    devices/eye-tracker.rst
+    devices/response-pads/index.rst
+    devices/optimic.rst
+    devices/electrical-stimulator.rst
+    devices/electrophysiology.rst
 
 .. toctree::
-   :hidden:
-   :caption: Code
+    :hidden:
+    :caption: Resources
 
-   api/index.rst
-   generated/tutorials/index.rst
-   contributing.rst
+    MNE-Python <https://mne.tools/stable/index.html>
+    FieldTrip <https://www.fieldtriptoolbox.org/>
+    glossary.rst
+
+.. toctree::
+    :hidden:
+    :caption: Code
+
+    api/index.rst
+    generated/tutorials/index.rst
+    contributing.rst
 
 Wiki for the `MEGIN Triux Neo`_ at the Human Neuroscience Platform, Campus
-Biotech, Geneva. With 306 SQUID sensors, 204 planar gradiometers and 102 magnetometers,
-it can measure brain activity in upright or supine position.
+Biotech, Geneva. With 306 :term:`SQUID` sensors, 204 planar gradiometers and 102
+magnetometers, it can measure brain activity in upright or supine position.
 
 .. image:: ./_static/meg/meg-positions-dark.png
     :class: only-dark
@@ -86,3 +86,12 @@ requested. Alternatively, you can contact directly one of the facility members:
 - Mathieu Scheltienne (engineer): mathieu.scheltienne@fcbg.ch
 - Nathalie Philippe (technologist): nathalie.philippe@fcbg.ch
 - Vincent Rochas (scientist): vincent.rochas@fcbg.ch
+
+|
+
+Booking the MEG
+---------------
+
+The MEG can be booked on `Campus Biotech Calpendo <calpendo_>`_ with the account used
+for all FCBG facilities equipment. Only approved projects can book the MEG. Please
+contact the facility team if you need access to Calpendo.

@@ -84,3 +84,8 @@
 .. _scikit-learn: https://scikit-learn.org/stable/
 .. _scipy: https://scipy.org/
 .. _sphinx-gallery: https://sphinx-gallery.github.io/stable/index.html
+
+
+.. others
+
+.. _calpendo: https://campusbiotech.calpendo.com/
