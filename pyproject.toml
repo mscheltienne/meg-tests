@@ -32,6 +32,7 @@ keywords = [
   'python',
   'tests',
   'timings',
+  'wiki',
 ]
 license = {file = 'LICENSE'}
 maintainers = [
