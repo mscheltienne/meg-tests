@@ -97,7 +97,7 @@ test = [
 meg_wiki-sys_info = 'meg_wiki.commands.sys_info:run'
 
 [project.urls]
-documentation = 'https://github.com/fcbg-hnp-meeg/meg_wiki'
+documentation = 'https://meg-wiki.hnp.fcbg.ch/'
 homepage = 'https://github.com/fcbg-hnp-meeg/meg_wiki'
 source = 'https://github.com/fcbg-hnp-meeg/meg_wiki'
 tracker = 'https://github.com/fcbg-hnp-meeg/meg_wiki/issues'
