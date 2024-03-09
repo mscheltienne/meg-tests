@@ -1,12 +1,11 @@
 from pathlib import Path as Path
-from typing import Union
 
 import numpy as np
 from numpy.typing import NDArray as NDArray
 
 def load_fine_calibration(
-    fname: Union[str, Path],
-) -> dict[str, Union[list[str], NDArray[np.float64], list[NDArray[np.float64]]]]:
+    fname: str | Path,
+) -> dict[str, list[str] | NDArray[np.float64] | list[NDArray[np.float64]]]:
     """Load a fine calibration.
 
     The fine calibration typically includes improved sensor locations,

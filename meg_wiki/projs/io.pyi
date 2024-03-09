@@ -1,5 +1,5 @@
 from pathlib import Path as Path
-from typing import IO, Union
+from typing import IO
 
 from mne import Projection
 
@@ -22,8 +22,8 @@ def _write_proj(fid: IO, projs: list[Projection]) -> None:
     """
 
 def write_proj(
-    fname: Union[str, Path],
-    projs: Union[list[Projection], tuple[Projection]],
+    fname: str | Path,
+    projs: list[Projection] | tuple[Projection],
     position: int,
     *,
     overwrite: bool = False,

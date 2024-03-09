@@ -1,9 +1,8 @@
 from pathlib import Path as Path
-from typing import Union
 
 from .datasets import sample as sample
 
-def load_mapping(fname: Union[str, Path]) -> dict[str, str]:
+def load_mapping(fname: str | Path) -> dict[str, str]:
     """Load a mapping TXT file into an MNE-compatible dictionary.
 
     The loaded mapping can be used to rename the channels from a recording with
