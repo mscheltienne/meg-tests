@@ -28,7 +28,7 @@ author = "MEEG-BCI facility"
 copyright = f"{date.today().year}, {author}"
 release = meg_wiki.__version__
 package = meg_wiki.__name__
-gh_url = "https://github.com/fcbg-hnp-meeg/meg-info"
+gh_url = "https://github.com/fcbg-hnp-meeg/meg-wiki"
 
 # -- general configuration -------------------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
