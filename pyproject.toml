@@ -25,7 +25,7 @@ dependencies = [
   'pooch',
   'psutil',
 ]
-description = 'Info, test and demo for the MEGIN Triux Neo System at the Human Neuroscience Platform in Geneva. '
+description = 'Wiki for the MEG platform at the Human Neuroscience Platform in Geneva.'
 keywords = [
   'meg',
   'neuroscience',
@@ -88,9 +88,9 @@ style = [
   'yamllint',
 ]
 test = [
-  'pytest',
   'pytest-cov',
   'pytest-timeout',
+  'pytest>=8.0',
 ]
 
 [project.scripts]
@@ -131,8 +131,6 @@ omit = [
 [tool.isort]
 extend_skip_glob = [
   'doc/*',
-  'examples/*',
-  'setup.py',
   'tutorials/*',
 ]
 line_length = 88
@@ -150,18 +148,18 @@ match-dir = '^meg_wiki.*'
 [tool.pytest.ini_options]
 addopts = '--durations 20 --junit-xml=junit-results.xml --verbose'
 filterwarnings = []
-minversion = '6.0'
+minversion = '8.0'
 
 [tool.ruff]
 extend-exclude = [
   'doc',
-  'setup.py',
 ]
 line-length = 88
 target-version = 'py39'
 
 [tool.ruff.format]
 docstring-code-format = true
+line-ending = "lf"
 
 [tool.ruff.lint]
 ignore = []
