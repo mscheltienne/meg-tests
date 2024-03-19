@@ -7,9 +7,9 @@ Tracker
 -------
 
 Contributions in all forms to this wiki are welcome. This wiki is hosted and build on
-`GitHub <project github_>`_. The `issue tracker <project issue tracker_>`_ can be used to
-propose changes, additions and report issues and solutions found when working with MEG
-data from our site.
+`GitHub <project github_>`_. The `issue tracker <project issue tracker_>`_ can be used
+to propose changes, additions and report issues and solutions found when working with
+MEG data from our site.
 
 Pull Requests
 -------------

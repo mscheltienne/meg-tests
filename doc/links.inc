@@ -60,6 +60,11 @@
 .. _Nvidia T1000: https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/productspage/quadro/quadro-desktop/proviz-print-nvidia-T1000-datasheet-us-nvidia-1670054-r4-web.pdf
 
 
+.. others
+
+.. _calpendo: https://campusbiotech.calpendo.com/
+
+
 .. project
 
 .. _MIT license: https://opensource.org/licenses/MIT
@@ -85,8 +90,3 @@
 .. _scikit-learn: https://scikit-learn.org/stable/
 .. _scipy: https://scipy.org/
 .. _sphinx-gallery: https://sphinx-gallery.github.io/stable/index.html
-
-
-.. others
-
-.. _calpendo: https://campusbiotech.calpendo.com/
