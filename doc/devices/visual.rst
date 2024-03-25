@@ -116,7 +116,7 @@ when the top left pixel changes state. This mode, usually disable, can be found 
         from byte_triggers import ParallelPortTrigger
         from psychopy.visual import Window
 
-        trigger = ParallelPortTrigger(0x4FB8)
+        trigger = ParallelPortTrigger(0x2FB8)
         win = Window()
         win.callOnFlip(trigger.signal, 1)  # send value 1 after the next flip
         win.flip()

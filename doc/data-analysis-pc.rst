@@ -3,14 +3,14 @@
 Data analysis PC (DANA)
 =======================
 
-Data analysis PCs, called DANA, are available in the MEG facility. DANA's can be
-accessed on the account ``meguser`` and have both MEGIN's analysis software and
+A data analysis PC, called DANA, is available in the MEG facility. DANA can be
+accessed on the account ``meguser`` and has both MEGIN's analysis software and
 MNE-Python.
 
 Specifications
 --------------
 
-The analysis PCs run on an `intel Xeon W-2245`_ (8 cores, 16 threads) with 32 GB of
+The analysis PC run on an `intel Xeon W-2245`_ (8 cores, 16 threads) with 32 GB of
 RAM and an `Nvidia Quadro P2200`_. Most analysis pipeline require one or multiple copies
 of a dataset to be loaded in RAM. 32 GB is sufficient for subject-level analysis and
 most group-level analysis, with an additional 20 GB of available swap if needed.

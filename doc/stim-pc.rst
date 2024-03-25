@@ -11,8 +11,8 @@ the non-admin account ``meguser``.
 Specifications
 --------------
 
-The stimulation PC runs on an `intel i5-12500`_ (6 cores, 12 threads) with 16 GB of RAM
-and an `Nvidia T1000`_. This hardware is recent but not high-end. Stimulation
+The stimulation PC runs on an `intel Xeon W-2245`_ (8 cores, 16 threads) with 32 GB of
+RAM and an `Nvidia Quadro P2200`_. This hardware is recent but not high-end. Stimulation
 paradigms rarely require high-end hardware with high throughput. Instead, latency and
 regularity are more valuable and are similar between high-end and middle-end
 hardware.
@@ -71,7 +71,7 @@ the paradigm and it should be reset to ``0`` after each trigger.
 
             from byte_triggers import ParallelPortTrigger
 
-            trigger = ParallelPortTrigger(0x4FB8)  # hexadecimal address
+            trigger = ParallelPortTrigger(0x2FB8)  # hexadecimal address
             trigger.signal(101)
 
         .. note::
@@ -116,7 +116,7 @@ the paradigm and it should be reset to ``0`` after each trigger.
         .. code-block:: matlab
 
             %% Initialize the parallel port object
-            address = hex2dec("4FB8");
+            address = hex2dec("2FB8");
             ioObj = io64;
             status = io64(ioObj);
             io64(ioObj, address, 0);  % set the parallel port to 0 (default state)

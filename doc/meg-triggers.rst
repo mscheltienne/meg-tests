@@ -69,14 +69,14 @@ Parallel Port (DB-25)
 
     .. tab-item:: Windows
 
-        On Windows, the address of the parallel port in hexadecimal is ``4FB8``. On the
+        On Windows, the address of the parallel port in hexadecimal is ``eFB8``. On the
         desktop, ``LPT Port Test Utility`` can be used to test the parallel port.
 
         .. image:: ./_static/meg/lpt-port-test-utility.png
             :width: 400
             :align: center
 
-        Select LPT X address and set ``4FB8``. You can then turn ``ON`` or ``OFF`` the
+        Select LPT X address and set ``eFB8``. You can then turn ``ON`` or ``OFF`` the
         individual ``Data Register`` pins.
 
         .. note::
