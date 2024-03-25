@@ -20,6 +20,8 @@ hardware.
 E-Prime
 -------
 
+In E-Prime, the monitor should be set to ``1`` and the parallel port to ``LPT4``.
+
 Python
 ------
 
