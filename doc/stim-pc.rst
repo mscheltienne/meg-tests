@@ -20,7 +20,15 @@ hardware.
 E-Prime
 -------
 
-In E-Prime, the monitor should be set to ``1`` and the parallel port to ``LPT4``.
+In E-Prime, if the `Chronos`_ is not used, the settings should be set to:
+
+- the monitor should be set to ``1``
+- the parallel port to ``LPT4``
+- the audio driver to ``ASIO``
+
+.. warning::
+
+    With audio stimulation, the ``DirectSound`` driver yields unreliable timings.
 
 Python
 ------
@@ -134,3 +142,29 @@ the paradigm and it should be reset to ``0`` after each trigger.
             pre-configured. On other computers, microsoft redistributables and the
             :download:`inpoutx64.dll <./_static/triggers/inpoutx64.dll>` file in
             ``C:\Windows\system32`` may be required.
+
+Measuring timings
+-----------------
+
+Timings can be measured by connecting a measuring device to a miscellaneous channel of
+the MEG system. The :ref:`sampling rate <meg-settings:Sampling rate>` can be increased
+to 5 kHz to measure higher frequency content.
+
+For visual task, a photodiode is available. The photodiode optical fiber should be
+connected to the powered digitizer. The analogical output of the digitizer is sufficient
+in most cases, and should be preferred above the thresholded digital output.
+
+For auditory task:
+
+- one of the monitoring output from the `Crimson 3`_ can be connected via a jack to BNC
+  cable to a miscellaneous channel.
+- the :ref:`optimic <devices/optimic:Optimic>` can be used to record the sound output
+  from the headset.
+
+This testing setup works best with a pure tone sound at 1 kHz, downloadable below:
+
+.. image:: ./_static/icons/audio-file.svg
+    :align: center
+    :width: 100
+    :target: ./_static/sound/tone_1000Hz.wav
+    :alt: Download sound file
