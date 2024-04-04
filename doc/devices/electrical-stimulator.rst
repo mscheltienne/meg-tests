@@ -1,5 +1,9 @@
 .. include:: ../links.inc
 
+.. image:: ../_static/digitimer/digitimer-ds7a.png
+    :align: right
+    :width: 30%
+
 Electrical stimulator
 =====================
 
