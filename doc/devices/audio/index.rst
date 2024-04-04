@@ -13,10 +13,10 @@ frequency and latency response.
     :link-type: url
     :text-align: center
 
-    .. image:: ../../_static/audio-devices/etymotic-light.png
+    .. image:: ../../_static/devices/etymotic-light.png
         :class: only-light
 
-    .. image:: ../../_static/audio-devices/etymotic-dark.png
+    .. image:: ../../_static/devices/etymotic-dark.png
         :class: only-dark
 
   .. grid-item-card:: SoundPixx
@@ -24,16 +24,16 @@ frequency and latency response.
     :link-type: url
     :text-align: center
 
-    .. image:: ../../_static/audio-devices/soundpixx-light.png
+    .. image:: ../../_static/devices/soundpixx-light.png
         :class: only-light
 
-    .. image:: ../../_static/audio-devices/soundpixx-dark.png
+    .. image:: ../../_static/devices/soundpixx-dark.png
         :class: only-dark
 
 Both audio stimulation systems are connected to a USB audio interface `Crimson 3`_ from
 `SPL`_.
 
-.. figure:: ../../_static/audio-devices/crimson.png
+.. figure:: ../../_static/devices/crimson.png
     :width: 700
     :align: center
 

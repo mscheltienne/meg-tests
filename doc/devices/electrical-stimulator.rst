@@ -1,6 +1,6 @@
 .. include:: ../links.inc
 
-.. image:: ../_static/digitimer/digitimer-ds7a.png
+.. image:: ../_static/devices/digitimer-ds7a.png
     :align: right
     :width: 30%
 

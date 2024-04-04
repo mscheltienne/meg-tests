@@ -10,7 +10,7 @@ elements: the amplifier, the pneumatic transducer, and the coil headsets.
 
 |
 
-.. image:: ../../_static/audio-devices/soundpixx-amplifier.png
+.. image:: ../../_static/devices/soundpixx-amplifier.png
     :align: right
     :width: 10%
 
@@ -28,7 +28,7 @@ The amplifier is positioned on the main desk. It is connected to the
 
 |
 
-.. image:: ../../_static/audio-devices/soundpixx-transducer.png
+.. image:: ../../_static/devices/soundpixx-transducer.png
     :align: right
     :width: 10%
 
@@ -45,7 +45,7 @@ the MEG system. The frequency response span 20 Hz to 20 kHz.
 
 |
 
-.. image:: ../../_static/audio-devices/soundpixx-coil-headset.png
+.. image:: ../../_static/devices/soundpixx-coil-headset.png
     :align: right
     :width: 10%
 
@@ -62,5 +62,5 @@ Datasheet
 .. image:: ../../_static/icons/pdf.png
     :align: center
     :alt: Download (SoundPixx datasheet)
-    :target: ../../_static/audio-devices/soundpixx-datasheet.pdf
+    :target: ../../_static/devices/soundpixx-datasheet.pdf
     :width: 100

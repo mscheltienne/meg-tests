@@ -8,7 +8,7 @@ Response pads
     :link-type: url
     :text-align: center
 
-    .. image:: ../../_static/response-pads/current-designs.png
+    .. image:: ../../_static/devices/current-designs.png
 
   .. grid-item-card:: Response pads (MEGIN)
     :link: response-pads-megin.html

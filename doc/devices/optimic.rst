@@ -6,7 +6,7 @@ Optimic
 The `Optimic MEG microphone`_ is a passive fiber optic microphone from the company
 `Opto acoustics`_.
 
-.. image:: ../_static/optimic/optimic.png
+.. image:: ../_static/devices/optimic.png
     :align: center
     :class: img-with-border
     :width: 600
