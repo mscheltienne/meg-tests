@@ -24,6 +24,7 @@ selection is set to:
 .. image:: ./_static/meg/meg-channel-selection.png
     :width: 1000
     :align: center
+    :class: img-with-border
 
 Common changes include:
 

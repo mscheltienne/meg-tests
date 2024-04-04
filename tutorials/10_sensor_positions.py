@@ -110,7 +110,7 @@ plt.show()
 # latitude while the sensor in the bottom box measures the derivative along the
 # longitude.
 #
-# .. figure:: ../../_static/layout/meg-channel-naming-convention.png
+# .. figure:: ../../_static/meg/meg-channel-naming-convention.png
 #     :align: center
 #     :alt: MEG channel naming convention
 #

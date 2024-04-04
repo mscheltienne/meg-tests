@@ -8,6 +8,7 @@ the :ref:`stimulation PC <stim-pc:Stimulation PC>` and one in the stimulus cabin
 .. image:: ./_static/meg/meg-triggers.png
     :width: 700
     :align: center
+    :class: img-with-border
 
 Binary vs combined channel
 --------------------------
@@ -75,6 +76,7 @@ Parallel Port (DB-25)
         .. image:: ./_static/meg/lpt-port-test-utility.png
             :width: 400
             :align: center
+            :class: img-with-border
 
         Select LPT X address and set ``2FB8``. You can then turn ``ON`` or ``OFF`` the
         individual ``Data Register`` pins.

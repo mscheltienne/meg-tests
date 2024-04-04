@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:09.109** total execution time for 4 files **from all galleries**:
+**00:08.982** total execution time for 4 files **from all galleries**:
 
 .. container::
 
@@ -33,14 +33,14 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_generated_tutorials_00_signal_space_projection.py` (``../tutorials/00_signal_space_projection.py``)
-     - 00:04.950
-     - 777.3
+     - 00:04.999
+     - 778.6
    * - :ref:`sphx_glr_generated_tutorials_10_sensor_positions.py` (``../tutorials/10_sensor_positions.py``)
-     - 00:02.942
+     - 00:02.823
      - 148.4
    * - :ref:`sphx_glr_generated_tutorials_20_rename_EEG_channels.py` (``../tutorials/20_rename_EEG_channels.py``)
-     - 00:01.217
-     - 10.8
+     - 00:01.160
+     - 10.5
    * - :ref:`sphx_glr_generated_tutorials_30_cHPI.py` (``../tutorials/30_cHPI.py``)
      - 00:00.000
-     - 10.4
+     - 10.5
