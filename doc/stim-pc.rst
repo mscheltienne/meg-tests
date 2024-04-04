@@ -94,8 +94,8 @@ the paradigm and it should be reset to ``0`` after each trigger.
 
             Note that the :ref:`stimulation PC <stim-pc:Stimulation PC>` is
             pre-configured. On other computers, microsoft redistributables and the
-            :download:`inpoutx64.dll <./_static/triggers/inpoutx64.dll>` file in
-            ``C:\Windows\system32`` may be required.
+            :download:`inpoutx64.dll <./_static/downloads/triggers/inpoutx64.dll>` file
+            in ``C:\Windows\system32`` may be required.
 
     .. tab-item:: Python (Linux)
 
@@ -119,8 +119,8 @@ the paradigm and it should be reset to ``0`` after each trigger.
 
     .. tab-item:: MATLAB (Windows)
 
-        1. Download :download:`io64.mexw64 <./_static/triggers/io64.mexw64>` in your
-           MATLAB path
+        1. Download :download:`io64.mexw64 <./_static/downloads/triggers/io64.mexw64>`
+           in your MATLAB path
         2. In MATLAB, use the following code to send triggers betwwn ``1`` and ``255``:
 
         .. code-block:: matlab
@@ -140,8 +140,8 @@ the paradigm and it should be reset to ``0`` after each trigger.
 
             Note that the :ref:`stimulation PC <stim-pc:Stimulation PC>` is
             pre-configured. On other computers, microsoft redistributables and the
-            :download:`inpoutx64.dll <./_static/triggers/inpoutx64.dll>` file in
-            ``C:\Windows\system32`` may be required.
+            :download:`inpoutx64.dll <./_static/downloads/triggers/inpoutx64.dll>` file
+            in ``C:\Windows\system32`` may be required.
 
 Measuring timings
 -----------------
@@ -166,5 +166,5 @@ This testing setup works best with a pure tone sound at 1 kHz, downloadable belo
 .. image:: ./_static/icons/audio-file.svg
     :align: center
     :alt: Download sound file
-    :target: ./_static/sound/tone_1000Hz.wav
+    :target: ./_static/downloads/sound/tone_1000Hz.wav
     :width: 100

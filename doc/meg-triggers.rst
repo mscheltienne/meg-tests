@@ -84,7 +84,7 @@ Parallel Port (DB-25)
         .. note::
 
             The ``LPT Port Test Utility`` can be downloaded
-            :download:`here <./_static/triggers/LPTTestUtility.exe>`.
+            :download:`here <./_static/downloads/triggers/LPTTestUtility.exe>`.
 
     .. tab-item:: Linux
 

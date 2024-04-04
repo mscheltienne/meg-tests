@@ -62,5 +62,5 @@ Datasheet
 .. image:: ../../_static/icons/pdf.png
     :align: center
     :alt: Download (SoundPixx datasheet)
-    :target: ../../_static/devices/soundpixx-datasheet.pdf
+    :target: ../../_static/downloads/datasheet/soundpixx.pdf
     :width: 100

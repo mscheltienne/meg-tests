@@ -105,5 +105,5 @@ here:
 .. image:: ./_static/icons/pdf.png
     :align: center
     :alt: Download (MEG Product Data)
-    :target: ./_static/meg/meg-product-data.pdf
+    :target: ./_static/downloads/datasheet/meg.pdf
     :width: 100
