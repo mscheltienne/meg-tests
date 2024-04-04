@@ -17,16 +17,16 @@ Setup
     .. tab-item:: Upright position
 
         .. image:: ../_static/eye-tracker/upright.png
-            :width: 600
             :align: center
             :class: img-with-border
+            :width: 600
 
     .. tab-item:: Supine position
 
         .. image:: ../_static/eye-tracker/supine.png
-            :width: 600
             :align: center
             :class: img-with-border
+            :width: 600
 
 Standalone vs integrated mode
 -----------------------------
@@ -70,14 +70,14 @@ Alternatively, triggers can be delivered as a "message" via the ethernet link be
 the :ref:`stimulation PC <stim-pc:Stimulation PC>` and the EyeLink PC.
 
 .. image:: ../_static/eye-tracker/triggers-light.png
-    :width: 600
     :align: center
     :class: only-light
+    :width: 600
 
 .. image:: ../_static/eye-tracker/triggers-dark.png
-    :width: 600
     :align: center
     :class: only-dark
+    :width: 600
 
 Analogical outputs
 ------------------
@@ -110,14 +110,14 @@ channels of the MEG, thus recording core information as part of the FIF file. In
         - ``(5, 5)`` corresponds to the bottom-right corner.
 
         .. image:: ../_static/eye-tracker/analogic-coordinates-light.png
-            :width: 600
             :align: center
             :class: only-light
+            :width: 600
 
         .. image:: ../_static/eye-tracker/analogic-coordinates-dark.png
-            :width: 600
             :align: center
             :class: only-dark
+            :width: 600
 
         .. warning::
 

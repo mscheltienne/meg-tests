@@ -165,6 +165,6 @@ This testing setup works best with a pure tone sound at 1 kHz, downloadable belo
 
 .. image:: ./_static/icons/audio-file.svg
     :align: center
-    :width: 100
-    :target: ./_static/sound/tone_1000Hz.wav
     :alt: Download sound file
+    :target: ./_static/sound/tone_1000Hz.wav
+    :width: 100

@@ -6,9 +6,9 @@ are split between 2 trigger interface I/O boxes, one on the main desk connected 
 the :ref:`stimulation PC <stim-pc:Stimulation PC>` and one in the stimulus cabinet.
 
 .. image:: ./_static/meg/meg-triggers.png
-    :width: 700
     :align: center
     :class: img-with-border
+    :width: 700
 
 Binary vs combined channel
 --------------------------
@@ -74,9 +74,9 @@ Parallel Port (DB-25)
         desktop, ``LPT Port Test Utility`` can be used to test the parallel port.
 
         .. image:: ./_static/meg/lpt-port-test-utility.png
-            :width: 400
             :align: center
             :class: img-with-border
+            :width: 400
 
         Select LPT X address and set ``2FB8``. You can then turn ``ON`` or ``OFF`` the
         individual ``Data Register`` pins.

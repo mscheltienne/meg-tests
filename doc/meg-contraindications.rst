@@ -26,15 +26,15 @@ Fillable PDFs in english or french are available below.
      - French
    * - .. image:: ./_static/icons/pdf.png
          :align: center
-         :width: 100
-         :target: ./_static/questionnaires/questionnaire_MEG_en.pdf
          :alt: Download (EN)
+         :target: ./_static/questionnaires/questionnaire_MEG_en.pdf
+         :width: 100
 
      - .. image:: ./_static/icons/pdf.png
          :align: center
-         :width: 100
-         :target: ./_static/questionnaires/questionnaire_MEG_fr.pdf
          :alt: Download (FR)
+         :target: ./_static/questionnaires/questionnaire_MEG_fr.pdf
+         :width: 100
 
 Known contraindications
 -----------------------

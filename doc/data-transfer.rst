@@ -92,13 +92,13 @@ describing the mounting procedure on the desktop.
         A pop-up will request your credentials. Enter your username and password.
 
         .. image:: ./_static/isilon/windows-credentials-dark.png
-            :class: only-dark
             :align: center
+            :class: only-dark
             :width: 400
 
         .. image:: ./_static/isilon/windows-credentials-light.png
-            :class: only-light
             :align: center
+            :class: only-light
             :width: 400
 
         .. warning::
@@ -110,12 +110,12 @@ describing the mounting procedure on the desktop.
         drive.
 
         .. image:: ./_static/isilon/windows-connected-dark.png
-            :class: only-dark
             :align: center
+            :class: only-dark
 
         .. image:: ./_static/isilon/windows-connected-light.png
-            :class: only-light
             :align: center
+            :class: only-light
 
         .. warning::
 
@@ -134,34 +134,34 @@ describing the mounting procedure on the desktop.
             smb://fcbgnasc.epfl.ch/fcbgdata
 
         .. image:: ./_static/isilon/macos-address-dark.png
-            :class: only-dark
             :align: center
+            :class: only-dark
 
         .. image:: ./_static/isilon/macos-address-light.png
-            :class: only-light
             :align: center
+            :class: only-light
 
         A pop-up will request your credentials. Select ``Registered User``, enter your
         username and password.
 
         .. image:: ./_static/isilon/macos-credentials-dark.png
-            :class: only-dark
             :align: center
+            :class: only-dark
 
         .. image:: ./_static/isilon/macos-credentials-light.png
-            :class: only-light
             :align: center
+            :class: only-light
 
         The network share is now mounted and appears in the left pane as an external
         drive.
 
         .. image:: ./_static/isilon/macos-connected-dark.png
-            :class: only-dark
             :align: center
+            :class: only-dark
 
         .. image:: ./_static/isilon/macos-connected-light.png
-            :class: only-light
             :align: center
+            :class: only-light
 
     .. tab-item:: Linux
 
@@ -182,24 +182,24 @@ describing the mounting procedure on the desktop.
             smb://fcbgnasc.campusbiotech.ch/fcbgdata
 
         .. image:: ./_static/isilon/linux-address-dark.png
-            :class: only-dark
             :align: center
+            :class: only-dark
 
         .. image:: ./_static/isilon/linux-address-light.png
-            :class: only-light
             :align: center
+            :class: only-light
 
         A pop-up will request your credentials. Select ``Registered User``, enter your
         username, domain (``campusbiotech.ch``, ``epfl.ch`` or ``unige.ch``) and
         password.
 
         .. image:: ./_static/isilon/linux-credentials-dark.png
-            :class: only-dark
             :align: center
+            :class: only-dark
 
         .. image:: ./_static/isilon/linux-credentials-light.png
-            :class: only-light
             :align: center
+            :class: only-light
 
         .. warning::
 
@@ -212,12 +212,12 @@ describing the mounting procedure on the desktop.
         drive.
 
         .. image:: ./_static/isilon/linux-connected-dark.png
-            :class: only-dark
             :align: center
+            :class: only-dark
 
         .. image:: ./_static/isilon/linux-connected-light.png
-            :class: only-light
             :align: center
+            :class: only-light
 
         .. warning::
 

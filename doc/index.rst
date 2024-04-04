@@ -50,23 +50,23 @@ Biotech, Geneva. With 306 :term:`SQUID` sensors, 204 planar gradiometers and 102
 magnetometers, it can measure brain activity in upright or supine position.
 
 .. image:: ./_static/meg/meg-positions-dark.png
-    :class: only-dark
     :align: center
+    :class: only-dark
     :width: 500
 
 .. image:: ./_static/meg/meg-positions-light.png
-    :class: only-light
     :align: center
+    :class: only-light
     :width: 500
 
 .. image:: ./_static/map/h4-dark.png
-    :class: only-dark
     :align: right
+    :class: only-dark
     :width: 440
 
 .. image:: ./_static/map/h4-light.png
-    :class: only-light
     :align: right
+    :class: only-light
     :width: 440
 
 Where to find us
@@ -104,6 +104,6 @@ here:
 
 .. image:: ./_static/icons/pdf.png
     :align: center
-    :width: 100
-    :target: ./_static/meg/meg-product-data.pdf
     :alt: Download (MEG Product Data)
+    :target: ./_static/meg/meg-product-data.pdf
+    :width: 100

@@ -7,9 +7,9 @@ The `Optimic MEG microphone`_ is a passive fiber optic microphone from the compa
 `Opto acoustics`_.
 
 .. image:: ../_static/optimic/optimic.png
-    :width: 600
     :align: center
     :class: img-with-border
+    :width: 600
 
 The microphone is connected to the Electro-Optic Unit (EOU 200, single channel) on the
 desktop which converts the optical signal to an electrical signal. The EOU unit is

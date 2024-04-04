@@ -65,37 +65,37 @@ the ``08/01/24``. On that day, the bad sensors removed are ``MEG 1213``, ``MEG 1
     .. tab-item:: Position 68°
 
         .. image:: ./_static/ssp/psd-68deg-dark.svg
-            :class: only-dark
             :align: center
+            :class: only-dark
             :width: 700
 
         .. image:: ./_static/ssp/psd-68deg-light.svg
-            :class: only-light
             :align: center
+            :class: only-light
             :width: 700
 
     .. tab-item:: Position 60°
 
         .. image:: ./_static/ssp/psd-60deg-dark.svg
-            :class: only-dark
             :align: center
+            :class: only-dark
             :width: 700
 
         .. image:: ./_static/ssp/psd-60deg-light.svg
-            :class: only-light
             :align: center
+            :class: only-light
             :width: 700
 
     .. tab-item:: Position 0°
 
         .. image:: ./_static/ssp/psd-0deg-dark.svg
-            :class: only-dark
             :align: center
+            :class: only-dark
             :width: 700
 
         .. image:: ./_static/ssp/psd-0deg-light.svg
-            :class: only-light
             :align: center
+            :class: only-light
             :width: 700
 
 Digitization

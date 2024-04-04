@@ -24,17 +24,17 @@ displayed by the projector in the control room.
     controller while leaving ``OFF`` the projector.
 
 .. image:: ../_static/visual/control-room.png
-    :width: 400
     :align: center
     :class: img-with-border
+    :width: 400
 
 The projector displays on a screen inside the MSR. The ideal screen position is marked
 on the floor and ensures reproducibility between subjects.
 
 .. image:: ../_static/visual/screen-projection.png
     :align: center
-    :width: 100%
     :class: img-with-border
+    :width: 100%
 
 Screen
 ------
@@ -60,23 +60,23 @@ corresponds to the controller (blue box on the desk) while the second is the pro
     .. tab-item:: PyPixx
 
         .. image:: ../_static/visual/pypixx.png
-            :width: 800
             :align: center
             :class: img-with-border
+            :width: 800
 
     .. tab-item:: PyPixx (PROPixxCTRL)
 
         .. image:: ../_static/visual/pypixx-propixx-ctrl.png
-            :width: 400
             :align: center
             :class: img-with-border
+            :width: 400
 
     .. tab-item:: PyPixx (PROPixx)
 
         .. image:: ../_static/visual/pypixx-propixx.png
-            :width: 400
             :align: center
             :class: img-with-border
+            :width: 400
 
 Projection orientation
 ~~~~~~~~~~~~~~~~~~~~~~
