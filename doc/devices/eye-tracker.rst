@@ -19,12 +19,14 @@ Setup
         .. image:: ../_static/eye-tracker/upright.png
             :width: 600
             :align: center
+            :class: img-with-border
 
     .. tab-item:: Supine position
 
         .. image:: ../_static/eye-tracker/supine.png
             :width: 600
             :align: center
+            :class: img-with-border
 
 Standalone vs integrated mode
 -----------------------------
