@@ -37,6 +37,7 @@
 .. _Pneumatic Squeeze Ball: https://www.curdes.com/mainforp/responsedevices/hhsc-1x1-pne.html
 .. _Polhemus: https://polhemus.com/motion-tracking/all-trackers/fastrak/
 .. _ProPixx projector: https://vpixx.com/products/propixx-mri/
+.. _SoundPixx: https://vpixx.com/products/soundpixx/
 .. _X-Rite i1Display Pro colorimeter: https://vpixx.com/products/x-rite-i1display/
 .. _932 interface: https://www.curdes.com/mainforp/interfaces/fiu-932b.html
 .. _4 button (curve left): https://www.curdes.com/mainforp/responsedevices/hhsc-1x4-cl.html
