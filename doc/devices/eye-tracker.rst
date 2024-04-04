@@ -79,6 +79,12 @@ the :ref:`stimulation PC <stim-pc:Stimulation PC>` and the EyeLink PC.
     :class: only-dark
     :width: 600
 
+.. note::
+
+    Both hardware trigger through the DB25 (parallel port) of the
+    :ref:`stimulation PC <stim-pc:Stimulation PC>` and through the `Chronos`_ are
+    duplicated and sent to the eye-tracker.
+
 Analogical outputs
 ------------------
 
