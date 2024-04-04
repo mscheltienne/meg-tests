@@ -128,3 +128,12 @@ when the top left pixel changes state. This mode, usually disable, can be found 
         win.flip()
 
     Thus, the pixel mode is usually not needed.
+
+Datasheet
+---------
+
+.. image:: ../_static/icons/pdf.png
+    :align: center
+    :alt: Download (SoundPixx datasheet)
+    :target: ../_static/downloads/datasheet/propixx.pdf
+    :width: 100
