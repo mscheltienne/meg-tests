@@ -33,6 +33,7 @@
 .. _MEGIN Triux Neo: https://megin.com/triux-neo/
 .. _MEGIN product data: https://megin.com/wp-content/uploads/2022/01/MEGIN-TRIUX-neo-Product-Data-2021.pdf
 .. _Optimic MEG microphone: https://www.optoacoustics.com/medical/optimic-meg-microphone
+.. _Opto acoustics: https://www.optoacoustics.com/
 .. _Pneumatic Squeeze Ball: https://www.curdes.com/mainforp/responsedevices/hhsc-1x1-pne.html
 .. _Polhemus: https://polhemus.com/motion-tracking/all-trackers/fastrak/
 .. _ProPixx projector: https://vpixx.com/products/propixx-mri/
@@ -78,6 +79,7 @@
 .. _byte-triggers: https://fcbg-hnp-meeg.github.io/byte-triggers/
 .. _E-Prime: https://pstnet.com/products/e-prime/
 .. _eyelink-track: https://github.com/fcbg-hnp-meeg/eyelink-track
+.. _furo: https://pradyunsg.me/furo/
 .. _mne stable: https://mne.tools/stable/index.html
 .. _mne bids: https://mne.tools/mne-bids/stable/index.html
 .. _mne connectivity: https://mne.tools/mne-connectivity/stable/index.html

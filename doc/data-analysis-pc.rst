@@ -159,7 +159,7 @@ FreeSurfer
 MATLAB
 ------
 
-The data analysis PCs do not have a MATLAB license. However, applications using the
+The data analysis PC does not have a MATLAB license. However, applications using the
 MATLAB Runtime can be added upon request.
 
 References
