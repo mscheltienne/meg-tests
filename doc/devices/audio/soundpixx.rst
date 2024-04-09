@@ -41,7 +41,7 @@ the MEG system. The frequency response span 20 Hz to 20 kHz.
 .. note::
 
     Highs are not well covered by this system. Thus, in most cases, the
-    :ref:`devices/audio/etymotic:Etymotic` are preferred.
+    :ref:`devices/audio/natus:Natus TIP-300` are preferred.
 
 |
 

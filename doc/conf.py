@@ -275,7 +275,7 @@ linkcheck_ignore = [  # will be compiled to regex
     "https://www.intel.com/content/www/us/en/",
     # internal links on grid-item cards
     "current-designs.html",  # response-pads/index.html
-    "etymotic.html",  # audio/index.html
+    "natus.html",  # audio/index.html
     "response-pads-megin.html",  # response-pads/index.html
     "soundpixx.html",  # audio/index.html
 ]

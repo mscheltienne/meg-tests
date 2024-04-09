@@ -8,15 +8,15 @@ frequency and latency response.
 
 .. grid::
 
-  .. grid-item-card:: Etymotic
-    :link: etymotic.html
+  .. grid-item-card:: Natus TIP-300
+    :link: natus.html
     :link-type: url
     :text-align: center
 
-    .. image:: ../../_static/devices/etymotic-light.png
+    .. image:: ../../_static/devices/natus-tip-300-light.png
         :class: only-light
 
-    .. image:: ../../_static/devices/etymotic-dark.png
+    .. image:: ../../_static/devices/natus-tip-300-dark.png
         :class: only-dark
 
   .. grid-item-card:: SoundPixx
@@ -39,11 +39,11 @@ Both audio stimulation systems are connected to a USB audio interface `Crimson 3
 
     The configuration is detailed on labels on the `Crimson 3`_.
 
-Select Etymotic or SoundPixx
-----------------------------
+Select Natus TIP-300 or SoundPixx
+---------------------------------
 
 The button ``Speakers: A to B`` selects the system in use. If the button is ``OFF``, the
-speakers ``A`` corresponding to the :ref:`devices/audio/etymotic:Etymotic` system
+speakers ``A`` corresponding to the :ref:`devices/audio/natus:Natus TIP-300` system
 is selected. If the button is ``ON``, the speakers ``B`` corresponding to the
 :ref:`devices/audio/soundpixx:SoundPixx` system is selected.
 
