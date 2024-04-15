@@ -121,7 +121,7 @@ the paradigm and it should be reset to ``0`` after each trigger.
 
         1. Download :download:`io64.mexw64 <./_static/downloads/triggers/io64.mexw64>`
            in your MATLAB path
-        2. In MATLAB, use the following code to send triggers betwwn ``1`` and ``255``:
+        2. In MATLAB, use the following code to send triggers between ``1`` and ``255``:
 
         .. code-block:: matlab
 
