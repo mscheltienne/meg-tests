@@ -23,7 +23,7 @@ from matplotlib import pyplot as plt
 from mne import pick_info, set_log_level
 from mne._fiff.pick import _picks_to_idx  # handy private function for selection
 from mne.channels import read_layout
-from mne.io.meas_info import read_info
+from mne.io import read_info
 from mne.transforms import Transform
 from mne.viz import plot_alignment, plot_sensors, set_3d_view
 from mne.viz.backends.renderer import create_3d_figure
