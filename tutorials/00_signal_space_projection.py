@@ -87,7 +87,7 @@ projs = read_proj(sample.data_path() / "ssp" / "200123" / "ssp_68_200123_proj.fi
 # To visualize the projector as topographic maps, we need information about the sensors
 # location and orientation. Those information are stored in every raw recording.
 
-from mne.io.meas_info import read_info
+from mne.io import read_info
 
 info = read_info(
     sample.data_path() / "meas_info" / "measurement-info.fif", verbose=False
