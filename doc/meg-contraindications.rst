@@ -5,7 +5,11 @@ The signal measured by an MEG system is extremely low (:math:`10e^{-15}\ T`), th
 is very restrictive with potential artifacts-inducing elements. None of the
 contraindications listed below can be harmful for the participant or for the device: an
 MEG is a fully passive device. The contraindications will only impact the signal
-quality.
+quality. Thus, if the cohort of participant is limited/rare it is possible to perform
+the experiment with a reduced signal quality. Depending on the artifact, it might be
+possible to correct in preprocessing through
+:ref:`MaxWell filtering and Spatiotemporal SSS (tSSS)
+<data-analysis-pc:MaxWell filter>`.
 
 .. warning::
 
