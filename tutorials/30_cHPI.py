@@ -49,7 +49,7 @@ from meg_wiki.datasets import sample
 # Head Position Indicator (HPI)
 # -----------------------------
 #
-# :ref:`Head Position Indication (HPI) <meg-sessin:HPI-measurement>` is a technique to
+# :ref:`Head Position Indication (HPI) <meg-session:HPI measurement>` is a technique to
 # measure the head position with respect to the MEG sensors. 5 coils are placed on the
 # participant head and digitized (see this
 # :ref:`section about digitization <meg-session:Digitization>`) in the head coordinate
