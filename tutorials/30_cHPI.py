@@ -29,6 +29,8 @@ software on the :ref:`DANA <data-analysis-pc:MEGIN's software>` or
     see :func:`meg_wiki.datasets.sample.data_path`).
 """
 
+from pathlib import Path
+
 from matplotlib import pyplot as plt
 from mne.chpi import (
     compute_chpi_amplitudes,
@@ -73,12 +75,12 @@ raw.info["dev_head_t"]
 #     which does not correspond to the subject in the ``raw`` recording. In practice,
 #     the subject's individual MRI should be used.
 
-fetch_fsaverage(sample.data_path())
+subjects_dir = Path(fetch_fsaverage()).parent
 fig = plot_alignment(
     raw.info,
     trans="fsaverage",
     subject="fsaverage",
-    subjects_dir=sample.data_path(),
+    subjects_dir=subjects_dir,
     surfaces="head-dense",
     meg=("helmet", "sensors"),
     dig="fiducials",
