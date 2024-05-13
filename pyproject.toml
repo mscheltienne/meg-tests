@@ -56,9 +56,11 @@ build = [
   'twine',
 ]
 doc = [
+  'darkdetect',
   'furo',
   'matplotlib',
   'memory-profiler',
+  'nibabel',
   'numpydoc',
   'PyQt6',
   'pyvista',
