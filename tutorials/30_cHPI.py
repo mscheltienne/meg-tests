@@ -111,9 +111,9 @@ fig = raw.plot(
 )
 fig.axes[0].axvline(1.492, color="darkgreen", linestyle="--")
 fig.axes[0].text(
-    1.492 - 0.892, fig.axes[0].get_ylim()[0] * 0.05, "cHPI OFF", fontsize=18
+    1.492 - 0.992, fig.axes[0].get_ylim()[0] * 0.05, "cHPI OFF", fontsize=18
 )
-fig.axes[0].text(1.492 + 1.3, fig.axes[0].get_ylim()[0] * 0.05, "cHPI ON", fontsize=18)
+fig.axes[0].text(1.492 + 1.1, fig.axes[0].get_ylim()[0] * 0.05, "cHPI ON", fontsize=18)
 plt.show()
 
 # %%
