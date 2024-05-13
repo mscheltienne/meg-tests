@@ -63,6 +63,7 @@ jobs:
         env:
           MNE_3D_OPTION_MULTI_SAMPLES: 1
           MNE_3D_OPTION_ANTIALIAS: false
+          LIBGL_ALWAYS_SOFTWARE: true
       - name: Prune sphinx environment
         run: rm -R ./doc/_build/html/.doctrees
       - name: Upload documentation
