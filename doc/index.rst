@@ -36,6 +36,7 @@
     MNE-Python <https://mne.tools/stable/index.html>
     FieldTrip <https://www.fieldtriptoolbox.org/>
     glossary.rst
+    datasheets.rst
 
 .. toctree::
     :hidden:
@@ -95,15 +96,3 @@ Booking the MEG
 The MEG can be booked on `Campus Biotech Calpendo <calpendo_>`_ through the researcher
 individual account used for all FCBG facilities equipment. Only approved projects can
 book the MEG. Please contact the facility team if you need access to `Calpendo`_.
-
-MEG datasheet
--------------
-
-The MEG datasheet is available on `MEGIN's website <MEGIN product data_>`_ or as PDF
-here:
-
-.. image:: ./_static/icons/pdf.png
-    :align: center
-    :alt: Download (MEG Product Data)
-    :target: ./_static/downloads/datasheet/meg.pdf
-    :width: 100
