@@ -49,7 +49,7 @@ jobs:
       - name: Download testing dataset
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          python -c "from mne.datasets import fetch_fsaverage; from meg_wiki.datasets import sample; sample.data_path(); fetch_fsaverage(sample.data_path() / 'fsaverage')"
+          python -c "from mne.datasets import fetch_fsaverage; from meg_wiki.datasets import sample; sample.data_path(); fetch_fsaverage(sample.data_path())"
       - name: Remove dataset version file
         run: rm meg_wiki_datasets_version.txt
       - name: Build doc

@@ -73,13 +73,13 @@ raw.info["dev_head_t"]
 #     which does not correspond to the subject in the ``raw`` recording. In practice,
 #     the subject's individual MRI should be used.
 
-fetch_fsaverage(sample.data_path() / "fsaverage")
+fetch_fsaverage(sample.data_path())
 fig = plot_alignment(
     raw.info,
     trans="fsaverage",
     subject="fsaverage",
     subjects_dir=sample.data_path(),
-    surfaces="head",
+    surfaces="head-dense",
     meg=("helmet", "sensors"),
     dig="fiducials",
     show_axes=True,
