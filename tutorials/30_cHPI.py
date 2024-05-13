@@ -29,15 +29,16 @@ software on the :ref:`DANA <data-analysis-pc:MEGIN's software>` or
     see :func:`meg_wiki.datasets.sample.data_path`).
 """
 
+from pathlib import Path
+
 from matplotlib import pyplot as plt
-from mne import Transform
 from mne.chpi import (
     compute_chpi_amplitudes,
     compute_chpi_locs,
     compute_head_pos,
     filter_chpi,
 )
-from mne.datasets import sample as sample_mne
+from mne.datasets import fetch_fsaverage
 from mne.io import read_raw_fif
 from mne.preprocessing import maxwell_filter
 from mne.viz import plot_alignment, plot_head_positions, set_3d_view
@@ -66,22 +67,21 @@ raw.info["dev_head_t"]
 
 # %%
 # The initial head position can be visualized within the sensor helmet with
-# :func:`mne.viz.plot_alignment`. In the plot below, we equate the MRI and head
-# coordinate frames to visualize the digitized head position with respect to the MEG
-# sensors.
+# :func:`mne.viz.plot_alignment`.
 #
 # .. note::
 #
-#     The figure below uses a subject MRI from MNE's sample dataset, which does not
-#     correspond to the subject in the ``raw`` recording. In practice, the subject's MRI
-#     should be used.
+#     The figure below uses fsaverage MRI from `MNE-Python <mne stable_>`_'s dataset,
+#     which does not correspond to the subject in the ``raw`` recording. In practice,
+#     the subject's individual MRI should be used.
 
-subjects_dir = sample_mne.data_path() / "subjects"
+subjects_dir = Path(fetch_fsaverage()).parent
 fig = plot_alignment(
     raw.info,
-    trans=Transform("head", "mri"),  # identity transformation
-    subject="sample",
+    trans="fsaverage",
+    subject="fsaverage",
     subjects_dir=subjects_dir,
+    surfaces="head-dense",
     meg=("helmet", "sensors"),
     dig="fiducials",
     show_axes=True,
