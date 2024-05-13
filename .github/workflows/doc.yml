@@ -61,6 +61,7 @@ jobs:
       - name: Build doc
         run: make -C doc html
         env:
+          MNE_3D_OPTION_MULTI_SAMPLES: 1
           LIBGL_ALWAYS_SOFTWARE: true
       - name: Prune sphinx environment
         run: rm -R ./doc/_build/html/.doctrees
