@@ -13,11 +13,7 @@ frequency and latency response.
     :link-type: url
     :text-align: center
 
-    .. image:: ../../_static/devices/natus-tip-300-light.png
-        :class: only-light
-
-    .. image:: ../../_static/devices/natus-tip-300-dark.png
-        :class: only-dark
+    .. image:: ../../_static/devices/natus-tip-300.png
 
   .. grid-item-card:: SoundPixx
     :link: soundpixx.html
