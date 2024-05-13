@@ -37,6 +37,7 @@ jobs:
         run: |
           export MNE_3D_OPTION_MULTI_SAMPLES=1
           export MNE_3D_OPTION_ANTIALIAS=false
+          export LIBGL_ALWAYS_SOFTWARE=true
       - name: Display system information
         run: meg_wiki-sys_info --developer
       - name: Get testing dataset version
