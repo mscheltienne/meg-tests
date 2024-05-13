@@ -44,12 +44,12 @@ jobs:
         id: cache
         uses: actions/cache@v4
         with:
-          key: meg-wiki-${{ runner.os }}-${{ hashFiles('meg_wiki_datasets_version.txt') }}
+          key: meg-wiki-doc-${{ runner.os }}-${{ hashFiles('meg_wiki_datasets_version.txt') }}
           path: ~/meg-wiki_data
       - name: Download testing dataset
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          python -c "from mne.datasets import fetch_fsaverage; from meg_wiki.datasets import sample; sample.data_path(); fetch_fsaverage(sample.data_path() / "fsaverage")"
+          python -c "from mne.datasets import fetch_fsaverage; from meg_wiki.datasets import sample; sample.data_path(); fetch_fsaverage(sample.data_path() / 'fsaverage')"
       - name: Remove dataset version file
         run: rm meg_wiki_datasets_version.txt
       - name: Build doc
