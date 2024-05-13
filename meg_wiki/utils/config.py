@@ -2,7 +2,7 @@ from __future__ import annotations  # c.f. PEP 563, PEP 649
 
 import platform
 import sys
-from functools import partial
+from functools import lru_cache, partial
 from importlib.metadata import requires, version
 from typing import TYPE_CHECKING
 
@@ -112,6 +112,12 @@ def _list_dependencies_info(
                 backend = "Not found"
 
             output += f" (backend: {backend})"
+        if dep.name == "pyvista":
+            version_, renderer = _get_gpu_info()
+            if version_ is None:
+                output += " (OpenGL unavailable)"
+            else:
+                output += f" (OpenGL {version_} via {renderer})"
         out(output + "\n")
 
     if len(not_found) != 0:
@@ -125,3 +131,15 @@ def _list_dependencies_info(
             out(f"✘ Not installed: {', '.join(not_found)}\n")
         else:
             out(f"Not installed: {', '.join(not_found)}\n")
+
+
+@lru_cache(maxsize=1)
+def _get_gpu_info():
+    """Get the GPU information."""
+    try:
+        from pyvista import GPUInfo
+
+        gi = GPUInfo()
+        return gi.version, gi.renderer
+    except Exception:
+        return None, None
