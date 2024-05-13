@@ -70,8 +70,8 @@ plt.show()
 # ------------------
 #
 # The default set of projectors is available `on our GitHub <sample dataset ssp_>`_.
-# Those projectors were obtained by combining projectors for the obtained from the
-# wideband PCA and from the narrowband PCA (bandpass filter between 15 and 18 Hz).
+# Those projectors were obtained by combining projectors from the wideband PCA and from
+# the narrowband PCA (bandpass filter between 15 and 18 Hz).
 # The narrowband PCA improves the correction of the 16.7 Hz artifact, typical from a 15
 # kV AC railway electrification system.
 #
