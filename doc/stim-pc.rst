@@ -33,6 +33,9 @@ In E-Prime, if the `Chronos`_ is not used, the settings should be set to:
 Python
 ------
 
+For Python, virtual environments are used to separate the dependencies of different
+projects and paradigms.
+
 .. tab-set::
 
     .. tab-item:: Windows
