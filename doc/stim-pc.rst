@@ -171,3 +171,9 @@ This testing setup works best with a pure tone sound at 1 kHz, downloadable belo
     :alt: Download sound file
     :target: ./_static/downloads/sound/tone_1000Hz.wav
     :width: 100
+
+Ethernet TCP/UDP
+----------------
+
+The stimulation PC has an extra GigE network card, `TP-Link TG-3468`_, which can be used
+in paradigms for network based communications.
