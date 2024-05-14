@@ -20,3 +20,6 @@ def _list_dependencies_info(
     out: Callable, ljust: int, package: str, dependencies: list[Requirement]
 ) -> None:
     """List dependencies names and versions."""
+
+def _get_gpu_info():
+    """Get the GPU information."""
