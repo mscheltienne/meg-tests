@@ -21,7 +21,7 @@ The amplifier is positioned on the main desk. It is connected to the
 :ref:`stimulation PC <stim-pc:Stimulation PC>` through the output ``B`` of the
 `Crimson 3`_.
 
-.. note::
+.. tip::
 
     To select the SoundPixx amplifier, make sure the light ``A to B`` is light up on the
     `Crimson 3`_, indicating that the output ``B`` is selected.
@@ -38,7 +38,7 @@ Pneumatic transducer
 The transducer is outside the magnetically shielded room, in the technical area behind
 the MEG system. The frequency response span 20 Hz to 20 kHz.
 
-.. note::
+.. tip::
 
     Highs are not well covered by this system. Thus, in most cases, the
     :ref:`devices/audio/natus:Natus TIP-300` are preferred.

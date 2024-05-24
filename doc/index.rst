@@ -46,9 +46,9 @@
     generated/tutorials/index.rst
     contributing.rst
 
-Wiki for the `MEGIN Triux Neo`_ at the Human Neuroscience Platform, Campus
-Biotech, Geneva. With 306 :term:`SQUID` sensors, 204 planar gradiometers and 102
-magnetometers, it can measure brain activity in upright or supine position.
+Wiki for the `MEGIN Triux Neo`_ at the Fondation Campus Biotech Geneva. With 306
+:term:`SQUID` sensors, 204 planar gradiometers and 102 magnetometers, it can measure
+brain activity in upright or supine position.
 
 .. image:: ./_static/meg/meg-positions-dark.png
     :align: center

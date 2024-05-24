@@ -11,7 +11,7 @@ possible to correct in preprocessing through
 :ref:`MaxWell filtering and Spatiotemporal SSS (tSSS)
 <data-analysis-pc:MaxWell filter>`.
 
-.. warning::
+.. tip::
 
     MRI compatibility is not equivalent to MEG compatibility. An MRI compatible object
     might still contain some amount of ferromagnetic materials which do not disqualify

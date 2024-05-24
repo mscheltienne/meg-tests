@@ -4,7 +4,7 @@
 Sensor positions
 ================
 
-.. note::
+.. important::
 
     This example requires the ``meg_wiki`` package to download the sample dataset. This
     package can be installed with ``pip``:
@@ -90,7 +90,7 @@ ax.axis("off")
 plt.show()
 
 # %%
-# .. note::
+# .. tip::
 #
 #    The function :func:`mne.viz.plot_layout` or the method
 #    :meth:`mne.channels.Layout.plot` can be used to plot the layout with fewer lines

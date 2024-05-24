@@ -6,7 +6,7 @@ Correct head movements with cHPI
 
 .. include:: ../../links.inc
 
-.. note::
+.. important::
 
     This example requires the ``meg_wiki`` package to download the sample dataset. This
     package can be installed with ``pip``:
@@ -21,7 +21,7 @@ compensate for head movements during a recording. To run SSS, you can use either
 software on the :ref:`DANA <data-analysis-pc:MEGIN's software>` or
 `MNE-Python <mne stable_>`_'s implementation.
 
-.. note::
+.. tip::
 
     The enhanced version available in `MNE-Python <mne stable_>`_ is recommended. See
     :func:`mne.preprocessing.maxwell_filter`. The fine calibration file and the
@@ -166,7 +166,7 @@ plt.show()
 # sensor position as if the head was still, i.e., in the position measured by the
 # initial HPI measurement.
 #
-# .. note::
+# .. tip::
 #
 #     It is important to first remove the cHPI signal from the recording and to mark
 #     bad channels.

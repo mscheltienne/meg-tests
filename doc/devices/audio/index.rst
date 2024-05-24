@@ -43,7 +43,7 @@ speakers ``A`` corresponding to the :ref:`devices/audio/natus:Natus TIP-300` sys
 is selected. If the button is ``ON``, the speakers ``B`` corresponding to the
 :ref:`devices/audio/soundpixx:SoundPixx` system is selected.
 
-.. warning::
+.. tip::
 
     If the :ref:`devices/audio/soundpixx:SoundPixx` is in-use, don't forget to
     turn on the SoundPixx controller.
@@ -56,7 +56,7 @@ high-pass filter. The microphone 2 is connected to the black microphone used to 
 the participant through the in-ear headphones. To enable the black microphone, both the
 ``Inputs: 1|2`` and ``Inputs: Mono`` button must be enabled.
 
-.. warning::
+.. tip::
 
     The black microphone has a low volume. Don't forget to turn the knob of input 2 to
     a high value. However, don't set it to max as it would leave a background noise. The

@@ -6,7 +6,7 @@ Create Signal Space Projectors
 
 .. include:: ../../links.inc
 
-.. note::
+.. important::
 
     This example requires the ``meg_wiki`` package to download the sample dataset. This
     package can be installed with ``pip``:

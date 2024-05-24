@@ -67,7 +67,7 @@ the co-registration through additional digitization points on the scalp surface.
     (recommended, default). The "lines" correspond to the dotted lines with arrows (left
     to right) on the figures above.
 
-.. warning::
+.. hint::
 
     Using the EEG caps with the MEG system significantly increases the preparation time.
     64 channels caps require about 1 hour and 2 operators to digitize, apply the gel and

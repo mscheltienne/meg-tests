@@ -180,7 +180,7 @@ magnetic field from the 5 HPI coils. :ref:`data-analysis-pc:MaxWell filter` can 
 :ref:`this tutorial <tut-cHPI>` for more information about the correction of head
 movements using `MNE-Python <mne stable_>`_.
 
-.. warning::
+.. tip::
 
     In any-case, the :term:`cHPI` signal should be filtered out before the analysis.
     In `MNE-Python <mne stable_>`_, this is done through :func:`~mne.chpi.filter_chpi`.

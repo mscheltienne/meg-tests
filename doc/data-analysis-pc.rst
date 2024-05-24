@@ -42,7 +42,7 @@ only the internal subspace (i.e., does an oblique projection).
 
 Introduction taken from `MNE's background on SSS and Maxwell filtering`_.
 
-.. note::
+.. tip::
 
     Instead of MEGIN's old MaxWell software available on the DANA, the enhanced version
     available in `MNE-Python <mne stable_>`_ is recommended. See
@@ -60,7 +60,7 @@ is not restricted to storing the continuous MEG data. For instance, the
 in the raw data file and in a separate FIFF file. In both case, the information related
 to the SSP is stored in the same FIFF tag.
 
-.. note::
+.. tip::
 
     `MNE-Python <mne stable_>`_ has command-line tools which can be accessed with:
 

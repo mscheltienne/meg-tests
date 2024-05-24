@@ -9,7 +9,7 @@ mount the share on their computer using those credentials.
 The data acquisition PC (DACQ) has access to the shares from labs using the MEG faciliy,
 and recordings can be transferred to their owner via this network share.
 
-.. note::
+.. important::
 
     Isilon is a **temporary** storage location. The goal is to transfer data from our
     facilities to the users. The shares should be regularly clean-up by the users.
@@ -84,7 +84,7 @@ describing the mounting procedure on the desktop.
             :align: center
             :width: 600
 
-        .. warning::
+        .. important::
 
             On the :ref:`stimulation PC <stim-pc:Stimulation PC>` please deselect
             ``Reconnect at sign-in``.
@@ -101,7 +101,7 @@ describing the mounting procedure on the desktop.
             :class: only-light
             :width: 400
 
-        .. warning::
+        .. important::
 
             On the :ref:`stimulation PC <stim-pc:Stimulation PC>` do not save the
             password. Please deselect ``Remember my credentials``.
@@ -117,7 +117,7 @@ describing the mounting procedure on the desktop.
             :align: center
             :class: only-light
 
-        .. warning::
+        .. important::
 
             On the :ref:`stimulation PC <stim-pc:Stimulation PC>` please disconnect the
             network drive when you are leaving.
@@ -201,7 +201,7 @@ describing the mounting procedure on the desktop.
             :align: center
             :class: only-light
 
-        .. warning::
+        .. important::
 
             On the :ref:`stimulation PC <stim-pc:Stimulation PC>` or the
             :ref:`data analysis PC <data-analysis-pc:Data analysis PC (DANA)>`, do not
@@ -219,13 +219,13 @@ describing the mounting procedure on the desktop.
             :align: center
             :class: only-light
 
-        .. warning::
+        .. important::
 
             On the :ref:`stimulation PC <stim-pc:Stimulation PC>` or the
             :ref:`data analysis PC <data-analysis-pc:Data analysis PC (DANA)>`, please
             eject (disconnect) the network share when you are leaving.
 
-        .. note::
+        .. tip::
 
             If you want to mount the network share automatically, e.g. on boot, you can
             edit ``/etc/fstab`` and use ``cifs``.
