@@ -91,7 +91,7 @@ the paradigm and it should be reset to ``0`` after each trigger.
 
             The :class:`~byte_triggers.ParallelPortTrigger` automatically resets the
             parallel port to ``0`` after each trigger, in a separate thread. This avoids
-            blocking the main thread. The default reset delay is set to ``50 ms``.
+            blocking the main thread. The default reset delay is set to ``10 ms``.
 
         .. note::
 
@@ -118,7 +118,7 @@ the paradigm and it should be reset to ``0`` after each trigger.
 
             The :class:`~byte_triggers.ParallelPortTrigger` automatically resets the
             parallel port to ``0`` after each trigger, in a separate thread. This avoids
-            blocking the main thread. The default reset delay is set to ``50 ms``.
+            blocking the main thread. The default reset delay is set to ``10 ms``.
 
     .. tab-item:: MATLAB (Windows)
 
