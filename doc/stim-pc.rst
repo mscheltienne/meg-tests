@@ -20,15 +20,19 @@ hardware.
 E-Prime
 -------
 
-In E-Prime, if the `Chronos`_ is not used, the settings should be set to:
+E-Prime is designed to work with a `Chronos`_ device to manage both auditory outputs and
+I/O lines, among which triggers. If the `Chronos`_ is not used, the settings should be
+set to:
 
-- the monitor should be set to ``1``
-- the parallel port to ``LPT4``
-- the audio driver to ``ASIO``
+- parallel port to ``LPT4``
+- audio driver to ``ASIO``
 
 .. warning::
 
     With audio stimulation, the ``DirectSound`` driver yields unreliable timings.
+
+Finally, the monitor index should be set to ``1`` or ``2``, but E-Prime does not
+identify the monitor index reliably and might swap the monitor index between 2 reboots.
 
 Python
 ------
