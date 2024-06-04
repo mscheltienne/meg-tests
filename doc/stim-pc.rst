@@ -6,7 +6,7 @@ Stimulation PC
 The stimulation PC is connected to the
 :ref:`stimulation devices <devices/index:Stimulation devices>`. It can boot on Windows
 10 or on Ubuntu 22.04 LTS (generic or lowlatency kernel). In both case, users should use
-the non-admin account ``meguser``.
+the non-admin account ``meguser`` and projects should be stored in ``~/projects``.
 
 Specifications
 --------------
@@ -38,13 +38,74 @@ Python
 ------
 
 For Python, virtual environments are used to separate the dependencies of different
-projects and paradigms.
+projects and paradigms. The virtual environment can be created either through VSCode or
+through a terminal.
+
+.. important::
+
+    The stimulation PC prevents ``pip`` installation of packages within the base
+    environment.
 
 .. tab-set::
 
+    .. tab-item:: VSCode
+
+        In VSCode, open the folder from your project, e.g. ``~/projects/my_project``.
+        Using the command palette (``Ctrl+Shift+P``), search for
+        ``Python: Select Interpreter``. You can then create an environment using
+        ``venv`` and the python interpreter (version) of your choice.
+
+        The created virtual environment will be placed in the current directory in the
+        folder ``.venv``, i.e. ``~/projects/my_project/.venv``. Subsequent terminals
+        opened in VSCode while this folder is opened will automatically activate the
+        virtual environment.
+
+        You can now install packages in this virtual environment with ``pip``:
+
+        .. code-block:: bash
+
+            $ pip install numpy
+
     .. tab-item:: Windows
 
-        TODO
+        In a command prompt or terminal (recommended: ``Cmder``), navigate to the
+        project location and to the folder in which you wish to create the virtual
+        environment. You can create the virtual environment with ``venv``:
+
+        .. code-block:: bash
+
+            $ py -m venv .venv
+
+        .. note::
+
+            You can replace ``.venv`` with the name of the environment. This name will
+            be used to create the folder in which the environment will be stored.
+
+        .. note::
+
+            If you wish to select a different python version than the version bind to
+            ``py``, specify the version after ``py``. For instance the command below
+            launches a 3.11 python interpreter (if installed on the system).
+
+            .. cote-block:: bash
+
+                $ py -3.11
+
+        Once created, you can activate the environment with:
+
+        .. code-block:: bash
+
+            $ .venv\Scripts\activate.bat
+
+        .. note::
+
+            You will always have to manually activate the environment in new terminals.
+
+        You can now install packages in this virtual environment with ``pip``:
+
+        .. code-block:: bash
+
+            $ pip install numpy
 
     .. tab-item:: Linux
 
@@ -65,6 +126,8 @@ PsychoPy
 
 MATLAB
 ------
+
+MATLAB is installed on the Windows partition of the stimulation PC.
 
 Triggers
 --------
