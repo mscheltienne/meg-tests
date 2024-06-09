@@ -87,7 +87,7 @@ through a terminal.
             ``py``, specify the version after ``py``. For instance the command below
             launches a 3.11 python interpreter (if installed on the system).
 
-            .. cote-block:: bash
+            .. code-block:: bash
 
                 $ py -3.11
 
