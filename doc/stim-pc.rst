@@ -242,4 +242,5 @@ This testing setup works best with a pure tone sound at 1 kHz, downloadable belo
 Ethernet TCP/UDP
 ----------------
 
-The stimulation PC has an extra GigE port available on the motherboard.
+The stimulation PC has an extra GigE network card, `TP-Link TG-3468`_, which can be used
+in paradigms for network based communications.
