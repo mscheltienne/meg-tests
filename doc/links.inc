@@ -59,7 +59,6 @@
 
 .. _intel Xeon W-2245: https://www.intel.com/content/www/us/en/products/sku/198609/intel-xeon-w2245-processor-16-5m-cache-3-90-ghz/specifications.html
 .. _Nvidia Quadro P2200: https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/quadro-p2200-datasheet-letter-974207-r4-web.pdf
-.. _TP-Link TG-3468: https://www.tp-link.com/us/home-networking/pci-adapter/tg-3468/
 
 
 .. others
