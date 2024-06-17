@@ -144,23 +144,26 @@ community are available on the stimulation PC, as of writing, python 3.9 to pyth
 PsychoPy
 --------
 
-.. tab-set::
-
-    .. tab-item:: Windows
-
-        TODO
-
-    .. tab-item:: Linux
-
-        TODO
+A default PsychoPy ``2023.2.3`` installation is available on the Windows partition.
+However, it is recommended to use a virtual environment to install the latest version of
+PsychoPy when able.
 
 MATLAB
 ------
 
-MATLAB is installed on both the Windows and Linux partition of the stimulation PC.
-As of writing, the version ``2024a`` is available.
+MATLAB ``R2024a`` is installed on both the Windows and Linux partition of the
+stimulation PC.
 
-On the linux partition, the executable is located here: ``/usr/local/bin/matlab``.
+.. tab-set::
+
+    .. tab-item:: Windows
+
+        On Windows, shortcut on the desktops are available. Psychtoolbox version
+        ``3.0.19.13`` is installed.
+
+    .. tab-item:: Linux
+
+        On Linux, the executable is located here: ``/usr/local/bin/matlab``.
 
 Triggers
 --------
