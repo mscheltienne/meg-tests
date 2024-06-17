@@ -92,4 +92,5 @@
 .. _psychopy: https://www.psychopy.org/
 .. _scikit-learn: https://scikit-learn.org/stable/
 .. _scipy: https://scipy.org/
+.. _spec 0: https://scientific-python.org/specs/spec-0000/
 .. _sphinx-gallery: https://sphinx-gallery.github.io/stable/index.html

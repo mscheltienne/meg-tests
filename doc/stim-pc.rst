@@ -39,7 +39,8 @@ Python
 
 For Python, virtual environments are used to separate the dependencies of different
 projects and paradigms. The virtual environment can be created either through VSCode or
-through a terminal.
+through a terminal. The python version defined in the `SPEC 0`_ by the scientific python
+community are available on the stimulation PC, as of writing, python 3.9 to python 3.12.
 
 .. important::
 
@@ -65,6 +66,8 @@ through a terminal.
         .. code-block:: bash
 
             $ pip install numpy
+
+        This method works both for Windows and Linux.
 
     .. tab-item:: Windows
 
@@ -109,7 +112,34 @@ through a terminal.
 
     .. tab-item:: Linux
 
-        TODO
+        In a terminal, navigate to the project location and to the folder in which you
+        wish to create the virtual environment. You can create the virtual environment
+        with ``venv``:
+
+        .. code-block:: bash
+
+            $ python3.10 -m venv .venv --copies
+
+        .. note::
+
+            You can replace ``.venv`` with the name of the environment. This name will
+            be used to create the folder in which the environment will be stored.
+
+        .. note::
+
+            If you wish to select a different python version, replace ``python3.10``
+            with, the appropriate version. For instance, the command below launches a
+            3.12 python interpreter.
+
+            .. code-block:: bash
+
+                $ python3.12
+
+        You can now install packages in this virtual environment with ``pip``:
+
+        .. code-block:: bash
+
+            $ pip install numpy
 
 PsychoPy
 --------
@@ -127,7 +157,7 @@ PsychoPy
 MATLAB
 ------
 
-MATLAB is installed on the Windows partition of the stimulation PC.
+MATLAB is installed on both the Windows and Linux partition of the stimulation PC.
 
 Triggers
 --------
