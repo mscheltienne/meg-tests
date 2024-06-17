@@ -158,6 +158,9 @@ MATLAB
 ------
 
 MATLAB is installed on both the Windows and Linux partition of the stimulation PC.
+As of writing, the version ``2024a`` is available.
+
+On the linux partition, the executable is located here: ``/usr/local/bin/matlab``.
 
 Triggers
 --------
