@@ -158,7 +158,7 @@ stimulation PC.
 
     .. tab-item:: Windows
 
-        On Windows, shortcut on the desktops are available. Psychtoolbox version
+        On Windows, a shortcut on the desktops are available. Psychtoolbox version
         ``3.0.19.13`` is installed.
 
     .. tab-item:: Linux
