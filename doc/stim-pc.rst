@@ -249,6 +249,13 @@ the paradigm and it should be reset to ``0`` after each trigger.
             :download:`inpoutx64.dll <./_static/downloads/triggers/inpoutx64.dll>` file
             in ``C:\Windows\system32`` may be required.
 
+        .. note::
+
+            If you need precise control on the monitor refresh rate, make sure that the
+            wait delay is smaller than the interval between 2 frames. On the stimulation
+            PC, the :ref:`ProPixx projector <devices/visual:ProPixx projector>` has a
+            120 refresh rate, i.e. 2 frames are separated y 8.33 ms.
+
 Measuring timings
 -----------------
 
