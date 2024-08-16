@@ -1,2 +1,2 @@
-from . import io  # noqa: F401
-from .io import write_proj  # noqa: F401
+from . import io
+from .io import write_proj

@@ -1,4 +1,4 @@
-from __future__ import annotations  # c.f. PEP 563, PEP 649
+from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
@@ -20,7 +20,7 @@ directory = sample.data_path() / "eeg-layout"
 
 
 @pytest.mark.parametrize(
-    "n, func",
+    ("n", "func"),
     [(32, load_mapping_32chs), (64, load_mapping_64chs), (128, load_mapping_128chs)],
 )
 def test_mapping(n: int, func: Callable[[], dict[str, str]]) -> None:

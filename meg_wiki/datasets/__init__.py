@@ -1,1 +1,1 @@
-from . import sample  # noqa: F401
+from . import sample
