@@ -133,9 +133,7 @@ filterwarnings = []
 minversion = '8.0'
 
 [tool.ruff]
-extend-exclude = [
-  'doc',
-]
+extend-exclude = []
 line-length = 88
 target-version = 'py39'
 
