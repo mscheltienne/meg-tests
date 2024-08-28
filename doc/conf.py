@@ -258,6 +258,7 @@ sphinx_gallery_conf = {
     "exclude_implicit_doc": {},  # set
     "filename_pattern": r"\d{2}_",
     "gallery_dirs": ["generated/tutorials"],
+    "ignore_pattern": "00_precise_audio",
     "image_scrapers": ("matplotlib", "pyvista"),
     "line_numbers": False,
     "plot_gallery": "True",  # str, to enable overwrite from CLI without warning
