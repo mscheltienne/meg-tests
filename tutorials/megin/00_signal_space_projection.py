@@ -4,7 +4,7 @@ r"""
 Create Signal Space Projectors
 ==============================
 
-.. include:: ../../links.inc
+.. include:: ../../../links.inc
 
 .. important::
 

@@ -4,7 +4,7 @@ r"""
 Correct head movements with cHPI
 ================================
 
-.. include:: ../../links.inc
+.. include:: ../../../links.inc
 
 .. important::
 

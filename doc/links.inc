@@ -90,6 +90,7 @@
 .. _numpy: https://numpy.org/
 .. _pre-commit: https://pre-commit.com/
 .. _psychopy: https://www.psychopy.org/
+.. _psychtoolbox: http://psychtoolbox.org/
 .. _scikit-learn: https://scikit-learn.org/stable/
 .. _scipy: https://scipy.org/
 .. _spec 0: https://scientific-python.org/specs/spec-0000/
