@@ -31,7 +31,7 @@ program execution for a precise amount of time. The variability depends on the o
 system and python version and should be measured before using it in an experiment.
 """
 
-# sphinx_gallery_thumbnail_path = '../../../_static/stimulation-tutorials/trigger-sound-delay-hist.png'
+# sphinx_gallery_thumbnail_path = '../_static/stimulation-tutorials/trigger-sound-delay-hist.png'
 
 import time
 import timeit
