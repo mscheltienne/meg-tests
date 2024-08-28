@@ -1,4 +1,3 @@
-from . import audio as audio
 from . import calibration as calibration
 from . import datasets as datasets
 from . import eeg as eeg
