@@ -19,6 +19,7 @@ classifiers = [
   'Programming Language :: Python :: 3.9',
 ]
 dependencies = [
+  'click',
   'mne>=1.7',
   'numpy>=1.21',
   'packaging',
@@ -94,7 +95,7 @@ test = [
 ]
 
 [project.scripts]
-meg_wiki-sys_info = 'meg_wiki.commands.sys_info:run'
+meg-wiki = 'meg_wiki.commands.main:run'
 
 [project.urls]
 documentation = 'https://meg-wiki.hnp.fcbg.ch/'
@@ -123,7 +124,6 @@ omit = [
   '**/__init__.py',
   '**/conftest.py',
   '**/meg_wiki/_version.py',
-  '**/meg_wiki/commands/*',
   '**/meg_wiki/utils/_fixes.py',
   '**/tests/**',
 ]

@@ -35,7 +35,7 @@ jobs:
           python -m pip install --progress-bar off --upgrade pip setuptools
           python -m pip install --progress-bar off .[test]
       - name: Display system information
-        run: meg_wiki-sys_info --developer
+        run: meg-wiki sys-info --developer
       - name: Get testing dataset version
         run: |
           curl https://raw.githubusercontent.com/fcbg-hnp-meeg/meg-wiki-datasets/main/version.txt -o meg_wiki_datasets_version.txt
@@ -88,7 +88,7 @@ jobs:
           python -m pip install --progress-bar off --upgrade --no-deps --pre --only-binary :all: -i https://pypi.anaconda.org/scientific-python-nightly-wheels/simple --timeout=180 matplotlib
           python -m pip install --progress-bar off --upgrade --pre --only-binary :all: -i https://pypi.anaconda.org/scientific-python-nightly-wheels/simple --timeout=180 numpy scipy
       - name: Display system information
-        run: meg_wiki-sys_info --developer
+        run: meg-wiki sys-info --developer
       - name: Get testing dataset version
         run: |
           curl https://raw.githubusercontent.com/fcbg-hnp-meeg/meg-wiki-datasets/main/version.txt -o meg_wiki_datasets_version.txt
