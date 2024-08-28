@@ -8,8 +8,8 @@ Precise audio presentation
 
 On the MEG platform, delivering audio stimuli can be done through 2 systems:
 
-- :ref:`devices/audio/natus:Natus TIP-300`: most commonly used, it offers excelent sound
-  quality.
+- :ref:`devices/audio/natus:Natus TIP-300`: most commonly used, it offers excellent
+  sound quality.
 - :ref:`devices/audio/soundpixx:SoundPixx`: the highs are lower than the
   :ref:`devices/audio/natus:Natus TIP-300` while the bass are stronger.
 
@@ -21,7 +21,7 @@ card by the :ref:`stimulation PC <stim-pc:Stimulation PC>`).
 
     If `E-Prime`_ is used, the sound can be delivered through the `Chronos`_. In this
     case, the signal reaches the `Crimson 3`_ through the RCA connectors. We will not
-    discuss this coniguration here.
+    discuss this configuration here.
 
 Python sleep precision
 ----------------------
