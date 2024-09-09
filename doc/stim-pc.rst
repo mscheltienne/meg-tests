@@ -282,6 +282,11 @@ This testing setup works best with a pure tone sound at 1 kHz, downloadable belo
     :target: ./_static/downloads/sound/tone_1000Hz.wav
     :width: 100
 
+.. note::
+
+    Do not forget to increase the sampling rate of the MEG to at least 2 kHz to
+    correctly sample the 1 kHz pure tone sound.
+
 Ethernet TCP/UDP
 ----------------
 
