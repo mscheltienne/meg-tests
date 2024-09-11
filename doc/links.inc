@@ -17,8 +17,8 @@
 
 .. datasets
 
-.. _sample dataset: https://github.com/fcbg-hnp-meeg/meg-wiki-datasets/tree/main
-.. _sample dataset ssp: https://github.com/fcbg-hnp-meeg/meg-wiki-datasets/tree/main/ssp
+.. _sample dataset: https://github.com/fcbg-platforms/meg-wiki-datasets/tree/main
+.. _sample dataset ssp: https://github.com/fcbg-platforms/meg-wiki-datasets/tree/main/ssp
 
 
 .. devices
@@ -70,18 +70,18 @@
 .. project
 
 .. _MIT license: https://opensource.org/licenses/MIT
-.. _project github: https://github.com/fcbg-hnp-meeg/meg-wiki
-.. _project github doc: https://github.com/fcbg-hnp-meeg/meg-wiki/tree/main/doc
-.. _project issue tracker: https://github.com/fcbg-hnp-meeg/meg-wiki/issues
-.. _project license: https://github.com/fcbg-hnp-meeg/meg-wiki/blob/main/LICENSE
+.. _project github: https://github.com/fcbg-platforms/meg-wiki
+.. _project github doc: https://github.com/fcbg-platforms/meg-wiki/tree/main/doc
+.. _project issue tracker: https://github.com/fcbg-platforms/meg-wiki/issues
+.. _project license: https://github.com/fcbg-platforms/meg-wiki/blob/main/LICENSE
 
 
 .. software
 
 .. _autoreject: https://autoreject.github.io/stable/index.html
-.. _byte-triggers: https://fcbg-hnp-meeg.github.io/byte-triggers/
+.. _byte-triggers: https://fcbg-platforms.github.io/byte-triggers/
 .. _E-Prime: https://pstnet.com/products/e-prime/
-.. _eyelink-track: https://github.com/fcbg-hnp-meeg/eyelink-track
+.. _eyelink-track: https://github.com/fcbg-platforms/eyelink-track
 .. _furo: https://pradyunsg.me/furo/
 .. _mne stable: https://mne.tools/stable/index.html
 .. _mne bids: https://mne.tools/mne-bids/stable/index.html

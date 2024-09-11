@@ -13,7 +13,7 @@ Correct head movements with cHPI
 
     .. code-block:: bash
 
-        $ pip install git+https://github.com/fcbg-hnp-meeg/meg-wiki
+        $ pip install git+https://github.com/fcbg-platforms/meg-wiki
 
 :ref:`Signal-Space Separation (SSS) and Maxwell filter
 <data-analysis-pc:MaxWell filter>`\ :footcite:p:`sss_2005,tsss_2006` can be used to

@@ -98,10 +98,10 @@ test = [
 meg-wiki = 'meg_wiki.commands.main:run'
 
 [project.urls]
-documentation = 'https://meg-wiki.hnp.fcbg.ch/'
-homepage = 'https://meg-wiki.hnp.fcbg.ch/'
-source = 'https://github.com/fcbg-hnp-meeg/meg_wiki'
-tracker = 'https://github.com/fcbg-hnp-meeg/meg_wiki/issues'
+documentation = 'https://meg-wiki.fcbg.ch/'
+homepage = 'https://meg-wiki.fcbg.ch/'
+source = 'https://github.com/fcbg-platforms/meg_wiki'
+tracker = 'https://github.com/fcbg-platforms/meg_wiki/issues'
 
 [tool.codespell]
 check-filenames = true

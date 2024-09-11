@@ -37,7 +37,7 @@ jobs:
         run: meg-wiki sys-info --developer
       - name: Get testing dataset version
         run: |
-          curl https://raw.githubusercontent.com/fcbg-hnp-meeg/meg-wiki-datasets/main/version.txt -o meg_wiki_datasets_version.txt
+          curl https://raw.githubusercontent.com/fcbg-platforms/meg-wiki-datasets/main/version.txt -o meg_wiki_datasets_version.txt
       - name: Cache dataset
         id: cache
         uses: actions/cache@v4

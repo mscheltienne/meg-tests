@@ -11,7 +11,7 @@ Rename EEG channels
 
     .. code-block:: bash
 
-        $ pip install git+https://github.com/fcbg-hnp-meeg/meg-wiki
+        $ pip install git+https://github.com/fcbg-platforms/meg-wiki
 
 The EEG channel are named ``EEG 001``, ``EEG 002``, .. while they actually correspond to
 a standard 10/05 naming. The EEG channel layouts are available in

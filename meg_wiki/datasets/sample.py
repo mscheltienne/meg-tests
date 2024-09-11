@@ -54,6 +54,6 @@ def data_path() -> Path:
         Path to the sample dataset, by default in ``"~/meg-wiki_data"``.
     """
     path = Path.home() / "meg-wiki_data"
-    base_url = "https://github.com/fcbg-hnp-meeg/meg-wiki-datasets/raw/main/"
+    base_url = "https://github.com/fcbg-platforms/meg-wiki-datasets/raw/main/"
     registry = files("meg_wiki.datasets") / "sample-registry.txt"
     return fetch_dataset(path, base_url, registry)

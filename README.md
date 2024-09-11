@@ -1,15 +1,15 @@
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
-[![codecov](https://codecov.io/gh/fcbg-hnp-meeg/meg-wiki/graph/badge.svg?token=XxO34oZis3)](https://codecov.io/gh/fcbg-hnp-meeg/meg-wiki)
-[![tests](https://github.com/fcbg-hnp-meeg/meg-wiki/actions/workflows/pytest.yaml/badge.svg?branch=main)](https://github.com/fcbg-hnp-meeg/meg-wiki/actions/workflows/pytest.yaml)
-[![doc](https://github.com/fcbg-hnp-meeg/meg-wiki/actions/workflows/doc.yml/badge.svg?branch=main)](https://github.com/fcbg-hnp-meeg/meg-wiki/actions/workflows/doc.yml)
+[![codecov](https://codecov.io/gh/fcbg-platforms/meg-wiki/graph/badge.svg?token=XxO34oZis3)](https://codecov.io/gh/fcbg-platforms/meg-wiki)
+[![tests](https://github.com/fcbg-platforms/meg-wiki/actions/workflows/pytest.yaml/badge.svg?branch=main)](https://github.com/fcbg-platforms/meg-wiki/actions/workflows/pytest.yaml)
+[![doc](https://github.com/fcbg-platforms/meg-wiki/actions/workflows/doc.yml/badge.svg?branch=main)](https://github.com/fcbg-platforms/meg-wiki/actions/workflows/doc.yml)
 
 # MEG wiki
 
-The MEG-wiki is available at the address: https://meg-wiki.hnp.fcbg.ch
+The MEG-wiki is available at the address: https://meg-wiki.fcbg.ch
 Contributions in all forms are welcome. Please use the
-[issue tracker](https://github.com/fcbg-hnp-meeg/meg-wiki/issues) to propose changes,
+[issue tracker](https://github.com/fcbg-platforms/meg-wiki/issues) to propose changes,
 additions and report issues and solutions found when working with MEG data from our
 site.
 
@@ -20,7 +20,7 @@ site.
 Pull request to the repository are welcome. The wiki is organized as a python project
 with a sphinx documentation. The documentation, used to generate the website HTML pages,
 is written in reStructuredText format in the
-[doc](https://github.com/fcbg-hnp-meeg/meg-wiki/tree/main/doc) folder.
+[doc](https://github.com/fcbg-platforms/meg-wiki/tree/main/doc) folder.
 
 In a pull request, the automatic workflows will build the documentation and check for
 conformity. Any warnings and errors during the build process must be resolved before the
@@ -54,4 +54,4 @@ The documentation can be build from the `meg-wiki/doc` folder with `make` comman
 ## Additional information
 
 Additional information can be found on the
-[contributing guide](https://meg-wiki.hnp.fcbg.ch/contributing.html).
+[contributing guide](https://meg-wiki.fcbg.ch/contributing.html).

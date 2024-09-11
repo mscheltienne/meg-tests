@@ -13,7 +13,7 @@ Create Signal Space Projectors
 
     .. code-block:: bash
 
-        $ pip install git+https://github.com/fcbg-hnp-meeg/meg-wiki
+        $ pip install git+https://github.com/fcbg-platforms/meg-wiki
 
 Background on projection
 ------------------------
