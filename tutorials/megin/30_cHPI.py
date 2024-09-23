@@ -53,7 +53,7 @@ from meg_wiki.datasets import sample
 # measure the head position with respect to the MEG sensors. 5 coils are placed on the
 # participant head and digitized (see this
 # :ref:`section about digitization <meg-session:Digitization>`) in the head coordinate
-# frame. At the beginning of a recording, an electromagnetic pulse if delivered on the 5
+# frame. At the beginning of a recording, an electromagnetic pulse is delivered on the 5
 # coils at 5 unique frequencies. The coil position with respect to the MEG sensors is
 # estimated by measuring the magnetic field produced by this pulse on the MEG sensors.
 #
