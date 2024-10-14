@@ -46,6 +46,13 @@
     generated/tutorials/index.rst
     contributing.rst
 
+.. toctree::
+    :hidden:
+    :caption: Advanced
+
+    advanced/manual_tuning.rst
+    advanced/fine_calibration.rst
+
 Wiki for the `MEGIN Triux Neo`_ at the Fondation Campus Biotech Geneva. With 306
 :term:`SQUID` sensors, 204 planar gradiometers and 102 magnetometers, it can measure
 brain activity in upright or supine position.
