@@ -34,7 +34,7 @@ compute the fine calibration from empty-room data.
 .. note::
 
     MNE-Python's docstring mentions that all channels should be good, probably because
-    of the channel selection occuring under-the-hood and to the creation of an output
+    of the channel selection occurring under-the-hood and to the creation of an output
     structure which *has* to include all channels. However, it seems that bad or noisy
     channels have little effect on the fine calibration. Thus, MNE-Python's docstring
     can be understood as "do not mark bad channels as bad, just let the function handle
