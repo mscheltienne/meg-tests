@@ -1,5 +1,3 @@
-.. include:: ../../links.inc
-
 Fine calibration and SSS shielding actor
 ========================================
 
