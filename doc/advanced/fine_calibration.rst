@@ -42,3 +42,24 @@ compute the fine calibration from empty-room data.
 
 The service tools also include scripts to compute the fine calibration and the SSS
 shielding factor.
+
+.. code-block:: bash
+
+    $ /neuro/dacq/tools/bin/meg_calib -v -f empty_room_68.fif
+
+SSS shielding factor
+--------------------
+
+``xfilter`` can estimate the SSS shielding factor with (1) default fine calibration and
+(2) a custom fine calibration file.
+
+.. code-block:: bash
+
+    $ /neuro/dacq/tools/bin/xfilter -v -f empty_room_68.fif -sf
+    $ /neuro/dacq/tools/bin/xfilter -v -f empty_room_68.fif -sf -cal sss_cal.dat
+
+You can then compare the ``*.xfilter.txt`` reports, e.g. with:
+
+.. code-block:: bash
+
+    $ more *.xfilter.txt
