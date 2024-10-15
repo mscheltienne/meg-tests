@@ -48,8 +48,11 @@ shielding factor.
 SSS shielding factor
 --------------------
 
-``xfilter`` can estimate the SSS shielding factor with (1) default fine calibration and
-(2) a custom fine calibration file.
+The SSS shielding factor corresponds to ratio of the norm of the channel type vector
+(shape (102,) for mags, shape (204,) for grads) before and after SSS, as a function of
+time (the norm is estimated at every timepoint). ``xfilter`` can estimate the SSS
+shielding factor with (1) default fine calibration and (2) a custom fine calibration
+file.
 
 .. code-block:: bash
 
@@ -61,3 +64,6 @@ You can then compare the ``*.xfilter.txt`` reports, e.g. with:
 .. code-block:: bash
 
     $ more *.xfilter.txt
+
+The argument ``xwav`` can be added to generate a FIFF file containing the uncorrelated
+noise waveforms (uncorrelated between channel waveforms), i.e. channel noise waveforms.
