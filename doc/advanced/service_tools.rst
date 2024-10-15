@@ -49,3 +49,14 @@ The tool will:
     from the railway electrificatin system. This artifact can be very well captured by
     1-3 components estimated on the narrowband 15-18 Hz. The projectors from the
     narrow and wideband PCA can be combined to form an orthogonal basis.
+
+autophantom
+-----------
+
+Autophantom automatically fits the measured dipoles with ``xfit`` and compares it with
+the known true position of each individual dipole. It requires an evoked (average) FIFF
+file as input.
+
+.. code-block:: bash
+
+    $ /neuro/dacq/tools/service/autophantom phantom_avg.fif --pdf
