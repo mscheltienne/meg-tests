@@ -24,6 +24,11 @@ be rejected by the fitting tool.
 
 The setting to change is ``DEFphantomWaitAfterReset`` which defaults to 3000 ms.
 
+.. note::
+
+    With this version of the electronics, we can set this value to -1 which will disable
+    the reset between dipoles entirely.
+
 Number of repetition
 ~~~~~~~~~~~~~~~~~~~~
 
