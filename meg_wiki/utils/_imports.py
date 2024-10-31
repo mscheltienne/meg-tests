@@ -5,7 +5,8 @@ Inspired from pandas: https://pandas.pydata.org/
 
 from __future__ import annotations
 
-import importlib
+from importlib import import_module
+from importlib.util import find_spec
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
@@ -53,10 +54,7 @@ def import_optional_dependency(
     """
     package_name = _INSTALL_MAPPING.get(name)
     install_name = package_name if package_name is not None else name
-
-    try:
-        module = importlib.import_module(name)
-    except ImportError:
+    if find_spec(name) is None:
         if raise_error:
             raise ImportError(
                 f"Missing optional dependency '{install_name}'. {extra} Use pip or "
@@ -64,5 +62,4 @@ def import_optional_dependency(
             )
         else:
             return None
-
-    return module
+    return import_module(name)

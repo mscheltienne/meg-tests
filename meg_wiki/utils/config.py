@@ -135,7 +135,7 @@ def _list_dependencies_info(
 
 
 @lru_cache(maxsize=1)
-def _get_gpu_info():
+def _get_gpu_info() -> tuple[str | None, str | None]:
     """Get the GPU information."""
     try:
         from pyvista import GPUInfo
