@@ -14,7 +14,7 @@ from meg_wiki.eeg import (
 )
 
 if TYPE_CHECKING:
-    from typing import Callable
+    from collections.abc import Callable
 
 directory = sample.data_path() / "eeg-layout"
 

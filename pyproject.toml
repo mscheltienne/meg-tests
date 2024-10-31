@@ -16,7 +16,7 @@ classifiers = [
   'Programming Language :: Python :: 3.10',
   'Programming Language :: Python :: 3.11',
   'Programming Language :: Python :: 3.12',
-  'Programming Language :: Python :: 3.9',
+  'Programming Language :: Python :: 3.13',
 ]
 dependencies = [
   'click',
@@ -41,7 +41,7 @@ maintainers = [
 ]
 name = 'meg_wiki'
 readme = 'README.md'
-requires-python = '>=3.9'
+requires-python = '>=3.10'
 version = '0.1.0'
 
 [project.optional-dependencies]
@@ -136,7 +136,6 @@ minversion = '8.0'
 [tool.ruff]
 extend-exclude = []
 line-length = 88
-target-version = 'py39'
 
 [tool.ruff.format]
 docstring-code-format = true
@@ -152,8 +151,6 @@ select = ['A', 'B', 'D', 'E', 'F', 'G', 'I', 'LOG', 'NPY', 'PIE', 'PT', 'T20', '
   'D100', # 'Missing docstring in public module'
   'D104', # 'Missing docstring in public package'
   'D107', # 'Missing docstring in __init__'
-  'UP007', # 'Use `X | Y` for type annotations', requires python 3.10
-  'UP038', # 'Use X | Y in {} call instead of (X, Y)', requires python 3.10
 ]
 '*.pyi' = ['E501']
 '__init__.py' = ['F401']

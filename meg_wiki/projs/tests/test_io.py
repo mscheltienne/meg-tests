@@ -34,7 +34,7 @@ def test_write_proj(tmp_path):
     projs2 = read_proj(tmp_path / "test_proj.fif")
     assert projs1 == projs2
     # manually compare the main fields
-    for p1, p2 in zip(projs, projs1):
+    for p1, p2 in zip(projs, projs1, strict=True):
         assert p1["desc"] + "_68deg" == p2["desc"]
         assert p1["kind"] == p2["kind"]
         assert p1["data"]["nrow"] == p2["data"]["nrow"]

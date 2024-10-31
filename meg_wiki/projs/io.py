@@ -22,7 +22,7 @@ from ._utils import orthonormalize_proj, rename_proj
 
 if TYPE_CHECKING:
     from pathlib import Path
-    from typing import IO, Union
+    from typing import IO
 
 
 def _write_proj(
@@ -59,8 +59,8 @@ def _write_proj(
 
 
 def write_proj(
-    fname: Union[str, Path],
-    projs: Union[list[Projection], tuple[Projection]],
+    fname: str | Path,
+    projs: list[Projection] | tuple[Projection],
     position: int,
     *,
     overwrite: bool = False,

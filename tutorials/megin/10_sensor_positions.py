@@ -73,7 +73,7 @@ layout = read_layout("Vectorview-all")
 fig, ax = plt.subplots(1, 1, figsize=(16.53, 11.69), layout="constrained")
 ax.set(xticks=[], yticks=[], aspect="equal")
 outlines = dict(border=([0, 1, 1, 0, 0], [0, 0, 1, 1, 0]))
-for p, ch_name in zip(layout.pos, layout.names):
+for p, ch_name in zip(layout.pos, layout.names, strict=True):
     center_pos = np.array((p[0] + p[2] / 2.0, p[1] + p[3] / 2.0))
     ch_name = ch_name.split("MEG")[1]
     ch_name = f"MAG\n{ch_name}" if ch_name.endswith("1") else f"GRAD\n{ch_name}"
@@ -124,7 +124,9 @@ plt.show()
 picks = _picks_to_idx(info, picks="grad")
 info = pick_info(info, picks, copy=False)
 mask_top = np.zeros(len(info.ch_names), bool)
-for k, (ch2, ch3) in enumerate(zip(info.ch_names[::2], info.ch_names[1::2])):
+for k, (ch2, ch3) in enumerate(
+    zip(info.ch_names[::2], info.ch_names[1::2], strict=True)
+):
     # ch2 ends with MEGxxx2 and ch3 ends with MEGxxx3
     idx2 = np.where(np.array(layout.names) == f"MEG {ch2.split('MEG')[1]}")[0]
     idx3 = np.where(np.array(layout.names) == f"MEG {ch3.split('MEG')[1]}")[0]

@@ -2,22 +2,16 @@ from __future__ import annotations
 
 from importlib.resources import files
 from pathlib import Path
-from typing import TYPE_CHECKING
 
 import pooch
 
 from ..utils._checks import ensure_path
 from ._fetch import fetch_dataset
 
-if TYPE_CHECKING:
-    from typing import Optional, Union
-
 _REGISTRY: Path = files("meg_wiki.datasets") / "sample-registry.txt"
 
 
-def _make_registry(
-    folder: Union[str, Path], output: Optional[Union[str, Path]] = None
-) -> None:
+def _make_registry(folder: str | Path, output: str | Path | None = None) -> None:
     """Create the registry file for the sample dataset.
 
     Parameters
@@ -41,7 +35,7 @@ def _make_registry(
     )
     hashes = [pooch.file_hash(file) for file in files]
     with open(output, "w") as outfile:
-        for fname, fhash in zip(files, hashes):
+        for fname, fhash in zip(files, hashes, strict=True):
             outfile.write(f"{fname.relative_to(folder).as_posix()} {fhash}\n")
 
 
