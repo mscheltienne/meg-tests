@@ -22,7 +22,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: 3.11
-          architecture: 'x64'
       - name: Setup headless display
         uses: pyvista/setup-headless-display-action@main
         with:
@@ -31,13 +30,14 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y optipng
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
       - name: Install package
-        run: python -m pip install --progress-bar off .[doc]
+        run: uv pip install --quiet --system .[doc]
       - name: Display system information
         run: meg-wiki sys-info --developer
       - name: Get testing dataset version
-        run: |
-          curl https://raw.githubusercontent.com/fcbg-platforms/meg-wiki-datasets/main/version.txt -o meg_wiki_datasets_version.txt
+        run: curl https://raw.githubusercontent.com/fcbg-platforms/meg-wiki-datasets/main/version.txt -o meg_wiki_datasets_version.txt
       - name: Cache dataset
         id: cache
         uses: actions/cache@v4

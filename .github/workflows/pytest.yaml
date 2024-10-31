@@ -17,7 +17,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu, macos, windows]
-        python-version: [3.9, "3.10", "3.11", "3.12"]
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
     name: ${{ matrix.os }} - py${{ matrix.python-version }}
     runs-on: ${{ matrix.os }}-latest
     defaults:
@@ -30,10 +30,10 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
       - name: Install package
-        run: |
-          python -m pip install --progress-bar off --upgrade pip setuptools
-          python -m pip install --progress-bar off .[test]
+        run: uv pip install --quiet --system .[test]
       - name: Display system information
         run: meg-wiki sys-info --developer
       - name: Get testing dataset version
@@ -66,7 +66,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.11"]
+        python-version: ["3.12"]
     name: pip pre-release - py${{ matrix.python-version }}
     runs-on: ubuntu-latest
     defaults:
@@ -79,14 +79,15 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install dependencies
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+      - name: Install package
         run: |
-          python -m pip install --progress-bar off --upgrade pip setuptools
-          python -m pip install --progress-bar off .[test]
-          python -m pip install --progress-bar off --upgrade git+https://github.com/mne-tools/mne-python
-          python -m pip install matplotlib
-          python -m pip install --progress-bar off --upgrade --no-deps --pre --only-binary :all: -i https://pypi.anaconda.org/scientific-python-nightly-wheels/simple --timeout=180 matplotlib
-          python -m pip install --progress-bar off --upgrade --pre --only-binary :all: -i https://pypi.anaconda.org/scientific-python-nightly-wheels/simple --timeout=180 numpy scipy
+          uv pip install --quiet --system .[test]
+          uv pip install --quiet --system --upgrade git+https://github.com/mne-tools/mne-python
+          uv pip install --quiet --system matplotlib
+          uv pip install --quiet --system --upgrade --prerelease allow --only-binary :all: -i https://pypi.anaconda.org/scientific-python-nightly-wheels/simple --no-deps matplotlib
+          uv pip install --quiet --system --upgrade --prerelease allow --only-binary :all: -i https://pypi.anaconda.org/scientific-python-nightly-wheels/simple numpy scipy
       - name: Display system information
         run: meg-wiki sys-info --developer
       - name: Get testing dataset version
