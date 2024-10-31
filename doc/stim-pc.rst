@@ -3,8 +3,7 @@
 Stimulation PC
 ==============
 
-The stimulation PC is connected to the
-:ref:`stimulation devices <devices/index:Stimulation devices>`. It can boot on Windows
+The stimulation PC is connected to the stimulation devices. It can boot on Windows
 10 or on Ubuntu 22.04 LTS (generic or lowlatency kernel). In both case, users should use
 the non-admin account ``meguser`` and projects should be stored in ``~/projects``.
 
