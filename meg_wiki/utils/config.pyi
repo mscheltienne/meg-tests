@@ -22,5 +22,5 @@ def _list_dependencies_info(
 ) -> None:
     """List dependencies names and versions."""
 
-def _get_gpu_info():
+def _get_gpu_info() -> tuple[str | None, str | None]:
     """Get the GPU information."""

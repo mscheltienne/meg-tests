@@ -1,4 +1,4 @@
-from pathlib import Path as Path
+from pathlib import Path
 from typing import IO
 
 from mne import Projection
