@@ -155,7 +155,7 @@ select = ['A', 'B', 'D', 'E', 'F', 'G', 'I', 'LOG', 'NPY', 'PIE', 'PT', 'T20', '
 '*.pyi' = ['E501']
 '__init__.py' = ['F401']
 'tutorials/*' = ['B018', 'D205', 'D400', 'E402', 'T201']
-'tutorials/stimulation/precise_audio.py' = ['E501']
+'tutorials/stimulation/00_precise_audio.py' = ['E501']
 
 [tool.ruff.lint.pydocstyle]
 convention = 'numpy'

@@ -252,7 +252,7 @@ sphinx_gallery_conf = {
     "doc_module": (f"{package}",),
     "examples_dirs": ["../tutorials"],
     "exclude_implicit_doc": {},  # set
-    "filename_pattern": r"\d{2}_",
+    "filename_pattern": r"(?!00_precise_audio\.py)\d{2}_.*",
     "gallery_dirs": ["generated/tutorials"],
     "image_scrapers": ("matplotlib", "pyvista"),
     "line_numbers": False,
