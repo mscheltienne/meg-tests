@@ -80,9 +80,12 @@ use the sound from the computer, the button ``DAW: 1|2`` must be enabled.
 Monitoring feedback
 -------------------
 
+The sound from the audio stimulation system is redirected on an MEG analogical channel,
+``MISC 006``, from the ``Phones 1`` output.
+
 2 Bose speakers are used to monitor the sound played through the audio stimulation
-system. The Bose speakers are connected on ``Phones 1`` and volume is adjusted both with
-a knob on the speakers and with the knob ``Phones 1`` on the `Crimson 3`_.
+system. The Bose speakers are connected on ``Phones 2`` and volume is adjusted both with
+a knob on the speakers and with the knob ``Phones 2`` on the `Crimson 3`_.
 
 Main volume
 -----------
