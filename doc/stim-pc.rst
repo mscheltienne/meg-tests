@@ -255,36 +255,23 @@ the paradigm and it should be reset to ``0`` after each trigger.
             PC, the :ref:`ProPixx projector <devices/visual:ProPixx projector>` has a
             120 refresh rate, i.e. 2 frames are separated y 8.33 ms.
 
-Measuring timings
------------------
+Measuring trigger to event delay
+--------------------------------
 
-Timings can be measured by connecting a measuring device to a miscellaneous channel of
-the MEG system. The :ref:`sampling rate <meg-settings:Sampling rate>` can be increased
-to 5 kHz to measure higher frequency content.
+Delays between an :ref:`MEG trigger <meg-triggers:MEG triggers>` and an event can be
+measured by connecting a measuring device to a miscellaneous channel of the MEG system.
+The :ref:`sampling rate <meg-settings:Sampling rate>` can be increased to 5 kHz to
+measure higher frequency content.
 
-For visual task, a photodiode is available. The photodiode optical fiber should be
+For **visual task**, a photodiode is available. The photodiode optical fiber should be
 connected to the powered digitizer. The analogical output of the digitizer is sufficient
 in most cases, and should be preferred above the thresholded digital output.
 
-For auditory task:
-
-- one of the monitoring output from the `Crimson 3`_ can be connected via a jack to BNC
-  cable to a miscellaneous channel.
-- the :ref:`optimic <devices/optimic:Optimic>` can be used to record the sound output
-  from the headset.
-
-This testing setup works best with a pure tone sound at 1 kHz, downloadable below:
-
-.. image:: ./_static/icons/audio-file.svg
-    :align: center
-    :alt: Download sound file
-    :target: ./_static/downloads/sound/tone_1000Hz.wav
-    :width: 100
-
-.. note::
-
-    Do not forget to increase the sampling rate of the MEG to at least 2 kHz to
-    correctly sample the 1 kHz pure tone sound.
+For **auditory task**, one of the monitoring output from the `Crimson 3`_, ``Phones 1``
+can be connected via a jack to BNC cable to a miscellaneous channel, ``MISC 006``. See
+additional information about this measure in the
+:ref:`trigger to sound onset delay <devices/audio/index:Trigger to sound onset delay>`
+section and in the tutorial :ref:`tut-proxy-audio-measure`.
 
 Ethernet TCP/UDP
 ----------------

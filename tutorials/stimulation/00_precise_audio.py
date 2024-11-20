@@ -88,7 +88,7 @@ print(f"Standard Deviation: {np.std(times):.8f} seconds")
 # precision. Despite a lack of funding and resources to support it, it's still one of
 # the most used stimuli presentation toolboxes. Some of its functionalities are
 # available in Python, especially through the `Psychopy`_ library.
-
+#
 # In this example, we will use the python interface of `Psychtoolbox`_ combined with
 # triggers from :class:`byte_triggers.ParallelPortTrigger` to deliver synchronize audio
 # stimuli and triggers.
