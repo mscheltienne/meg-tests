@@ -1,0 +1,52 @@
+
+:orphan:
+
+.. _sphx_glr_sg_execution_times:
+
+
+Computation times
+=================
+**02:56.349** total execution time for 6 files **from all galleries**:
+
+.. container::
+
+  .. raw:: html
+
+    <style scoped>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script type="text/javascript" class="init">
+    $(document).ready( function () {
+        $('table.sg-datatable').DataTable({order: [[1, 'desc']]});
+    } );
+    </script>
+
+  .. list-table::
+   :header-rows: 1
+   :class: table table-striped sg-datatable
+
+   * - Example
+     - Time
+     - Mem (MB)
+   * - :ref:`sphx_glr_generated_tutorials_megin_30_cHPI.py` (``../tutorials/megin/30_cHPI.py``)
+     - 02:36.766
+     - 794.4
+   * - :ref:`sphx_glr_generated_tutorials_megin_00_signal_space_projection.py` (``../tutorials/megin/00_signal_space_projection.py``)
+     - 00:09.628
+     - 1061.1
+   * - :ref:`sphx_glr_generated_tutorials_megin_10_sensor_positions.py` (``../tutorials/megin/10_sensor_positions.py``)
+     - 00:05.165
+     - 418.2
+   * - :ref:`sphx_glr_generated_tutorials_stimulation_10_proxy_audio_measure.py` (``../tutorials/stimulation/10_proxy_audio_measure.py``)
+     - 00:03.002
+     - 215.2
+   * - :ref:`sphx_glr_generated_tutorials_megin_20_rename_EEG_channels.py` (``../tutorials/megin/20_rename_EEG_channels.py``)
+     - 00:01.788
+     - 215.3
+   * - :ref:`sphx_glr_generated_tutorials_stimulation_00_precise_audio.py` (``../tutorials/stimulation/00_precise_audio.py``)
+     - 00:00.000
+     - 0.0

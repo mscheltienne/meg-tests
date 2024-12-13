@@ -1,0 +1,9 @@
+﻿meg\_wiki.eeg.load\_mapping\_128chs
+===================================
+
+.. currentmodule:: meg_wiki.eeg
+
+.. autofunction:: load_mapping_128chs
+
+.. minigallery:: meg_wiki.eeg.load_mapping_128chs
+    :add-heading:

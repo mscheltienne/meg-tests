@@ -1,0 +1,9 @@
+﻿meg\_wiki.projs.write\_proj
+===========================
+
+.. currentmodule:: meg_wiki.projs
+
+.. autofunction:: write_proj
+
+.. minigallery:: meg_wiki.projs.write_proj
+    :add-heading:

@@ -1,0 +1,102 @@
+
+
+.. _sphx_glr_generated_tutorials_megin:
+
+MEGIN specific
+--------------
+
+The tutorials below are specific to MEGIN systems, and specifically to the MEGIN system
+installed at Campus Biotech. Those examples show how to explore the datasets exported or
+how to perform specific processing steps on them.
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="    This example requires the meg_wiki package to download the sample dataset. This     package can be installed with pip:">
+
+.. only:: html
+
+  .. image:: /generated/tutorials/megin/images/thumb/sphx_glr_00_signal_space_projection_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_generated_tutorials_megin_00_signal_space_projection.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Create Signal Space Projectors</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="    This example requires the meg_wiki package to download the sample dataset. This     package can be installed with pip:">
+
+.. only:: html
+
+  .. image:: /generated/tutorials/megin/images/thumb/sphx_glr_10_sensor_positions_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_generated_tutorials_megin_10_sensor_positions.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Sensor positions</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="    This example requires the meg_wiki package to download the sample dataset. This     package can be installed with pip:">
+
+.. only:: html
+
+  .. image:: /generated/tutorials/megin/images/thumb/sphx_glr_20_rename_EEG_channels_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_generated_tutorials_megin_20_rename_EEG_channels.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Rename EEG channels</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="    This example requires the meg_wiki package to download the sample dataset. This     package can be installed with pip:">
+
+.. only:: html
+
+  .. image:: /generated/tutorials/megin/images/thumb/sphx_glr_30_cHPI_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_generated_tutorials_megin_30_cHPI.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Correct head movements with cHPI</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/tutorials/megin/00_signal_space_projection
+   /generated/tutorials/megin/10_sensor_positions
+   /generated/tutorials/megin/20_rename_EEG_channels
+   /generated/tutorials/megin/30_cHPI
+

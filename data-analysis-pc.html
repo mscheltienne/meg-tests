@@ -1,0 +1,592 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Audio stimulation" href="devices/audio/index.html" /><link rel="prev" title="Data transfer (Isilon)" href="data-transfer.html" />
+
+    <link rel="shortcut icon" href="_static/FCBG.svg"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
+        <title>Data analysis PC (DANA) - meg-wiki</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="_static/css/style.css?v=3fd3962a" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">meg-wiki</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/FCBG.svg" alt="Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="meg-session.html">MEG session</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meg-contraindications.html">MEG contraindications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meg-settings.html">MEG settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meg-triggers.html">MEG triggers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stim-pc.html">Stimulation PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transfer.html">Data transfer (Isilon)</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Data analysis PC (DANA)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Devices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="devices/audio/index.html">Audio stimulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devices/visual.html">ProPixx projector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devices/eye-tracker.html">Eye-tracker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devices/response-pads/index.html">Response pads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devices/optimic.html">Optimic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devices/electrical-stimulator.html">Electrical stimulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devices/electrophysiology.html">Electrophysiology</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://mne.tools/stable/index.html">MNE-Python</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.fieldtriptoolbox.org/">FieldTrip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasheets.html">Datasheets</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api/index.html">API References</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API References</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="api/calibration.html">Calibration</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Calibration</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/api/meg_wiki.calibration.load_fine_calibration.html">meg_wiki.calibration.load_fine_calibration</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="api/datasets.html">Datasets</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Datasets</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/api/meg_wiki.datasets.sample.data_path.html">meg_wiki.datasets.sample.data_path</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="api/eeg.html">EEG</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of EEG</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/api/meg_wiki.eeg.load_mapping_32chs.html">meg_wiki.eeg.load_mapping_32chs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/api/meg_wiki.eeg.load_mapping_64chs.html">meg_wiki.eeg.load_mapping_64chs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/api/meg_wiki.eeg.load_mapping_128chs.html">meg_wiki.eeg.load_mapping_128chs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/api/meg_wiki.eeg.load_mapping.html">meg_wiki.eeg.load_mapping</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="api/logging.html">Logging</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Logging</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/api/meg_wiki.add_file_handler.html">meg_wiki.add_file_handler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/api/meg_wiki.set_log_level.html">meg_wiki.set_log_level</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="api/projs.html">Projectors</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Projectors</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/api/meg_wiki.projs.write_proj.html">meg_wiki.projs.write_proj</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="generated/tutorials/index.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Tutorials</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="generated/tutorials/megin/index.html">MEGIN specific</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of MEGIN specific</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/tutorials/megin/00_signal_space_projection.html">Create Signal Space Projectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/tutorials/megin/10_sensor_positions.html">Sensor positions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/tutorials/megin/20_rename_EEG_channels.html">Rename EEG channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/tutorials/megin/30_cHPI.html">Correct head movements with cHPI</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="generated/tutorials/stimulation/index.html">Stimulation</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Stimulation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/tutorials/stimulation/00_precise_audio.html">Precise audio presentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/tutorials/stimulation/10_proxy_audio_measure.html">MISC 006: a proxy measure of the audio stimuli</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="advanced/manual_tuning.html">Manual sensor tuning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced/fine_calibration.html">Fine calibration and SSS shielding actor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced/service_tools.html">Service tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced/settings.html">DACQ settings</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/data-analysis-pc.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="data-analysis-pc-dana">
+<h1>Data analysis PC (DANA)<a class="headerlink" href="#data-analysis-pc-dana" title="Link to this heading">🔗</a></h1>
+<p>A data analysis PC, called DANA, is available in the MEG facility. DANA can be
+accessed on the account <code class="docutils literal notranslate"><span class="pre">meguser</span></code> and has both MEGIN’s analysis software and
+MNE-Python.</p>
+<section id="specifications">
+<h2>Specifications<a class="headerlink" href="#specifications" title="Link to this heading">🔗</a></h2>
+<p>The analysis PC run on an <a class="reference external" href="https://www.intel.com/content/www/us/en/products/sku/198609/intel-xeon-w2245-processor-16-5m-cache-3-90-ghz/specifications.html">intel Xeon W-2245</a> (8 cores, 16 threads) with 32 GB of
+RAM and an <a class="reference external" href="https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/quadro-p2200-datasheet-letter-974207-r4-web.pdf">Nvidia Quadro P2200</a>. Most analysis pipeline require one or multiple copies
+of a dataset to be loaded in RAM. 32 GB is sufficient for subject-level analysis and
+most group-level analysis, with an additional 20 GB of available swap if needed.</p>
+</section>
+<section id="megin-s-software">
+<h2>MEGIN’s software<a class="headerlink" href="#megin-s-software" title="Link to this heading">🔗</a></h2>
+<section id="maxwell-filter">
+<h3>MaxWell filter<a class="headerlink" href="#maxwell-filter" title="Link to this heading">🔗</a></h3>
+<p>Signal-Space Separation (SSS)<a class="footnote-reference brackets" href="#footcite-sss-2005" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#footcite-tsss-2006" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> is a technique based on
+the physics of electromagnetics fields. SSS separates the measured signal into
+components attributable to sources inside the measurement volume of the sensor array
+(the internal components), and components attributable to sources outside the
+measurement volume (the external components). The internal and external components are
+linearly independent, so it is possible to simply discard the external components to
+reduce environmental noise.</p>
+<p>Maxwell filtering is a related procedure that omits the higher-order components of the
+internal subspace, which are dominated by sensor noise. Typically, Maxwell filtering and
+SSS are performed together.</p>
+<p>Like <a class="reference internal" href="meg-settings.html#signal-space-projector"><span class="std std-ref">Signal Space Projector</span></a><a class="footnote-reference brackets" href="#footcite-ssp-1997" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>, SSS is a form
+of projection. Whereas SSP empirically determines a noise subspace based on data
+(empty-room recordings, EOG or ECG activity, etc) and projects the measurements onto a
+subspace orthogonal to the noise, SSS mathematically constructs the external and
+internal subspaces from <a class="reference external" href="https://en.wikipedia.org/wiki/Spherical_harmonics">spherical harmonics</a> and reconstructs the sensor signals using
+only the internal subspace (i.e., does an oblique projection).</p>
+<p>Introduction taken from <a class="reference external" href="https://mne.tools/stable/auto_tutorials/preprocessing/60_maxwell_filtering_sss.html#background-on-sss-and-maxwell-filtering">MNE’s background on SSS and Maxwell filtering</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Instead of MEGIN’s old MaxWell software available on the DANA, the enhanced version
+available in <a class="reference external" href="https://mne.tools/stable/index.html">MNE-Python</a> is recommended. See
+<a class="reference external" href="https://mne.tools/stable/generated/mne.preprocessing.maxwell_filter.html#mne.preprocessing.maxwell_filter" title="(in MNE v1.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.preprocessing.maxwell_filter()</span></code></a>. The fine calibration file and the
+cross-talk correction are available in the <a class="reference external" href="https://github.com/fcbg-platforms/meg-wiki-datasets/tree/main">sample dataset</a> (
+see <a class="reference internal" href="generated/api/meg_wiki.datasets.sample.data_path.html#meg_wiki.datasets.sample.data_path" title="meg_wiki.datasets.sample.data_path"><code class="xref py py-func docutils literal notranslate"><span class="pre">meg_wiki.datasets.sample.data_path()</span></code></a>).</p>
+</div>
+</section>
+<section id="fiff-format">
+<h3>FIFF format<a class="headerlink" href="#fiff-format" title="Link to this heading">🔗</a></h3>
+<p>The FIFF format is MEGIN’s proprietary format for MEG data. It is a binary tag based
+format. The tags define which information is stored in the file. Thus, the FIFF format
+is not restricted to storing the continuous MEG data. For instance, the
+<a class="reference internal" href="meg-settings.html#signal-space-projector"><span class="std std-ref">Signal Space Projector</span></a><a class="footnote-reference brackets" href="#footcite-ssp-1997" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> are stored both
+in the raw data file and in a separate FIFF file. In both case, the information related
+to the SSP is stored in the same FIFF tag.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a class="reference external" href="https://mne.tools/stable/index.html">MNE-Python</a> has command-line tools which can be accessed with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mne<span class="w"> </span>&lt;command&gt;<span class="w"> </span>&lt;options&gt;
+</pre></div>
+</div>
+<p>Entering the command <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">mne</span></code> will return a list of available commands.</p>
+</div>
+<p>The commands <code class="docutils literal notranslate"><span class="pre">mne</span> <span class="pre">what</span></code> and <code class="docutils literal notranslate"><span class="pre">mne</span> <span class="pre">show_fiff</span></code> can be used to inspect the content of
+a FIFF file. For instance, to inspect the content of the file
+<code class="docutils literal notranslate"><span class="pre">ssp_68_200123_proj.fif</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mne<span class="w"> </span>what<span class="w"> </span>ssp_68_200123_proj.fif
+proj
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mne<span class="w"> </span>show_fiff<span class="w"> </span>ssp_68_200123_proj.fif
+<span class="nv">999</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>FIFFB_ROOT
+<span class="w">    </span><span class="nv">100</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>FIFF_FILE_ID<span class="w"> </span><span class="o">(</span>20b<span class="w"> </span>ids<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="s1">&#39;version&#39;</span>:<span class="w"> </span><span class="m">65540</span>,<span class="w"> </span><span class="s1">&#39;machid&#39;</span>:<span class="w"> </span>a<span class="w"> </span>...<span class="w"> </span>dict<span class="w"> </span><span class="nv">len</span><span class="o">=</span><span class="m">4</span>
+<span class="w">    </span><span class="nv">101</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>FIFF_DIR_POINTER<span class="w"> </span><span class="o">(</span>4b<span class="w"> </span>&gt;i4<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>-1<span class="o">]</span>
+<span class="w">    </span><span class="nv">106</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>FIFF_FREE_LIST<span class="w"> </span><span class="o">(</span>4b<span class="w"> </span>&gt;i4<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>-1<span class="o">]</span>
+<span class="w">    </span><span class="nv">108</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>FIFF_NOP<span class="w"> </span><span class="o">(</span>0b<span class="w"> </span>nul<span class="o">)</span>
+<span class="w">    </span><span class="nv">313</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>FIFFB_PROJ
+<span class="w">        </span><span class="nv">200</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>FIFF_NCHAN<span class="w"> </span><span class="o">(</span>4b<span class="w"> </span>&gt;i4<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="m">306</span><span class="o">]</span>
+<span class="w">        </span><span class="nv">3002</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FIFF_SPHERE_RADIUS<span class="w"> </span><span class="o">(</span>4b<span class="w"> </span>&gt;i4<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>
+<span class="w">        </span><span class="nv">3001</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FIFF_SPHERE_ORIGIN<span class="w"> </span><span class="o">(</span>12b<span class="w"> </span>&gt;f4<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="m">0</span>.<span class="w"> </span><span class="m">0</span>.<span class="w"> </span><span class="m">0</span>.<span class="o">]</span><span class="w"> </span>...<span class="w"> </span>array<span class="w"> </span><span class="nv">size</span><span class="o">=</span><span class="m">3</span>
+<span class="w">        </span><span class="nv">314</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>FIFFB_PROJ_ITEM
+<span class="w">            </span><span class="nv">206</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>FIFF_COMMENT/FIFF_DESCRIPTION<span class="w"> </span><span class="o">(</span>24b<span class="w"> </span>str<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>ssp_68_magn.fif<span class="w"> </span>:<span class="w"> </span>PCA-v1<span class="w"> </span>...<span class="w"> </span>str<span class="w"> </span><span class="nv">len</span><span class="o">=</span><span class="m">24</span>
+<span class="w">            </span><span class="nv">3411</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FIFF_PROJ_ITEM_KIND<span class="w"> </span><span class="o">(</span>4b<span class="w"> </span>&gt;i4<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>
+<span class="w">            </span><span class="nv">3417</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FIFF_PROJ_ITEM_CH_NAME_LIST<span class="w"> </span><span class="o">(</span>2447b<span class="w"> </span>str<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>MEG0111:MEG0112:MEG0113:MEG012<span class="w"> </span>...<span class="w"> </span>str<span class="w"> </span><span class="nv">len</span><span class="o">=</span><span class="m">2447</span>
+<span class="w">            </span><span class="nv">3412</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FIFF_PROJ_ITEM_TIME<span class="w"> </span><span class="o">(</span>4b<span class="w"> </span>&gt;f4<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="m">0</span>.<span class="o">]</span>
+<span class="w">            </span><span class="nv">3414</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FIFF_PROJ_ITEM_NVEC<span class="w"> </span><span class="o">(</span>4b<span class="w"> </span>&gt;i4<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>
+<span class="w">            </span><span class="nv">3415</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FIFF_PROJ_ITEM_VECTORS<span class="w"> </span><span class="o">(</span>1236b<span class="w"> </span>&gt;f4<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="o">[[</span>-0.07794372<span class="w">  </span><span class="m">0</span>.<span class="w">          </span><span class="m">0</span>.<span class="w">  </span>...<span class="w"> </span>array<span class="w"> </span><span class="nv">size</span><span class="o">=</span><span class="m">306</span>
+<span class="w">        </span><span class="nv">314</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>FIFFB_PROJ_ITEM
+<span class="w">            </span><span class="nv">206</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>FIFF_COMMENT/FIFF_DESCRIPTION<span class="w"> </span><span class="o">(</span>24b<span class="w"> </span>str<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>ssp_68_magn.fif<span class="w"> </span>:<span class="w"> </span>PCA-v2<span class="w"> </span>...<span class="w"> </span>str<span class="w"> </span><span class="nv">len</span><span class="o">=</span><span class="m">24</span>
+<span class="w">            </span><span class="nv">3411</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FIFF_PROJ_ITEM_KIND<span class="w"> </span><span class="o">(</span>4b<span class="w"> </span>&gt;i4<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>
+<span class="w">            </span><span class="nv">3417</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FIFF_PROJ_ITEM_CH_NAME_LIST<span class="w"> </span><span class="o">(</span>2447b<span class="w"> </span>str<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>MEG0111:MEG0112:MEG0113:MEG012<span class="w"> </span>...<span class="w"> </span>str<span class="w"> </span><span class="nv">len</span><span class="o">=</span><span class="m">2447</span>
+<span class="w">            </span><span class="nv">3412</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FIFF_PROJ_ITEM_TIME<span class="w"> </span><span class="o">(</span>4b<span class="w"> </span>&gt;f4<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="m">0</span>.<span class="o">]</span>
+<span class="w">            </span><span class="nv">3414</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FIFF_PROJ_ITEM_NVEC<span class="w"> </span><span class="o">(</span>4b<span class="w"> </span>&gt;i4<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>
+<span class="w">            </span><span class="nv">3415</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FIFF_PROJ_ITEM_VECTORS<span class="w"> </span><span class="o">(</span>1236b<span class="w"> </span>&gt;f4<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="o">[[</span>-0.07037429<span class="w">  </span><span class="m">0</span>.<span class="w">          </span><span class="m">0</span>.<span class="w">  </span>...<span class="w"> </span>array<span class="w"> </span><span class="nv">size</span><span class="o">=</span><span class="m">306</span>
+<span class="w">        </span><span class="o">(</span>...<span class="o">)</span>
+<span class="w">        </span><span class="nv">314</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>FIFFB_PROJ_ITEM
+<span class="w">            </span><span class="nv">206</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>FIFF_COMMENT/FIFF_DESCRIPTION<span class="w"> </span><span class="o">(</span>24b<span class="w"> </span>str<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>ssp_68_grad.fif<span class="w"> </span>:<span class="w"> </span>PCA-v2<span class="w"> </span>...<span class="w"> </span>str<span class="w"> </span><span class="nv">len</span><span class="o">=</span><span class="m">24</span>
+<span class="w">            </span><span class="nv">3411</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FIFF_PROJ_ITEM_KIND<span class="w"> </span><span class="o">(</span>4b<span class="w"> </span>&gt;i4<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>
+<span class="w">            </span><span class="nv">3417</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FIFF_PROJ_ITEM_CH_NAME_LIST<span class="w"> </span><span class="o">(</span>2447b<span class="w"> </span>str<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>MEG0111:MEG0112:MEG0113:MEG012<span class="w"> </span>...<span class="w"> </span>str<span class="w"> </span><span class="nv">len</span><span class="o">=</span><span class="m">2447</span>
+<span class="w">            </span><span class="nv">3412</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FIFF_PROJ_ITEM_TIME<span class="w"> </span><span class="o">(</span>4b<span class="w"> </span>&gt;f4<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="m">0</span>.<span class="o">]</span>
+<span class="w">            </span><span class="nv">3414</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FIFF_PROJ_ITEM_NVEC<span class="w"> </span><span class="o">(</span>4b<span class="w"> </span>&gt;i4<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>
+<span class="w">            </span><span class="nv">3415</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FIFF_PROJ_ITEM_VECTORS<span class="w"> </span><span class="o">(</span>1236b<span class="w"> </span>&gt;f4<span class="o">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="m">0</span>.00000000e+00<span class="w">  </span><span class="m">4</span>.50235838e<span class="w"> </span>...<span class="w"> </span>array<span class="w"> </span><span class="nv">size</span><span class="o">=</span><span class="m">306</span>
+</pre></div>
+</div>
+<p>The tag 314 (<code class="docutils literal notranslate"><span class="pre">FIFFB_PROJ_ITEM</span></code>) contains the information of a single SSP. The tag 3411
+(<code class="docutils literal notranslate"><span class="pre">FIFF_PROJ_ITEM_KIND</span></code>) indicates the type of projection. The tag 3417
+(<code class="docutils literal notranslate"><span class="pre">FIFF_PROJ_ITEM_CH_NAME_LIST</span></code>) contains the list of channels to which the SSP is
+applied.</p>
+<p>All MEGIN software work with the FIFF format.</p>
+</section>
+<section id="software">
+<h3>Software<a class="headerlink" href="#software" title="Link to this heading">🔗</a></h3>
+<p>The available software from MEGIN are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DicomAccess</span></code> is a DICOM v3.0 compliant application for transferring DICOM images.
+The images can be retrieved from a DICOM database or loaded from directories. The
+<code class="docutils literal notranslate"><span class="pre">GET</span></code> operation creates FIFF files from the single-frame 16-bit CT, enhanced CT, MR
+and enhanced MR images.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Graph</span></code> is a general purpose signal processor based on a LISP language interpreter.
+This tool is useful to visualize and compared datasets through its different layouts.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GraphicsClipboard</span></code> to generate screenshots of visualizations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MaxFilter</span></code> to run (temporal) Signal-Space
+Separation<a class="footnote-reference brackets" href="#footcite-sss-2005" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#footcite-tsss-2006" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. See the section about
+<a class="reference internal" href="#maxwell-filter"><span class="std std-ref">MaxWell filter</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MEG-MRI-Integration</span></code>, also called <code class="docutils literal notranslate"><span class="pre">mrilabl</span></code>, is a tool to visualize volumetric
+data. It’s especially designed to combine MRI and MEG data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MRI-segmentation</span></code>, also called <code class="docutils literal notranslate"><span class="pre">seglab</span></code>, is a segmentation program with both 2D
+processing operators (for single images) and 3D processing operators (for volume
+data).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Plotting</span></code>, also called <code class="docutils literal notranslate"><span class="pre">xplotter</span></code>, is a plotting tool mainly intended for
+plotting of evoked response data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SourceModelling</span></code>, also called <code class="docutils literal notranslate"><span class="pre">xfit</span></code>, for dipole fitting.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ViewBrain</span></code> is used to visualize volumetric data. It can render segmented MRI as 3D
+images and overlay Equivalent Current Dipoles (ECDs).</p></li>
+</ul>
+</section>
+</section>
+<section id="python">
+<h2>Python<a class="headerlink" href="#python" title="Link to this heading">🔗</a></h2>
+</section>
+<section id="mne-python">
+<h2>MNE-Python<a class="headerlink" href="#mne-python" title="Link to this heading">🔗</a></h2>
+</section>
+<section id="freesurfer">
+<h2>FreeSurfer<a class="headerlink" href="#freesurfer" title="Link to this heading">🔗</a></h2>
+</section>
+<section id="matlab">
+<h2>MATLAB<a class="headerlink" href="#matlab" title="Link to this heading">🔗</a></h2>
+<p>The data analysis PC does not have a MATLAB license. However, applications using the
+MATLAB Runtime can be added upon request.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">🔗</a></h2>
+<div class="docutils container" id="id7">
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="footcite-sss-2005" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id5">2</a>)</span>
+<p>Samu Taulu and Matti Kajola. Presentation of electromagnetic multichannel data: the signal space separation method. <em>Journal of Applied Physics</em>, 97(12):124905, 2005. <a class="reference external" href="https://doi.org/10.1063/1.1935742">doi:10.1063/1.1935742</a>.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-tsss-2006" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id6">2</a>)</span>
+<p>Samu Taulu and Juha Simola. Spatiotemporal signal space separation method for rejecting nearby interference in MEG measurements. <em>Physics in Medicine and Biology</em>, 51(7):1759–1768, 2006. <a class="reference external" href="https://doi.org/10.1088/0031-9155/51/7/008">doi:10.1088/0031-9155/51/7/008</a>.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-ssp-1997" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id4">2</a>)</span>
+<p>Mikko A. Uusitalo and Risto J. Ilmoniemi. Signal-space projection method for separating MEG or EEG into components. <em>Medical &amp; Biological Engineering &amp; Computing</em>, 35(2):135–140, 1997. <a class="reference external" href="https://doi.org/10.1007/BF02534144">doi:10.1007/BF02534144</a>.</p>
+</aside>
+</aside>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="devices/audio/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Audio stimulation</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="data-transfer.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Data transfer (Isilon)</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, MEEG-BCI facility
+            </div>
+            Made with 
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/fcbg-platforms/meg-wiki" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Data analysis PC (DANA)</a><ul>
+<li><a class="reference internal" href="#specifications">Specifications</a></li>
+<li><a class="reference internal" href="#megin-s-software">MEGIN’s software</a><ul>
+<li><a class="reference internal" href="#maxwell-filter">MaxWell filter</a></li>
+<li><a class="reference internal" href="#fiff-format">FIFF format</a></li>
+<li><a class="reference internal" href="#software">Software</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#python">Python</a></li>
+<li><a class="reference internal" href="#mne-python">MNE-Python</a></li>
+<li><a class="reference internal" href="#freesurfer">FreeSurfer</a></li>
+<li><a class="reference internal" href="#matlab">MATLAB</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=01f34227"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=30646c52"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    </body>
+</html>

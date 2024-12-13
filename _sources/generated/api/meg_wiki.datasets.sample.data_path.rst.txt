@@ -1,0 +1,9 @@
+﻿meg\_wiki.datasets.sample.data\_path
+====================================
+
+.. currentmodule:: meg_wiki.datasets.sample
+
+.. autofunction:: data_path
+
+.. minigallery:: meg_wiki.datasets.sample.data_path
+    :add-heading:

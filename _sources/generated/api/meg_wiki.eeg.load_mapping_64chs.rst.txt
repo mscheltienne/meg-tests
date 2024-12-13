@@ -1,0 +1,9 @@
+﻿meg\_wiki.eeg.load\_mapping\_64chs
+==================================
+
+.. currentmodule:: meg_wiki.eeg
+
+.. autofunction:: load_mapping_64chs
+
+.. minigallery:: meg_wiki.eeg.load_mapping_64chs
+    :add-heading:

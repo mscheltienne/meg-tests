@@ -1,0 +1,9 @@
+﻿meg\_wiki.add\_file\_handler
+============================
+
+.. currentmodule:: meg_wiki
+
+.. autofunction:: add_file_handler
+
+.. minigallery:: meg_wiki.add_file_handler
+    :add-heading:

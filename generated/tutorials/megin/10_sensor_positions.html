@@ -1,0 +1,956 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Rename EEG channels" href="20_rename_EEG_channels.html" /><link rel="prev" title="Create Signal Space Projectors" href="00_signal_space_projection.html" />
+
+    <link rel="shortcut icon" href="../../../_static/FCBG.svg"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
+        <title>Sensor positions - meg-wiki</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/style.css?v=3fd3962a" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">meg-wiki</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../../_static/FCBG.svg" alt="Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../meg-session.html">MEG session</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../meg-contraindications.html">MEG contraindications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../meg-settings.html">MEG settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../meg-triggers.html">MEG triggers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stim-pc.html">Stimulation PC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data-transfer.html">Data transfer (Isilon)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data-analysis-pc.html">Data analysis PC (DANA)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Devices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../devices/audio/index.html">Audio stimulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../devices/visual.html">ProPixx projector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../devices/eye-tracker.html">Eye-tracker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../devices/response-pads/index.html">Response pads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../devices/optimic.html">Optimic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../devices/electrical-stimulator.html">Electrical stimulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../devices/electrophysiology.html">Electrophysiology</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://mne.tools/stable/index.html">MNE-Python</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.fieldtriptoolbox.org/">FieldTrip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../datasheets.html">Datasheets</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code</span></p>
+<ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../api/index.html">API References</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API References</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../api/calibration.html">Calibration</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Calibration</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/meg_wiki.calibration.load_fine_calibration.html">meg_wiki.calibration.load_fine_calibration</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../api/datasets.html">Datasets</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Datasets</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/meg_wiki.datasets.sample.data_path.html">meg_wiki.datasets.sample.data_path</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../api/eeg.html">EEG</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of EEG</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/meg_wiki.eeg.load_mapping_32chs.html">meg_wiki.eeg.load_mapping_32chs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/meg_wiki.eeg.load_mapping_64chs.html">meg_wiki.eeg.load_mapping_64chs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/meg_wiki.eeg.load_mapping_128chs.html">meg_wiki.eeg.load_mapping_128chs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/meg_wiki.eeg.load_mapping.html">meg_wiki.eeg.load_mapping</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../api/logging.html">Logging</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Logging</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/meg_wiki.add_file_handler.html">meg_wiki.add_file_handler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/meg_wiki.set_log_level.html">meg_wiki.set_log_level</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../api/projs.html">Projectors</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Projectors</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/meg_wiki.projs.write_proj.html">meg_wiki.projs.write_proj</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Tutorials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Tutorials</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">MEGIN specific</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of MEGIN specific</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="00_signal_space_projection.html">Create Signal Space Projectors</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Sensor positions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="20_rename_EEG_channels.html">Rename EEG channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="30_cHPI.html">Correct head movements with cHPI</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../stimulation/index.html">Stimulation</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Stimulation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../stimulation/00_precise_audio.html">Precise audio presentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../stimulation/10_proxy_audio_measure.html">MISC 006: a proxy measure of the audio stimuli</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/manual_tuning.html">Manual sensor tuning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/fine_calibration.html">Fine calibration and SSS shielding actor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/service_tools.html">Service tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/settings.html">DACQ settings</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="../../../_sources/generated/tutorials/megin/10_sensor_positions.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#sphx-glr-download-generated-tutorials-megin-10-sensor-positions-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code.</p>
+</div>
+<section class="sphx-glr-example-title" id="sensor-positions">
+<span id="tut-sensor-positions"></span><span id="sphx-glr-generated-tutorials-megin-10-sensor-positions-py"></span><h1>Sensor positions<a class="headerlink" href="#sensor-positions" title="Link to this heading">🔗</a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This example requires the <code class="docutils literal notranslate"><span class="pre">meg_wiki</span></code> package to download the sample dataset. This
+package can be installed with <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/fcbg-platforms/meg-wiki
+</pre></div>
+</div>
+</div>
+<p>The sensor position is defined for each sensors as an <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array.html#numpy.array" title="(in NumPy v2.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">array</span></code></a> of 12 elements.
+This array represents the position and the normal given by a <code class="docutils literal notranslate"><span class="pre">(3,</span> <span class="pre">3)</span></code> rotation matrix,
+in device coordinates.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">mne</span> <span class="kn">import</span> <a href="https://mne.tools/stable/generated/mne.pick_info.html#mne.pick_info" title="mne.pick_info" class="sphx-glr-backref-module-mne sphx-glr-backref-type-py-function"><span class="n">pick_info</span></a><span class="p">,</span> <a href="https://mne.tools/stable/generated/mne.set_log_level.html#mne.set_log_level" title="mne.set_log_level" class="sphx-glr-backref-module-mne sphx-glr-backref-type-py-function"><span class="n">set_log_level</span></a>
+<span class="kn">from</span> <span class="nn">mne._fiff.pick</span> <span class="kn">import</span> <span class="n">_picks_to_idx</span>  <span class="c1"># handy private function for selection</span>
+<span class="kn">from</span> <span class="nn">mne.channels</span> <span class="kn">import</span> <a href="https://mne.tools/stable/generated/mne.channels.read_layout.html#mne.channels.read_layout" title="mne.channels.read_layout" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-function"><span class="n">read_layout</span></a>
+<span class="kn">from</span> <span class="nn">mne.io</span> <span class="kn">import</span> <a href="https://mne.tools/stable/generated/mne.io.read_info.html#mne.io.read_info" title="mne.io.read_info" class="sphx-glr-backref-module-mne-io sphx-glr-backref-type-py-function"><span class="n">read_info</span></a>
+<span class="kn">from</span> <span class="nn">mne.transforms</span> <span class="kn">import</span> <a href="https://mne.tools/stable/generated/mne.transforms.Transform.html#mne.transforms.Transform" title="mne.transforms.Transform" class="sphx-glr-backref-module-mne-transforms sphx-glr-backref-type-py-class"><span class="n">Transform</span></a>
+<span class="kn">from</span> <span class="nn">mne.viz</span> <span class="kn">import</span> <a href="https://mne.tools/stable/generated/mne.viz.plot_alignment.html#mne.viz.plot_alignment" title="mne.viz.plot_alignment" class="sphx-glr-backref-module-mne-viz sphx-glr-backref-type-py-function"><span class="n">plot_alignment</span></a><span class="p">,</span> <a href="https://mne.tools/stable/generated/mne.viz.plot_sensors.html#mne.viz.plot_sensors" title="mne.viz.plot_sensors" class="sphx-glr-backref-module-mne-viz sphx-glr-backref-type-py-function"><span class="n">plot_sensors</span></a><span class="p">,</span> <a href="https://mne.tools/stable/generated/mne.viz.set_3d_view.html#mne.viz.set_3d_view" title="mne.viz.set_3d_view" class="sphx-glr-backref-module-mne-viz sphx-glr-backref-type-py-function"><span class="n">set_3d_view</span></a>
+<span class="kn">from</span> <span class="nn">mne.viz.backends.renderer</span> <span class="kn">import</span> <span class="n">create_3d_figure</span>
+
+<span class="kn">from</span> <span class="nn">meg_wiki.datasets</span> <span class="kn">import</span> <span class="n">sample</span>
+
+<a href="https://mne.tools/stable/generated/mne.set_log_level.html#mne.set_log_level" title="mne.set_log_level" class="sphx-glr-backref-module-mne sphx-glr-backref-type-py-function"><span class="n">set_log_level</span></a><span class="p">(</span><span class="s2">&quot;WARNING&quot;</span><span class="p">)</span>
+<a href="https://mne.tools/stable/generated/mne.Info.html#mne.Info" title="mne._fiff.meas_info.Info" class="sphx-glr-backref-module-mne-_fiff-meas_info sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">info</span></a> <span class="o">=</span> <a href="https://mne.tools/stable/generated/mne.io.read_info.html#mne.io.read_info" title="mne.io.read_info" class="sphx-glr-backref-module-mne-io sphx-glr-backref-type-py-function"><span class="n">read_info</span></a><span class="p">(</span>
+    <a href="../../api/meg_wiki.datasets.sample.data_path.html#meg_wiki.datasets.sample.data_path" title="meg_wiki.datasets.sample.data_path" class="sphx-glr-backref-module-meg_wiki-datasets-sample sphx-glr-backref-type-py-function"><span class="n">sample</span><span class="o">.</span><span class="n">data_path</span></a><span class="p">()</span> <span class="o">/</span> <span class="s2">&quot;meas_info&quot;</span> <span class="o">/</span> <span class="s2">&quot;measurement-info.fif&quot;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+<a href="https://mne.tools/stable/generated/mne.Info.html#mne.Info" title="mne._fiff.meas_info.Info" class="sphx-glr-backref-module-mne-_fiff-meas_info sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">info</span></a>
+</pre></div>
+</div>
+<div class="output_subarea output_html rendered_html output_result">
+<script type="text/javascript">
+    const toggleVisibility = (className) => {
+
+  const elements = document.querySelectorAll(`.${className}`)
+
+  elements.forEach(element => {
+    if (element.classList.contains('repr-section-header')) {
+      // Don't collapse the section header row.
+       return
+    }
+    if (element.classList.contains('repr-element-collapsed')) {
+      // Force a reflow to ensure the display change takes effect before removing the class
+      element.classList.remove('repr-element-collapsed')
+      element.offsetHeight // This forces the browser to recalculate layout
+      element.classList.remove('repr-element-faded')
+    } else {
+      // Start transition to hide the element
+      element.classList.add('repr-element-faded')
+      element.addEventListener('transitionend', handler = (e) => {
+        if (e.propertyName === 'opacity' && getComputedStyle(element).opacity === '0.2') {
+          element.classList.add('repr-element-collapsed')
+          element.removeEventListener('transitionend', handler)
+        }
+      });
+    }
+  });
+
+  // Take care of button (adjust caret)
+  const button = document.querySelectorAll(`.repr-section-header.${className} > th.repr-section-toggle-col > button`)[0]
+  button.classList.toggle('collapsed')
+
+  // Take care of the tooltip of the section header row
+  const sectionHeaderRow = document.querySelectorAll(`tr.repr-section-header.${className}`)[0]
+  sectionHeaderRow.classList.toggle('collapsed')
+  sectionHeaderRow.title = sectionHeaderRow.title === 'Hide section' ? 'Show section' : 'Hide section'
+}
+</script>
+
+<style type="text/css">
+    table.repr.table.table-hover.table-striped.table-sm.table-responsive.small {
+  /* Don't make rows wider than they need to be. */
+  display: inline;
+}
+
+table > tbody > tr.repr-element > td {
+  /* Apply a tighter layout to the table cells. */
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  padding-right: 1rem;
+}
+
+table > tbody > tr > td.repr-section-toggle-col {
+  /* Remove background and border of the first cell in every row
+     (this row is only used for the collapse / uncollapse caret)
+
+     TODO: Need to find a good solution for VS Code that works in both
+           light and dark mode. */
+  border-color: transparent;
+  --bs-table-accent-bg: transparent;
+}
+
+tr.repr-section-header {
+  /* Remove stripes from section header rows */
+  background-color: transparent;
+  border-color: transparent;
+  --bs-table-striped-bg: transparent;
+  cursor: pointer;
+}
+
+tr.repr-section-header > th {
+  text-align: left !important;
+  vertical-align: middle;
+}
+
+.repr-element, tr.repr-element > td {
+  opacity: 1;
+  text-align: left !important;
+}
+
+.repr-element-faded {
+  transition: 0.3s ease;
+  opacity: 0.2;
+}
+
+.repr-element-collapsed {
+  display: none;
+}
+
+/* Collapse / uncollapse button and the caret it contains. */
+.repr-section-toggle-col button {
+  cursor: pointer;
+  width: 1rem;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+span.collapse-uncollapse-caret {
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+
+/* The collapse / uncollapse carets were copied from the free Font Awesome collection and adjusted. */
+
+/* Default to black carets for light mode */
+.repr-section-toggle-col > button.collapsed > span.collapse-uncollapse-caret {
+  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="black" d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"/></svg>');
+}
+
+.repr-section-toggle-col
+  > button:not(.collapsed)
+  > span.collapse-uncollapse-caret {
+  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="black" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>');
+}
+
+/* Use white carets for dark mode */
+@media (prefers-color-scheme: dark) {
+  .repr-section-toggle-col > button.collapsed > span.collapse-uncollapse-caret {
+    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="white" d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"/></svg>');
+  }
+
+  .repr-section-toggle-col
+    > button:not(.collapsed)
+    > span.collapse-uncollapse-caret {
+    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="white" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>');
+  }
+}
+
+.channel-names-btn {
+  padding: 0;
+  border: none;
+  background: none;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  cursor: pointer;
+  color: #0d6efd;
+}
+
+.channel-names-btn:hover {
+  color: #0a58ca;
+}
+</style>
+
+
+
+<table class="repr table table-hover table-striped table-sm table-responsive small">
+
+
+
+
+
+
+
+
+<tr class="repr-section-header general-4558ba07-5a26-4ecd-81c7-a733a041ae2b"  title="Hide section"
+    onclick="toggleVisibility('general-4558ba07-5a26-4ecd-81c7-a733a041ae2b')">
+    <th class="repr-section-toggle-col">
+        <button>
+
+            <span class="collapse-uncollapse-caret"></span>
+        </button>
+    </th>
+    <th colspan="2">
+        <strong>General</strong>
+    </th>
+</tr>
+
+<tr class="repr-element general-4558ba07-5a26-4ecd-81c7-a733a041ae2b ">
+    <td class="repr-section-toggle-col"></td>
+    <td>MNE object type</td>
+    <td>Info</td>
+</tr>
+<tr class="repr-element general-4558ba07-5a26-4ecd-81c7-a733a041ae2b ">
+    <td class="repr-section-toggle-col"></td>
+    <td>Measurement date</td>
+
+    <td>2000-01-01 at 00:00:00 UTC</td>
+
+</tr>
+<tr class="repr-element general-4558ba07-5a26-4ecd-81c7-a733a041ae2b ">
+    <td class="repr-section-toggle-col"></td>
+    <td>Participant</td>
+
+
+
+</tr>
+<tr class="repr-element general-4558ba07-5a26-4ecd-81c7-a733a041ae2b ">
+    <td class="repr-section-toggle-col"></td>
+    <td>Experimenter</td>
+
+    <td>mne_anonymize</td>
+
+</tr>
+
+
+
+
+
+
+
+
+<tr class="repr-section-header acquisition-85f964ef-dac8-4e94-86f4-17dcf2d56fa9"
+    title="Hide section"  onclick="toggleVisibility('acquisition-85f964ef-dac8-4e94-86f4-17dcf2d56fa9')">
+    <th class="repr-section-toggle-col">
+        <button>
+
+            <span class="collapse-uncollapse-caret"></span>
+        </button>
+    </th>
+    <th colspan="2">
+        <strong>Acquisition</strong>
+    </th>
+</tr>
+
+
+
+
+
+
+
+
+<tr class="repr-element acquisition-85f964ef-dac8-4e94-86f4-17dcf2d56fa9 ">
+    <td class="repr-section-toggle-col"></td>
+    <td>Sampling frequency</td>
+    <td>1000.00 Hz</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+<tr class="repr-section-header channels-a90e1243-c9a4-4433-a4e3-b692dbbee60b"  title="Hide section"
+    onclick="toggleVisibility('channels-a90e1243-c9a4-4433-a4e3-b692dbbee60b')">
+    <th class="repr-section-toggle-col">
+        <button>
+
+            <span class="collapse-uncollapse-caret"></span>
+        </button>
+    </th>
+    <th colspan="2">
+        <strong>Channels</strong>
+    </th>
+</tr>
+
+
+<tr class="repr-element channels-a90e1243-c9a4-4433-a4e3-b692dbbee60b ">
+    <td class="repr-section-toggle-col"></td>
+    <td>Magnetometers</td>
+    <td>
+        <button class="channel-names-btn" onclick="alert('Good Magnetometers:\n\nMEG0111, MEG0121, MEG0131, MEG0141, MEG0211, MEG0221, MEG0231, MEG0241, MEG0311, MEG0321, MEG0331, MEG0341, MEG0411, MEG0421, MEG0431, MEG0441, MEG0511, MEG0521, MEG0531, MEG0541, MEG0611, MEG0621, MEG0631, MEG0641, MEG0711, MEG0721, MEG0731, MEG0741, MEG0811, MEG0821, MEG0911, MEG0921, MEG0931, MEG0941, MEG1011, MEG1021, MEG1031, MEG1041, MEG1111, MEG1121, MEG1131, MEG1141, MEG1211, MEG1221, MEG1231, MEG1241, MEG1311, MEG1321, MEG1331, MEG1341, MEG1411, MEG1421, MEG1431, MEG1441, MEG1511, MEG1521, MEG1531, MEG1541, MEG1611, MEG1621, MEG1631, MEG1641, MEG1711, MEG1721, MEG1731, MEG1741, MEG1811, MEG1821, MEG1831, MEG1841, MEG1911, MEG1921, MEG1931, MEG1941, MEG2011, MEG2021, MEG2031, MEG2041, MEG2111, MEG2121, MEG2131, MEG2141, MEG2211, MEG2221, MEG2231, MEG2241, MEG2311, MEG2321, MEG2331, MEG2341, MEG2411, MEG2421, MEG2431, MEG2441, MEG2511, MEG2521, MEG2531, MEG2541, MEG2611, MEG2621, MEG2631, MEG2641')" title="(Click to open in popup)&#13;&#13;MEG0111, MEG0121, MEG0131, MEG0141, MEG0211, MEG0221, MEG0231, MEG0241, MEG0311, MEG0321, MEG0331, MEG0341, MEG0411, MEG0421, MEG0431, MEG0441, MEG0511, MEG0521, MEG0531, MEG0541, MEG0611, MEG0621, MEG0631, MEG0641, MEG0711, MEG0721, MEG0731, MEG0741, MEG0811, MEG0821, MEG0911, MEG0921, MEG0931, MEG0941, MEG1011, MEG1021, MEG1031, MEG1041, MEG1111, MEG1121, MEG1131, MEG1141, MEG1211, MEG1221, MEG1231, MEG1241, MEG1311, MEG1321, MEG1331, MEG1341, MEG1411, MEG1421, MEG1431, MEG1441, MEG1511, MEG1521, MEG1531, MEG1541, MEG1611, MEG1621, MEG1631, MEG1641, MEG1711, MEG1721, MEG1731, MEG1741, MEG1811, MEG1821, MEG1831, MEG1841, MEG1911, MEG1921, MEG1931, MEG1941, MEG2011, MEG2021, MEG2031, MEG2041, MEG2111, MEG2121, MEG2131, MEG2141, MEG2211, MEG2221, MEG2231, MEG2241, MEG2311, MEG2321, MEG2331, MEG2341, MEG2411, MEG2421, MEG2431, MEG2441, MEG2511, MEG2521, MEG2531, MEG2541, MEG2611, MEG2621, MEG2631, MEG2641">
+            102
+        </button>
+
+
+    </td>
+</tr>
+
+
+<tr class="repr-element channels-a90e1243-c9a4-4433-a4e3-b692dbbee60b ">
+    <td class="repr-section-toggle-col"></td>
+    <td>Gradiometers</td>
+    <td>
+        <button class="channel-names-btn" onclick="alert('Good Gradiometers:\n\nMEG0112, MEG0113, MEG0122, MEG0123, MEG0132, MEG0133, MEG0142, MEG0143, MEG0212, MEG0213, MEG0222, MEG0223, MEG0232, MEG0233, MEG0242, MEG0243, MEG0312, MEG0313, MEG0322, MEG0323, MEG0332, MEG0333, MEG0342, MEG0343, MEG0412, MEG0413, MEG0422, MEG0423, MEG0432, MEG0433, MEG0442, MEG0443, MEG0512, MEG0513, MEG0522, MEG0523, MEG0532, MEG0533, MEG0542, MEG0543, MEG0612, MEG0613, MEG0622, MEG0623, MEG0632, MEG0633, MEG0642, MEG0643, MEG0712, MEG0713, MEG0722, MEG0723, MEG0732, MEG0733, MEG0742, MEG0743, MEG0812, MEG0813, MEG0822, MEG0823, MEG0912, MEG0913, MEG0922, MEG0923, MEG0932, MEG0933, MEG0942, MEG0943, MEG1012, MEG1013, MEG1022, MEG1023, MEG1032, MEG1033, MEG1042, MEG1043, MEG1112, MEG1113, MEG1122, MEG1123, MEG1132, MEG1133, MEG1142, MEG1143, MEG1212, MEG1213, MEG1222, MEG1223, MEG1232, MEG1233, MEG1242, MEG1243, MEG1312, MEG1313, MEG1322, MEG1323, MEG1332, MEG1333, MEG1342, MEG1343, MEG1412, MEG1413, MEG1422, MEG1423, MEG1432, MEG1433, MEG1442, MEG1443, MEG1512, MEG1513, MEG1522, MEG1523, MEG1532, MEG1533, MEG1542, MEG1543, MEG1612, MEG1613, MEG1622, MEG1623, MEG1632, MEG1633, MEG1642, MEG1643, MEG1712, MEG1713, MEG1722, MEG1723, MEG1732, MEG1733, MEG1742, MEG1743, MEG1812, MEG1813, MEG1822, MEG1823, MEG1832, MEG1833, MEG1842, MEG1843, MEG1912, MEG1913, MEG1922, MEG1923, MEG1932, MEG1933, MEG1942, MEG1943, MEG2012, MEG2013, MEG2022, MEG2023, MEG2032, MEG2033, MEG2042, MEG2043, MEG2112, MEG2113, MEG2122, MEG2123, MEG2132, MEG2133, MEG2142, MEG2143, MEG2212, MEG2213, MEG2222, MEG2223, MEG2232, MEG2233, MEG2242, MEG2243, MEG2312, MEG2313, MEG2322, MEG2323, MEG2332, MEG2333, MEG2342, MEG2343, MEG2412, MEG2413, MEG2422, MEG2423, MEG2432, MEG2433, MEG2442, MEG2443, MEG2512, MEG2513, MEG2522, MEG2523, MEG2532, MEG2533, MEG2542, MEG2543, MEG2612, MEG2613, MEG2622, MEG2623, MEG2632, MEG2633, MEG2642, MEG2643')" title="(Click to open in popup)&#13;&#13;MEG0112, MEG0113, MEG0122, MEG0123, MEG0132, MEG0133, MEG0142, MEG0143, MEG0212, MEG0213, MEG0222, MEG0223, MEG0232, MEG0233, MEG0242, MEG0243, MEG0312, MEG0313, MEG0322, MEG0323, MEG0332, MEG0333, MEG0342, MEG0343, MEG0412, MEG0413, MEG0422, MEG0423, MEG0432, MEG0433, MEG0442, MEG0443, MEG0512, MEG0513, MEG0522, MEG0523, MEG0532, MEG0533, MEG0542, MEG0543, MEG0612, MEG0613, MEG0622, MEG0623, MEG0632, MEG0633, MEG0642, MEG0643, MEG0712, MEG0713, MEG0722, MEG0723, MEG0732, MEG0733, MEG0742, MEG0743, MEG0812, MEG0813, MEG0822, MEG0823, MEG0912, MEG0913, MEG0922, MEG0923, MEG0932, MEG0933, MEG0942, MEG0943, MEG1012, MEG1013, MEG1022, MEG1023, MEG1032, MEG1033, MEG1042, MEG1043, MEG1112, MEG1113, MEG1122, MEG1123, MEG1132, MEG1133, MEG1142, MEG1143, MEG1212, MEG1213, MEG1222, MEG1223, MEG1232, MEG1233, MEG1242, MEG1243, MEG1312, MEG1313, MEG1322, MEG1323, MEG1332, MEG1333, MEG1342, MEG1343, MEG1412, MEG1413, MEG1422, MEG1423, MEG1432, MEG1433, MEG1442, MEG1443, MEG1512, MEG1513, MEG1522, MEG1523, MEG1532, MEG1533, MEG1542, MEG1543, MEG1612, MEG1613, MEG1622, MEG1623, MEG1632, MEG1633, MEG1642, MEG1643, MEG1712, MEG1713, MEG1722, MEG1723, MEG1732, MEG1733, MEG1742, MEG1743, MEG1812, MEG1813, MEG1822, MEG1823, MEG1832, MEG1833, MEG1842, MEG1843, MEG1912, MEG1913, MEG1922, MEG1923, MEG1932, MEG1933, MEG1942, MEG1943, MEG2012, MEG2013, MEG2022, MEG2023, MEG2032, MEG2033, MEG2042, MEG2043, MEG2112, MEG2113, MEG2122, MEG2123, MEG2132, MEG2133, MEG2142, MEG2143, MEG2212, MEG2213, MEG2222, MEG2223, MEG2232, MEG2233, MEG2242, MEG2243, MEG2312, MEG2313, MEG2322, MEG2323, MEG2332, MEG2333, MEG2342, MEG2343, MEG2412, MEG2413, MEG2422, MEG2423, MEG2432, MEG2433, MEG2442, MEG2443, MEG2512, MEG2513, MEG2522, MEG2523, MEG2532, MEG2533, MEG2542, MEG2543, MEG2612, MEG2613, MEG2622, MEG2623, MEG2632, MEG2633, MEG2642, MEG2643">
+            204
+        </button>
+
+
+    </td>
+</tr>
+
+
+<tr class="repr-element channels-a90e1243-c9a4-4433-a4e3-b692dbbee60b ">
+    <td class="repr-section-toggle-col"></td>
+    <td>Head & sensor digitization</td>
+
+    <td>Not available</td>
+
+</tr>
+
+
+
+
+
+
+
+
+<tr class="repr-section-header filters-94300ddf-40e3-4595-9972-c1f2864c98c3"  title="Hide section"
+    onclick="toggleVisibility('filters-94300ddf-40e3-4595-9972-c1f2864c98c3')">
+    <th class="repr-section-toggle-col">
+        <button>
+
+            <span class="collapse-uncollapse-caret"></span>
+        </button>
+    </th>
+    <th colspan="2">
+        <strong>Filters</strong>
+    </th>
+</tr>
+
+<tr class="repr-element filters-94300ddf-40e3-4595-9972-c1f2864c98c3 ">
+    <td class="repr-section-toggle-col"></td>
+    <td>Highpass</td>
+    <td>0.10 Hz</td>
+</tr>
+
+
+<tr class="repr-element filters-94300ddf-40e3-4595-9972-c1f2864c98c3 ">
+    <td class="repr-section-toggle-col"></td>
+    <td>Lowpass</td>
+    <td>330.00 Hz</td>
+</tr>
+
+
+<tr class="repr-element filters-94300ddf-40e3-4595-9972-c1f2864c98c3 ">
+    <td class="repr-section-toggle-col"></td>
+    <td>Projections</td>
+    <td>
+
+        ssp_68_magn.fif : PCA-v1 (off)
+        <br />
+
+        ssp_68_magn.fif : PCA-v2 (off)
+        <br />
+
+        ssp_68_magn.fif : PCA-v3 (off)
+        <br />
+
+        ssp_68_magn.fif : PCA-v4 (off)
+        <br />
+
+        ssp_68_magn.fif : PCA-v5 (off)
+        <br />
+
+        ssp_68_magn.fif : PCA-v6 (off)
+        <br />
+
+        ssp_68_magn.fif : PCA-v1 (off)
+        <br />
+
+        ssp_68_magn.fif : PCA-v2 (off)
+        <br />
+
+        ssp_68_magn.fif : PCA-v3 (off)
+        <br />
+
+        ssp_68_grad.fif : PCA-v1 (off)
+        <br />
+
+        ssp_68_grad.fif : PCA-v2 (off)
+        <br />
+
+        ssp_68_grad.fif : PCA-v3 (off)
+        <br />
+
+        ssp_68_grad.fif : PCA-v1 (off)
+        <br />
+
+        ssp_68_grad.fif : PCA-v2 (off)
+
+
+    </td>
+</tr>
+
+</table>
+</div>
+<br />
+<br /><p>In MNE-Python, the sensor position is stored under the key <code class="docutils literal notranslate"><span class="pre">loc</span></code> for every channels.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="https://mne.tools/stable/generated/mne.Info.html#mne.Info" title="mne._fiff.meas_info.Info" class="sphx-glr-backref-module-mne-_fiff-meas_info sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">info</span></a><span class="p">[</span><span class="s2">&quot;chs&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;loc&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[-0.1066      0.0464     -0.0604     -0.0127      0.0057     -0.99990302
+ -0.186801   -0.98240298 -0.0033     -0.98232698  0.18674099  0.013541  ]
+</pre></div>
+</div>
+<p>Along with other sensor information:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">key</span></a><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <a href="https://mne.tools/stable/generated/mne.Info.html#mne.Info" title="mne._fiff.meas_info.Info" class="sphx-glr-backref-module-mne-_fiff-meas_info sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">info</span></a><span class="p">[</span><span class="s2">&quot;chs&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">key</span></a> <span class="o">==</span> <span class="s2">&quot;loc&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">key</span></a><span class="si">}</span><span class="s2">:</span><span class="se">\n</span><span class="s2">  Position:</span><span class="se">\n</span><span class="si">{</span><span class="n">value</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">  Normal:</span><span class="se">\n</span><span class="si">{</span><span class="n">value</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">key</span></a><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>scanno: 1
+logno: 111
+kind: 1 (FIFFV_MEG_CH)
+range: 1.0
+cal: 1.329999999022391e-10
+coil_type: 3024 (FIFFV_COIL_VV_MAG_T3)
+loc:
+  Position:
+[-0.1066  0.0464 -0.0604]
+  Normal:
+[[-0.0127      0.0057     -0.99990302]
+ [-0.186801   -0.98240298 -0.0033    ]
+ [-0.98232698  0.18674099  0.013541  ]]
+unit: 112 (FIFF_UNIT_T)
+unit_mul: 0 (FIFF_UNITM_NONE)
+ch_name: MEG0111
+coord_frame: 1 (FIFFV_COORD_DEVICE)
+</pre></div>
+</div>
+<p>The sensors can be visualized on a 3D plot. This measurement information was taken
+from an empty-room recording. Thus, it does not contain an HPI measurement and it does
+not contain the transform from the device to the head coordinate frame.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># set an identity transformation from the device to head coordinates</span>
+<a href="https://mne.tools/stable/generated/mne.Info.html#mne.Info" title="mne._fiff.meas_info.Info" class="sphx-glr-backref-module-mne-_fiff-meas_info sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">info</span></a><span class="p">[</span><span class="s2">&quot;dev_head_t&quot;</span><span class="p">]</span> <span class="o">=</span> <a href="https://mne.tools/stable/generated/mne.transforms.Transform.html#mne.transforms.Transform" title="mne.transforms.Transform" class="sphx-glr-backref-module-mne-transforms sphx-glr-backref-type-py-class"><span class="n">Transform</span></a><span class="p">(</span><span class="s2">&quot;meg&quot;</span><span class="p">,</span> <span class="s2">&quot;head&quot;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a> <span class="o">=</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.axes.html#matplotlib.pyplot.axes" title="matplotlib.pyplot.axes" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">axes</span></a><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s2">&quot;3d&quot;</span><span class="p">)</span>
+<a href="https://mne.tools/stable/generated/mne.viz.plot_sensors.html#mne.viz.plot_sensors" title="mne.viz.plot_sensors" class="sphx-glr-backref-module-mne-viz sphx-glr-backref-type-py-function"><span class="n">plot_sensors</span></a><span class="p">(</span><a href="https://mne.tools/stable/generated/mne.Info.html#mne.Info" title="mne._fiff.meas_info.Info" class="sphx-glr-backref-module-mne-_fiff-meas_info sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">info</span></a><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;3d&quot;</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span><span class="o">.</span><span class="n">view_init</span></a><span class="p">(</span><span class="n">azim</span><span class="o">=</span><span class="mi">130</span><span class="p">,</span> <span class="n">elev</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
+</pre></div>
+</div>
+<img src="../../../_images/sphx_glr_10_sensor_positions_001.png" srcset="../../../_images/sphx_glr_10_sensor_positions_001.png" alt="10 sensor positions" class = "sphx-glr-single-img"/><p>The 3D coordinates can be projected on a 2D plane to represent a topographic view of
+the sensor array. In MNE, a <a class="reference external" href="https://mne.tools/stable/generated/mne.channels.Layout.html#mne.channels.Layout" title="(in MNE v1.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Layout</span></code></a> object is used to represent
+the idealied 2D sensor positions. Built-in layouts are available for the MEGIN system,
+under the keys <code class="docutils literal notranslate"><span class="pre">'Vectorview-all'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Vectorview-mag'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Vectorview-grad'</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">'Vectorview-grad_norm'</span></code>.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://mne.tools/stable/generated/mne.channels.Layout.html#mne.channels.Layout" title="mne.channels.Layout" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">layout</span></a> <span class="o">=</span> <a href="https://mne.tools/stable/generated/mne.channels.read_layout.html#mne.channels.read_layout" title="mne.channels.read_layout" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-function"><span class="n">read_layout</span></a><span class="p">(</span><span class="s2">&quot;Vectorview-all&quot;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a><span class="p">,</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a> <span class="o">=</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="matplotlib.pyplot.subplots" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">16.53</span><span class="p">,</span> <span class="mf">11.69</span><span class="p">),</span> <a href="https://mne.tools/stable/generated/mne.channels.Layout.html#mne.channels.Layout" title="mne.channels.Layout" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">layout</span></a><span class="o">=</span><span class="s2">&quot;constrained&quot;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set.html#matplotlib.axes.Axes.set" title="matplotlib.axes.Axes.set" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">set</span></a><span class="p">(</span><span class="n">xticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">aspect</span><span class="o">=</span><span class="s2">&quot;equal&quot;</span><span class="p">)</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">outlines</span></a> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">border</span><span class="o">=</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]))</span>
+<span class="k">for</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">p</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ch_name</span></a> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">layout</span><span class="o">.</span><span class="n">pos</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">layout</span><span class="o">.</span><span class="n">names</span></a><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">center_pos</span></a> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.array.html#numpy.array" title="numpy.array" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">((</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">p</span></a><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">p</span></a><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">p</span></a><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">p</span></a><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">))</span>
+    <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ch_name</span></a> <span class="o">=</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ch_name</span></a><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;MEG&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+    <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ch_name</span></a> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;MAG</span><span class="se">\n</span><span class="si">{</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ch_name</span></a><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ch_name</span></a><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;GRAD</span><span class="se">\n</span><span class="si">{</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ch_name</span></a><span class="si">}</span><span class="s2">&quot;</span>
+    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.annotate.html#matplotlib.axes.Axes.annotate" title="matplotlib.axes.Axes.annotate" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">annotate</span></a><span class="p">(</span>
+        <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ch_name</span></a><span class="p">,</span>
+        <span class="n">xy</span><span class="o">=</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">center_pos</span></a><span class="p">,</span>
+        <span class="n">horizontalalignment</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+        <span class="n">verticalalignment</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+        <span class="n">size</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+    <span class="p">)</span>
+    <a href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">x1</span></a><span class="p">,</span> <a href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">x2</span></a><span class="p">,</span> <a href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">y1</span></a><span class="p">,</span> <a href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">y2</span></a> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">p</span></a><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">p</span></a><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">p</span></a><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">p</span></a><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">p</span></a><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">p</span></a><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot" title="matplotlib.axes.Axes.plot" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">plot</span></a><span class="p">([</span><a href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">x1</span></a><span class="p">,</span> <a href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">x1</span></a><span class="p">,</span> <a href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">x2</span></a><span class="p">,</span> <a href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">x2</span></a><span class="p">,</span> <a href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">x1</span></a><span class="p">],</span> <span class="p">[</span><a href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">y1</span></a><span class="p">,</span> <a href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">y2</span></a><span class="p">,</span> <a href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">y2</span></a><span class="p">,</span> <a href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">y1</span></a><span class="p">,</span> <a href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">y1</span></a><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.axis.html#matplotlib.axes.Axes.axis" title="matplotlib.axes.Axes.axis" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">axis</span></a><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
+</pre></div>
+</div>
+<img src="../../../_images/sphx_glr_10_sensor_positions_002.png" srcset="../../../_images/sphx_glr_10_sensor_positions_002.png" alt="10 sensor positions" class = "sphx-glr-single-img"/><div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The function <a class="reference external" href="https://mne.tools/stable/generated/mne.viz.plot_layout.html#mne.viz.plot_layout" title="(in MNE v1.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.viz.plot_layout()</span></code></a> or the method
+<a class="reference external" href="https://mne.tools/stable/generated/mne.channels.Layout.html#mne.channels.Layout.plot" title="(in MNE v1.8)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mne.channels.Layout.plot()</span></code></a> can be used to plot the layout with fewer lines
+of code but without customization. For instance:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mne.channels</span> <span class="kn">import</span> <a href="https://mne.tools/stable/generated/mne.channels.read_layout.html#mne.channels.read_layout" title="mne.channels.read_layout" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-function"><span class="n">read_layout</span></a>
+
+<a href="https://mne.tools/stable/generated/mne.channels.Layout.html#mne.channels.Layout" title="mne.channels.Layout" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">layout</span></a> <span class="o">=</span> <a href="https://mne.tools/stable/generated/mne.channels.read_layout.html#mne.channels.read_layout" title="mne.channels.read_layout" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-function"><span class="n">read_layout</span></a><span class="p">(</span><span class="s2">&quot;Vectorview-all&quot;</span><span class="p">)</span>
+<a href="https://mne.tools/stable/generated/mne.channels.Layout.html#mne.channels.Layout" title="mne.channels.Layout" class="sphx-glr-backref-module-mne-channels sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">layout</span></a><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p>If you pay attention to the plotted layout, you will notice that triplets of sensors
+are represented sometimes with <code class="docutils literal notranslate"><span class="pre">GRADXXX2</span></code> on top and <code class="docutils literal notranslate"><span class="pre">GRADXXX3</span></code> on the bottom, and
+sometimes the other way around. This is because the sensors are not all oriented in
+the same direction. The sensor in the top box measures the derivative along the
+latitude while the sensor in the bottom box measures the derivative along the
+longitude.</p>
+<figure class="align-center" id="id1">
+<img alt="MEG channel naming convention" src="../../../_images/meg-channel-naming-convention.png" />
+<figcaption>
+<p><span class="caption-text">Figure taken from MEGIN’s User’s Manual (copyright ©2011-2019 MEGIN Oy).</span><a class="headerlink" href="#id1" title="Link to this image">🔗</a></p>
+</figcaption>
+</figure>
+<p>We can visualize the orientation in 3D, with the sensors oriented along the lines of
+latitude (horizontal sensitivity along the equator) in <strong>red</strong> and the sensors
+oriented along the lines of longitude (vertical sensitivity along the equator) in
+<strong>orange</strong>.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">picks</span></a> <span class="o">=</span> <span class="n">_picks_to_idx</span><span class="p">(</span><a href="https://mne.tools/stable/generated/mne.Info.html#mne.Info" title="mne._fiff.meas_info.Info" class="sphx-glr-backref-module-mne-_fiff-meas_info sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">info</span></a><span class="p">,</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">picks</span></a><span class="o">=</span><span class="s2">&quot;grad&quot;</span><span class="p">)</span>
+<a href="https://mne.tools/stable/generated/mne.Info.html#mne.Info" title="mne._fiff.meas_info.Info" class="sphx-glr-backref-module-mne-_fiff-meas_info sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">info</span></a> <span class="o">=</span> <a href="https://mne.tools/stable/generated/mne.pick_info.html#mne.pick_info" title="mne.pick_info" class="sphx-glr-backref-module-mne sphx-glr-backref-type-py-function"><span class="n">pick_info</span></a><span class="p">(</span><a href="https://mne.tools/stable/generated/mne.Info.html#mne.Info" title="mne._fiff.meas_info.Info" class="sphx-glr-backref-module-mne-_fiff-meas_info sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">info</span></a><span class="p">,</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">picks</span></a><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_top</span></a> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.zeros.html#numpy.zeros" title="numpy.zeros" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">(</span><span class="nb">len</span><span class="p">(</span><a href="https://mne.tools/stable/generated/mne.Info.html#mne.Info" title="mne._fiff.meas_info.Info" class="sphx-glr-backref-module-mne-_fiff-meas_info sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">info</span></a><span class="o">.</span><span class="n">ch_names</span><span class="p">),</span> <span class="nb">bool</span><span class="p">)</span>
+<span class="k">for</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k</span></a><span class="p">,</span> <span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ch2</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ch3</span></a><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span>
+    <span class="nb">zip</span><span class="p">(</span><a href="https://mne.tools/stable/generated/mne.Info.html#mne.Info" title="mne._fiff.meas_info.Info" class="sphx-glr-backref-module-mne-_fiff-meas_info sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">info</span></a><span class="o">.</span><span class="n">ch_names</span><span class="p">[::</span><span class="mi">2</span><span class="p">],</span> <a href="https://mne.tools/stable/generated/mne.Info.html#mne.Info" title="mne._fiff.meas_info.Info" class="sphx-glr-backref-module-mne-_fiff-meas_info sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">info</span></a><span class="o">.</span><span class="n">ch_names</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">],</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="p">):</span>
+    <span class="c1"># ch2 ends with MEGxxx2 and ch3 ends with MEGxxx3</span>
+    <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">idx2</span></a> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.where.html#numpy.where" title="numpy.where" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">where</span></a><span class="p">(</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.array.html#numpy.array" title="numpy.array" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">layout</span><span class="o">.</span><span class="n">names</span></a><span class="p">)</span> <span class="o">==</span> <span class="sa">f</span><span class="s2">&quot;MEG </span><span class="si">{</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ch2</span></a><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;MEG&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">idx3</span></a> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.where.html#numpy.where" title="numpy.where" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">where</span></a><span class="p">(</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.array.html#numpy.array" title="numpy.array" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">layout</span><span class="o">.</span><span class="n">names</span></a><span class="p">)</span> <span class="o">==</span> <span class="sa">f</span><span class="s2">&quot;MEG </span><span class="si">{</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ch3</span></a><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;MEG&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_top</span></a><span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k</span></a> <span class="p">:</span> <span class="mi">2</span> <span class="o">*</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k</span></a> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+        <span class="k">if</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">layout</span><span class="o">.</span><span class="n">pos</span></a><span class="p">[:,</span> <span class="mi">1</span><span class="p">][</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">idx2</span></a><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">&gt;</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">layout</span><span class="o">.</span><span class="n">pos</span></a><span class="p">[:,</span> <span class="mi">1</span><span class="p">][</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">idx3</span></a><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+        <span class="k">else</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+    <span class="p">)</span>
+<a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_bottom</span></a> <span class="o">=</span> <span class="o">~</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_top</span></a>  <span class="c1"># opposite</span>
+
+<span class="c1"># retrieve position and orientation in device coordinate frame</span>
+<a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pos</span></a> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.array.html#numpy.array" title="numpy.array" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">([</span><span class="n">ch</span><span class="p">[</span><span class="s2">&quot;loc&quot;</span><span class="p">][:</span><span class="mi">3</span><span class="p">]</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <a href="https://mne.tools/stable/generated/mne.Info.html#mne.Info" title="mne._fiff.meas_info.Info" class="sphx-glr-backref-module-mne-_fiff-meas_info sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">info</span></a><span class="p">[</span><span class="s2">&quot;chs&quot;</span><span class="p">]])</span>
+<a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ori</span></a> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.array.html#numpy.array" title="numpy.array" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">([</span><span class="n">ch</span><span class="p">[</span><span class="s2">&quot;loc&quot;</span><span class="p">][</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <a href="https://mne.tools/stable/generated/mne.Info.html#mne.Info" title="mne._fiff.meas_info.Info" class="sphx-glr-backref-module-mne-_fiff-meas_info sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">info</span></a><span class="p">[</span><span class="s2">&quot;chs&quot;</span><span class="p">]])</span>
+
+<span class="c1"># create render</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">renderer_kwargs</span></a> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">bgcolor</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<span class="n">renderer</span> <span class="o">=</span> <span class="n">create_3d_figure</span><span class="p">(</span>
+    <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">800</span><span class="p">),</span>
+    <span class="n">scene</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">bgcolor</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<a href="https://mne.tools/stable/generated/mne.viz.plot_alignment.html#mne.viz.plot_alignment" title="mne.viz.plot_alignment" class="sphx-glr-backref-module-mne-viz sphx-glr-backref-type-py-function"><span class="n">plot_alignment</span></a><span class="p">(</span><a href="https://mne.tools/stable/generated/mne.Info.html#mne.Info" title="mne._fiff.meas_info.Info" class="sphx-glr-backref-module-mne-_fiff-meas_info sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">info</span></a><span class="p">,</span> <span class="n">meg</span><span class="o">=</span><span class="s2">&quot;sensors&quot;</span><span class="p">,</span> <span class="n">coord_frame</span><span class="o">=</span><span class="s2">&quot;meg&quot;</span><span class="p">,</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a><span class="o">=</span><span class="n">renderer</span><span class="o">.</span><span class="n">scene</span><span class="p">())</span>
+<span class="n">renderer</span><span class="o">.</span><span class="n">quiver3d</span><span class="p">(</span><span class="o">*</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pos</span></a><span class="p">[</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_top</span></a><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="o">*</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ori</span></a><span class="p">[</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_top</span></a><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.015</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;arrow&quot;</span><span class="p">)</span>
+<span class="n">renderer</span><span class="o">.</span><span class="n">quiver3d</span><span class="p">(</span>
+    <span class="o">*</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pos</span></a><span class="p">[</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_bottom</span></a><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="o">*</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ori</span></a><span class="p">[</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_bottom</span></a><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.015</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;arrow&quot;</span>
+<span class="p">)</span>
+<a href="https://mne.tools/stable/generated/mne.viz.set_3d_view.html#mne.viz.set_3d_view" title="mne.viz.set_3d_view" class="sphx-glr-backref-module-mne-viz sphx-glr-backref-type-py-function"><span class="n">set_3d_view</span></a><span class="p">(</span><span class="n">renderer</span><span class="o">.</span><span class="n">figure</span><span class="p">,</span> <span class="n">azimuth</span><span class="o">=</span><span class="mi">55</span><span class="p">,</span> <span class="n">elevation</span><span class="o">=</span><span class="mi">70</span><span class="p">,</span> <span class="n">distance</span><span class="o">=</span><span class="mf">0.55</span><span class="p">)</span>
+</pre></div>
+</div>
+<img src="../../../_images/sphx_glr_10_sensor_positions_003.png" srcset="../../../_images/sphx_glr_10_sensor_positions_003.png" alt="10 sensor positions" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 5.165 seconds)</p>
+<p><strong>Estimated memory usage:</strong>  418 MB</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-generated-tutorials-megin-10-sensor-positions-py">
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../../_downloads/7d665c6a22202f10bf10600a7d1f9ad7/10_sensor_positions.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">10_sensor_positions.ipynb</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../../_downloads/c12a3273f3f1bb595106f70792abd0b5/10_sensor_positions.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">10_sensor_positions.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../../../_downloads/d0cfc7d68fb9ae481325f1f8dad0c4a1/10_sensor_positions.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">10_sensor_positions.zip</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="20_rename_EEG_channels.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Rename EEG channels</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="00_signal_space_projection.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Create Signal Space Projectors</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, MEEG-BCI facility
+            </div>
+            Made with 
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/fcbg-platforms/meg-wiki" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script src="../../../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=30646c52"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+
+
+.. _sphx_glr_generated_tutorials_stimulation:
+
+Stimulation
+-----------
+
+The tutorials below showcase how to use the stimulation systems available on the
+MEG platform at Campus Biotech.
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="On the MEG platform, delivering audio stimuli can be done through 2 systems:">
+
+.. only:: html
+
+  .. image:: /generated/tutorials/stimulation/images/thumb/sphx_glr_00_precise_audio_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_generated_tutorials_stimulation_00_precise_audio.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Precise audio presentation</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="    This example requires the meg_wiki package to download the sample dataset. This     package can be installed with pip:">
+
+.. only:: html
+
+  .. image:: /generated/tutorials/stimulation/images/thumb/sphx_glr_10_proxy_audio_measure_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_generated_tutorials_stimulation_10_proxy_audio_measure.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">MISC 006: a proxy measure of the audio stimuli</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /generated/tutorials/stimulation/00_precise_audio
+   /generated/tutorials/stimulation/10_proxy_audio_measure
+

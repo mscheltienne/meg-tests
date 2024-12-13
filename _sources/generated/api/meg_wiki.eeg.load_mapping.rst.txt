@@ -1,0 +1,9 @@
+﻿meg\_wiki.eeg.load\_mapping
+===========================
+
+.. currentmodule:: meg_wiki.eeg
+
+.. autofunction:: load_mapping
+
+.. minigallery:: meg_wiki.eeg.load_mapping
+    :add-heading:

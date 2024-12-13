@@ -1,0 +1,9 @@
+﻿meg\_wiki.set\_log\_level
+=========================
+
+.. currentmodule:: meg_wiki
+
+.. autofunction:: set_log_level
+
+.. minigallery:: meg_wiki.set_log_level
+    :add-heading:

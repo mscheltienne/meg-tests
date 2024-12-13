@@ -1,0 +1,9 @@
+﻿meg\_wiki.calibration.load\_fine\_calibration
+=============================================
+
+.. currentmodule:: meg_wiki.calibration
+
+.. autofunction:: load_fine_calibration
+
+.. minigallery:: meg_wiki.calibration.load_fine_calibration
+    :add-heading:
